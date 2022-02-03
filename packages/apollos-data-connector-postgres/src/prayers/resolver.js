@@ -4,6 +4,8 @@ export default {
   Mutation: {
     addPrayer: (root, args, { dataSources: { PrayerRequest } }) =>
       PrayerRequest.addPrayer(args),
+    reportPrayer: (root, args, { dataSources: { PrayerRequest } }) =>
+      PrayerRequest.reportPrayer(args),
   },
   PrayerRequest: {
     id: ({ id }, args, context, { parentType }) =>

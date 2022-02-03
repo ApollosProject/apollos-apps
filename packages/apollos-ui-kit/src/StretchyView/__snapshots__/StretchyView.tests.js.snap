@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the StretchyView component should render as a background 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     StretchyComponent={
       <pure(Component)
@@ -126,12 +132,18 @@ Array [
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the StretchyView component should render as a header 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -148,7 +160,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     StretchyComponent={
       <mapProps(Component)
@@ -273,6 +285,6 @@ Array [
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;

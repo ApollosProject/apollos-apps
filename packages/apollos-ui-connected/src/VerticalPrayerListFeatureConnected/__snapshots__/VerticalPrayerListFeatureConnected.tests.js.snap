@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerListFeatureConnected 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Object {
@@ -34,7 +40,7 @@ Array [
     >
       subtitle
     </Text>
-  </View>,
+  </View>
   <View>
     <View
       style={
@@ -221,7 +227,7 @@ Array [
       onRequestClose={[Function]}
       visible={false}
     />
-  </View>,
+  </View>
   <View>
     <View
       style={
@@ -408,12 +414,18 @@ Array [
       onRequestClose={[Function]}
       visible={false}
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`VerticalPrayerListFeatureConnected component renders empty VerticalPrayerListFeatureConnected 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Object {
@@ -446,7 +458,7 @@ Array [
     >
       subtitle
     </Text>
-  </View>,
+  </View>
   <View
     style={
       Object {
@@ -503,6 +515,6 @@ Array [
     >
       Let's fix that! Are you ready to get started?
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;

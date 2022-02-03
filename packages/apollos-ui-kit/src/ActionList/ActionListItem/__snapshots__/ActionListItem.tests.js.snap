@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionListItem should handle an onPress function 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -79,12 +85,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ActionListItem should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -101,7 +113,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -141,12 +153,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ActionListItem should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -163,7 +181,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -249,12 +267,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ActionListItem should render with a label 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -271,7 +295,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -328,12 +352,18 @@ Array [
         What
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ActionListItem should render with a title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -350,7 +380,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -404,12 +434,18 @@ Array [
         Boom
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ActionListItem should render with an event 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -426,7 +462,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -502,6 +538,6 @@ Array [
         What
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

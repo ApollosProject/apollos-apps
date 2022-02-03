@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the BodySmall component should accept additional props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     accessible={false}
     bold={false}
@@ -33,12 +39,18 @@ Array [
     }
   >
     "He who lays up treasures on earth spends his life backing away from his treasures. To him, death is loss. He who lays up treasures in heaven looks forward to eternity; he’s moving daily toward his treasures. To him, death is gain." ― Randy Alcorn
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the BodySmall component should accept and render passed in styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -55,7 +67,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     bold={false}
     italic={false}
@@ -69,12 +81,18 @@ Array [
     }
   >
     Smaller salmon text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the BodySmall component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -91,7 +109,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -103,12 +121,18 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the BodySmall component should render as bold 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -125,7 +149,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     bold={true}
     italic={false}
@@ -139,12 +163,18 @@ Array [
     }
   >
     Bold BodySmall text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the BodySmall component should render as bold italic 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -161,7 +191,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     bold={true}
     italic={true}
@@ -175,12 +205,18 @@ Array [
     }
   >
     Bold italic BodySmall text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the BodySmall component should render as italic 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -197,7 +233,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     bold={false}
     italic={true}
@@ -211,12 +247,18 @@ Array [
     }
   >
     Italic BodySmall text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the BodySmall component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -233,7 +275,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     bold={false}
     italic={false}
@@ -247,6 +289,6 @@ Array [
     }
   >
     Default BodySmall text
-  </Text>,
-]
+  </Text>
+</View>
 `;

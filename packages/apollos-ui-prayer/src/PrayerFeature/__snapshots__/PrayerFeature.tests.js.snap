@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The PrayerFeature component should accept an onPressAdd function 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1109,12 +1115,18 @@ Array [
         </RCTScrollView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should accept an onPressAvatar function 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1131,7 +1143,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1951,12 +1963,18 @@ Array [
         </RCTScrollView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1973,7 +1991,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2793,12 +2811,18 @@ Array [
         </RCTScrollView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2815,7 +2839,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     isLoading={true}
     style={
@@ -3649,12 +3673,18 @@ Array [
         </RCTScrollView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should render a loading state without a \`Card\` border 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -3671,7 +3701,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -3708,7 +3738,7 @@ Array [
         Example title
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Object {
@@ -5549,12 +5579,18 @@ Array [
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should render with a custom subtitle 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -5571,7 +5607,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -6391,12 +6427,18 @@ Array [
         </RCTScrollView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should render with a title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -6413,7 +6455,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -7246,12 +7288,18 @@ Array [
         </RCTScrollView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerFeature component should render without a \`Card\` border 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -7268,7 +7316,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -7292,7 +7340,7 @@ Array [
         Prayer
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Object {
@@ -8061,6 +8109,6 @@ Array [
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;

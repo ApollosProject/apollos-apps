@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ChannelLabel component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -40,12 +46,18 @@ Array [
     >
       Default
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ChannelLabel component should render a skeleton view 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -62,7 +74,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -84,12 +96,18 @@ Array [
     >
       Default
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ChannelLabel component should render a skeleton view that supports an icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -106,7 +124,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -294,12 +312,18 @@ Array [
     >
       Default
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ChannelLabel component should render flexed 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -316,7 +340,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -338,12 +362,18 @@ Array [
     >
       Default
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ChannelLabel component should render with an icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -360,7 +390,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -548,6 +578,6 @@ Array [
     >
       Default
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;

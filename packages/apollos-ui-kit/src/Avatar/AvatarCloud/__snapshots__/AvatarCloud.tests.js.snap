@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -157,12 +163,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -179,7 +191,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -318,12 +330,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -340,7 +358,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -502,12 +520,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The AvatarCloud component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -524,7 +548,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -663,12 +687,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The AvatarCloud component should render as isLoading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -685,7 +715,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -851,12 +881,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The AvatarCloud component should render as radial 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -873,7 +909,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1012,12 +1048,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The AvatarCloud component should render without blur effect 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1034,7 +1076,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1173,6 +1215,6 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The media player can change media 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -1716,12 +1722,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can go PiP 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1738,7 +1750,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -2115,12 +2127,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can go fullscreen 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2137,7 +2155,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -3905,12 +3923,18 @@ Array [
         </View>
       </View>
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can go live 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -3927,7 +3951,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -5055,12 +5079,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can pause media 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -5077,7 +5107,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -6757,12 +6787,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can play a Youtube video by source html 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -6779,7 +6815,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -6947,12 +6983,18 @@ Array [
         </View>
       </RCTPortalOrigin>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can play a Youtube video by uri 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -6969,7 +7011,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -8624,12 +8666,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can play a web embedded video 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -8646,7 +8694,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -8809,12 +8857,18 @@ Array [
         </View>
       </RCTPortalOrigin>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can play a web embedded video by url 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -8831,7 +8885,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -10354,12 +10408,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can play media 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -10376,7 +10436,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -12111,12 +12171,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can render a VideoSelect 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -12133,7 +12199,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -14082,12 +14148,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can unmount cleanly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -14104,7 +14176,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -15242,12 +15314,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player can update playhead 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -15264,7 +15342,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -17003,12 +17081,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player detects special resi support 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -17025,7 +17109,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -17198,12 +17282,18 @@ Array [
         </View>
       </RCTPortalOrigin>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player renders 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -17220,7 +17310,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -18979,12 +19069,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The media player scrolls 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -19001,7 +19097,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -20681,6 +20777,6 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;

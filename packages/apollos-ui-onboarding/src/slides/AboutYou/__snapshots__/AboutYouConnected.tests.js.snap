@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AboutYouConnected component renders Gender and BirthDate when logged in 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     birthDate="1980-02-10T05:00:00.000Z"
     contentContainerStyle={
@@ -412,7 +418,7 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -707,12 +713,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`AboutYouConnected component renders in a default state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -729,7 +741,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1109,7 +1121,7 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -1149,12 +1161,18 @@ Array [
         Skip
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`AboutYouConnected component should render a custom Component 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1171,9 +1189,9 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text>
     Male
-  </Text>,
-]
+  </Text>
+</View>
 `;

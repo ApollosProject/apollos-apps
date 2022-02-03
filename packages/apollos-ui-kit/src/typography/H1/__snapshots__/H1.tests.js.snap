@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the H1 component should accept additional props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     accessible={false}
     style={
@@ -31,12 +37,18 @@ Array [
     }
   >
     "Do all the good you can. By all the means you can. In all the ways you can. In all theplaces you can. At all the times you can. To all the people you can. As long as ever you can." ― John Wesley
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H1 component should accept and render passed in styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -53,7 +65,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     style={
       Object {
@@ -65,12 +77,18 @@ Array [
     }
   >
     Salmon text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H1 component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -87,7 +105,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -99,12 +117,18 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the H1 component should render a loading state with correct positioning (margins) 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -121,7 +145,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -133,12 +157,18 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the H1 component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -155,7 +185,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     style={
       Object {
@@ -167,12 +197,18 @@ Array [
     }
   >
     Default H1 text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H1 component should render with correct padding 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -189,7 +225,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     padded={true}
     style={
@@ -203,12 +239,18 @@ Array [
     }
   >
     Padded H1 text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H1 component should render with other color states 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -225,7 +267,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     primary={true}
     style={
@@ -238,7 +280,7 @@ Array [
     }
   >
     H1
-  </Text>,
+  </Text>
   <Text
     secondary={true}
     style={
@@ -251,7 +293,7 @@ Array [
     }
   >
     H1
-  </Text>,
+  </Text>
   <Text
     style={
       Object {
@@ -264,7 +306,7 @@ Array [
     tertiary={true}
   >
     H1
-  </Text>,
+  </Text>
   <Text
     quaternary={true}
     style={
@@ -277,7 +319,7 @@ Array [
     }
   >
     H1
-  </Text>,
+  </Text>
   <Text
     placeholder={true}
     style={
@@ -290,7 +332,7 @@ Array [
     }
   >
     H1
-  </Text>,
+  </Text>
   <Text
     action={true}
     style={
@@ -303,6 +345,6 @@ Array [
     }
   >
     H1
-  </Text>,
-]
+  </Text>
+</View>
 `;

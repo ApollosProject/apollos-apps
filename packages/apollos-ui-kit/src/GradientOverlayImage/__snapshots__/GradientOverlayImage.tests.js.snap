@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the GradientOverlayImage component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -50,12 +56,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with an overlayColor 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -72,7 +84,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -141,12 +153,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.featured 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -163,7 +181,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -232,12 +250,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.gradient-bottom 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -254,7 +278,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -323,12 +347,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.gradient-top 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -345,7 +375,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -414,12 +444,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.high 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -436,7 +472,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -505,12 +541,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.low 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -527,7 +569,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -596,12 +638,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.medium 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -618,7 +666,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -687,6 +735,6 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;

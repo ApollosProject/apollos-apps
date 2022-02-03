@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ActionCard component should accept additional Card props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="salmon"
     style={
@@ -69,12 +75,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ActionCard component should render an action 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -91,7 +103,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -757,12 +769,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ActionCard component should render an icon and label 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -779,7 +797,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1121,12 +1139,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ActionCard component should render children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1143,7 +1167,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1193,6 +1217,6 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

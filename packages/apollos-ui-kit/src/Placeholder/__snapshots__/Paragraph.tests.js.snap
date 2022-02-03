@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Paragraph placeholder accepts custom line styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       style={
@@ -56,12 +62,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Paragraph placeholder accepts custom styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -78,7 +90,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -122,12 +134,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Paragraph placeholder has varying width lines 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -144,7 +162,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       style={
@@ -182,12 +200,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Paragraph placeholder renders correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -204,7 +228,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       style={
@@ -242,12 +266,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Paragraph placeholder renders multiple lines 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -264,7 +294,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       style={
@@ -866,6 +896,6 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;

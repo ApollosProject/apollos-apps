@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The ContentTitles component should feature 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -598,12 +604,18 @@ Array [
         </RNSVGSvgView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The ContentTitles component should micro 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -620,7 +632,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -674,12 +686,18 @@ Array [
         This is a short summary of this content.
       </Text>
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The ContentTitles component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -696,7 +714,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -760,12 +778,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The ContentTitles component should render social buttons 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -782,7 +806,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1362,6 +1386,6 @@ Array [
         </RNSVGSvgView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

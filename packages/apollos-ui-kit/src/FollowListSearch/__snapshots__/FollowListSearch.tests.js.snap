@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FollowListSearch should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -527,7 +533,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <RCTScrollView
     style={
       Object {
@@ -544,12 +550,18 @@ Array [
         }
       />
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`FollowListSearch should render a modal 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -566,7 +578,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Modal
     animationType="slide"
     hardwareAccelerated={false}
@@ -1209,12 +1221,18 @@ Array [
         </View>
       </RCTSafeAreaView>
     </View>
-  </Modal>,
-]
+  </Modal>
+</View>
 `;
 
 exports[`FollowListSearch should render followers 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1231,7 +1249,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1740,7 +1758,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <RCTScrollView
     style={
       Object {
@@ -1897,12 +1915,18 @@ Array [
         }
       />
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`FollowListSearch should render with a search function 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1919,7 +1943,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2428,7 +2452,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <RCTScrollView
     style={
       Object {
@@ -2445,6 +2469,6 @@ Array [
         }
       />
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;

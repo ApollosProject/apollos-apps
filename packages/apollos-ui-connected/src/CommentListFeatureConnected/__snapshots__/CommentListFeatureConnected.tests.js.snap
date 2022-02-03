@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The CommentListFeatureConnected component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <RCTScrollView
     data={
       Array [
@@ -6274,7 +6280,7 @@ Array [
         }
       />
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     animateOnMount={true}
     backgroundComponent={[Function]}
@@ -6288,6 +6294,6 @@ Array [
       ]
     }
     topInset={0}
-  />,
-]
+  />
+</View>
 `;

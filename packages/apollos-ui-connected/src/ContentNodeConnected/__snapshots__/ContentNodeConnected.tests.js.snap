@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentNodeConnected should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View>
     <View
       style={
@@ -636,7 +642,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     flex={false}
     style={
@@ -690,6 +696,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

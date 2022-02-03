@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Button component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -69,12 +75,18 @@ Array [
         My Button!
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a Tertiary button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -91,7 +103,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -142,12 +154,18 @@ Array [
         Tertiary Action
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a bordered button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -164,7 +182,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -214,12 +232,18 @@ Array [
         Ghost Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a disabled button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -236,7 +260,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -287,12 +311,18 @@ Array [
         Disabled Button 😭
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a ghost button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -309,7 +339,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -359,12 +389,18 @@ Array [
         Ghost Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a ghost pill button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -381,7 +417,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -431,12 +467,18 @@ Array [
         Ghost Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -453,7 +495,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -498,12 +540,18 @@ Array [
         size="small"
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a pill button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -520,7 +568,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -571,12 +619,18 @@ Array [
         Pill Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a primary button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -593,7 +647,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -644,12 +698,18 @@ Array [
         Primary Action
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a secondary button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -666,7 +726,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -717,12 +777,18 @@ Array [
         Secondary Action
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render as default type 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -739,7 +805,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -790,12 +856,18 @@ Array [
         My Button!
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render with children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -812,7 +884,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -835,6 +907,6 @@ Array [
     }
   >
     <View />
-  </View>,
-]
+  </View>
+</View>
 `;

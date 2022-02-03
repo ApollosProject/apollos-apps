@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentCard renders Basic card, with Image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -358,12 +364,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders a Default Placeholder 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -380,7 +392,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     isLoading={true}
     style={
@@ -607,12 +619,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders as Tile/Image only 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -629,7 +647,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     forceRatio={1}
     style={
@@ -916,12 +934,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders as Tile/No image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -938,7 +962,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     forceRatio={1}
     style={
@@ -1257,12 +1281,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders basic tile card, with Image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1279,7 +1309,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     forceRatio={1}
     style={
@@ -1619,12 +1649,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders with Default Placeholder 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1641,7 +1677,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     forceRatio={1}
     isLoading={true}
@@ -1864,12 +1900,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders with No image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1886,7 +1928,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2208,12 +2250,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ContentCard renders with an Image only 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2230,7 +2278,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2507,6 +2555,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

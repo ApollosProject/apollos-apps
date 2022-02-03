@@ -1,297 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the LikeButton component should render a Like 1`] = `
-<RNSVGSvgView
-  align="xMidYMid"
-  bbHeight={32}
-  bbWidth={32}
-  color="#17B582"
-  height={32}
-  id="Raw"
-  meetOrSlice={0}
-  minX={0}
-  minY={0}
-  size={32}
+<View
   style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderWidth": 0,
-      },
-      Object {},
-      null,
-      Object {
-        "flex": 0,
-        "height": 32,
-        "width": 32,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-  tintColor="#17B582"
-  vbHeight={256}
-  vbWidth={256}
-  width={32}
 >
-  <RNSVGGroup
-    fill={
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    color="#17B582"
+    height={32}
+    id="Raw"
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    size={32}
+    style={
       Array [
-        0,
-        4278190080,
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {},
+        null,
+        Object {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
       ]
     }
-    fillOpacity={1}
-    fillRule={1}
-    font={Object {}}
-    matrix={
-      Array [
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
-      ]
-    }
-    opacity={1}
-    originX={0}
-    originY={0}
-    propList={Array []}
-    rotation={0}
-    scaleX={1}
-    scaleY={1}
-    skewX={0}
-    skewY={0}
-    stroke={null}
-    strokeDasharray={null}
-    strokeDashoffset={null}
-    strokeLinecap={0}
-    strokeLinejoin={0}
-    strokeMiterlimit={4}
-    strokeOpacity={1}
-    strokeWidth={1}
-    vectorEffect={0}
-    x={0}
-    y={0}
+    tintColor="#17B582"
+    vbHeight={256}
+    vbWidth={256}
+    width={32}
   >
-    <RNSVGRect
-      fill={null}
-      fillOpacity={1}
-      fillRule={1}
-      height={256}
-      matrix={
-        Array [
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-        ]
-      }
-      opacity={1}
-      originX={0}
-      originY={0}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-      rotation={0}
-      rx={0}
-      ry={0}
-      scaleX={1}
-      scaleY={1}
-      skewX={0}
-      skewY={0}
-      stroke={null}
-      strokeDasharray={null}
-      strokeDashoffset={null}
-      strokeLinecap={0}
-      strokeLinejoin={0}
-      strokeMiterlimit={4}
-      strokeOpacity={1}
-      strokeWidth={1}
-      vectorEffect={0}
-      width={256}
-      x={0}
-      y={0}
-    />
-    <RNSVGPath
-      d="M128,216S28,160,28,92A52.00881,52.00881,0,0,1,128.00008,71.965l-.00019.00008A52.00881,52.00881,0,0,1,228,92C228,160,128,216,128,216Z"
-      fill={null}
-      fillOpacity={1}
-      fillRule={1}
-      matrix={
-        Array [
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-        ]
-      }
-      opacity={1}
-      originX={0}
-      originY={0}
-      propList={
-        Array [
-          "fill",
-          "stroke",
-          "strokeWidth",
-          "strokeLinecap",
-          "strokeLinejoin",
-        ]
-      }
-      rotation={0}
-      scaleX={1}
-      scaleY={1}
-      skewX={0}
-      skewY={0}
-      stroke={
-        Array [
-          0,
-          4279743874,
-        ]
-      }
-      strokeDasharray={null}
-      strokeDashoffset={null}
-      strokeLinecap={1}
-      strokeLinejoin={1}
-      strokeMiterlimit={4}
-      strokeOpacity={1}
-      strokeWidth={16}
-      vectorEffect={0}
-      x={0}
-      y={0}
-    />
-  </RNSVGGroup>
-</RNSVGSvgView>
-`;
-
-exports[`the LikeButton component should render a UnLike 1`] = `
-<RNSVGSvgView
-  align="xMidYMid"
-  bbHeight={32}
-  bbWidth={32}
-  color="#17B582"
-  fill="#17B582"
-  height={32}
-  id="Raw"
-  meetOrSlice={0}
-  minX={0}
-  minY={0}
-  size={32}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "borderWidth": 0,
-      },
-      Object {},
-      null,
-      Object {
-        "flex": 0,
-        "height": 32,
-        "width": 32,
-      },
-    ]
-  }
-  tintColor="#17B582"
-  vbHeight={256}
-  vbWidth={256}
-  width={32}
->
-  <RNSVGGroup
-    fill={
-      Array [
-        0,
-        4279743874,
-      ]
-    }
-    fillOpacity={1}
-    fillRule={1}
-    font={Object {}}
-    matrix={
-      Array [
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
-      ]
-    }
-    opacity={1}
-    originX={0}
-    originY={0}
-    propList={
-      Array [
-        "fill",
-      ]
-    }
-    rotation={0}
-    scaleX={1}
-    scaleY={1}
-    skewX={0}
-    skewY={0}
-    stroke={null}
-    strokeDasharray={null}
-    strokeDashoffset={null}
-    strokeLinecap={0}
-    strokeLinejoin={0}
-    strokeMiterlimit={4}
-    strokeOpacity={1}
-    strokeWidth={1}
-    vectorEffect={0}
-    x={0}
-    y={0}
-  >
-    <RNSVGRect
-      fill={null}
-      fillOpacity={1}
-      fillRule={1}
-      height={256}
-      matrix={
-        Array [
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-        ]
-      }
-      opacity={1}
-      originX={0}
-      originY={0}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-      rotation={0}
-      rx={0}
-      ry={0}
-      scaleX={1}
-      scaleY={1}
-      skewX={0}
-      skewY={0}
-      stroke={null}
-      strokeDasharray={null}
-      strokeDashoffset={null}
-      strokeLinecap={0}
-      strokeLinejoin={0}
-      strokeMiterlimit={4}
-      strokeOpacity={1}
-      strokeWidth={1}
-      vectorEffect={0}
-      width={256}
-      x={0}
-      y={0}
-    />
-    <RNSVGPath
-      d="M176.02344,32a59.85506,59.85506,0,0,0-48,23.95947A60.02029,60.02029,0,0,0,20.02344,92c0,71.86279,99.84082,128.6001,104.09082,130.98a8.00089,8.00089,0,0,0,7.81836,0A317.34027,317.34027,0,0,0,183.375,185.44629C218.30957,154.00488,236.02344,122.56494,236.02344,92A60.06812,60.06812,0,0,0,176.02344,32Z"
+    <RNSVGGroup
       fill={
         Array [
           0,
@@ -300,6 +48,7 @@ exports[`the LikeButton component should render a UnLike 1`] = `
       }
       fillOpacity={1}
       fillRule={1}
+      font={Object {}}
       matrix={
         Array [
           1,
@@ -330,7 +79,274 @@ exports[`the LikeButton component should render a UnLike 1`] = `
       vectorEffect={0}
       x={0}
       y={0}
-    />
-  </RNSVGGroup>
-</RNSVGSvgView>
+    >
+      <RNSVGRect
+        fill={null}
+        fillOpacity={1}
+        fillRule={1}
+        height={256}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        rx={0}
+        ry={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        width={256}
+        x={0}
+        y={0}
+      />
+      <RNSVGPath
+        d="M128,216S28,160,28,92A52.00881,52.00881,0,0,1,128.00008,71.965l-.00019.00008A52.00881,52.00881,0,0,1,228,92C228,160,128,216,128,216Z"
+        fill={null}
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+            "stroke",
+            "strokeWidth",
+            "strokeLinecap",
+            "strokeLinejoin",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={
+          Array [
+            0,
+            4279743874,
+          ]
+        }
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={1}
+        strokeLinejoin={1}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={16}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;
+
+exports[`the LikeButton component should render a UnLike 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    color="#17B582"
+    fill="#17B582"
+    height={32}
+    id="Raw"
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    size={32}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {},
+        null,
+        Object {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
+      ]
+    }
+    tintColor="#17B582"
+    vbHeight={256}
+    vbWidth={256}
+    width={32}
+  >
+    <RNSVGGroup
+      fill={
+        Array [
+          0,
+          4279743874,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      font={Object {}}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      originX={0}
+      originY={0}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      stroke={null}
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
+    >
+      <RNSVGRect
+        fill={null}
+        fillOpacity={1}
+        fillRule={1}
+        height={256}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        rx={0}
+        ry={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        width={256}
+        x={0}
+        y={0}
+      />
+      <RNSVGPath
+        d="M176.02344,32a59.85506,59.85506,0,0,0-48,23.95947A60.02029,60.02029,0,0,0,20.02344,92c0,71.86279,99.84082,128.6001,104.09082,130.98a8.00089,8.00089,0,0,0,7.81836,0A317.34027,317.34027,0,0,0,183.375,185.44629C218.30957,154.00488,236.02344,122.56494,236.02344,92A60.06812,60.06812,0,0,0,176.02344,32Z"
+        fill={
+          Array [
+            0,
+            4278190080,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={Array []}
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
 `;

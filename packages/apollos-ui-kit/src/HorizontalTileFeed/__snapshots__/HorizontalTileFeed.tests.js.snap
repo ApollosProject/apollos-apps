@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The HorizontalTileFeed component renders correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     collapsable={false}
     contentContainerStyle={
@@ -285,12 +291,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The HorizontalTileFeed component renders empty state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -307,7 +319,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     collapsable={false}
     contentContainerStyle={
@@ -883,6 +895,6 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Modal component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Modal
     hardwareAccelerated={false}
     visible={true}
@@ -36,12 +42,18 @@ Array [
         emulateUnlessSupported={true}
       />
     </View>
-  </Modal>,
-]
+  </Modal>
+</View>
 `;
 
 exports[`The Modal component should render a custom close action 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -58,7 +70,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Modal
     hardwareAccelerated={false}
     visible={true}
@@ -163,12 +175,18 @@ Array [
         </View>
       </RCTSafeAreaView>
     </View>
-  </Modal>,
-]
+  </Modal>
+</View>
 `;
 
 exports[`The Modal component should render with children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -185,7 +203,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Modal
     hardwareAccelerated={false}
     visible={true}
@@ -207,6 +225,6 @@ Array [
         </Text>
       </RCTSafeAreaView>
     </View>
-  </Modal>,
-]
+  </Modal>
+</View>
 `;

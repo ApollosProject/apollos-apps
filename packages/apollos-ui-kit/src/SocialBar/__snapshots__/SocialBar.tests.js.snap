@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The SocialBar component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -541,12 +547,18 @@ Array [
         </RNSVGGroup>
       </RNSVGSvgView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The SocialBar component should show only buttons given 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -563,7 +575,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -783,7 +795,7 @@ Array [
         
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Object {
@@ -1100,12 +1112,18 @@ Array [
         </RNSVGGroup>
       </RNSVGSvgView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The SocialBar component should toggle liked 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1122,7 +1140,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1648,6 +1666,6 @@ Array [
         </RNSVGGroup>
       </RNSVGSvgView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -279,12 +285,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders John 3:16-17 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -301,7 +313,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -428,12 +440,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -450,7 +468,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -766,12 +784,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Psalm 23 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -788,7 +812,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -1248,12 +1272,18 @@ Array [
     >
       PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Psalm 32 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1270,7 +1300,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -2004,12 +2034,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2026,7 +2062,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -2940,12 +2976,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2962,7 +3004,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -3168,12 +3210,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -3190,7 +3238,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -3585,12 +3633,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders a custom version name 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -3607,7 +3661,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       style={
@@ -3826,12 +3880,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ScriptureItem component renders a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -3848,7 +3908,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       style={
@@ -3910,6 +3970,6 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ui-kit/Comment Should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -615,12 +621,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-kit/Comment Should render with isLiked 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -637,7 +649,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1231,12 +1243,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-kit/Comment Should render without onPressLike 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1253,7 +1271,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1644,12 +1662,18 @@ Array [
     >
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-kit/Comment should render without onPressActionMenu 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1666,7 +1690,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1978,6 +2002,6 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The PrayerExperienceConnected component closes onboarding when button is pressed 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onClose={[Function]}
   >
@@ -645,6 +651,7 @@ Array [
                     >
                       <PrayerCard
                         prayer="I pray for you."
+                        prayerId="PrayerRequest:1"
                         profile={
                           Object {
                             "__typename": "Person",
@@ -658,6 +665,7 @@ Array [
                             },
                           }
                         }
+                        reportPrayer={[Function]}
                         title="Pray for Father"
                       />
                     </View>
@@ -1214,12 +1222,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1236,7 +1250,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onClose={[Function]}
   >
@@ -1863,6 +1877,7 @@ Array [
                     >
                       <PrayerCard
                         prayer="I pray for you."
+                        prayerId="PrayerRequest:1"
                         profile={
                           Object {
                             "__typename": "Person",
@@ -1876,6 +1891,7 @@ Array [
                             },
                           }
                         }
+                        reportPrayer={[Function]}
                         title="Pray for Father"
                       />
                     </View>
@@ -2091,12 +2107,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerExperienceConnected component prays 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2113,7 +2135,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onClose={[Function]}
   >
@@ -2740,6 +2762,7 @@ Array [
                     >
                       <PrayerCard
                         prayer="I pray for you."
+                        prayerId="PrayerRequest:1"
                         profile={
                           Object {
                             "__typename": "Person",
@@ -2753,6 +2776,7 @@ Array [
                             },
                           }
                         }
+                        reportPrayer={[Function]}
                         title="Pray for Father"
                       />
                     </View>
@@ -3309,12 +3333,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The PrayerExperienceConnected component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -3331,7 +3361,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onClose={[Function]}
   >
@@ -3958,6 +3988,7 @@ Array [
                     >
                       <PrayerCard
                         prayer="I pray for you."
+                        prayerId="PrayerRequest:1"
                         profile={
                           Object {
                             "__typename": "Person",
@@ -3971,6 +4002,7 @@ Array [
                             },
                           }
                         }
+                        reportPrayer={[Function]}
                         title="Pray for Father"
                       />
                     </View>
@@ -4527,6 +4559,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

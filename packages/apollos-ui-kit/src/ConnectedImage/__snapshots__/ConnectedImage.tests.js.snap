@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -38,12 +44,18 @@ Array [
         "backgroundColor": "#A5A5A5",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the ConnectedImage component should render between minAspectRatio and maxAspectRatio 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -60,7 +72,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -80,12 +92,18 @@ Array [
         "backgroundColor": "#A5A5A5",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -102,7 +120,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -121,12 +139,18 @@ Array [
         "backgroundColor": "#A5A5A5",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -143,7 +167,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -163,12 +187,18 @@ Array [
         "backgroundColor": "#A5A5A5",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the ConnectedImage component should render with a minAspectRatio 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -185,7 +215,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -205,8 +235,8 @@ Array [
         "backgroundColor": "#A5A5A5",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the ConnectedImage component should throw an error if maxAspectRatio is used without maintainAspectRatio 1`] = `

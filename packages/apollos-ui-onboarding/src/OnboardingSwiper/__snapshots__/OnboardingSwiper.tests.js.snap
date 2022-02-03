@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The onboarding swiper should render with a fragment as a child 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -229,12 +235,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The onboarding swiper should render with an array as a child 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -251,7 +263,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -462,6 +474,6 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

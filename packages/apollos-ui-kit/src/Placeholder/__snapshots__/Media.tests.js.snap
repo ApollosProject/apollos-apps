@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Media placeholder accepts custom styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -28,12 +34,18 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`The Media placeholder accepts size 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -50,7 +62,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -60,12 +72,18 @@ Array [
         "width": "50%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`The Media placeholder renders correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -82,7 +100,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -92,6 +110,6 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
