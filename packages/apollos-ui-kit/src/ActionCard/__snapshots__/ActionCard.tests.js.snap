@@ -452,8 +452,8 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
-              "borderColor": "#A5A5A5",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
@@ -478,7 +478,7 @@ Array [
               align="xMidYMid"
               bbHeight={16}
               bbWidth={16}
-              color="#27272E"
+              color="#FFFFFF"
               height={16}
               id="Raw"
               meetOrSlice={0}
@@ -500,7 +500,7 @@ Array [
                   },
                 ]
               }
-              tintColor="#27272E"
+              tintColor="#FFFFFF"
               vbHeight={256}
               vbWidth={256}
               width={16}
@@ -624,7 +624,7 @@ Array [
                   stroke={
                     Array [
                       0,
-                      4280756014,
+                      4294967295,
                     ]
                   }
                   strokeDasharray={null}
@@ -673,7 +673,7 @@ Array [
                   stroke={
                     Array [
                       0,
-                      4280756014,
+                      4294967295,
                     ]
                   }
                   strokeDasharray={null}
@@ -722,7 +722,7 @@ Array [
                   stroke={
                     Array [
                       0,
-                      4280756014,
+                      4294967295,
                     ]
                   }
                   strokeDasharray={null}
@@ -743,7 +743,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "color": "#27272E",
+                "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
                 "justifyContent": "center",

@@ -89,32 +89,34 @@ Array [
               }
               themeSize={72}
             >
-              <View
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMedia",
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
-                    "alignItems": "center",
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 72,
-                    "height": 72,
-                    "justifyContent": "center",
-                    "width": 72,
+                    "borderRadius": 36,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
                 }
                 themeSize={72}
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(249, 249, 251)",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 36,
-                    }
-                  }
-                  themeSize={72}
-                >
-                  MN
-                </Text>
-              </View>
+              />
             </View>
           </View>
           <Text
@@ -183,8 +185,8 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
                   "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
@@ -276,32 +278,34 @@ Array [
               }
               themeSize={72}
             >
-              <View
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMedia",
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
-                    "alignItems": "center",
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 72,
-                    "height": 72,
-                    "justifyContent": "center",
-                    "width": 72,
+                    "borderRadius": 36,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
                 }
                 themeSize={72}
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(249, 249, 251)",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 36,
-                    }
-                  }
-                  themeSize={72}
-                >
-                  MN
-                </Text>
-              </View>
+              />
             </View>
           </View>
           <Text
@@ -370,8 +374,8 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
                   "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,

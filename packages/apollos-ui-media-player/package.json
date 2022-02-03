@@ -78,7 +78,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "../../node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "../../node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|react-navigation|@apollosproject|d3|d3-*|commander))"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules",

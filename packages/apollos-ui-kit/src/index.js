@@ -6,10 +6,12 @@ export ActivityIndicator, {
 } from './ActivityIndicator';
 export ActionBar, { ActionBarItem } from './ActionBar';
 export AddCommentInput from './AddCommentInput';
+export AppIcon from './AppIcon';
 export Avatar, { AvatarList, AvatarCloud } from './Avatar';
 export BackgroundImageBlur from './BackgroundImageBlur';
 export BackgroundView from './BackgroundView';
 export Button, { ButtonLink, ButtonIcon } from './Button';
+export ByLine from './ByLine';
 export CampusCard from './CampusCard';
 export Card, {
   CardImage,

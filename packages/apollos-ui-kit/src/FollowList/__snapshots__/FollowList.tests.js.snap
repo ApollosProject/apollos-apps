@@ -77,10 +77,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(207, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(207, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -201,10 +202,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(217, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(217, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -325,10 +327,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(202, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(202, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -449,10 +452,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(312, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(312, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -611,10 +615,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(207, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(207, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -695,10 +700,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(217, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(217, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -843,10 +849,11 @@ Array [
             themeSize={64}
           >
             <View
+              backgroundColor="hsl(207, 40%, 60%)"
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "hsl(207, 40%, 60%)",
                   "borderRadius": 64,
                   "height": 64,
                   "justifyContent": "center",
@@ -967,10 +974,11 @@ Array [
             themeSize={64}
           >
             <View
+              backgroundColor="hsl(217, 40%, 60%)"
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "hsl(217, 40%, 60%)",
                   "borderRadius": 64,
                   "height": 64,
                   "justifyContent": "center",
@@ -1131,10 +1139,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(202, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(202, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -1255,10 +1264,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(312, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(312, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -1417,10 +1427,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(207, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(207, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -1541,10 +1552,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(217, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(217, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -1716,10 +1728,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(207, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(207, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -1840,10 +1853,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(217, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(217, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -2002,10 +2016,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(207, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(207, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -2126,10 +2141,11 @@ Array [
         themeSize={64}
       >
         <View
+          backgroundColor="hsl(217, 40%, 60%)"
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "hsl(217, 40%, 60%)",
               "borderRadius": 64,
               "height": 64,
               "justifyContent": "center",
@@ -2251,7 +2267,7 @@ Array [
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#A5A5A5",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "flexDirection": "row",
@@ -2268,7 +2284,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#A5A5A5",
+              "color": "#17B582",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,

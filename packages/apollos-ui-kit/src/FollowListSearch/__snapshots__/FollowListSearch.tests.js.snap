@@ -1787,10 +1787,11 @@ Array [
             themeSize={64}
           >
             <View
+              backgroundColor="hsl(217, 40%, 60%)"
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "hsl(217, 40%, 60%)",
                   "borderRadius": 64,
                   "height": 64,
                   "justifyContent": "center",

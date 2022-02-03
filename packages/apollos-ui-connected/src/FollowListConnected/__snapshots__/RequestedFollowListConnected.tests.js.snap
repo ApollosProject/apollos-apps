@@ -130,8 +130,8 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 8,
             "borderWidth": 2,
             "elevation": 2,
@@ -148,7 +148,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         <Text
           style={
             Object {
-              "color": "#27272E",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "lineHeight": 18,

@@ -295,8 +295,8 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#A5A5A5",
-                      "borderColor": "#A5A5A5",
+                      "backgroundColor": "#17B582",
+                      "borderColor": "#17B582",
                       "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
@@ -314,7 +314,7 @@ Array [
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#27272E",
+                        "color": "#FFFFFF",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",

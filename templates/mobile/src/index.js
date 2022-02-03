@@ -20,7 +20,7 @@ import {
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-authentication';
-import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
+import { LandingSwiper, Onboarding } from '@apollosproject/ui-onboarding';
 
 import {
   ContentSingleConnected,
@@ -134,7 +134,7 @@ const App = () => (
                 stackPresentation: 'push',
               }}
             />
-            <Screen name="LandingScreen" component={Landing} />
+            <Screen name="LandingScreen" component={LandingSwiper} />
             <Screen name="Search" component={SearchScreenConnected} />
             <Screen
               name="UserSettingsNavigator"

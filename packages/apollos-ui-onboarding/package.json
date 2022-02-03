@@ -29,7 +29,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*))"
+      "node_modules/(?!((jest-)?react-native|react-navigation-shared-element|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*|d3|d3-*|commander))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -56,6 +56,8 @@
     "@apollosproject/ui-notifications": "*",
     "react": "*",
     "react-native": "*",
+    "react-native-reanimated": "^2.0.0",
+    "react-navigation-shared-element": "*",
     "react-native-safe-area-context": "*"
   },
   "dependencies": {
@@ -76,6 +78,7 @@
     "react-native": "0.63.2",
     "react-native-safe-area-context": "^3.0.7",
     "react-test-renderer": "16.13.1",
+    "react-navigation-shared-element": "^2.0.0",
     "waait": "1.0.2"
   },
   "publishConfig": {

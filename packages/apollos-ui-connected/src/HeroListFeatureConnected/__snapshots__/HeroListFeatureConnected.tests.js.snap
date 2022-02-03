@@ -351,7 +351,7 @@ exports[`The HeroListFeatureConnected component should render 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#A5A5A5",
+          "borderColor": "#17B582",
           "borderRadius": 16,
           "borderWidth": 2,
           "flexDirection": "row",
@@ -368,7 +368,7 @@ exports[`The HeroListFeatureConnected component should render 1`] = `
       <Text
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "#17B582",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -803,7 +803,7 @@ exports[`The HeroListFeatureConnected component should render without a hero car
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#A5A5A5",
+          "borderColor": "#17B582",
           "borderRadius": 16,
           "borderWidth": 2,
           "flexDirection": "row",
@@ -820,7 +820,7 @@ exports[`The HeroListFeatureConnected component should render without a hero car
       <Text
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "#17B582",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -1113,7 +1113,7 @@ exports[`The HeroListFeatureConnected component should render without actions 1`
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#A5A5A5",
+          "borderColor": "#17B582",
           "borderRadius": 16,
           "borderWidth": 2,
           "flexDirection": "row",
@@ -1130,7 +1130,7 @@ exports[`The HeroListFeatureConnected component should render without actions 1`
       <Text
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "#17B582",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,

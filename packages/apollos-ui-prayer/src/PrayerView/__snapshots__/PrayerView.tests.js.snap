@@ -84,13 +84,13 @@ Array [
               <View
                 bordered={false}
                 disabled={false}
-                pill={true}
+                pill={false}
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
+                    "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
+                    "borderRadius": 16,
                     "borderWidth": 2,
                     "elevation": 2,
                     "flexDirection": "row",
@@ -208,13 +208,13 @@ Array [
               <View
                 bordered={true}
                 disabled={false}
-                pill={true}
+                pill={false}
                 style={
                   Object {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
-                    "borderColor": "#A5A5A5",
-                    "borderRadius": 48,
+                    "borderColor": "#17B582",
+                    "borderRadius": 16,
                     "borderWidth": 0,
                     "flexDirection": "row",
                     "height": 48,
@@ -228,7 +228,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#A5A5A5",
+                      "color": "#17B582",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -242,13 +242,13 @@ Array [
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
                   "flexDirection": "row",
@@ -349,13 +349,13 @@ Array [
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
                   "flexDirection": "row",
@@ -1069,13 +1069,13 @@ Array [
               <View
                 bordered={true}
                 disabled={false}
-                pill={true}
+                pill={false}
                 style={
                   Object {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
-                    "borderColor": "#A5A5A5",
-                    "borderRadius": 48,
+                    "borderColor": "#17B582",
+                    "borderRadius": 16,
                     "borderWidth": 0,
                     "flexDirection": "row",
                     "height": 48,
@@ -1089,7 +1089,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#A5A5A5",
+                      "color": "#17B582",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -1103,13 +1103,13 @@ Array [
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
                   "flexDirection": "row",
@@ -1214,13 +1214,13 @@ Array [
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
                   "flexDirection": "row",
@@ -1321,13 +1321,13 @@ Array [
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
                   "flexDirection": "row",
@@ -1428,13 +1428,13 @@ Array [
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
                   "flexDirection": "row",
