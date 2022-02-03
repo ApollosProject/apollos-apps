@@ -35,6 +35,9 @@ export const ACTION_MAP = {
   OPEN_URL: ({ openUrl, relatedNode }) => {
     openUrl(relatedNode.url);
   },
+  OPEN_URL_EXTERNALLY: ({ openUrl, relatedNode }) => {
+    openUrl(relatedNode.url, { externalBrowser: true });
+  },
   OPEN_AUTHENTICATED_URL: ({ openUrl, relatedNode }) => {
     openUrl(relatedNode.url, {}, { useRockToken: true });
   },
