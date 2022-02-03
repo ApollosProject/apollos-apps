@@ -145,7 +145,7 @@ const RNVideoPresentation = ({
     return () => {
       // Ugly :/
       // Thanks to RNScreens, the native video doesn't realize it's unmounted.
-      // React land does thought, so we need to intercept that unmount and stop the video.
+      // React land does though, so we need to intercept that unmount and stop the video.
       // We also need to stop pip, since the PIP player doesn't work once the component is paused.
       // eslint-disable-next-line react-hooks/exhaustive-deps
       videoRef?.current?.setNativeProps({
