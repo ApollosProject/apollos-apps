@@ -141,7 +141,7 @@ const RNVideoPresentation = ({
     }
   }, [pictureMode, useNativeFullscreeniOS, pause]);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     return () => {
       // Ugly :/
       // Thanks to RNScreens, the native video doesn't realize it's unmounted.

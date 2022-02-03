@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { IPlayerMedia } from './types';
-import { View, StyleSheet, Platform } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { ConnectedImage, styled } from '@apollosproject/ui-kit';
 
 const Wrapper = styled(StyleSheet.absoluteFillObject)(View);
@@ -10,12 +10,10 @@ const BackgroundImage = styled({
   ...StyleSheet.absoluteFillObject,
 })(ConnectedImage);
 
-const InnerImage = styled(({ theme }: { theme: any }) => ({
+const InnerImage = styled({
   ...StyleSheet.absoluteFillObject,
   backgroundColor: 'transparent',
-  // @ts-ignore
-  ...Platform.select(theme?.shadows?.default),
-}))(ConnectedImage);
+})(ConnectedImage);
 
 const CoverImage: React.FunctionComponent<{
   source: IPlayerMedia['coverImage'];

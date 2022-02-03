@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import Reanimated from 'react-native-reanimated';
 import PropTypes from 'prop-types';
@@ -99,23 +99,32 @@ const NodeSingleConnectedWithMedia = ({
     data?.node?.liveStream?.isLive &&
     data?.node?.liveStream?.media?.sources?.length;
 
-  if (!hasVideo && !hasLivestream && !hasAudio)
+  const mediaSource = useMemo(() => {
+    if (hasLivestream) return data?.node?.liveStream?.media?.sources[0];
+
+    if (hasVideo) {
+      const video = data?.node?.videos?.find(({ sources }) => sources?.length);
+      return {
+        ...video.sources[0],
+        // if there's an embed code, pass it ot the media player and it'll choose the best path to use:
+        ...(video.embedHtml ? { html: video.embedHtml } : {}),
+      };
+    }
+
+    if (hasAudio) {
+      return data?.node?.audios?.find(({ sources }) => sources?.length)
+        ?.sources[0];
+    }
+
+    return null;
+  }, [data, hasLivestream, hasVideo, hasAudio]);
+
+  if (!mediaSource)
     return (
       <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
         {children}
       </NodeSingleConnected>
     );
-
-  const mediaSource = (() => {
-    if (hasLivestream) return data.node?.liveStream?.media?.sources[0];
-
-    if (hasVideo)
-      return data.node?.videos?.find(({ sources }) => sources?.length)
-        ?.sources[0];
-
-    return data.node?.audios?.find(({ sources }) => sources?.length)
-      ?.sources[0];
-  })();
 
   return (
     <BackgroundView>

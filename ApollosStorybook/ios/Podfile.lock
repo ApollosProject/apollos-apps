@@ -279,7 +279,7 @@ PODS:
   - React-jsinspector (0.67.1)
   - React-logger (0.67.1):
     - glog
-  - react-native-apollos-player (2.43.0):
+  - react-native-apollos-player (2.43.1):
     - React
   - react-native-config (0.11.7):
     - React
@@ -462,7 +462,7 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.99.0)
   - FlipperKit/SKIOSNetworkPlugin (= 0.99.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - OneSignalXCFramework (< 4.0, >= 3.0)
+  - OneSignalXCFramework (< 4.0, >= 3.4.3)
   - OpenSSL-Universal (= 1.1.180)
   - Permission-Notifications (from `../node_modules/react-native-permissions/ios/Notifications.podspec`)
   - Permission-PhotoLibrary (from `../node_modules/react-native-permissions/ios/PhotoLibrary.podspec`)
@@ -699,7 +699,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 1af5de75a4c834c05d53a77c1512e5aa6c18412f
   React-jsinspector: ab80bcdb02f28cdfc0dbbaea6db1241565d59002
   React-logger: b08f354e4c928ff794ca477347fea0922aaf11c3
-  react-native-apollos-player: 73274aecf7ea1e272dfb6c19897f5e004fc57f94
+  react-native-apollos-player: e8403a6087bdb92515ef2339e0be9f026212c3a3
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: 7c9436da6dfdecd9526c62eac62ea2bc3f0cc8ea
@@ -742,6 +742,6 @@ SPEC CHECKSUMS:
   Yoga: 5cbf25add73edb290e1067017690f7ebf56c5468
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 15d6e68620333dff2e19e68f875c5c2f3299184e
+PODFILE CHECKSUM: 60f6864e4a5aeb2165abfefefa790267f2721c30
 
 COCOAPODS: 1.11.2
