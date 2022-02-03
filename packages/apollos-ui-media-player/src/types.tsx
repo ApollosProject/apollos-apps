@@ -1,6 +1,6 @@
 export interface IPlayerMedia {
   /** Media Source to play. Passed unaltered to underyling Video component */
-  source?: { uri?: string };
+  source?: { uri?: string; html?: string };
   /** Image to display while loading */
   coverImage?: { uri?: string } | [{ uri: string }];
   /** Disables irrelevant UI controls during live stream */

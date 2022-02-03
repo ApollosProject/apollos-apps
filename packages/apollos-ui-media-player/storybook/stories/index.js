@@ -2,12 +2,24 @@ import * as React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { Text } from 'react-native';
 
+import { WebView } from 'react-native-webview';
+
 import {
   ApollosPlayerContainer,
   useNowPlaying,
   usePlayerControls,
   PictureMode,
 } from '@apollosproject/ui-media-player';
+
+const ResiHTML = {
+  html:
+    '<div style="position:relative;overflow:hidden;padding-top:56.25%;">\n  <iframe allow="autoplay; fullscreen" allowfullscreen="true" src="https://control.resi.io/webplayer/video.html?id=NmMwMDI3MzItNzIwMy00MTRkLTgwYTAtYjY2OTU3Njg1YzZhOjQ0NDNiZmZhLTdiOWYtMTFlYy05MWZmLWU1ZDQ2ODFjMTVmNw%3D%3D&type=library&autoplay=false" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"></iframe>\n</div>',
+};
+
+const YouTubeHTML = {
+  html:
+    '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qog4M6nyRpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+};
 
 const PlayerExamples = () => {
   const { setNowPlaying } = useNowPlaying();
@@ -107,6 +119,37 @@ const PlayerExamples = () => {
       >
         Play Mp3
       </Text>
+
+      <Text
+        onPress={() => {
+          setNowPlaying({
+            source: ResiHTML,
+            presentationProps: {
+              title: 'Web Video',
+              description: 'Video Description',
+            },
+          });
+          play();
+        }}
+      >
+        Play Resi Web Embed
+      </Text>
+
+      <Text
+        onPress={() => {
+          setNowPlaying({
+            source: YouTubeHTML,
+            presentationProps: {
+              title: 'YT Video',
+              description: 'Video Description',
+            },
+          });
+          play();
+        }}
+      >
+        Play YT Embed
+      </Text>
+
       <Text onPress={() => setPictureMode(PictureMode.Fullscreen)}>
         Open fullscreen
       </Text>
@@ -259,7 +302,21 @@ const BasicPlayer = (props) => (
   </ApollosPlayerContainer>
 );
 
+const WebViewTest = React.memo(({ source }) => (
+  <WebView
+    style={{ width: '100%' }}
+    bounces={false}
+    originWhitelist={['*']}
+    allowsFullscreenVideo
+    allowsInlineMediaPlayback
+    mediaPlaybackRequiresUserAction={false}
+    source={source}
+  />
+));
+
 storiesOf('@apollosproject/ui-media-player', module)
   .add('Basic Player', BasicPlayer)
   .add('Collapsing Player', () => <BasicPlayer collapseOnScroll />)
-  .add('Native iOS Fullscreen', () => <BasicPlayer useNativeFullscreeniOS />);
+  .add('Native iOS Fullscreen', () => <BasicPlayer useNativeFullscreeniOS />)
+  .add('Resi WebView Embed', () => <BasicPlayer source={ResiHTML} />)
+  .add('YouTube WebView Embed', () => <BasicPlayer source={YouTubeHTML} />);

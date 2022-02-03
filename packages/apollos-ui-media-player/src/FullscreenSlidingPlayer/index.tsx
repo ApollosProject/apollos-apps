@@ -47,6 +47,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   children,
   collapseOnScroll = false,
   useNativeFullscreeniOS = false,
+  allowFullscreenControl = true,
   scrollViewRef: scrollViewRefProp,
   videos,
 }) => {
@@ -69,7 +70,10 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   const isPiP = pictureMode === PictureMode.PictureInPicture;
 
   const fullscreenAnimation = React.useRef(new Animated.Value(0)).current;
-  if (Platform.OS === 'android' || !useNativeFullscreeniOS) {
+  if (
+    (Platform.OS === 'android' || !useNativeFullscreeniOS) &&
+    allowFullscreenControl
+  ) {
     Animated.spring(fullscreenAnimation, {
       toValue: isFullscreen ? 1 : 0,
       useNativeDriver: false, // todo
@@ -242,7 +246,9 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       <Animated.View
         style={[
           presentationStyles,
-          isFullscreen ? fullscreenPresentationStyles : null,
+          isFullscreen && allowFullscreenControl
+            ? fullscreenPresentationStyles
+            : null,
         ]}
       >
         <VideoPresentationContainer
@@ -258,7 +264,9 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       </Animated.View>
 
       {/* iOS-only modal-based fullScreen controls */}
-      {!useNativeFullscreeniOS && Platform.OS === 'ios' ? (
+      {!useNativeFullscreeniOS &&
+      allowFullscreenControl &&
+      Platform.OS === 'ios' ? (
         <Modal
           animationType="fade"
           presentationStyle="overFullScreen"
@@ -284,7 +292,10 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
         </Modal>
       ) : null}
 
-      <StatusBar hidden={isFullscreen} showHideTransition="slide" />
+      <StatusBar
+        hidden={isFullscreen && allowFullscreenControl}
+        showHideTransition="slide"
+      />
     </View>
   );
 };

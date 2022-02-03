@@ -13,6 +13,8 @@ import {
   usePlayhead,
 } from '../context';
 
+import WebVideo from '../WebVideo';
+
 jest.useFakeTimers();
 
 describe('The media player', () => {
@@ -288,6 +290,81 @@ describe('The media player', () => {
           }}
           coverImage={{
             uri: `https://picsum.photos/seed/123/100/100`,
+          }}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('can play a web embedded video', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ApollosPlayerContainer
+          source={{
+            html: '🐟',
+          }}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('can play a web embedded video by url', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ApollosPlayerContainer
+          source={{
+            uri: '🐟',
+          }}
+          VideoComponent={WebVideo}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('detects special resi support', () => {
+    jest.mock('react-native/Libraries/Utilities/Platform', () => ({
+      OS: 'android', // or 'ios'
+      select: () => null,
+    }));
+    const tree = renderer.create(
+      <Providers>
+        <ApollosPlayerContainer
+          source={{
+            uri: 'resi',
+            html: `<div style="position:relative;overflow:hidden;padding-top:56.25%;">
+            <iframe allow="autoplay; fullscreen" allowfullscreen="true" src="https://control.resi.io/webplayer/video.html?id=NmMwMDI3MzItNzIwMy00MTRkLTgwYTAtYjY2OTU3Njg1YzZhOjQ0OWU0NWZlLTc4NzYtMTFlYy05YjMwLTI1NDJlN2I5MzdjMA%3D%3D&type=library&autoplay=false" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"></iframe>
+          </div>`,
+          }}
+          VideoComponent={WebVideo}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('can play a Youtube video by source html', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ApollosPlayerContainer
+          source={{
+            html:
+              '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qog4M6nyRpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          }}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('can play a Youtube video by uri', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ApollosPlayerContainer
+          source={{
+            uri: 'https://www.youtube.com/watch?v=xHhdn4RX7as',
           }}
         />
       </Providers>

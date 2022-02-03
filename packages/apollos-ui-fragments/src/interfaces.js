@@ -17,6 +17,7 @@ const VIDEO_NODE_FRAGMENT = gql`
       sources {
         uri
       }
+      embedHtml
     }
   }
 `;
