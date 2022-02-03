@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionListImage should not render with a date if it has an image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -40,12 +46,18 @@ Array [
         "width": 64,
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`ActionListImage should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -62,7 +74,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -84,12 +96,18 @@ Array [
         "width": 64,
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`ActionListImage should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -106,7 +124,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Image
     fadeDuration={250}
     onLoad={[Function]}
@@ -120,12 +138,18 @@ Array [
         "width": 64,
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`ActionListImage should render with a date 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -142,7 +166,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -181,6 +205,6 @@ Array [
     >
       Nov
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;

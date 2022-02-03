@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+import { ActionSheetProvider } from '@expo/react-native-action-sheet';
 import { Themer } from './theme';
 import { LayoutProvider } from './LayoutContext';
 
 const Providers = ({ theme, themeInput, icons, iconInput, children }) => (
-  <LayoutProvider>
-    <Themer theme={theme || themeInput} icons={icons || iconInput}>
-      <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
-    </Themer>
-  </LayoutProvider>
+  <ActionSheetProvider>
+    <LayoutProvider>
+      <Themer theme={theme || themeInput} icons={icons || iconInput}>
+        <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
+      </Themer>
+    </LayoutProvider>
+  </ActionSheetProvider>
 );
 
 Providers.propTypes = {

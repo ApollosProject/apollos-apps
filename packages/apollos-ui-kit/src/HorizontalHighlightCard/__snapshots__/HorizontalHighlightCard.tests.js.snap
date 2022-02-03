@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalHighlightCard should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -160,12 +166,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render a loading state with isLoading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -182,7 +194,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={true}
@@ -358,12 +370,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -380,7 +398,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -788,12 +806,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -810,7 +834,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -959,12 +983,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -981,7 +1011,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -1288,12 +1318,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1310,7 +1346,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -1474,12 +1510,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1496,7 +1538,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -1660,12 +1702,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should should render as a like icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1682,7 +1730,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -2000,12 +2048,18 @@ Array [
         </RNSVGSvgView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should should render as disabled 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2022,7 +2076,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={true}
     inHorizontalList={true}
@@ -2166,12 +2220,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2188,7 +2248,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -2503,6 +2563,6 @@ Array [
         </RNSVGSvgView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

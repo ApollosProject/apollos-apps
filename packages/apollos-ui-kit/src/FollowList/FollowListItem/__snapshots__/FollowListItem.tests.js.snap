@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FollowListItem should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -316,12 +322,18 @@ Array [
         Follow
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render a confirmed follow 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -338,7 +350,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -636,12 +648,18 @@ Array [
         Follow
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render a confirmed request 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -658,7 +676,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -956,12 +974,18 @@ Array [
         Following
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render a follower request 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -978,7 +1002,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1346,12 +1370,18 @@ Array [
         Following
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render a follower suggestion 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1368,7 +1398,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1666,12 +1696,18 @@ Array [
         Follow
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1688,7 +1724,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1977,12 +2013,18 @@ Array [
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render a sent follow request 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1999,7 +2041,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2297,12 +2339,18 @@ Array [
         Requested
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FollowListItem should render with a name 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2319,7 +2367,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2631,6 +2679,6 @@ Array [
         Follow
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

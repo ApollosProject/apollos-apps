@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Auth Verification component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -33,7 +39,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -253,12 +259,18 @@ Stand by…
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render as disabled 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -275,7 +287,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -290,7 +302,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -571,12 +583,18 @@ Stand by…
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render in a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -593,7 +611,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -608,7 +626,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -883,12 +901,18 @@ Stand by…
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render in a next button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -905,7 +929,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -920,7 +944,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -1201,12 +1225,18 @@ Stand by…
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render in an error state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1223,7 +1253,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1238,7 +1268,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -1471,12 +1501,18 @@ Stand by…
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render with a custom confirmationPromptText 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1493,7 +1529,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1508,7 +1544,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -1728,12 +1764,18 @@ Stand by…
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render with a value 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1750,7 +1792,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1765,7 +1807,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -1986,12 +2028,18 @@ Stand by…
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Auth Verification component should render with custom confirmationTitleText 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2008,7 +2056,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2023,7 +2071,7 @@ Array [
         "top": 0,
       }
     }
-  />,
+  />
   <View
     onLayout={[Function]}
     style={
@@ -2242,6 +2290,6 @@ Array [
         </View>
       </View>
     </RCTScrollView>
-  </View>,
-]
+  </View>
+</View>
 `;

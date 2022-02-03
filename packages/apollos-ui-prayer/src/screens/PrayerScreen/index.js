@@ -21,6 +21,15 @@ const PRAYER_FRAGMENT = gql`
   }
 `;
 
+export const REPORT_PRAYER = gql`
+  mutation reportPrayer($prayerId: ID!) {
+    reportPrayer(prayerId: $prayerId) {
+      id
+      text
+    }
+  }
+`;
+
 const PrayerScreen = ({
   PrayerCardComponent = PrayerCard,
   onPressPrimary,
@@ -43,6 +52,17 @@ const PrayerScreen = ({
       track({ eventName: 'PrayerPrayed', properties: { prayer } });
     },
   });
+  const [reportPrayer] = useMutation(REPORT_PRAYER, {
+    variables: {
+      prayerId: prayer.id,
+    },
+    refetchQueries: ['getPrayerFeature', 'getPrayerListFeature'],
+    onCompleted: () => {
+      if (onPressPrimary) {
+        onPressPrimary();
+      }
+    },
+  });
 
   const handleOnPressPrimary = () => {
     if (onPressPrimary) onPressPrimary();
@@ -59,11 +79,13 @@ const PrayerScreen = ({
       {...props}
     >
       <PrayerCardComponent
+        prayerId={prayer.id}
         prayer={prayer.text}
         profile={prayer.requestor}
         title={`Pray for ${
           prayer.requestor?.nickName || prayer.requestor?.firstName
         }`}
+        reportPrayer={reportPrayer}
       />
     </PrayerView>
   );

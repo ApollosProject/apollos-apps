@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the CardTile component number box should grow elegantly with larger numbers 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -106,12 +112,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -128,7 +140,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -184,12 +196,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render a loading skeleton 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -206,7 +224,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -262,12 +280,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render a loading skeleton for all available props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -284,7 +308,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -632,12 +656,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render a number box 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -654,7 +684,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -742,12 +772,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render card details 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -764,7 +800,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -1104,12 +1140,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render card details with date 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1126,7 +1168,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -1478,12 +1520,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the CardTile component should render children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1500,7 +1548,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     collapsable={false}
     style={
@@ -1538,6 +1586,6 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

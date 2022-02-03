@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 import ApollosConfig from '@apollosproject/config';
 
 export default gql`
-  query($id: ID!) {
+  query getPrayerFeature($id: ID!) {
     currentUser {
       id
       profile {

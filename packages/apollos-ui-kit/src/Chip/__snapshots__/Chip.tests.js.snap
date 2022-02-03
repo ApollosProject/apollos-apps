@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Chip component should be selected 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -55,12 +61,18 @@ Array [
     >
       My Button!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render a custom icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -77,7 +89,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -256,12 +268,18 @@ Array [
         Custom Icon
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render an icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -278,7 +296,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -490,12 +508,18 @@ Array [
     >
       Heart!!!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -512,7 +536,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -566,12 +590,18 @@ Array [
         My Button!
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render positioned for a chipList 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -588,7 +618,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -627,6 +657,6 @@ Array [
     >
       chipList
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;

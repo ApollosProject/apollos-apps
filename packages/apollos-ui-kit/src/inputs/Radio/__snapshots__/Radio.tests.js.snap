@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Radio component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       accessible={true}
@@ -116,12 +122,18 @@ Array [
         option 2
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Radio component should render horizontally 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -138,7 +150,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -242,12 +254,18 @@ Array [
         option 2
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Radio component should render with an error 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -264,7 +282,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       accessible={true}
@@ -384,12 +402,18 @@ Array [
         Danger Will Robinson
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Radio component should render without an underline 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -406,7 +430,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       accessible={true}
@@ -504,6 +528,6 @@ Array [
         option 2
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

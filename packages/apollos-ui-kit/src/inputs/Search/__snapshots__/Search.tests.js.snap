@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Search Input component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -534,12 +540,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Search Input component should render as disabled 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -556,7 +568,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={true}
     style={
@@ -1073,12 +1085,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Search Input component should render with a custom cancelButtonText 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1095,7 +1113,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -1611,12 +1629,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Search Input component should render with a custom placeholder 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1633,7 +1657,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -2149,12 +2173,18 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Search Input component should render with a custom screenBackgroundColor 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2171,7 +2201,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -2688,6 +2718,6 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

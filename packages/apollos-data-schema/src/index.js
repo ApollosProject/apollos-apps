@@ -1323,6 +1323,7 @@ export const prayerSchema = gql`
 
   extend type Mutation {
     addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+    reportPrayer(prayerId: ID!): PrayerRequest
   }
 
   extend enum InteractionAction {

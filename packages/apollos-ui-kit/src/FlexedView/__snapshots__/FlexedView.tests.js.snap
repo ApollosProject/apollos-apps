@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlexedView component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,13 +24,13 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
         "flex": 1,
       }
     }
-  />,
-]
+  />
+</View>
 `;

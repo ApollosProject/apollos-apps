@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DefaultCard should render a loading state with isLoading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     isLoading={true}
     style={
@@ -99,12 +105,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render at the images natural aspect ratio (between min/max) 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -121,7 +133,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -261,12 +273,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall) 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -283,7 +301,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -423,12 +441,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -445,7 +469,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -585,12 +609,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render with a summary 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -607,7 +637,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -770,12 +800,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render with an actionIcon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -792,7 +828,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1214,12 +1250,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render with an actionIcon and subtitle 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1236,7 +1278,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1680,12 +1722,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render with custom LabelComponent 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1702,7 +1750,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1864,12 +1912,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render with custom labelText 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1886,7 +1940,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2048,12 +2102,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should render with isLive support 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2070,7 +2130,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2351,12 +2411,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should should render a like icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2373,7 +2439,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2513,12 +2579,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`DefaultCard should should render as isLiked 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2535,7 +2607,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2882,6 +2954,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -402,12 +408,18 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render a different background component 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -424,7 +436,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <View
       onLayout={[Function]}
@@ -800,12 +812,18 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -822,7 +840,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1206,12 +1224,18 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render when disabled 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1228,7 +1252,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -1612,12 +1636,18 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different gender list 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1634,7 +1664,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2018,12 +2048,18 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different prompt and title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2040,7 +2076,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2424,12 +2460,18 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ui-auth/Profile/ProfileDetailsEntry should render with errors 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2446,7 +2488,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -2830,6 +2872,6 @@ Array [
         </View>
       </RCTScrollView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

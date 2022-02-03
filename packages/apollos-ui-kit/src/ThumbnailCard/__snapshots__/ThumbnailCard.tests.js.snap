@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ThumbnailCard component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -89,12 +95,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ThumbnailCard component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -111,7 +123,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -242,12 +254,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ThumbnailCard component should render with a category 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -264,7 +282,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -357,12 +375,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ThumbnailCard component should render with a category and images 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -379,7 +403,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -508,12 +532,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ThumbnailCard component should render with a description 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -530,7 +560,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -623,12 +653,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`the ThumbnailCard component should render with an images 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -645,7 +681,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -752,6 +788,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

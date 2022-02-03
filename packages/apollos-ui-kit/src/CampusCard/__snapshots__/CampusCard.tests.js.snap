@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CampusCard should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     category=""
     inHorizontalList={true}
@@ -150,12 +156,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render a loading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -172,7 +184,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     category=""
     inHorizontalList={true}
@@ -303,12 +315,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render with a title and description 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -325,7 +343,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={false}
@@ -412,12 +430,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render with a title and distance 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -434,7 +458,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={false}
@@ -532,12 +556,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render with a title and image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -554,7 +584,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={false}
@@ -650,12 +680,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render with just a title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -672,7 +708,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={false}
@@ -747,12 +783,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render without a description 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -769,7 +811,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     category=""
     inHorizontalList={true}
@@ -889,12 +931,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render without a distance 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -911,7 +959,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     category=""
     inHorizontalList={true}
@@ -1020,12 +1068,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`CampusCard should render without an image 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1042,7 +1096,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     category=""
     inHorizontalList={true}
@@ -1153,6 +1207,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

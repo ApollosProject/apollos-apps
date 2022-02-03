@@ -73,7 +73,13 @@ exports[`ThemeProvider renders in light theme 1`] = `
 `;
 
 exports[`the styled HOC allows a theme to supply override functions 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -90,7 +96,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     active={true}
     clickable={true}
@@ -99,19 +105,25 @@ Array [
         "backgroundColor": "active-color",
       }
     }
-  />,
+  />
   <View
     style={
       Object {
         "backgroundColor": "in-active-color",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the styled HOC allows a theme to supply overrides 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -128,7 +140,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     clickable={true}
     style={
@@ -136,12 +148,18 @@ Array [
         "backgroundColor": "green",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the styled HOC merges nested styles from withTheme and an overide 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -158,7 +176,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     clickable={false}
     style={
@@ -168,12 +186,18 @@ Array [
         "color": "blue",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the styled HOC provides a theme 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -190,7 +214,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     clickable={false}
     style={
@@ -198,12 +222,18 @@ Array [
         "backgroundColor": "#00676D",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the styled HOC uses overide when using \`named\` hoc 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -220,7 +250,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     clickable={false}
     style={
@@ -229,8 +259,8 @@ Array [
         "borderRadius": 7,
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`withThemeMixin overrides styles without affecting siblings 1`] = `

@@ -1,5 +1,6 @@
 import { Op } from 'sequelize';
 import { get } from 'lodash';
+import { parseGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
 
 class Prayer extends PostgresDataSource {
@@ -68,6 +69,7 @@ class Prayer extends PostgresDataSource {
           createdAt: {
             [Op.gt]: daysSincePosted,
           },
+          approved: true,
         },
         include: [
           {
@@ -135,6 +137,28 @@ class Prayer extends PostgresDataSource {
       type: 'PRAYER',
     });
   };
+
+  async reportPrayer({ prayerId }) {
+    let id = prayerId;
+
+    try {
+      const parsedId = parseGlobalId(prayerId);
+      id = parsedId.id;
+    } catch (e) {
+      id = prayerId;
+    }
+
+    let prayerRequest = await this.getFromId(id);
+
+    await prayerRequest.update({
+      approved: false,
+      flagCount: prayerRequest.flagCount + 1,
+    });
+
+    prayerRequest = await this.getFromId(id);
+
+    return prayerRequest;
+  }
 }
 
 export { Prayer as default };

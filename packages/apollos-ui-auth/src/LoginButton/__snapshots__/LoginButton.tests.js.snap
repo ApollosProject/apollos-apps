@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginButton component renders a LoginButton that is loading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -63,12 +69,18 @@ Array [
         size="small"
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`LoginButton component renders a LoginButton when logged out 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -85,7 +97,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -136,12 +148,18 @@ Array [
         Get Connected
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`LoginButton component renders nothing when logged in 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -158,7 +176,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -209,6 +227,6 @@ Array [
         Get Connected
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

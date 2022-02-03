@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalDefaultCard should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -141,12 +147,18 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -163,7 +175,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={true}
@@ -333,12 +345,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should render with a summary 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -355,7 +373,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -523,12 +541,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should render with a title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -545,7 +569,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     isLoading={true}
@@ -704,12 +728,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should should render a like icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -726,7 +756,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -871,12 +901,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -893,7 +929,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     inHorizontalList={true}
     style={
@@ -1038,6 +1074,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

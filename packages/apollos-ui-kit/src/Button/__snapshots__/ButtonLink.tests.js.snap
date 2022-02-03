@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Button component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     onPress={[Function]}
     style={
@@ -28,12 +34,18 @@ Array [
     }
   >
     Boom
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`The Button component should render inherit typographic styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -50,7 +62,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     bold={false}
     italic={false}
@@ -73,6 +85,6 @@ Array [
     >
       Boom
     </Text>
-  </Text>,
-]
+  </Text>
+</View>
 `;

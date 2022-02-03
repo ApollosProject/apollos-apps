@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The AvatarList component should accept an onPressAdd function 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     ListHeaderComponent={
       <mapProps(Component)>
@@ -1023,12 +1029,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The AvatarList component should accept an onPressAvatar function 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1045,7 +1057,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     ListHeaderComponent={null}
     data={
@@ -1779,12 +1791,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The AvatarList component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1801,7 +1819,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     ListHeaderComponent={null}
     data={
@@ -2535,12 +2553,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The AvatarList component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2557,7 +2581,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     ListHeaderComponent={
       <mapProps(Component)>
@@ -3241,6 +3265,6 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;

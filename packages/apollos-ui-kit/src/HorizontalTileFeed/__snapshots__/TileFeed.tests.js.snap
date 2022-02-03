@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The TileFeed component renders correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     collapsable={false}
     contentContainerStyle={
@@ -241,12 +247,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The TileFeed component renders empty state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -263,7 +275,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     collapsable={false}
     contentContainerStyle={
@@ -312,6 +324,6 @@ Array [
     windowSize={21}
   >
     <View />
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;

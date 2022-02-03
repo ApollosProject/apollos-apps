@@ -4,350 +4,358 @@ exports[`content feed query component renders a feedview after successful query 
 <View
   style={
     Object {
-      "backgroundColor": "rgb(249, 249, 251)",
       "flex": 1,
-      "height": "100%",
     }
   }
 >
-  <RCTScrollView
-    data={
-      Array [
-        Object {
-          "__typename": "UniversalContentItem",
-          "coverImage": null,
-          "hyphenatedTitle": "Mea Animal Aperiam Ornatus Eu",
-          "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
-          "summary": "Bla bla bla",
-          "theme": null,
-          "title": "Mea Animal Aperiam Ornatus Eu",
-        },
-        Object {
-          "__typename": "UniversalContentItem",
-          "coverImage": null,
-          "hyphenatedTitle": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
-          "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
-          "summary": "Bla bla bla",
-          "theme": null,
-          "title": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
-        },
-      ]
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "flex": 1,
+        "height": "100%",
+      }
     }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    onContentSizeChange={[Function]}
-    onEndReached={[Function]}
-    onEndReachedThreshold={0.7}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onPressItem={[Function]}
-    onRefresh={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    refreshControl={
-      <RefreshControlMock
-        onRefresh={[Function]}
-        refreshing={false}
-      />
-    }
-    refreshing={false}
-    removeClippedSubviews={false}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
   >
-    <RCTRefreshControl />
-    <View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "__typename": "UniversalContentItem",
+            "coverImage": null,
+            "hyphenatedTitle": "Mea Animal Aperiam Ornatus Eu",
+            "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
+            "summary": "Bla bla bla",
+            "theme": null,
+            "title": "Mea Animal Aperiam Ornatus Eu",
+          },
+          Object {
+            "__typename": "UniversalContentItem",
+            "coverImage": null,
+            "hyphenatedTitle": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
+            "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
+            "summary": "Bla bla bla",
+            "theme": null,
+            "title": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.7}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onPressItem={[Function]}
+      onRefresh={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[Function]}
+          refreshing={false}
+        />
+      }
+      refreshing={false}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <RCTRefreshControl />
+      <View>
         <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "transform": Array [
-                Object {
-                  "scale": 1,
-                },
-              ],
-            }
-          }
+          onLayout={[Function]}
+          style={null}
         >
           <View
-            isLoading={false}
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "marginHorizontal": 16,
-                "marginVertical": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
               }
             }
           >
             <View
+              isLoading={false}
               style={
                 Object {
+                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 16,
-                  "overflow": "hidden",
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 16,
-                    "width": "100%",
+                    "borderRadius": 16,
+                    "overflow": "hidden",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": null,
-                      "flexDirection": "row",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
-                      }
-                    }
-                  >
-                    Editorial
-                  </Text>
-                </View>
-                <Text
-                  numberOfLines={2}
-                  style={
-                    Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 24,
-                      "lineHeight": 27.6,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#27272E",
-                      }
-                    }
-                  >
-                    Mea Animal Aperiam Ornatus Eu
-                  </Text>
-                </Text>
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
-                  style={
-                    Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    Bla bla bla
-                  </Text>
-                </Text>
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                      "paddingTop": 8,
+                      "paddingHorizontal": 20,
+                      "paddingVertical": 16,
                       "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flex": null,
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 24,
+                        }
+                      }
+                    >
+                      Editorial
+                    </Text>
+                  </View>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 24,
+                        "lineHeight": 27.6,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#27272E",
+                        }
+                      }
+                    >
+                      Mea Animal Aperiam Ornatus Eu
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={3}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Bla bla bla
+                    </Text>
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "paddingTop": 8,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>
         </View>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
         <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "transform": Array [
-                Object {
-                  "scale": 1,
-                },
-              ],
-            }
-          }
+          onLayout={[Function]}
+          style={null}
         >
           <View
-            isLoading={false}
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "marginHorizontal": 16,
-                "marginVertical": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
               }
             }
           >
             <View
+              isLoading={false}
               style={
                 Object {
+                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 16,
-                  "overflow": "hidden",
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 16,
-                    "width": "100%",
+                    "borderRadius": 16,
+                    "overflow": "hidden",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": null,
-                      "flexDirection": "row",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
-                      }
-                    }
-                  >
-                    Editorial
-                  </Text>
-                </View>
-                <Text
-                  numberOfLines={2}
-                  style={
-                    Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 24,
-                      "lineHeight": 27.6,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#27272E",
-                      }
-                    }
-                  >
-                    Probo Senserit Id Mea, Ut Sed Malis Postea,
-                  </Text>
-                </Text>
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
-                  style={
-                    Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    Bla bla bla
-                  </Text>
-                </Text>
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                      "paddingTop": 8,
+                      "paddingHorizontal": 20,
+                      "paddingVertical": 16,
                       "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flex": null,
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 24,
+                        }
+                      }
+                    >
+                      Editorial
+                    </Text>
+                  </View>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 24,
+                        "lineHeight": 27.6,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#27272E",
+                        }
+                      }
+                    >
+                      Probo Senserit Id Mea, Ut Sed Malis Postea,
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={3}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Bla bla bla
+                    </Text>
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "paddingTop": 8,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
+    </RCTScrollView>
+  </View>
 </View>
 `;
