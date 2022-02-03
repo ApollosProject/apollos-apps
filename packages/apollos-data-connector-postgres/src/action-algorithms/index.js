@@ -207,8 +207,16 @@ class ActionAlgorithm extends PostgresDataSource {
     limit = 20,
     skip = 0,
     tags = [],
+    useCampusTag = false,
   } = {}) {
-    const { ContentItem } = this.context.dataSources;
+    const { ContentItem, Feature, Person, Campus } = this.context.dataSources;
+
+    if (useCampusTag) {
+      Feature.setCacheHint({ scope: 'PRIVATE' });
+      const person = await Person.getCurrentPerson();
+      const campus = await Campus.getForPerson(person);
+      tags = [campus?.name, ...tags].filter((tag) => tag);
+    }
 
     const items = await ContentItem.getFromCategoryIds(categoryIDs, {
       limit,
