@@ -85,7 +85,7 @@ platform :ios do
         add_id_info_uses_idfa: false
       },
       reject_if_possible: true,
-      run_precheck_before_submit: false
+      run_precheck_before_submit: false,
       app_version: get_version_number(xcodeproj: "ios", target: "OneSignalNotificationServiceExtension"),
     )
   end
@@ -142,10 +142,4 @@ platform :android do
       package_name: package_name
     )
   end
-end
-
-error do |lane, exception|
-  s = File.read("../app.json")
-  app_name = s[/"name": "(.*)",/, 1]
-  slack(message: app_name << " - " << exception.to_s, success: false)
 end
