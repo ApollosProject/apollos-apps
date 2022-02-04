@@ -30,9 +30,10 @@ export default class Search {
       this.algoliaConfig?.API_KEY &&
       this.client
     ) {
-      this._index = this.client.initIndex(
-        `ContentItem_${this.context?.church?.slug}`
-      );
+      const indexName =
+        this.algoliaConfig?.INDEX_NAME ||
+        `ContentItem_${this.context?.church?.slug}`;
+      this._index = this.client.initIndex(indexName);
       this._index.setSettings(
         this.algoliaConfig.CONFIGURATION || {
           searchableAttributes: ['title', 'unordered(summary)'],
