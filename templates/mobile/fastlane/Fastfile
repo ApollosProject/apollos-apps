@@ -13,6 +13,16 @@
 # Uncomment the line if you want fastlane to automatically update itself
 #update_fastlane
 
+# other setup commands
+# fastlane produce -a "$IOS_BUNDLE" --skip_itc
+# fastlane produce -a "$IOS_BUNDLE.OneSignalNotificationServiceExtension" --skip_itc
+# fastlane produce group -g "group.$IOS_BUNDLE.onesignal" -n "OneSignal Group"
+# fastlane produce associate_group -a "$IOS_BUNDLE,$IOS_BUNDLE.OneSignalNotificationServiceExtension" "group.$IOS_BUNDLE.onesignal"
+# fastlane pem -a "$IOS_BUNDLE"
+# fastlane upload_app_privacy_details_to_app_store -a "$IOS_BUNDLE"
+# fastlane run download_from_play_store json_key:"android/key.json"
+
+
 def bump_version_code()
     s = File.read("../android/app/build.gradle")
     versionCode = number_of_commits
@@ -38,7 +48,6 @@ platform :ios do
     match_nuke(type: "appstore", app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"])
     match(type: 'development', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
     match(type: 'appstore', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
-    get_push_certificate(app_identifier: ENV["DELIVER_APP_IDENTIFIER"])
   end
 
   desc "Push a new internal build to TestFlight"
@@ -57,9 +66,6 @@ platform :ios do
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
-    upload_app_privacy_details_to_app_store(
-      app_identifier: ENV["DELIVER_APP_IDENTIFIER"]
-    )
     testflight
   end
 

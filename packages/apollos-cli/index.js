@@ -55,16 +55,24 @@ mobile
             ? true
             : `Alphanumeric and underscores only!`,
       },
+      {
+        type: 'text',
+        name: 'serverURL',
+        message: 'Server URL?',
+        validate: (value) =>
+          value.match(/^http.*/)[0] === value ? true : `Must be a valid URL!`,
+      },
     ];
 
     (async () => {
       const response = await prompts(questions);
-      if (Object.keys(response).length === 3) {
+      if (Object.keys(response).length === 4) {
         try {
           execa(`${__dirname}/scripts/create-mobile.sh`, [
             response.appName,
             response.iosID,
             response.androidID,
+            response.serverURL,
           ]).stdout.pipe(process.stdout);
         } catch (e) {
           console.log(e);
@@ -74,8 +82,6 @@ mobile
   });
 
 mobile
-  .command('theme')
-  .description('Manage mobile app theme')
   .command('logo')
   .description('Edit app icons and splash screen')
   .action(() => logo());
