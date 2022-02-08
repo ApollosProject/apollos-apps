@@ -84,7 +84,12 @@ const resolver = {
       ),
   },
   ActionTableFeature: {
-    actions: ({ actions, data }, args, { dataSources: { Feature } }) =>
+    actions: (
+      { getActions, actions, data },
+      args,
+      { dataSources: { Feature } }
+    ) =>
+      getActions() ||
       actions ||
       data?.actions?.map((action) => Feature.attachActionIds(action)),
     id: id('ActionTableFeature'),
