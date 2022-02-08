@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FeatureTitles should pass style 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,19 +24,25 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
         "backgroundColor": "red",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`FeatureTitles should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -47,7 +59,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View>
     <Text
       secondary={true}
@@ -75,12 +87,18 @@ Array [
     >
       Are you telling me that you built a time machine out of a DeLorean?
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`FeatureTitles should render loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -97,7 +115,7 @@ Array [
         Object {},
       ]
     }
-  />,
-  <View />,
-]
+  />
+  <View />
+</View>
 `;

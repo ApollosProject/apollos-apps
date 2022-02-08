@@ -17,9 +17,9 @@ import {
   InternalPlayerContext,
 } from './context';
 
-import Controls from './Controls';
 import NativeControls from './NativeControls';
-import RNVideo from './RNVideo';
+
+import useSourceComponents from './useSourceComponents';
 
 interface ContainerProps extends IPlayerMedia, FullScreenSlidingPlayerProps {
   autoplay?: Boolean;
@@ -29,8 +29,8 @@ interface ContainerProps extends IPlayerMedia, FullScreenSlidingPlayerProps {
 }
 
 const Container: React.FunctionComponent<ContainerProps> = ({
-  VideoComponent = RNVideo,
-  ControlsComponent = Controls,
+  VideoComponent,
+  ControlsComponent,
   PlayerComponent = FullscreenSlidingPlayer,
   children,
   source,
@@ -144,6 +144,14 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   );
 
   // ---------
+  // Detect the correct VideoComponent and ControlsComponent to use
+  const sourceComponents = useSourceComponents({
+    source: nowPlaying.source,
+    VideoComponent,
+    ControlsComponent,
+  });
+
+  // ---------
   // 🚀 Go Time
   return (
     <InternalPlayerContext.Provider value={internalPlayerContext}>
@@ -155,8 +163,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                 <React.Fragment>
                   <NativeControls />
                   <PlayerComponent
-                    VideoComponent={VideoComponent}
-                    ControlsComponent={ControlsComponent}
+                    {...sourceComponents}
                     collapseOnScroll={collapseOnScroll}
                     useNativeFullscreeniOS={useNativeFullscreeniOS}
                     scrollViewRef={scrollViewRef}
@@ -168,8 +175,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
               ),
               [
                 children,
-                VideoComponent,
-                ControlsComponent,
+                sourceComponents,
                 collapseOnScroll,
                 useNativeFullscreeniOS,
                 scrollViewRef,

@@ -101,3 +101,7 @@ testing*.db
 ApollosApi/
 ApollosApp/
 ApollosCluster/
+
+vendor
+
+.vscode

@@ -38,8 +38,8 @@ class ActionAlgorithm extends PostgresDataSource {
             // NOTE this is in for backwards compatibility
             // should remove reference to Feature.ACTION_ALGORITHIMS eventually
             return this.ACTION_ALGORITHMS[algorithm.type]({
-              ...algorithm.arguments,
               ...args,
+              ...algorithm.arguments,
             });
           }
           return this.ACTION_ALGORITHMS[algorithm](args);
@@ -207,8 +207,16 @@ class ActionAlgorithm extends PostgresDataSource {
     limit = 20,
     skip = 0,
     tags = [],
+    useCampusTag = false,
   } = {}) {
-    const { ContentItem } = this.context.dataSources;
+    const { ContentItem, Feature, Person, Campus } = this.context.dataSources;
+
+    if (useCampusTag) {
+      Feature.setCacheHint({ scope: 'PRIVATE' });
+      const person = await Person.getCurrentPerson();
+      const campus = await Campus.getForPerson(person);
+      tags = [campus?.name, ...tags].filter((tag) => tag);
+    }
 
     const items = await ContentItem.getFromCategoryIds(categoryIDs, {
       limit,

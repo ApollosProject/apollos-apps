@@ -273,7 +273,15 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                       "flex": 1,
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>

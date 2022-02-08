@@ -19,9 +19,6 @@ const createModel = defineModel({
 
 const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.prayerRequest.addScope('defaultScope', {
-    where: {
-      approved: true,
-    },
     include: [{ model: sequelize.models.people, as: 'prayedUsers' }],
   });
   sequelize.models.people.hasMany(sequelize.models.prayerRequest, {

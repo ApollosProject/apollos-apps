@@ -1,4 +1,4 @@
-import './loadConfig';
+import './theme';
 import { AppRegistry } from 'react-native';
 
 const App = require('./src').default;

@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 import ApollosConfig from '@apollosproject/config';
 
 export default gql`
-  query getActionListFeature($featureId: ID!) {
+  query getPrayerListFeature($featureId: ID!) {
     node(id: $featureId) {
       ...PrayerListFeatureFragment
     }

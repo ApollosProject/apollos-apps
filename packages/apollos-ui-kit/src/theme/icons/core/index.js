@@ -10,6 +10,7 @@ export Avatar from './Avatar';
 export Badge from './Badge';
 export Bank from './Bank';
 export BrandIcon from './BrandIcon';
+export BrandLogo from './BrandLogo';
 export Building from './Building';
 export Calendar from './Calendar';
 export Camera from './Camera';

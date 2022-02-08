@@ -175,4 +175,24 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
     expect(usersPrayed.length).toEqual(1);
     expect(usersPrayed[0].id).toEqual(currentPerson.id);
   });
+
+  it('reports a Prayer and removes it from the Daily Prayer View', async () => {
+    const prayerRequestDatasource = new PrayerRequestDataSource();
+    prayerRequestDatasource.initialize({ context });
+
+    const prayer1 = await sequelize.models.prayerRequest.create({
+      text: 'Test Prayer',
+    });
+    await person2.addPrayerRequest(prayer1);
+
+    let dailyPrayerFeed = await prayerRequestDatasource.byDailyPrayerFeed({});
+
+    expect(dailyPrayerFeed.length).toEqual(1);
+
+    await prayerRequestDatasource.reportPrayer({ prayerId: prayer1.id });
+
+    dailyPrayerFeed = await prayerRequestDatasource.byDailyPrayerFeed({});
+
+    expect(dailyPrayerFeed.length).toEqual(0);
+  });
 });

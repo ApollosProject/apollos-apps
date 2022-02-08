@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HighlightCard should render a loading state with isLoading 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     isLoading={true}
@@ -204,12 +210,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render in a "tall" aspect ratio (maxAspectRatio) 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -226,7 +238,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -368,12 +380,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render in a "wide" aspect ratio 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -390,7 +408,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -532,12 +550,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render with a custom actionIcon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -554,7 +578,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -960,12 +984,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render with a custom theme 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -982,7 +1012,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="salmon"
     style={
@@ -1131,12 +1161,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render with a summary 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1153,7 +1189,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -1310,12 +1346,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render with custom LabelComponent 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1332,7 +1374,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -1496,12 +1538,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render with custom labelText 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1518,7 +1566,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -1682,12 +1730,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should render with isLive 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1704,7 +1758,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -1868,12 +1922,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should should render a like icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1890,7 +1950,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -2208,12 +2268,18 @@ Array [
         </RNSVGSvgView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should should render as isLiked 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2230,7 +2296,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -2545,12 +2611,18 @@ Array [
         </RNSVGSvgView>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should should render as isLive 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2567,7 +2639,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -2731,12 +2803,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`HighlightCard should should render with an action "button" 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -2753,7 +2831,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     cardColor="#00676D"
     style={
@@ -3058,6 +3136,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

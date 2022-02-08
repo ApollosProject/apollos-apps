@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding Slide component should render a loading indicator 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -37,7 +43,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -81,13 +87,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -108,12 +114,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render both slide navigation buttons 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -130,7 +142,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -149,7 +161,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -193,13 +205,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -457,12 +469,18 @@ Array [
         Skip
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -479,7 +497,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -498,12 +516,18 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render onboarding next button navigation 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -520,7 +544,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -539,7 +563,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -583,13 +607,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -834,12 +858,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render onboarding skip button navigation 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -856,7 +886,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -875,7 +905,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -914,12 +944,18 @@ Array [
         Skip
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render onboarding skip button with custom text 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -936,7 +972,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -955,7 +991,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -994,12 +1030,18 @@ Array [
         Custom skip button text
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render primary navigation button with a custom icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1016,7 +1058,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1035,7 +1077,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -1079,13 +1121,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -1376,12 +1418,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render primary navigation button with custom text 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1398,7 +1446,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1417,7 +1465,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -1461,13 +1509,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -1712,12 +1760,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render primary navigation button without a custom icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1734,7 +1788,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1753,7 +1807,7 @@ Array [
         Boom
       </Text>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -1797,13 +1851,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -1830,6 +1884,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

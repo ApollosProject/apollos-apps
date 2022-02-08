@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The ModalView component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     navigation={
       Object {
@@ -199,12 +205,18 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The ModalView component should render a custom close action 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -221,7 +233,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     navigation={
       Object {
@@ -519,12 +531,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The ModalView component should render with children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -541,7 +559,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     navigation={
       Object {
@@ -725,6 +743,6 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

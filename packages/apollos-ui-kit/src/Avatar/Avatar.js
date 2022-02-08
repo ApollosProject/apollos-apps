@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Platform } from 'react-native';
 import { get, compact } from 'lodash';
-import { compose, setDisplayName } from 'recompose';
 
 import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import styled from '../styled';
 import { withTheme } from '../theme';
 import ActivityIndicator from '../ActivityIndicator';
 import { ButtonIcon } from '../Button';
-import Icon from '../Icon';
 import TouchableScale from '../TouchableScale';
 import PlaceholderInitials from './Placeholder';
 
@@ -22,18 +20,6 @@ const Container = styled(
   }),
   'ui-kit.Avatar.Avatar.Container'
 )(View);
-
-const PlaceholderIcon = compose(
-  setDisplayName('ui-kit.Avatar.Avatar.PlaceholderIcon'),
-  withTheme(
-    ({ theme: { colors } = {}, themeSize }) => ({
-      fill: colors.background.inactive,
-      name: 'avatar',
-      size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
-    }),
-    'ui-kit.Avatar.Avatar.PlaceholderIcon'
-  )
-)(Icon);
 
 const Image = styled(
   ({ themeSize }) => ({
@@ -138,21 +124,19 @@ const Avatar = ({
   ...imageProps
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
-    {(!isLoading && source && source.uri) || // eslint-disable-line no-nested-ternary
-    (!isLoading && profile?.photo && profile?.photo?.uri) ? (
+    {(!isLoading && source) || // eslint-disable-line no-nested-ternary
+    (!isLoading && profile?.photo) ? (
       <Image
         source={source || profile.photo}
         {...imageProps}
         themeSize={themeSize}
       />
-    ) : profile?.firstName || profile?.lastName ? (
+    ) : (
       <PlaceholderInitials
         placeholderInitials={initials(profile?.firstName, profile?.lastName)}
         themeSize={themeSize}
         isLoading={false}
       />
-    ) : (
-      <PlaceholderIcon themeSize={themeSize} isLoading={false} />
     )}
     {!isLoading && notification ? ( // sometimes isLoading can be infered by context. This forces it to hide.
       <>
@@ -183,12 +167,13 @@ const Avatar = ({
 
 Avatar.propTypes = {
   buttonIcon: PropTypes.string,
-  containerStyle: PropTypes.any, // eslint-disable-line
+  // eslint-disable-next-line react/forbid-prop-types
+  containerStyle: PropTypes.any,
   isLoading: PropTypes.bool,
   onPressIcon: PropTypes.func,
   themeSize: PropTypes.number,
   notification: PropTypes.bool,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   profile: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,

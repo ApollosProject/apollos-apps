@@ -2,20 +2,28 @@
 
 exports[`The AddCommentInput Component must render 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-/>
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
 `;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding Features component should pass additional props to Slide 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -78,7 +84,7 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -122,13 +128,13 @@ Array [
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -373,12 +379,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Features component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -395,7 +407,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -455,12 +467,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding Features component should render a BackgroundComponent 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -477,7 +495,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -568,12 +586,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding Features component should render a custom description 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -590,7 +614,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -650,12 +674,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding Features component should render a custom first name 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -672,7 +702,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -732,12 +762,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding Features component should render a custom title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -754,7 +790,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -815,6 +851,6 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;

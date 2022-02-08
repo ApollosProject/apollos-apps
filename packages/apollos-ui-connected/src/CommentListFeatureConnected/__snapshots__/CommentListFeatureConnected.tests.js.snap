@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The CommentListFeatureConnected component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <RCTScrollView
     data={
       Array [
@@ -277,73 +283,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/0/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/0/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -877,73 +896,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/1/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/1/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -1480,73 +1512,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/2/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/2/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -2080,73 +2125,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/3/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/3/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -2683,73 +2741,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/4/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/4/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -3283,73 +3354,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/5/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/5/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -3886,73 +3970,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/6/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/6/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -4486,73 +4583,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/7/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/7/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -5089,73 +5199,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/8/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/8/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -5689,73 +5812,86 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
+                  "flexDirection": "row",
                 }
               }
-              themeSize={48}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/seed/9/200",
-                    },
-                  ]
-                }
+              <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
+                    "alignItems": "center",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "width": 48,
                   }
                 }
                 themeSize={48}
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "justifyContent": "center",
-                  "marginLeft": 8,
-                }
-              }
-            >
-              <Text
+              >
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "__typename": "ImageMediaSource",
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/seed/9/200",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 24,
+                      "bottom": 0,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  themeSize={48}
+                />
+              </View>
+              <View
                 style={
                   Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "justifyContent": "center",
+                    "marginLeft": 8,
                   }
                 }
               >
-                Albert Flores
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
+                <Text
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
                   }
-                }
-              >
-                Anderson Campus
-              </Text>
+                >
+                  Albert Flores
+                   
+                  Flores
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(39, 39, 46, 0.3)",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Anderson Campus
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -6274,7 +6410,7 @@ Array [
         }
       />
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     animateOnMount={true}
     backgroundComponent={[Function]}
@@ -6288,6 +6424,6 @@ Array [
       ]
     }
     topInset={0}
-  />,
-]
+  />
+</View>
 `;

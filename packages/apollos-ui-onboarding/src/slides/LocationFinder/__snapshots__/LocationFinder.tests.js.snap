@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding LocationFinder component should pass additional props to Slide component 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -94,8 +100,8 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "backgroundColor": "#17B582",
+                "borderColor": "#17B582",
                 "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
@@ -124,7 +130,7 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -163,12 +169,18 @@ Array [
         Later
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -185,7 +197,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -261,8 +273,8 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "backgroundColor": "#17B582",
+                "borderColor": "#17B582",
                 "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
@@ -291,12 +303,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render a BackgroundComponent 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -313,7 +331,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -420,8 +438,8 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "backgroundColor": "#17B582",
+                "borderColor": "#17B582",
                 "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
@@ -450,12 +468,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render a button with custom text 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -472,7 +496,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -564,8 +588,8 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
                   "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
@@ -595,12 +619,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render a custom description 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -617,7 +647,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -693,8 +723,8 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "backgroundColor": "#17B582",
+                "borderColor": "#17B582",
                 "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
@@ -723,12 +753,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render a custom title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -745,7 +781,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -821,8 +857,8 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "backgroundColor": "#17B582",
+                "borderColor": "#17B582",
                 "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
@@ -851,12 +887,18 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render the campus card 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -873,7 +915,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1060,7 +1102,7 @@ South Barrington, IL 60010-6143
         </View>
       </View>
     </View>
-  </RCTScrollView>,
+  </RCTScrollView>
   <View
     style={
       Object {
@@ -1104,13 +1146,13 @@ South Barrington, IL 60010-6143
         <View
           bordered={false}
           disabled={false}
-          pill={true}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 48,
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
               "borderWidth": 2,
               "elevation": 2,
               "flexDirection": "row",
@@ -1355,12 +1397,18 @@ South Barrington, IL 60010-6143
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding LocationFinder component should render with a button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1377,7 +1425,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1469,8 +1517,8 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
                   "borderRadius": 16,
                   "borderWidth": 2,
                   "elevation": 2,
@@ -1500,6 +1548,6 @@ Array [
         </View>
       </View>
     </View>
-  </RCTScrollView>,
-]
+  </RCTScrollView>
+</View>
 `;

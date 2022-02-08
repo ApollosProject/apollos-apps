@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NodeFeaturesConnected should render 1`] = `
-<FeaturesFeedConnected
-  featureFeedId="FeatureFeed:123"
-  onPressActionItem={[Function]}
-  openUrl={[Function]}
-/>
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <FeaturesFeedConnected
+    featureFeedId="FeatureFeed:123"
+    onPressActionItem={[Function]}
+    openUrl={[Function]}
+  />
+</View>
 `;

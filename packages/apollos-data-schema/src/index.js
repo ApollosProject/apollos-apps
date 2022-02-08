@@ -183,8 +183,11 @@ export const authenticationSchema = gql`
   }
 
   extend type Mutation {
+    # Requests an OTP to be sent to an existing user.
     requestLogin(identity: AuthenticationIdentityInput!): LoginAttempt
+    # Requests an OTP to be sent to a new user.
     requestRegister(identity: AuthenticationIdentityInput!): LoginAttempt
+    # Logs in with an OTP.
     validateLogin(
       identity: AuthenticationIdentityInput!
       otp: String!
@@ -195,7 +198,26 @@ export const authenticationSchema = gql`
     claimLinkCode(
       input: AuthenticationClaimLinkCodeInput!
     ): ClaimLinkCodeAttempt
+
+    # Uses a refresh token to get a new access token.
     refreshSession(refreshToken: String!): AuthenticatedPerson
+
+    # Used for connecting an email or phone number to an existing logged in account.
+    requestConnectIdentity(
+      identity: AuthenticationIdentityInput!
+    ): IdentityConnectAttempt
+    connectIdentity(
+      identity: AuthenticationIdentityInput!
+      otp: String!
+    ): AuthenticatedPerson
+  }
+
+  type IdentityConnectAttempt {
+    result: IdentityConnectAttemptResult
+  }
+
+  enum IdentityConnectAttemptResult {
+    SUCCESS
   }
 
   enum LoginAttemptResult {
@@ -269,11 +291,11 @@ export const peopleSchema = gql`
   enum UPDATEABLE_PROFILE_FIELDS {
     FirstName
     LastName
-    Email
+    Email @deprecated
     NickName
     Gender
     BirthDate
-    Phone
+    Phone @deprecated
   }
 
   input UpdateProfileInput {
@@ -982,6 +1004,7 @@ export const featuresSchema = gql`
     READ_CONTENT
     READ_EVENT
     OPEN_URL
+    OPEN_URL_EXTERNALLY
     OPEN_AUTHENTICATED_URL
     OPEN_NODE
     OPEN_CHANNEL
@@ -1045,7 +1068,9 @@ export const featuresSchema = gql`
 
   type ActionTableAction {
     id: ID!
+    icon: String
     title: String
+    subtitle: String
     action: ACTION_FEATURE_ACTION
     relatedNode: Node
   }
@@ -1350,6 +1375,7 @@ export const prayerSchema = gql`
 
   extend type Mutation {
     addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+    reportPrayer(prayerId: ID!): PrayerRequest
   }
 
   extend enum InteractionAction {

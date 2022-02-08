@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The DateInput component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -49,8 +55,8 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -98,12 +104,18 @@ Array [
         }
       />
     </Modal>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The DateInput component should render with a displayValue 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -120,7 +132,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -151,8 +163,8 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -170,7 +182,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#27272E",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -253,12 +265,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The DateInput component should render with a label 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -275,7 +293,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -306,8 +324,8 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -325,7 +343,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#27272E",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -410,12 +428,18 @@ Array [
         Date Label
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The DateInput component should render with a placeholder 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -432,7 +456,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -463,8 +487,8 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -482,7 +506,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#27272E",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -565,12 +589,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The DateInput component should render with an error 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -587,7 +617,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -618,8 +648,8 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -680,12 +710,18 @@ Array [
     >
       Danger Will Robinson
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The DateInput component should render without a maximum date 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -702,7 +738,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -733,8 +769,8 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -752,7 +788,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#27272E",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -837,6 +873,6 @@ Array [
         Date Label
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

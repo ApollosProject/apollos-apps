@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ScriptureList component renders a scripture List 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     style={
       Object {
@@ -43,6 +49,6 @@ Array [
     >
       1 Corinthians 15:57, Exodus 17:8-15
     </Text>
-  </Text>,
-]
+  </Text>
+</View>
 `;

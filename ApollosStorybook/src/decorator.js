@@ -17,10 +17,7 @@ const decorator = (story) => {
     <NavigationContainer independent>
       <ClientProvider>
         <LiveProvider>
-          <Providers
-            themeInput={customTheme}
-            iconInput={customIcons}
-          >
+          <Providers themeInput={customTheme} iconInput={customIcons}>
             <Stack.Navigator>
               <Stack.Screen
                 name="RootScreen"
@@ -33,6 +30,6 @@ const decorator = (story) => {
       </ClientProvider>
     </NavigationContainer>
   );
-}
+};
 
 export default decorator;

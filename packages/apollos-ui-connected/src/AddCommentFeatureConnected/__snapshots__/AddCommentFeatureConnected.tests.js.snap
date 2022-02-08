@@ -2,28 +2,36 @@
 
 exports[`The CommentListFeatureConnected component should render 1`] = `
 <View
-  __typename="AddCommentFeature"
-  addPrompt="A great add prompt"
-  animateOnMount={true}
-  backgroundComponent={[Function]}
-  dismissOnPanDown={false}
-  id="AddCommentFeature:123"
-  index={0}
-  initialPrompt="A great initial prompt"
-  loading={false}
-  onChange={[Function]}
-  relatedNode={
+  style={
     Object {
-      "__typename": "UniversalContentItem",
-      "id": "UniversalContentItem:123",
+      "flex": 1,
     }
   }
-  snapPoints={
-    Array [
-      80,
-      "100%",
-    ]
-  }
-  topInset={0}
-/>
+>
+  <View
+    __typename="AddCommentFeature"
+    addPrompt="A great add prompt"
+    animateOnMount={true}
+    backgroundComponent={[Function]}
+    dismissOnPanDown={false}
+    id="AddCommentFeature:123"
+    index={0}
+    initialPrompt="A great initial prompt"
+    loading={false}
+    onChange={[Function]}
+    relatedNode={
+      Object {
+        "__typename": "UniversalContentItem",
+        "id": "UniversalContentItem:123",
+      }
+    }
+    snapPoints={
+      Array [
+        80,
+        "100%",
+      ]
+    }
+    topInset={0}
+  />
+</View>
 `;

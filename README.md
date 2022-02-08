@@ -72,6 +72,13 @@ yarn link-packages
 
 Run simply run `yarn start` to start up the server and app. If you need to unlink the local packages in the templates repo to test that NPM dependencies are working properly, run `yarn unlink-packages` from both the `apps` and `templates` repos.
 
+#### Running the Multi-Tenant API Locally
+1. Make sure you're running a node version of 14 or greater.
+1. In the root of `apollos-apps`, on the `next` branch, run `yarn` to install dependencies
+2. Run `yarn cluster`. This will copy the cluster and attempt to start it. Starting the cluster may fail.
+3. If it fails, kill that process, run `cd ApollosCluster`, then run `ENV_STAGE=staging yarn start:dev`
+4. Run `yarn start` from the root of `apollos-apps` to watch for changes.
+
 ### PRs
 
 We use the [Angular Conventional Commits](https://www.npmjs.com/package/conventional-changelog-angular) preset for pull requests and commits. Squash merges should be in this form:

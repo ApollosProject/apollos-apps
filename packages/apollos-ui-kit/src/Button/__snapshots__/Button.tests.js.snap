@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Button component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -38,13 +44,13 @@ Array [
     <View
       bordered={false}
       disabled={false}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
-          "borderRadius": 48,
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
           "flexDirection": "row",
@@ -69,12 +75,18 @@ Array [
         My Button!
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a Tertiary button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -91,7 +103,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -111,13 +123,13 @@ Array [
     <View
       bordered={false}
       disabled={false}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "#6EC5B8",
           "borderColor": "#6EC5B8",
-          "borderRadius": 48,
+          "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
           "flexDirection": "row",
@@ -142,12 +154,18 @@ Array [
         Tertiary Action
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a bordered button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -164,7 +182,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -184,13 +202,13 @@ Array [
     <View
       bordered={true}
       disabled={false}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#00676D",
-          "borderRadius": 48,
+          "borderColor": "#17B582",
+          "borderRadius": 16,
           "borderWidth": 2,
           "flexDirection": "row",
           "height": 48,
@@ -204,7 +222,7 @@ Array [
       <Text
         style={
           Object {
-            "color": "#00676D",
+            "color": "#17B582",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -214,12 +232,18 @@ Array [
         Ghost Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a disabled button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -236,7 +260,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -256,13 +280,13 @@ Array [
     <View
       bordered={false}
       disabled={true}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
-          "borderRadius": 48,
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
           "flexDirection": "row",
@@ -287,12 +311,18 @@ Array [
         Disabled Button 😭
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a ghost button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -309,7 +339,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -329,13 +359,13 @@ Array [
     <View
       bordered={true}
       disabled={false}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
           "borderColor": "#27272E",
-          "borderRadius": 48,
+          "borderRadius": 16,
           "borderWidth": 2,
           "flexDirection": "row",
           "height": 48,
@@ -359,12 +389,18 @@ Array [
         Ghost Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a ghost pill button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -381,7 +417,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -431,12 +467,18 @@ Array [
         Ghost Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -453,7 +495,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -473,13 +515,13 @@ Array [
     <View
       bordered={false}
       disabled={false}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
-          "borderRadius": 48,
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
           "flexDirection": "row",
@@ -498,12 +540,18 @@ Array [
         size="small"
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Button component should render a pill button 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -520,153 +568,7 @@ Array [
         Object {},
       ]
     }
-  />,
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      bordered={false}
-      disabled={false}
-      pill={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
-          "borderRadius": 48,
-          "borderWidth": 2,
-          "elevation": 2,
-          "flexDirection": "row",
-          "height": 48,
-          "justifyContent": "center",
-          "opacity": 1,
-          "overflow": "hidden",
-          "paddingHorizontal": 16,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 16,
-            "lineHeight": 24,
-          }
-        }
-      >
-        Pill Button
-      </Text>
-    </View>
-  </View>,
-]
-`;
-
-exports[`The Button component should render a primary button 1`] = `
-Array [
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {},
-      ]
-    }
-  />,
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      bordered={false}
-      disabled={false}
-      pill={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
-          "borderRadius": 48,
-          "borderWidth": 2,
-          "elevation": 2,
-          "flexDirection": "row",
-          "height": 48,
-          "justifyContent": "center",
-          "opacity": 1,
-          "overflow": "hidden",
-          "paddingHorizontal": 16,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 16,
-            "lineHeight": 24,
-          }
-        }
-      >
-        Primary Action
-      </Text>
-    </View>
-  </View>,
-]
-`;
-
-exports[`The Button component should render a secondary button 1`] = `
-Array [
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {},
-      ]
-    }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -714,15 +616,21 @@ Array [
           }
         }
       >
-        Secondary Action
+        Pill Button
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
-exports[`The Button component should render as default type 1`] = `
-Array [
+exports[`The Button component should render a primary button 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -739,7 +647,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -759,13 +667,13 @@ Array [
     <View
       bordered={false}
       disabled={false}
-      pill={true}
+      pill={false}
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#A5A5A5",
-          "borderColor": "#A5A5A5",
-          "borderRadius": 48,
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
           "flexDirection": "row",
@@ -780,22 +688,28 @@ Array [
       <Text
         style={
           Object {
-            "color": "#27272E",
+            "color": "#FFFFFF",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
           }
         }
       >
-        My Button!
+        Primary Action
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
-exports[`The Button component should render with children 1`] = `
-Array [
+exports[`The Button component should render a secondary button 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -812,17 +726,175 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Secondary Action
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Button component should render as default type 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        My Button!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Button component should render with children 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
   <View
     bordered={false}
     disabled={false}
-    pill={true}
+    pill={false}
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
+        "backgroundColor": "#17B582",
+        "borderColor": "#17B582",
+        "borderRadius": 16,
         "borderWidth": 2,
         "elevation": 2,
         "flexDirection": "row",
@@ -835,6 +907,6 @@ Array [
     }
   >
     <View />
-  </View>,
-]
+  </View>
+</View>
 `;

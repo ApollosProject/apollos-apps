@@ -303,7 +303,7 @@ class Feature extends PostgresDataSource {
     algorithms = ['DAILY_PRAYER'],
     title,
     subtitle = 'Daily Prayer',
-    isCard = true,
+    isCard = false,
     ...args
   }) {
     const { ActionAlgorithm } = this.context.dataSources;

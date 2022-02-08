@@ -275,520 +275,23 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                   }
                 >
                   <View
-                    onLayout={[Function]}
                     style={
-                      Array [
-                        Object {
-                          "flex": 1,
-                        },
-                        Object {
-                          "paddingBottom": 0,
-                        },
-                      ]
+                      Object {
+                        "flex": 1,
+                      }
                     }
                   >
                     <View
+                      onLayout={[Function]}
                       style={
-                        Object {
-                          "paddingHorizontal": 16,
-                          "paddingVertical": 16,
-                        }
-                      }
-                    >
-                      <View
-                        disabled={false}
-                        style={
+                        Array [
                           Object {
-                            "marginVertical": 16,
-                          }
-                        }
-                      >
-                        <View>
-                          <View
-                            style={
-                              Object {
-                                "flexDirection": "row",
-                                "justifyContent": "center",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "center",
-                                  "justifyContent": "center",
-                                }
-                              }
-                            />
-                            <View
-                              style={
-                                Object {
-                                  "alignSelf": "flex-end",
-                                  "flex": 1,
-                                }
-                              }
-                            >
-                              <View
-                                style={
-                                  Object {
-                                    "opacity": 1,
-                                  }
-                                }
-                              >
-                                <TextInput
-                                  allowFontScaling={true}
-                                  editable={true}
-                                  onBlur={[Function]}
-                                  onChangeText={[Function]}
-                                  onFocus={[Function]}
-                                  placeholderTextColor="rgba(39, 39, 46, 0.6)"
-                                  rejectResponderTermination={true}
-                                  returnKeyType="done"
-                                  style={
-                                    Array [
-                                      Object {
-                                        "color": "#27272E",
-                                        "fontFamily": "InterUI-Bold",
-                                        "fontSize": 14,
-                                        "height": 38,
-                                        "paddingVertical": 0,
-                                      },
-                                      undefined,
-                                    ]
-                                  }
-                                  type="text"
-                                  underlineColorAndroid="transparent"
-                                  value="Isaac"
-                                />
-                              </View>
-                              <View
-                                onLayout={[Function]}
-                                pointerEvents="none"
-                                style={
-                                  Object {
-                                    "justifyContent": "center",
-                                    "opacity": 0.8,
-                                    "position": "absolute",
-                                    "top": 0,
-                                    "transform": Array [
-                                      Object {
-                                        "scale": 0.8,
-                                      },
-                                      Object {
-                                        "translateX": 0,
-                                      },
-                                      Object {
-                                        "translateY": 0,
-                                      },
-                                    ],
-                                  }
-                                }
-                              >
-                                <Text
-                                  numberOfLines={0}
-                                  style={
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "color": "rgba(39, 39, 46, 0.6)",
-                                      "fontFamily": "InterUI-Medium",
-                                      "fontSize": 14,
-                                      "lineHeight": 21,
-                                      "paddingVertical": 4,
-                                    }
-                                  }
-                                >
-                                  First Name
-                                </Text>
-                              </View>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "center",
-                                  "justifyContent": "center",
-                                }
-                              }
-                            />
-                          </View>
-                          <View
-                            style={
-                              Object {
-                                "bottom": 0,
-                                "left": 0,
-                                "right": 0,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "bottom": -0.5,
-                                  "height": 0.5,
-                                }
-                              }
-                            />
-                            <View
-                              style={
-                                Object {
-                                  "bottom": 0,
-                                  "left": 0,
-                                  "right": 0,
-                                  "transform": Array [
-                                    Object {
-                                      "scaleX": 1,
-                                    },
-                                  ],
-                                }
-                              }
-                            >
-                              <View
-                                hasError={false}
-                                style={
-                                  Object {
-                                    "backgroundColor": "#17B582",
-                                    "bottom": 0,
-                                    "height": 0.5,
-                                  }
-                                }
-                              />
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                      <View
-                        disabled={false}
-                        style={
+                            "flex": 1,
+                          },
                           Object {
-                            "marginVertical": 16,
-                          }
-                        }
-                      >
-                        <View>
-                          <View
-                            style={
-                              Object {
-                                "flexDirection": "row",
-                                "justifyContent": "center",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "center",
-                                  "justifyContent": "center",
-                                }
-                              }
-                            />
-                            <View
-                              style={
-                                Object {
-                                  "alignSelf": "flex-end",
-                                  "flex": 1,
-                                }
-                              }
-                            >
-                              <View
-                                style={
-                                  Object {
-                                    "opacity": 1,
-                                  }
-                                }
-                              >
-                                <TextInput
-                                  allowFontScaling={true}
-                                  editable={true}
-                                  onBlur={[Function]}
-                                  onChangeText={[Function]}
-                                  onFocus={[Function]}
-                                  placeholderTextColor="rgba(39, 39, 46, 0.6)"
-                                  rejectResponderTermination={true}
-                                  returnKeyType="done"
-                                  style={
-                                    Array [
-                                      Object {
-                                        "color": "#27272E",
-                                        "fontFamily": "InterUI-Bold",
-                                        "fontSize": 14,
-                                        "height": 38,
-                                        "paddingVertical": 0,
-                                      },
-                                      undefined,
-                                    ]
-                                  }
-                                  type="text"
-                                  underlineColorAndroid="transparent"
-                                  value="Hardy"
-                                />
-                              </View>
-                              <View
-                                onLayout={[Function]}
-                                pointerEvents="none"
-                                style={
-                                  Object {
-                                    "justifyContent": "center",
-                                    "opacity": 0.8,
-                                    "position": "absolute",
-                                    "top": 0,
-                                    "transform": Array [
-                                      Object {
-                                        "scale": 0.8,
-                                      },
-                                      Object {
-                                        "translateX": 0,
-                                      },
-                                      Object {
-                                        "translateY": 0,
-                                      },
-                                    ],
-                                  }
-                                }
-                              >
-                                <Text
-                                  numberOfLines={0}
-                                  style={
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "color": "rgba(39, 39, 46, 0.6)",
-                                      "fontFamily": "InterUI-Medium",
-                                      "fontSize": 14,
-                                      "lineHeight": 21,
-                                      "paddingVertical": 4,
-                                    }
-                                  }
-                                >
-                                  Last Name
-                                </Text>
-                              </View>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "center",
-                                  "justifyContent": "center",
-                                }
-                              }
-                            />
-                          </View>
-                          <View
-                            style={
-                              Object {
-                                "bottom": 0,
-                                "left": 0,
-                                "right": 0,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "bottom": -0.5,
-                                  "height": 0.5,
-                                }
-                              }
-                            />
-                            <View
-                              style={
-                                Object {
-                                  "bottom": 0,
-                                  "left": 0,
-                                  "right": 0,
-                                  "transform": Array [
-                                    Object {
-                                      "scaleX": 1,
-                                    },
-                                  ],
-                                }
-                              }
-                            >
-                              <View
-                                hasError={false}
-                                style={
-                                  Object {
-                                    "backgroundColor": "#17B582",
-                                    "bottom": 0,
-                                    "height": 0.5,
-                                  }
-                                }
-                              />
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                      <View
-                        disabled={false}
-                        style={
-                          Object {
-                            "marginVertical": 16,
-                          }
-                        }
-                      >
-                        <View>
-                          <View
-                            style={
-                              Object {
-                                "flexDirection": "row",
-                                "justifyContent": "center",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "center",
-                                  "justifyContent": "center",
-                                }
-                              }
-                            />
-                            <View
-                              style={
-                                Object {
-                                  "alignSelf": "flex-end",
-                                  "flex": 1,
-                                }
-                              }
-                            >
-                              <View
-                                style={
-                                  Object {
-                                    "opacity": 1,
-                                  }
-                                }
-                              >
-                                <TextInput
-                                  allowFontScaling={true}
-                                  autoCapitalize="none"
-                                  autoCorrect={false}
-                                  editable={true}
-                                  keyboardType="email-address"
-                                  onBlur={[Function]}
-                                  onChangeText={[Function]}
-                                  onFocus={[Function]}
-                                  placeholderTextColor="rgba(39, 39, 46, 0.6)"
-                                  rejectResponderTermination={true}
-                                  returnKeyType="done"
-                                  style={
-                                    Array [
-                                      Object {
-                                        "color": "#27272E",
-                                        "fontFamily": "InterUI-Bold",
-                                        "fontSize": 14,
-                                        "height": 38,
-                                        "paddingVertical": 0,
-                                      },
-                                      undefined,
-                                    ]
-                                  }
-                                  type="email"
-                                  underlineColorAndroid="transparent"
-                                  value="isaac.hardy@newspring.cc"
-                                />
-                              </View>
-                              <View
-                                onLayout={[Function]}
-                                pointerEvents="none"
-                                style={
-                                  Object {
-                                    "justifyContent": "center",
-                                    "opacity": 0.8,
-                                    "position": "absolute",
-                                    "top": 0,
-                                    "transform": Array [
-                                      Object {
-                                        "scale": 0.8,
-                                      },
-                                      Object {
-                                        "translateX": 0,
-                                      },
-                                      Object {
-                                        "translateY": 0,
-                                      },
-                                    ],
-                                  }
-                                }
-                              >
-                                <Text
-                                  numberOfLines={0}
-                                  style={
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "color": "rgba(39, 39, 46, 0.6)",
-                                      "fontFamily": "InterUI-Medium",
-                                      "fontSize": 14,
-                                      "lineHeight": 21,
-                                      "paddingVertical": 4,
-                                    }
-                                  }
-                                >
-                                  Email
-                                </Text>
-                              </View>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "center",
-                                  "justifyContent": "center",
-                                }
-                              }
-                            />
-                          </View>
-                          <View
-                            style={
-                              Object {
-                                "bottom": 0,
-                                "left": 0,
-                                "right": 0,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "bottom": -0.5,
-                                  "height": 0.5,
-                                }
-                              }
-                            />
-                            <View
-                              style={
-                                Object {
-                                  "bottom": 0,
-                                  "left": 0,
-                                  "right": 0,
-                                  "transform": Array [
-                                    Object {
-                                      "scaleX": 1,
-                                    },
-                                  ],
-                                }
-                              }
-                            >
-                              <View
-                                hasError={false}
-                                style={
-                                  Object {
-                                    "backgroundColor": "#17B582",
-                                    "bottom": 0,
-                                    "height": 0.5,
-                                  }
-                                }
-                              />
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "justifyContent": "flex-end",
-                          "marginBottom": 80,
-                        }
+                            "paddingBottom": 0,
+                          },
+                        ]
                       }
                     >
                       <View
@@ -800,54 +303,559 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                         }
                       >
                         <View
-                          accessible={true}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          disabled={false}
                           style={
                             Object {
-                              "opacity": 1,
+                              "marginVertical": 16,
+                            }
+                          }
+                        >
+                          <View>
+                            <View
+                              style={
+                                Object {
+                                  "flexDirection": "row",
+                                  "justifyContent": "center",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "flex-end",
+                                    "flex": 1,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                    }
+                                  }
+                                >
+                                  <TextInput
+                                    allowFontScaling={true}
+                                    editable={true}
+                                    onBlur={[Function]}
+                                    onChangeText={[Function]}
+                                    onFocus={[Function]}
+                                    placeholderTextColor="rgba(39, 39, 46, 0.6)"
+                                    rejectResponderTermination={true}
+                                    returnKeyType="done"
+                                    style={
+                                      Array [
+                                        Object {
+                                          "color": "#27272E",
+                                          "fontFamily": "InterUI-Bold",
+                                          "fontSize": 14,
+                                          "height": 38,
+                                          "paddingVertical": 0,
+                                        },
+                                        undefined,
+                                      ]
+                                    }
+                                    type="text"
+                                    underlineColorAndroid="transparent"
+                                    value="Isaac"
+                                  />
+                                </View>
+                                <View
+                                  onLayout={[Function]}
+                                  pointerEvents="none"
+                                  style={
+                                    Object {
+                                      "justifyContent": "center",
+                                      "opacity": 0.8,
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "transform": Array [
+                                        Object {
+                                          "scale": 0.8,
+                                        },
+                                        Object {
+                                          "translateX": 0,
+                                        },
+                                        Object {
+                                          "translateY": 0,
+                                        },
+                                      ],
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    numberOfLines={0}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "transparent",
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                        "fontFamily": "InterUI-Medium",
+                                        "fontSize": 14,
+                                        "lineHeight": 21,
+                                        "paddingVertical": 4,
+                                      }
+                                    }
+                                  >
+                                    First Name
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              />
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "bottom": 0,
+                                  "left": 0,
+                                  "right": 0,
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "bottom": -0.5,
+                                    "height": 0.5,
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "right": 0,
+                                    "transform": Array [
+                                      Object {
+                                        "scaleX": 1,
+                                      },
+                                    ],
+                                  }
+                                }
+                              >
+                                <View
+                                  hasError={false}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#17B582",
+                                      "bottom": 0,
+                                      "height": 0.5,
+                                    }
+                                  }
+                                />
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                        <View
+                          disabled={false}
+                          style={
+                            Object {
+                              "marginVertical": 16,
+                            }
+                          }
+                        >
+                          <View>
+                            <View
+                              style={
+                                Object {
+                                  "flexDirection": "row",
+                                  "justifyContent": "center",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "flex-end",
+                                    "flex": 1,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                    }
+                                  }
+                                >
+                                  <TextInput
+                                    allowFontScaling={true}
+                                    editable={true}
+                                    onBlur={[Function]}
+                                    onChangeText={[Function]}
+                                    onFocus={[Function]}
+                                    placeholderTextColor="rgba(39, 39, 46, 0.6)"
+                                    rejectResponderTermination={true}
+                                    returnKeyType="done"
+                                    style={
+                                      Array [
+                                        Object {
+                                          "color": "#27272E",
+                                          "fontFamily": "InterUI-Bold",
+                                          "fontSize": 14,
+                                          "height": 38,
+                                          "paddingVertical": 0,
+                                        },
+                                        undefined,
+                                      ]
+                                    }
+                                    type="text"
+                                    underlineColorAndroid="transparent"
+                                    value="Hardy"
+                                  />
+                                </View>
+                                <View
+                                  onLayout={[Function]}
+                                  pointerEvents="none"
+                                  style={
+                                    Object {
+                                      "justifyContent": "center",
+                                      "opacity": 0.8,
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "transform": Array [
+                                        Object {
+                                          "scale": 0.8,
+                                        },
+                                        Object {
+                                          "translateX": 0,
+                                        },
+                                        Object {
+                                          "translateY": 0,
+                                        },
+                                      ],
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    numberOfLines={0}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "transparent",
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                        "fontFamily": "InterUI-Medium",
+                                        "fontSize": 14,
+                                        "lineHeight": 21,
+                                        "paddingVertical": 4,
+                                      }
+                                    }
+                                  >
+                                    Last Name
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              />
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "bottom": 0,
+                                  "left": 0,
+                                  "right": 0,
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "bottom": -0.5,
+                                    "height": 0.5,
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "right": 0,
+                                    "transform": Array [
+                                      Object {
+                                        "scaleX": 1,
+                                      },
+                                    ],
+                                  }
+                                }
+                              >
+                                <View
+                                  hasError={false}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#17B582",
+                                      "bottom": 0,
+                                      "height": 0.5,
+                                    }
+                                  }
+                                />
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                        <View
+                          disabled={false}
+                          style={
+                            Object {
+                              "marginVertical": 16,
+                            }
+                          }
+                        >
+                          <View>
+                            <View
+                              style={
+                                Object {
+                                  "flexDirection": "row",
+                                  "justifyContent": "center",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "flex-end",
+                                    "flex": 1,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                    }
+                                  }
+                                >
+                                  <TextInput
+                                    allowFontScaling={true}
+                                    autoCapitalize="none"
+                                    autoCorrect={false}
+                                    editable={true}
+                                    keyboardType="email-address"
+                                    onBlur={[Function]}
+                                    onChangeText={[Function]}
+                                    onFocus={[Function]}
+                                    placeholderTextColor="rgba(39, 39, 46, 0.6)"
+                                    rejectResponderTermination={true}
+                                    returnKeyType="done"
+                                    style={
+                                      Array [
+                                        Object {
+                                          "color": "#27272E",
+                                          "fontFamily": "InterUI-Bold",
+                                          "fontSize": 14,
+                                          "height": 38,
+                                          "paddingVertical": 0,
+                                        },
+                                        undefined,
+                                      ]
+                                    }
+                                    type="email"
+                                    underlineColorAndroid="transparent"
+                                    value="isaac.hardy@newspring.cc"
+                                  />
+                                </View>
+                                <View
+                                  onLayout={[Function]}
+                                  pointerEvents="none"
+                                  style={
+                                    Object {
+                                      "justifyContent": "center",
+                                      "opacity": 0.8,
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "transform": Array [
+                                        Object {
+                                          "scale": 0.8,
+                                        },
+                                        Object {
+                                          "translateX": 0,
+                                        },
+                                        Object {
+                                          "translateY": 0,
+                                        },
+                                      ],
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    numberOfLines={0}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "transparent",
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                        "fontFamily": "InterUI-Medium",
+                                        "fontSize": 14,
+                                        "lineHeight": 21,
+                                        "paddingVertical": 4,
+                                      }
+                                    }
+                                  >
+                                    Email
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              />
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "bottom": 0,
+                                  "left": 0,
+                                  "right": 0,
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "bottom": -0.5,
+                                    "height": 0.5,
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "right": 0,
+                                    "transform": Array [
+                                      Object {
+                                        "scaleX": 1,
+                                      },
+                                    ],
+                                  }
+                                }
+                              >
+                                <View
+                                  hasError={false}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#17B582",
+                                      "bottom": 0,
+                                      "height": 0.5,
+                                    }
+                                  }
+                                />
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "justifyContent": "flex-end",
+                            "marginBottom": 80,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "paddingHorizontal": 16,
+                              "paddingVertical": 16,
                             }
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={true}
+                            accessible={true}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
                               Object {
-                                "alignItems": "center",
-                                "backgroundColor": "#00676D",
-                                "borderColor": "#00676D",
-                                "borderRadius": 48,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
-                                "height": 48,
-                                "justifyContent": "center",
                                 "opacity": 1,
-                                "overflow": "hidden",
-                                "paddingHorizontal": 16,
                               }
                             }
                           >
-                            <Text
+                            <View
+                              bordered={false}
+                              disabled={false}
+                              pill={false}
                               style={
                                 Object {
-                                  "color": "#FFFFFF",
-                                  "fontFamily": "InterUI-Bold",
-                                  "fontSize": 16,
-                                  "lineHeight": 24,
+                                  "alignItems": "center",
+                                  "backgroundColor": "#17B582",
+                                  "borderColor": "#17B582",
+                                  "borderRadius": 16,
+                                  "borderWidth": 2,
+                                  "elevation": 2,
+                                  "flexDirection": "row",
+                                  "height": 48,
+                                  "justifyContent": "center",
+                                  "opacity": 1,
+                                  "overflow": "hidden",
+                                  "paddingHorizontal": 16,
                                 }
                               }
                             >
-                              Save
-                            </Text>
+                              <Text
+                                style={
+                                  Object {
+                                    "color": "#FFFFFF",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                  }
+                                }
+                              >
+                                Save
+                              </Text>
+                            </View>
                           </View>
                         </View>
                       </View>

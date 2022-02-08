@@ -134,10 +134,10 @@ const Button = enhance(
 Button.defaultProps = {
   disabled: false,
   bordered: false,
-  pill: true,
+  pill: false,
   title: '',
   accessibilityComponentType: 'button',
-  type: 'primary',
+  type: 'default',
 };
 
 Button.propTypes = {

@@ -27,46 +27,10 @@ describe('The AvatarCloud component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('should render as radial', () => {
-    const tree = renderer.create(
-      <Providers>
-        <AvatarCloud avatars={avatars} radial />
-      </Providers>
-    );
-
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render without blur effect', () => {
-    const tree = renderer.create(
-      <Providers>
-        <AvatarCloud avatars={avatars} blur={false} />
-      </Providers>
-    );
-
-    expect(tree).toMatchSnapshot();
-  });
   it('should render as isLoading', () => {
     const tree = renderer.create(
       <Providers>
         <AvatarCloud avatars={['', '', '']} primaryAvatar={''} isLoading />
-      </Providers>
-    );
-
-    expect(tree).toMatchSnapshot();
-  });
-  it('should accept a maxAvatarWidth', () => {
-    const tree = renderer.create(
-      <Providers>
-        <AvatarCloud avatars={avatars} maxAvatarWidth={0.1} />
-      </Providers>
-    );
-
-    expect(tree).toMatchSnapshot();
-  });
-  it('should accept a minAvatarWidth', () => {
-    const tree = renderer.create(
-      <Providers>
-        <AvatarCloud avatars={avatars} minAvatarWidth={1} />
       </Providers>
     );
 

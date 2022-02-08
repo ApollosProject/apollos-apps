@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The landing swiper should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "flex": 1,
+        "height": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        initialRouteName="Scripture"
+        screenOptions={
+          Object {
+            "cardStyleInterpolator": [Function],
+            "headerShown": false,
+          }
+        }
+      >
+        <View
+          component={[Function]}
+          name="LandingSlide-0"
+          sharedElements={[Function]}
+        />
+        <View
+          component={[Function]}
+          name="LandingSlide-1"
+          sharedElements={[Function]}
+        />
+        <View
+          component={[Function]}
+          name="LandingSlide-2"
+          sharedElements={[Function]}
+        />
+        <View
+          component={[Function]}
+          name="LandingSlide-3"
+          sharedElements={[Function]}
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

@@ -9,6 +9,7 @@ const withThemeColor = styled(
     quaternary,
     placeholder,
     action,
+    centered,
   }) => ({
     ...(action ? { color: theme.colors.text.action } : {}),
     ...(placeholder ? { color: theme.colors.text.placeholder } : {}),
@@ -16,6 +17,7 @@ const withThemeColor = styled(
     ...(tertiary ? { color: theme.colors.text.tertiary } : {}),
     ...(secondary ? { color: theme.colors.text.secondary } : {}),
     ...(primary ? { color: theme.colors.text.primary } : {}),
+    ...(centered ? { textAlign: 'center' } : {}),
   })
 );
 

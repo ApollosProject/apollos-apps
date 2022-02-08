@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The BackgroundView component should accept extra props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -27,12 +33,18 @@ Array [
         "height": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`The BackgroundView component should render 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -49,7 +61,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -58,12 +70,18 @@ Array [
         "height": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`The BackgroundView component should render as a system color 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -80,7 +98,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     material="system"
     style={
@@ -90,12 +108,18 @@ Array [
         "height": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`The BackgroundView component should render with paper color 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -112,7 +136,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     material="paper"
     style={
@@ -122,6 +146,6 @@ Array [
         "height": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;

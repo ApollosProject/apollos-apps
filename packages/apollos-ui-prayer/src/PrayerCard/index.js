@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import Color from 'color';
 import PropTypes from 'prop-types';
+import { useActionSheet } from '@expo/react-native-action-sheet';
 
 import {
   Avatar,
@@ -13,6 +14,7 @@ import {
   Icon,
   styled,
   withTheme,
+  TouchableScale,
 } from '@apollosproject/ui-kit';
 
 import PrayerInput from '../PrayerInput';
@@ -90,31 +92,52 @@ const PrayerCard = ({
   prayer,
   title,
   completed,
-}) => (
-  <StyledCard cardColor={cardColor} isLoading={isLoading}>
-    <Content>
-      <AvatarPlacement hasAvatar={!!profile}>
-        <AvatarWrapper>
-          {profile ? <UserAvatar profile={profile} /> : <DefaultAvatar />}
-        </AvatarWrapper>
-      </AvatarPlacement>
-      {isLoading || prayer ? (
-        <>
-          <H4 padded>{title}</H4>
-          <BodyText>{prayer}</BodyText>
-        </>
-      ) : (
-        </* we render this without `padded` so that the input text can be aligned correctly */>
-          <H4>{title}</H4>
-          <PrayerInput
-            onChangeText={onPrayerChangeText}
-            completed={completed}
-          />
-        </>
-      )}
-    </Content>
-  </StyledCard>
-);
+  reportPrayer,
+}) => {
+  const { showActionSheetWithOptions } = useActionSheet();
+
+  return (
+    <StyledCard cardColor={cardColor} isLoading={isLoading}>
+      <TouchableScale
+        onLongPress={() => {
+          showActionSheetWithOptions(
+            {
+              options: ['Report Prayer', 'Cancel'],
+              cancelButtonIndex: 1,
+            },
+            (buttonIndex) => {
+              if (buttonIndex === 0) {
+                reportPrayer();
+              }
+            }
+          );
+        }}
+      >
+        <Content>
+          <AvatarPlacement hasAvatar={!!profile}>
+            <AvatarWrapper>
+              {profile ? <UserAvatar profile={profile} /> : <DefaultAvatar />}
+            </AvatarWrapper>
+          </AvatarPlacement>
+          {isLoading || prayer ? (
+            <>
+              <H4 padded>{title}</H4>
+              <BodyText>{prayer}</BodyText>
+            </>
+          ) : (
+            </* we render this without `padded` so that the input text can be aligned correctly */>
+              <H4>{title}</H4>
+              <PrayerInput
+                onChangeText={onPrayerChangeText}
+                completed={completed}
+              />
+            </>
+          )}
+        </Content>
+      </TouchableScale>
+    </StyledCard>
+  );
+};
 
 PrayerCard.propTypes = {
   profile: PropTypes.shape({
@@ -128,6 +151,7 @@ PrayerCard.propTypes = {
   title: PropTypes.string,
   prayer: PropTypes.string,
   onPrayerChangeText: PropTypes.func,
+  reportPrayer: PropTypes.func,
 };
 
 PrayerCard.defaultProps = {

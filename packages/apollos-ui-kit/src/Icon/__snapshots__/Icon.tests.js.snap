@@ -2,26 +2,12 @@
 
 exports[`The CoreIcons icon renders correctly 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-/>
-`;
-
-exports[`The Icon component accepts an iconInput object (custom icons) 1`] = `
-Array [
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -38,7 +24,35 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
+</View>
+`;
+
+exports[`The Icon component accepts an iconInput object (custom icons) 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
   <RNSVGSvgView
     align="xMidYMid"
     bbHeight={32}
@@ -243,12 +257,18 @@ Array [
         y={0}
       />
     </RNSVGGroup>
-  </RNSVGSvgView>,
-]
+  </RNSVGSvgView>
+</View>
 `;
 
 exports[`The Icon component overrides UIKit icons with iconInput (custom icons) that have the same name 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -265,7 +285,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <RNSVGSvgView
     align="xMidYMid"
     bbHeight={32}
@@ -380,66 +400,90 @@ Array [
         y={0}
       />
     </RNSVGGroup>
-  </RNSVGSvgView>,
-]
+  </RNSVGSvgView>
+</View>
 `;
 
 exports[`The Icon component return null for a missing icon 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-/>
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
 `;
 
 exports[`The PhosphorIcons icon renders correctly 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-/>
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
 `;
 
 exports[`The default icon renders correctly 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
-/>
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
 `;

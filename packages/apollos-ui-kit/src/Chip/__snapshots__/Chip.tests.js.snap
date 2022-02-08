@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Chip component should be selected 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -55,12 +61,18 @@ Array [
     >
       My Button!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render a custom icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -77,7 +89,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -101,8 +113,8 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#A5A5A5",
-          "borderColor": "#A5A5A5",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
@@ -244,7 +256,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "color": "#27272E",
+            "color": "#FFFFFF",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "justifyContent": "center",
@@ -256,12 +268,18 @@ Array [
         Custom Icon
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render an icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -278,7 +296,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -286,8 +304,8 @@ Array [
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#A5A5A5",
-        "borderColor": "#A5A5A5",
+        "backgroundColor": "#17B582",
+        "borderColor": "#17B582",
         "borderRadius": 16,
         "borderWidth": 2,
         "elevation": 2,
@@ -312,7 +330,7 @@ Array [
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
-        color="#27272E"
+        color="#FFFFFF"
         height={16}
         id="Raw"
         meetOrSlice={0}
@@ -334,7 +352,7 @@ Array [
             },
           ]
         }
-        tintColor="#27272E"
+        tintColor="#FFFFFF"
         vbHeight={256}
         vbWidth={256}
         width={16}
@@ -458,7 +476,7 @@ Array [
             stroke={
               Array [
                 0,
-                4280756014,
+                4294967295,
               ]
             }
             strokeDasharray={null}
@@ -479,7 +497,7 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "color": "#27272E",
+          "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "justifyContent": "center",
@@ -490,12 +508,18 @@ Array [
     >
       Heart!!!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -512,7 +536,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     accessible={true}
     focusable={true}
@@ -536,8 +560,8 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#A5A5A5",
-          "borderColor": "#A5A5A5",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
@@ -554,7 +578,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "color": "#27272E",
+            "color": "#FFFFFF",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "justifyContent": "center",
@@ -566,12 +590,18 @@ Array [
         My Button!
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Chip component should render positioned for a chipList 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -588,7 +618,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     bordered={false}
     disabled={false}
@@ -596,8 +626,8 @@ Array [
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#A5A5A5",
-        "borderColor": "#A5A5A5",
+        "backgroundColor": "#17B582",
+        "borderColor": "#17B582",
         "borderRadius": 16,
         "borderWidth": 2,
         "elevation": 2,
@@ -616,7 +646,7 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "color": "#27272E",
+          "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "justifyContent": "center",
@@ -627,6 +657,6 @@ Array [
     >
       chipList
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;

@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.42.0",
+  "version": "2.43.1",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -39,7 +39,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*|d3|d3-*|commander))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"

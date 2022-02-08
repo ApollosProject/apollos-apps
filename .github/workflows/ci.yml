@@ -30,15 +30,6 @@ jobs:
     - name: Lint
       run: yarn lint
 
-  m1-changes:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Check for M1 changes commited
-      run: ./scripts/check-for-m1-changes.sh         
-
   test:
     runs-on: ubuntu-latest
     services:

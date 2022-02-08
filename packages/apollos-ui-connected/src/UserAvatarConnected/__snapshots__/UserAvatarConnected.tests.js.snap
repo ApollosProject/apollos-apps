@@ -4,62 +4,14 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "height": 48,
-      "justifyContent": "center",
-      "width": 48,
+      "flex": 1,
     }
   }
-  themeSize={48}
->
-  <Image
-    fadeDuration={250}
-    onLoad={[Function]}
-    source={
-      Array [
-        Object {
-          "__typename": "ImageMedia",
-          "cache": "force-cache",
-          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-        },
-      ]
-    }
-    style={
-      Object {
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 24,
-        "bottom": 0,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    themeSize={48}
-  />
-</View>
-`;
-
-exports[`UserAvatarConnected component renders UserAvatarConnected without a photo 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "height": 48,
-      "justifyContent": "center",
-      "width": 48,
-    }
-  }
-  themeSize={48}
 >
   <View
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 48,
         "height": 48,
         "justifyContent": "center",
         "width": 48,
@@ -67,18 +19,83 @@ exports[`UserAvatarConnected component renders UserAvatarConnected without a pho
     }
     themeSize={48}
   >
-    <Text
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "__typename": "ImageMedia",
+            "cache": "force-cache",
+            "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+          },
+        ]
+      }
       style={
         Object {
-          "color": "rgb(249, 249, 251)",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 24,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 24,
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      themeSize={48}
+    />
+  </View>
+</View>
+`;
+
+exports[`UserAvatarConnected component renders UserAvatarConnected without a photo 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 48,
+        "justifyContent": "center",
+        "width": 48,
+      }
+    }
+    themeSize={48}
+  >
+    <View
+      backgroundColor="hsl(108, 40%, 60%)"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "hsl(108, 40%, 60%)",
+          "borderRadius": 48,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 48,
         }
       }
       themeSize={48}
     >
-      GC
-    </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgb(249, 249, 251)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 24,
+          }
+        }
+        themeSize={48}
+      >
+        GC
+      </Text>
+    </View>
   </View>
 </View>
 `;

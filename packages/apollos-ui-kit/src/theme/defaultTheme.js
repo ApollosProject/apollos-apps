@@ -99,6 +99,7 @@ export const sizing = {
     small: 48,
     medium: 72,
     large: 120,
+    xlarge: 160,
   },
 };
 
@@ -152,8 +153,8 @@ export const shadows = ({ colors: themeColors }) => ({
 
 export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   default: {
-    fill: themeColors.action.default,
-    accent: themeColors.text.primary,
+    fill: themeColors.action.secondary,
+    accent: themeColors.white,
   },
   primary: {
     fill: themeColors.action.primary,

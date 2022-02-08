@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding Slide component should render a custom icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -330,12 +336,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render a description 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -352,7 +364,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -394,12 +406,18 @@ Array [
         There's that word again: "heavy." Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -416,7 +434,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -478,12 +496,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render a title 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -500,7 +524,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -542,12 +566,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render accept additionall props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -564,7 +594,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -609,12 +639,18 @@ Array [
     <Text>
       Great Scott!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render an icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -631,7 +667,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -795,12 +831,18 @@ Array [
         }
       />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render children alone 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -817,7 +859,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -860,12 +902,18 @@ Array [
     <Text>
       Great Scott!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render with children 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -882,7 +930,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -929,6 +977,6 @@ Array [
     <Text>
       Great Scott!
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;

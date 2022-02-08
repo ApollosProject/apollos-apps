@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProtectedRoute component navigates to the auth route when logged out 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -34,8 +40,8 @@ Array [
       hidesWhenStopped={true}
       size="small"
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ProtectedRoute component navigates to the auth route when logged out 2`] = `
@@ -47,7 +53,13 @@ Array [
 `;
 
 exports[`ProtectedRoute component navigates to the logged in route when logged in 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -64,7 +76,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -80,8 +92,8 @@ Array [
       hidesWhenStopped={true}
       size="small"
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`ProtectedRoute component navigates to the logged in route when logged in 2`] = `
@@ -93,7 +105,13 @@ Array [
 `;
 
 exports[`ProtectedRoute component renders a custom loading component 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -110,9 +128,9 @@ Array [
         Object {},
       ]
     }
-  />,
-  <View />,
-]
+  />
+  <View />
+</View>
 `;
 
 exports[`ProtectedRoute component renders a custom loading component 2`] = `Array []`;

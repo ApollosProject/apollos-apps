@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.33.4",
+  "version": "2.43.1",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -42,8 +42,8 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.33.4",
-    "@apollosproject/babel-preset-apollos": "^2.33.4",
+    "@apollosproject/apollo-server-env-mock": "^2.43.1",
+    "@apollosproject/babel-preset-apollos": "^2.43.1",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.7.0",
     "jest": "^25.1.0"

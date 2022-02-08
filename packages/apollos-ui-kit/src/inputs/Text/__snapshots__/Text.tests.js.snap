@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Text Input component should render as a numeric field 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -179,12 +185,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Text Input component should render as a password field with an icon 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -201,7 +213,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -630,12 +642,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Text Input component should render as a phone number field 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -652,7 +670,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -813,12 +831,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Text Input component should render as an email field 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -835,7 +859,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -998,12 +1022,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Text Input component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1020,7 +1050,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -1179,12 +1209,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`The Text Input component should render with no underline 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -1201,7 +1237,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     disabled={false}
     style={
@@ -1316,6 +1352,6 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

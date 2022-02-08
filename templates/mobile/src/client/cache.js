@@ -2,15 +2,24 @@ import { InMemoryCache } from '@apollo/client/cache';
 import AsyncStorage from '@react-native-community/async-storage';
 import { CachePersistor } from 'apollo3-cache-persist';
 import ApollosConfig from '@apollosproject/config';
+import fragmentTypes from '../../fragmentTypes.json';
 
 // We reset our apollo cache based an env value and static number.
 // In the future, we should also look at resetting the app when an error occurs related to Apollo.
 // You can also increment this number to force a manual reset of the cache.
 const SCHEMA_VERSION = `${ApollosConfig.SCHEMA_VERSION}-1`; // Must be a string.
 const SCHEMA_VERSION_KEY = 'apollo-schema-version';
+const possibleTypes = {};
+fragmentTypes.__schema.types.forEach((supertype) => {
+  if (supertype.possibleTypes) {
+    possibleTypes[supertype.name] = [
+      ...supertype.possibleTypes.map((subtype) => subtype.name),
+    ];
+  }
+});
 
 const cache = new InMemoryCache({
-  possibleTypes: ApollosConfig.TYPEMAP,
+  possibleTypes,
   cacheRedirects: {
     Query: {
       fields: {

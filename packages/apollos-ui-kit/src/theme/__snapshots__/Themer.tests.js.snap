@@ -40,8 +40,8 @@ exports[`Themer should generate entirely new themes based on overrides 1`] = `
           "fill": "#c64f55",
         },
         "default": Object {
-          "accent": "#27272E",
-          "fill": "#A5A5A5",
+          "accent": "#FFFFFF",
+          "fill": "green",
         },
         "ghost": Object {
           "accent": "#27272E",
@@ -171,6 +171,7 @@ exports[`Themer should generate entirely new themes based on overrides 1`] = `
           "large": 120,
           "medium": 72,
           "small": 48,
+          "xlarge": 160,
           "xsmall": 24,
         },
         "baseBorderRadius": 16,

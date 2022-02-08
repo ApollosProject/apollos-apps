@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.42.0",
+  "version": "2.43.1",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -31,8 +31,8 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-native))"
-    ],
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-native|d3|d3-*|commander))"
+    ],    
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
     ],
@@ -62,9 +62,11 @@
     "react-native-svg": "*"
   },
   "dependencies": {
+    "@expo/react-native-action-sheet": "^3.12.0",
     "@react-native-community/blur": "^3.6.0",
     "@react-native-picker/picker": "^1.9.4",
     "color": "^3.1.0",
+    "d3-hierarchy": "^3.1.1",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",

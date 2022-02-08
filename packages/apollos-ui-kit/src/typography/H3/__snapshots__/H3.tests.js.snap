@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the H3 component should accept additional props 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -18,7 +24,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     accessible={false}
     style={
@@ -31,12 +37,18 @@ Array [
     }
   >
     "The Christian shoemaker does his duty not by putting little crosses on the shoes, but by making good shoes, because God is interested in good craftsmanship." ― Martin Luther
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H3 component should accept and render passed in styles 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -53,7 +65,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     style={
       Object {
@@ -65,12 +77,18 @@ Array [
     }
   >
     Salmon text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H3 component should render a loading state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -87,7 +105,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -99,12 +117,18 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the H3 component should render a loading state with correct positioning (margins) 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -121,7 +145,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <View
     style={
       Object {
@@ -135,12 +159,18 @@ Array [
         "width": "100%",
       }
     }
-  />,
-]
+  />
+</View>
 `;
 
 exports[`the H3 component should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -157,7 +187,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     style={
       Object {
@@ -169,12 +199,18 @@ Array [
     }
   >
     Default H3 text
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`the H3 component should render with correct padding 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -191,7 +227,7 @@ Array [
         Object {},
       ]
     }
-  />,
+  />
   <Text
     padded={true}
     style={
@@ -206,6 +242,6 @@ Array [
     }
   >
     Padded H3 text
-  </Text>,
-]
+  </Text>
+</View>
 `;

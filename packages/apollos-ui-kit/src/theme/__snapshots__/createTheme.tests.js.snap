@@ -20,8 +20,8 @@ Object {
       "fill": "#c64f55",
     },
     "default": Object {
-      "accent": "#27272E",
-      "fill": "#A5A5A5",
+      "accent": "#FFFFFF",
+      "fill": "#17B582",
     },
     "ghost": Object {
       "accent": "#27272E",
@@ -155,6 +155,7 @@ Object {
       "large": 120,
       "medium": 72,
       "small": 48,
+      "xlarge": 160,
       "xsmall": 24,
     },
     "baseBorderRadius": 16,
@@ -425,8 +426,8 @@ Object {
       "fill": "#c64f55",
     },
     "default": Object {
-      "accent": "#F4F7F8",
-      "fill": "#A5A5A5",
+      "accent": "#FFFFFF",
+      "fill": "#17B582",
     },
     "ghost": Object {
       "accent": "#F4F7F8",
@@ -556,6 +557,7 @@ Object {
       "large": 120,
       "medium": 72,
       "small": 48,
+      "xlarge": 160,
       "xsmall": 24,
     },
     "baseBorderRadius": 16,
