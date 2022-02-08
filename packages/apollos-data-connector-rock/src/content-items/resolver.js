@@ -94,7 +94,7 @@ const resolver = {
       if (reference && reference != null) {
         return dataSources.Scripture.getScriptures(reference);
       }
-      return null;
+      return [];
     },
   },
   UniversalContentItem: {
@@ -109,6 +109,13 @@ const resolver = {
   },
   MediaContentItem: {
     ...defaultContentItemResolvers,
+    scriptures: ({ attributeValues }, args, { dataSources }) => {
+      const reference = get(attributeValues, 'scriptures.value');
+      if (reference && reference != null) {
+        return dataSources.Scripture.getScriptures(reference);
+      }
+      return [];
+    },
   },
   WeekendContentItem: {
     ...defaultContentItemResolvers,
