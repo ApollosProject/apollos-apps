@@ -146,20 +146,42 @@ class ContentItemDataSource extends PostgresDataSource {
         ? {
             where: {
               contentItemCategoryId: { [Op.in]: args.categoryIDs },
+              // When we are filtering personas by a channel,
+              // it's frequent that a church won't tag a specific item with a persona
+              // expecting that item to be seen by everyone.
+
+              // Those items will show up as having no tags, so we need to filter items that
+              // A. Don't have a tag. (id is null)
+              // B. Have a tag, with a person (that's current user)
+              [Op.or]: [
+                { '$tags.people.id$': { [Op.not]: null } },
+                { '$tags.id$': { [Op.is]: null } },
+              ],
               ...args?.where,
             },
           }
-        : {}),
-      include: {
-        model: this.sequelize.models.tag,
-        as: 'tags',
-        where: { type: 'Persona' },
-        include: {
-          model: this.sequelize.models.people,
-          where: { id: personId },
-          as: 'people',
+        : {
+            where: {
+              '$tags.people.id$': { [Op.not]: null },
+              ...args?.where,
+            },
+          }),
+      include: [
+        {
+          model: this.sequelize.models.tag,
+          as: 'tags',
+          where: { type: 'Persona' },
+          required: false,
+          duplicating: false,
+          include: {
+            model: this.sequelize.models.people,
+            where: { id: personId },
+            as: 'people',
+            required: false,
+            duplicating: false,
+          },
         },
-      },
+      ],
     });
   }
 

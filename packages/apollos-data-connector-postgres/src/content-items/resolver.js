@@ -69,7 +69,7 @@ const resolver = {
       }),
     personaFeed: async (root, args, { dataSources }) => {
       return dataSources.ContentItem.paginate({
-        cursor: dataSources.ContentItem.byPersonaFeed,
+        cursor: dataSources.ContentItem.getPersonaFeed,
         ...args,
       });
     },
