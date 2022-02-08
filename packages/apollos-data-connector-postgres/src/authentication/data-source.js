@@ -129,6 +129,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     });
 
     if (!isValid) {
+      // eslint-disable-next-line no-console
       console.error('Invalid OTP');
       return null;
     }
@@ -142,6 +143,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     });
 
     if (!person) {
+      // eslint-disable-next-line no-console
       console.error('No user found');
       return null;
     }
@@ -184,18 +186,12 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     let authenticatedPerson = null;
 
     if (linkCode.openIdIdentityId) {
-      // N...
-      const openIdIdentity = await this.context.dataSources.OpenIdIdentity.getFromId(
-        linkCode.openIdIdentityId
-      );
+      const openIdIdentity = await linkCode.getOpenIdIdentity();
 
       if (!openIdIdentity) {
         result = 'USER_NOT_FOUND';
       } else {
-        // N+1 🙈
-        const person = await this.context.dataSources.Person.getFromId(
-          openIdIdentity.personId
-        );
+        const person = await openIdIdentity.getPerson();
 
         if (!person) {
           result = 'USER_NOT_FOUND';
@@ -277,14 +273,16 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       );
     }
 
-    // Associated it to this OTP
+    // Claim the OTP using the OpenID
     try {
       await OTP.claimLinkCode({
         otp: input.otp,
         openIdIdentity,
       });
     } catch (otpUpdateError) {
+      // eslint-disable-next-line no-console
       console.error(otpUpdateError);
+
       return {
         result: 'ERROR',
       };

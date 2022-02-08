@@ -42,6 +42,9 @@ const createModel = defineModel({
   },
 });
 
-const setupModel = configureModel(() => {});
+const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.openIdIdentity.hasMany(sequelize.models.otp);
+  sequelize.models.otp.belongsTo(sequelize.models.openIdIdentity);
+});
 
 export { createModel, setupModel };
