@@ -20,6 +20,8 @@
 # fastlane produce associate_group -a "$IOS_BUNDLE,$IOS_BUNDLE.OneSignalNotificationServiceExtension" "group.$IOS_BUNDLE.onesignal"
 # fastlane pem -a "$IOS_BUNDLE"
 # fastlane upload_app_privacy_details_to_app_store -a "$IOS_BUNDLE"
+# fastlane deliver download_metadata
+# fastlane deliver download_screenshots
 # fastlane run download_from_play_store json_key:"android/key.json"
 
 
