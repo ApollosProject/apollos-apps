@@ -191,7 +191,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   claimLinkCode = async ({ input }) => {
     const { OTP, Person } = this.context.dataSources;
 
-    // Validate link code is valid
+    // Validate link code is eligible to be claimed
     const linkCode = await OTP.getLinkCodeByCode({
       code: input.code,
     });
