@@ -118,7 +118,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async validateLogin({ identity, otp }) {
-    const { OTP, RefreshToken } = this.context.dataSources;
+    const { OTP } = this.context.dataSources;
 
     const { identityKey, identityValue } = this.parseIdentity(identity);
 
@@ -146,16 +146,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       return null;
     }
 
-    const accessToken = generateToken({ personId: person.id });
-    const refreshToken = await RefreshToken.createToken({
-      personId: person.id,
-    });
-
-    return {
-      person,
-      accessToken,
-      refreshToken,
-    };
+    return this.createAuthenticatedPerson({ person });
   }
 
   async requestLinkCode({ input }) {
@@ -174,7 +165,9 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async sendLinkCodeForRequest({ identityValue }) {
-    const linkCode = await this.context.dataSources.OTP.generateLinkCode({
+    const { OTP } = this.context.dataSources;
+
+    const linkCode = await OTP.generateLinkCode({
       identity: identityValue,
     });
 
@@ -185,9 +178,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       const person = await linkCode.getPerson();
 
       if (person) {
-        authenticatedPerson = {
-          person,
-        };
+        authenticatedPerson = this.createAuthenticatedPerson({ person });
       } else {
         result = 'USER_NOT_FOUND';
       }
@@ -279,8 +270,10 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     const token = await this.context.dataSources.RefreshToken.getValidToken({
       jwtToken: refreshToken,
     });
+
     // Create new person token
     const accessToken = generateToken({ personId: token.personId });
+
     // Return both refresh token and person token
     return {
       accessToken,
@@ -300,5 +293,20 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       return { profile: this.context.dataSources.Person.getCurrentPerson() };
     }
     throw new AuthenticationError('Must be logged in');
+  };
+
+  createAuthenticatedPerson = async ({ person }) => {
+    const accessToken = generateToken({ personId: person.id });
+    const refreshToken = await this.context.dataSources.RefreshToken.createToken(
+      {
+        personId: person.id,
+      }
+    );
+
+    return {
+      person,
+      accessToken,
+      refreshToken,
+    };
   };
 }
