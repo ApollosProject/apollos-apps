@@ -283,10 +283,6 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     };
   };
 
-  // NEXT STEPS 2/8 3:30pm:
-  // --> Check slack with Vincent, but need to refactor these token generation
-  // things into a central mechanism, so I can return them in the requestLinkCode flow
-
   getCurrentPerson = async () => {
     const { personId } = this.context;
 

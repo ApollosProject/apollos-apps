@@ -22,15 +22,9 @@ const resolver = {
       return Authentication.validateLogin({ identity, otp });
     },
     requestLinkCode: (root, { input }, { dataSources: { Authentication } }) => {
-      console.log('\n🔑 (Resolver) requestLinkCode');
-      console.log('input:', input);
-
       return Authentication.requestLinkCode({ input });
     },
     claimLinkCode: (root, { input }, { dataSources: { Authentication } }) => {
-      console.log('\n🔑 (Resolver) claimLinkCode');
-      console.log('input:', input);
-
       return Authentication.claimLinkCode({ input });
     },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
