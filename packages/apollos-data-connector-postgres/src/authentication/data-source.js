@@ -159,7 +159,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async requestLinkCode({ input }) {
-    console.log('\n🟪 🔐 Authentication.requestLinkCode() ');
+    console.log('\n🔑 (Data Source) Authentication.requestLinkCode() ');
     console.log('input:', input);
 
     const { identityKey, identityValue } = this.parseIdentity(input);
@@ -174,8 +174,6 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async sendLinkCodeForRequest({ identityValue }) {
-    console.log('\n🟪 sendLinkCodeForRequest()');
-
     const linkCode = await this.context.dataSources.OTP.generateLinkCode({
       identity: identityValue,
     });
@@ -183,23 +181,15 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     let result = 'SUCCESS';
     let authenticatedPerson = null;
 
-    if (linkCode.openIdIdentityId) {
-      const openIdIdentity = await linkCode.getOpenIdIdentity();
+    if (linkCode.personId) {
+      const person = await linkCode.getPerson();
 
-      if (!openIdIdentity) {
-        result = 'USER_NOT_FOUND';
+      if (person) {
+        authenticatedPerson = {
+          person,
+        };
       } else {
-        const person = await openIdIdentity.getPerson();
-
-        if (!person) {
-          result = 'USER_NOT_FOUND';
-        } else {
-          authenticatedPerson = {
-            person,
-            accessToken: openIdIdentity.accessToken,
-            refreshToken: openIdIdentity.refreshToken,
-          };
-        }
+        result = 'USER_NOT_FOUND';
       }
     }
 
@@ -212,15 +202,15 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   claimLinkCode = async ({ input }) => {
-    console.log('\n🟪 🔐 Authentication.claimLinkCode()');
-    const { OTP } = this.context.dataSources;
+    console.log('\n🔑 (Data Source) Authentication.claimLinkCode()');
+    const { OTP, Person } = this.context.dataSources;
 
-    // Make sure it's a valid code first
-    const linkCode = await OTP.getLinkCodeByOtp({
-      otp: input.otp,
+    // Validate link code OTP is valid
+    const linkCode = await OTP.getLinkCodeByCode({
+      code: input.code,
     });
-    const isValid = !!linkCode;
-    const isClaimed = !!linkCode?.openIdIdentityId;
+    const isValid = Boolean(linkCode);
+    const isClaimed = Boolean(linkCode?.personId);
 
     if (!isValid || isClaimed) {
       return {
@@ -228,54 +218,14 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       };
     }
 
-    // Ensure a Person exists
-    const { originPerson } = input;
+    // Validate the user requesting to claim the code
+    const person = await Person.getCurrentPerson();
 
-    let person = await this.sequelize.models.people.findOne({
-      where: {
-        originId: originPerson.originId,
-      },
-    });
-
-    if (!person) {
-      const personAttributes = {
-        originId: originPerson.originId,
-        originType: originPerson.originType,
-        firstName: originPerson.firstName,
-        lastName: originPerson.lastName,
-        email: originPerson.email,
-        phone: originPerson.phone,
-      };
-
-      person = await this.sequelize.models.people.create(personAttributes);
-    }
-
-    // Ensure an OpenIdIdentity exists
-    let openIdIdentity = await this.sequelize.models.openIdIdentity.findOne({
-      where: {
-        personId: person.id,
-      },
-    });
-
-    if (!openIdIdentity) {
-      const openIdAttributes = {
-        personId: person.id,
-        accessToken: input.openIdIdentity.accessToken,
-        refreshToken: input.openIdIdentity.refreshToken,
-        providerType: input.openIdIdentity.providerType,
-        providerSessionId: input.openIdIdentity.providerSessionId,
-      };
-
-      openIdIdentity = await this.sequelize.models.openIdIdentity.create(
-        openIdAttributes
-      );
-    }
-
-    // Claim the OTP using the OpenID
+    // Claim the Link Code/OTP
     try {
       await OTP.claimLinkCode({
-        otp: input.otp,
-        openIdIdentity,
+        code: input.code,
+        person,
       });
     } catch (otpUpdateError) {
       // eslint-disable-next-line no-console
@@ -337,6 +287,10 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       refreshToken,
     };
   };
+
+  // NEXT STEPS 2/8 3:30pm:
+  // --> Check slack with Vincent, but need to refactor these token generation
+  // things into a central mechanism, so I can return them in the requestLinkCode flow
 
   getCurrentPerson = async () => {
     const { personId } = this.context;

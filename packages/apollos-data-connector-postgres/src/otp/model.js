@@ -30,7 +30,7 @@ const createModel = defineModel({
       unique: false,
       allowNull: false,
     },
-    openIdIdentityId: {
+    personId: {
       type: DataTypes.UUID,
       unique: false,
       allowNull: true,
@@ -43,8 +43,8 @@ const createModel = defineModel({
 });
 
 const setupModel = configureModel(({ sequelize }) => {
-  sequelize.models.openIdIdentity.hasMany(sequelize.models.otp);
-  sequelize.models.otp.belongsTo(sequelize.models.openIdIdentity);
+  sequelize.models.people.hasMany(sequelize.models.otp);
+  sequelize.models.otp.belongsTo(sequelize.models.people);
 });
 
 export { createModel, setupModel };

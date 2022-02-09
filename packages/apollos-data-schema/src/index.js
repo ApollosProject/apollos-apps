@@ -240,31 +240,12 @@ export const authenticationSchema = gql`
   }
 
   input AuthenticationClaimLinkCodeInput {
-    otp: String!
-    originPerson: PersonInput!
-    openIdIdentity: OpenIdIdentityInput!
-  }
-
-  input OpenIdIdentityInput {
-    accessToken: String!
-    refreshToken: String
-    providerSessionId: String
-    providerType: String!
-  }
-
-  input PersonInput {
-    originId: String
-    originType: String
-    firstName: String!
-    lastName: String!
-    email: String
-    phone: String
-    profileImageUrl: String
+    code: String!
   }
 
   enum LinkCodeAttemptResult {
     INVALID_LINK_CODE
-    USER_NOT_FOUND
+    INVALID_USER
     ERROR
     SUCCESS
   }

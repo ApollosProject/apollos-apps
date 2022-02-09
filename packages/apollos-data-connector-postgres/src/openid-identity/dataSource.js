@@ -86,6 +86,7 @@ export default class OpenIdIdentity extends PostgresDataSource {
 
   async getCurrentPersonIdentity({ type }) {
     const currentPerson = await this.context.dataSources.Person.getCurrentPerson();
+    console.log('currentPerson:', currentPerson);
     const identity = (
       await currentPerson.getOpenIdIdentities({
         where: { providerType: type },
@@ -114,6 +115,7 @@ export default class OpenIdIdentity extends PostgresDataSource {
 
       userInfo = await client.userinfo(tokens.access_token);
     }
+
     return userInfo;
   }
 

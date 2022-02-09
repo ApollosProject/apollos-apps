@@ -108,10 +108,10 @@ export default class OTPDataSource extends PostgresDataSource {
     return newOtp;
   };
 
-  getLinkCodeByOtp = async ({ otp }) => {
+  getLinkCodeByCode = async ({ code }) => {
     return this.model.findOne({
       where: {
-        code: otp,
+        code,
         type: 'LINK_CODE',
         expiresAt: {
           [Op.gt]: new Date(),
@@ -120,15 +120,16 @@ export default class OTPDataSource extends PostgresDataSource {
     });
   };
 
-  claimLinkCode = async ({ otp, openIdIdentity }) => {
-    console.log('\n🟧 claimLinkCode() ', otp, openIdIdentity);
+  claimLinkCode = async ({ code, person }) => {
+    console.log('\n🟧 claimLinkCode() ', code, person);
     const otpRow = await this.model.findOne({
-      otp,
+      code,
+      personId: null,
     });
 
     try {
       const updatedOtpRow = await otpRow.update({
-        openIdIdentityId: openIdIdentity.id,
+        personId: person.id,
       });
 
       return updatedOtpRow;

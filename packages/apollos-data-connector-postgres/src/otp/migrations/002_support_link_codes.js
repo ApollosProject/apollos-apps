@@ -13,16 +13,16 @@ async function up({ context: queryInterface }) {
   Adds a reference column to an OpenID Identity. Allows us to associate an OTP Code
   with an authenticated/known user.
   */
-  await queryInterface.addColumn('otp', 'open_id_identity_id', {
+  await queryInterface.addColumn('otp', 'person_id', {
     type: Sequelize.UUID,
   });
 
   // Deleting people will delete corresponding OTP rows
   await queryInterface.addConstraint('otp', {
-    fields: ['open_id_identity_id'],
+    fields: ['person_id'],
     type: 'foreign key',
     references: {
-      table: 'open_id_identity',
+      table: 'people',
       field: 'id',
     },
     onDelete: 'cascade',
@@ -57,4 +57,4 @@ async function down({ context: queryInterface }) {
 
 const name = '002_support_link_codes_and_external_provider_tokens';
 
-module.exports = { up, down, name, order: 9 };
+module.exports = { up, down, name, order: 18 };
