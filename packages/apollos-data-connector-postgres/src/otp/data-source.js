@@ -67,7 +67,6 @@ export default class OTPDataSource extends PostgresDataSource {
   };
 
   generateLinkCode = async ({ identity }) => {
-    console.log('\n🟧 generateLinkCode()');
     const type = 'LINK_CODE';
 
     const existingCode = await this.model.findOne({
@@ -78,10 +77,10 @@ export default class OTPDataSource extends PostgresDataSource {
     });
 
     if (existingCode) {
-      const alreadyClaimed = existingCode.openIdIdentityId;
+      const claimed = existingCode.personId;
       const expired = moment().isAfter(moment(existingCode.expiresAt));
 
-      if (alreadyClaimed || !expired) {
+      if (claimed || !expired) {
         return existingCode;
       }
 
@@ -121,7 +120,6 @@ export default class OTPDataSource extends PostgresDataSource {
   };
 
   claimLinkCode = async ({ code, person }) => {
-    console.log('\n🟧 claimLinkCode() ', code, person);
     const otpRow = await this.model.findOne({
       code,
       personId: null,

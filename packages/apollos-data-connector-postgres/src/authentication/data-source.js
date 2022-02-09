@@ -150,9 +150,9 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async requestLinkCode({ input }) {
-    console.log('\n🔑 (Data Source) Authentication.requestLinkCode() ');
-    console.log('input:', input);
+    const { OTP } = this.context.dataSources;
 
+    // Validate request input
     const { identityKey, identityValue } = this.parseIdentity(input);
 
     if (identityKey !== 'link_code') {
@@ -161,12 +161,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       };
     }
 
-    return this.sendLinkCodeForRequest({ identityValue, identityKey });
-  }
-
-  async sendLinkCodeForRequest({ identityValue }) {
-    const { OTP } = this.context.dataSources;
-
+    // Generate (or fetch) link code
     const linkCode = await OTP.generateLinkCode({
       identity: identityValue,
     });
@@ -174,6 +169,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     let result = 'SUCCESS';
     let authenticatedPerson = null;
 
+    // Has this link code been claimed already?
     if (linkCode.personId) {
       const person = await linkCode.getPerson();
 
@@ -193,13 +189,13 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   claimLinkCode = async ({ input }) => {
-    console.log('\n🔑 (Data Source) Authentication.claimLinkCode()');
     const { OTP, Person } = this.context.dataSources;
 
-    // Validate link code OTP is valid
+    // Validate link code is valid
     const linkCode = await OTP.getLinkCodeByCode({
       code: input.code,
     });
+
     const isValid = Boolean(linkCode);
     const isClaimed = Boolean(linkCode?.personId);
 
@@ -211,6 +207,12 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     // Validate the user requesting to claim the code
     const person = await Person.getCurrentPerson();
+
+    if (!person) {
+      return {
+        result: 'INVALID_USER',
+      };
+    }
 
     // Claim the Link Code/OTP
     try {
