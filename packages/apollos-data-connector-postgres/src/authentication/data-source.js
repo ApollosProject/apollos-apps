@@ -124,8 +124,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     const isValid = await OTP.validateOTP({
       identity: identityValue,
-      type: toUpper(identityKey),
-      otp,
+      code: otp,
     });
 
     if (!isValid) {
@@ -249,7 +248,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     const isValid = await OTP.validateOTP({
       identity: identityValue,
-      otp,
+      code: otp,
     });
 
     if (!isValid) {

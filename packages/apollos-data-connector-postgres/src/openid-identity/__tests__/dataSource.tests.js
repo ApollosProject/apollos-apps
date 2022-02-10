@@ -35,6 +35,13 @@ const context = {
     Person: {
       getCurrentPerson: () => currentPerson,
     },
+    Authentication: {
+      createAuthenticatedPerson: jest.fn(() => ({
+        person: currentPerson,
+        accessToken: 'myAccessToken',
+        refreshToken: 'myRefreshToken',
+      })),
+    },
     Config,
   },
   church: { slug: 'apollos_demo' },
@@ -68,11 +75,13 @@ describe('openid datasource', () => {
       gender: 'MALE',
     });
   });
+
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
     await globalSequelize.drop({ cascade: true });
     jest.clearAllMocks();
   });
+
   it('registers a rock openid code', async () => {
     setResponse([
       { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
@@ -94,6 +103,7 @@ describe('openid datasource', () => {
     expect(callback.mock.calls).toMatchSnapshot();
     expect(dbIdentity.idToken).toMatchSnapshot();
   });
+
   it('registers a new user in our postgres database', async () => {
     setResponse([
       { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
@@ -118,7 +128,8 @@ describe('openid datasource', () => {
     expect(accessToken).toBeDefined();
     expect(refreshToken).toBeDefined();
   });
-  it('updates an existing in our postgres database', async () => {
+
+  it('updates an existing person in our postgres database', async () => {
     setResponse([
       { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
     ]);
@@ -134,6 +145,14 @@ describe('openid datasource', () => {
       firstName: 'Jeff',
     });
 
+    context.dataSources.Authentication.createAuthenticatedPerson.mockImplementationOnce(
+      () => ({
+        person: existingPerson,
+        accessToken: '123',
+        refreshToken: '123',
+      })
+    );
+
     const { person } = await openIdDataSource.registerWithCode({
       type: 'rock',
       code: '123',
@@ -141,9 +160,11 @@ describe('openid datasource', () => {
     const newPerson = await sequelize.models.people.findOne({
       where: { originId: '81' },
     });
+
     expect(newPerson.firstName).toBe('Conrad');
     expect(person.id).toBe(existingPerson.id);
   });
+
   it("return's a user's identity using their openid credentials", async () => {
     setResponse([
       { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
@@ -165,6 +186,7 @@ describe('openid datasource', () => {
     expect(identity).toMatchSnapshot();
     expect(userinfo.mock.calls).toMatchSnapshot();
   });
+
   it('refreshes a token if it expires when fetching a user identity', async () => {
     setResponse([
       { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
