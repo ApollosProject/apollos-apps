@@ -26,7 +26,7 @@ export default class OTPDataSource extends PostgresDataSource {
 
     if (existingCode) {
       if (moment().isBefore(moment(existingCode.expiresAt))) {
-        return existingCode.code;
+        return existingCode;
       }
 
       this.model.destroy({
@@ -48,15 +48,14 @@ export default class OTPDataSource extends PostgresDataSource {
 
     await this.model.create(otpShape);
 
-    return { code };
+    return otpShape;
   };
 
-  validateOTP = async ({ identity, type, otp }) => {
+  validateOTP = async ({ identity, code }) => {
     const validOTP = await this.model.findOne({
       where: {
-        code: otp,
+        code,
         identity,
-        type,
         expiresAt: {
           [Op.gt]: new Date(),
         },
@@ -121,8 +120,10 @@ export default class OTPDataSource extends PostgresDataSource {
 
   claimLinkCode = async ({ code, person }) => {
     const otpRow = await this.model.findOne({
-      code,
-      personId: null,
+      where: {
+        code,
+        personId: null,
+      },
     });
 
     try {

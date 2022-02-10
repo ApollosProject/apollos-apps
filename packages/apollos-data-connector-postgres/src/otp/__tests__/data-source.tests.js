@@ -3,6 +3,13 @@ import * as OTP from '..';
 import OTPDataSource from '../data-source';
 import { getSequelize } from '../../postgres/index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
+import {
+  Campus,
+  ContentItem,
+  ContentItemCategory,
+  Person,
+  Media,
+} from '../../index';
 
 const context = {
   church: { slug: 'apollos_demo' },
@@ -17,7 +24,10 @@ describe('Apollos Postgres OTP DataSource', () => {
     globalSequelize = await getSequelize({ churchSlug: 'global' });
     sequelize = await getSequelize({ churchSlug: 'apollos_demo' });
 
-    await setupPostgresTestEnv([OTP], context);
+    await setupPostgresTestEnv(
+      [Campus, ContentItem, ContentItemCategory, OTP, Person, Media],
+      context
+    );
 
     otpDataSource = new OTPDataSource();
     await otpDataSource.initialize({ context });
@@ -29,80 +39,80 @@ describe('Apollos Postgres OTP DataSource', () => {
   });
 
   it('generates an otp for email', async () => {
-    const otp = await otpDataSource.generateOTP({
+    const { code } = await otpDataSource.generateOTP({
       identity: '123@123.com',
       type: 'EMAIL',
     });
 
     await otpDataSource.model.findOne({
       where: {
-        code: otp,
+        code,
       },
     });
 
-    expect(otp).toMatch(/[0-9]{6}/);
+    expect(code).toMatch(/[0-9]{6}/);
   });
 
   it('generates an otp for phone number', async () => {
-    const otp = await otpDataSource.generateOTP({
+    const { code } = await otpDataSource.generateOTP({
       identity: '11231231234',
       type: 'PHONE',
     });
 
-    expect(otp).toMatch(/[0-9]{6}/);
+    expect(code).toMatch(/[0-9]{6}/);
   });
 
   it('validates an otp for email', async () => {
-    const otp = await otpDataSource.generateOTP({
+    const { code } = await otpDataSource.generateOTP({
       identity: '123@123.com',
       type: 'EMAIL',
     });
 
     const isValidOTP = await otpDataSource.validateOTP({
       identity: '123@123.com',
-      otp,
+      code,
     });
 
     expect(isValidOTP).toBe(true);
   });
 
   it('validates an otp for phone', async () => {
-    const otp = await otpDataSource.generateOTP({
+    const { code } = await otpDataSource.generateOTP({
       identity: '11231231234',
       type: 'PHONE',
     });
 
     const isValidOTP = await otpDataSource.validateOTP({
       identity: '11231231234',
-      otp,
+      code,
     });
 
     expect(isValidOTP).toBe(true);
   });
 
   it('rejects an invalid otp', async () => {
-    const otp = await otpDataSource.generateOTP({
+    const { code } = await otpDataSource.generateOTP({
       identity: '11231231234',
       type: 'PHONE',
     });
 
     const isValidOTP = await otpDataSource.validateOTP({
       identity: '11231231234',
-      otp: String(parseInt(otp, 10) + 1),
+      code: String(parseInt(code, 10) + 1),
     });
 
     expect(isValidOTP).toBe(false);
   });
 
   it('rejects an invalid identity', async () => {
-    const otp = await otpDataSource.generateOTP({
+    const { code } = await otpDataSource.generateOTP({
       identity: '11231231234',
       type: 'PHONE',
     });
 
     const isValidOTP = await otpDataSource.validateOTP({
       identity: '123@123.com',
-      otp,
+      code,
     });
 
     expect(isValidOTP).toBe(false);
@@ -134,40 +144,40 @@ describe('Apollos Postgres OTP DataSource', () => {
   });
 
   it('should return an existing code, if it is not expired', async () => {
-    const otp1 = await otpDataSource.generateOTP({
+    const { code: code1 } = await otpDataSource.generateOTP({
       identity: '123@123.com',
       type: 'EMAIL',
     });
 
     await otpDataSource.model.findOne({
       where: {
-        code: otp1,
+        code: code1,
       },
     });
 
-    expect(otp1).toMatch(/[0-9]{6}/);
+    expect(code1).toMatch(/[0-9]{6}/);
 
-    const otp2 = await otpDataSource.generateOTP({
+    const { code: code2 } = await otpDataSource.generateOTP({
       identity: '123@123.com',
       type: 'EMAIL',
     });
 
-    expect(otp2).toEqual(otp1);
+    expect(code2).toEqual(code1);
   });
 
   it('should return a new code, if existing codes are expired', async () => {
-    const otp1 = await otpDataSource.generateOTP({
+    const { code: code1 } = await otpDataSource.generateOTP({
       identity: '123@123.com',
       type: 'EMAIL',
     });
 
     await otpDataSource.model.findOne({
       where: {
-        code: otp1,
+        code: code1,
       },
     });
 
-    expect(otp1).toMatch(/[0-9]{6}/);
+    expect(code1).toMatch(/[0-9]{6}/);
 
     await otpDataSource.model.update(
       {
@@ -175,16 +185,16 @@ describe('Apollos Postgres OTP DataSource', () => {
       },
       {
         where: {
-          code: otp1,
+          code: code1,
         },
       }
     );
 
-    const otp2 = await otpDataSource.generateOTP({
+    const { code: code2 } = await otpDataSource.generateOTP({
       identity: '123@123.com',
       type: 'EMAIL',
     });
 
-    expect(otp2).not.toEqual(otp1);
+    expect(code2).not.toEqual(code1);
   });
 });

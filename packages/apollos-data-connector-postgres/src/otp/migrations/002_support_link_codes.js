@@ -48,13 +48,10 @@ async function down({ context: queryInterface }) {
   `);
 
   // person_id column
-  await queryInterface.removeConstraint(
-    'otp',
-    'otp_open_id_identity_id_open_id_identity_fk'
-  );
-  await queryInterface.removeColumn('otp', 'open_id_identity_id');
+  await queryInterface.removeConstraint('otp', 'otp_person_id_people_fk');
+  await queryInterface.removeColumn('otp', 'person_id');
 }
 
-const name = '002_support_link_codes_and_external_provider_tokens';
+const name = '002_support_link_codes';
 
 module.exports = { up, down, name, order: 18 };
