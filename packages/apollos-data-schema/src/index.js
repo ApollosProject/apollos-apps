@@ -708,6 +708,7 @@ export const searchSchema = gql`
   }
 
   type SearchResultsConnection {
+    totalCount: Int
     edges: [SearchResult]
     pageInfo: PaginationInfo
   }

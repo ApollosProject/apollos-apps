@@ -59,10 +59,17 @@ export default class Search {
         throw new Error(`An invalid 'after' cursor was provided: ${after}`);
       }
     }
-    const { hits } = await this.index.search({ query, length, offset });
-    return hits.map((node, i) => ({
-      ...node,
-      cursor: createCursor({ position: i + offset }),
-    }));
+    const { hits, nbHits: totalCount } = await this.index.search({
+      query,
+      length,
+      offset,
+    });
+    return {
+      totalCount,
+      edges: hits.map((node, i) => ({
+        ...node,
+        cursor: createCursor({ position: i + offset }),
+      })),
+    };
   }
 }
