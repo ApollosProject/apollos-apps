@@ -123,6 +123,9 @@ export default class OTPDataSource extends PostgresDataSource {
       where: {
         code,
         personId: null,
+        expiresAt: {
+          [Op.gt]: new Date(),
+        },
       },
     });
 

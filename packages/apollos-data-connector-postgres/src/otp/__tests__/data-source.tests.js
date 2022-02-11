@@ -306,4 +306,67 @@ describe('Apollos Postgres OTP DataSource', () => {
       expect(result).toBeNull();
     });
   });
+
+  describe('claimLinkCode', () => {
+    it('should relate a person to an otp if it has not been claimed already and has not expired', async () => {
+      const ryan = await personDataSource.model.create({
+        originId: '2112',
+        originType: 'rock',
+        firstName: 'Ryan',
+        lastName: 'Davidson',
+      });
+
+      const otp = await otpDataSource.generateLinkCode({ identity: 'apple' });
+      const claimedOtp = await otpDataSource.claimLinkCode({
+        code: otp.code,
+        person: ryan,
+      });
+
+      expect(claimedOtp.personId).toBe(ryan.id);
+    });
+
+    it('should throw an error if the otp was already claimed', async () => {
+      const vincent = await personDataSource.model.create({
+        originId: '1',
+        originType: 'rock',
+        firstName: 'Vincent',
+        lastName: 'Wilson',
+      });
+
+      const ryan = await personDataSource.model.create({
+        originId: '2112',
+        originType: 'rock',
+        firstName: 'Ryan',
+        lastName: 'Davidson',
+      });
+
+      // Generate an OTP and claim it as Vincent
+      const otp = await otpDataSource.generateLinkCode({ identity: 'pear' });
+      await otpDataSource.claimLinkCode({
+        code: otp.code,
+        person: vincent,
+      });
+
+      // Try to claim Vincent's OTP as Ryan
+      await expect(
+        otpDataSource.claimLinkCode({ code: otp.code, person: ryan })
+      ).rejects.toThrow();
+    });
+
+    it('should throw an error if the otp has expired', async () => {
+      // Create an expired OTP
+      const otp = await otpDataSource.generateLinkCode({ identity: 'orange' });
+      await otp.update({
+        expiresAt: '1989-01-15T21:12:00.000Z',
+      });
+
+      // Try to claim the OTP
+      await expect(
+        otpDataSource.claimLinkCode({
+          code: otp.code,
+          person: {},
+        })
+      ).rejects.toThrow();
+    });
+  });
 });
