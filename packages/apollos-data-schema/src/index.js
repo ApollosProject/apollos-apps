@@ -240,7 +240,7 @@ export const authenticationSchema = gql`
   }
 
   input AuthenticationClaimLinkCodeInput {
-    code: String!
+    otp: String!
   }
 
   enum LinkCodeAttemptResult {
