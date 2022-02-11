@@ -279,4 +279,31 @@ describe('Apollos Postgres OTP DataSource', () => {
       expect(firstOtp.dataValues).toMatchObject(secondOtp.dataValues);
     });
   });
+
+  describe('getLinkCodeByCode', () => {
+    it('should return a link code if it has not expired yet', async () => {
+      const otp = await otpDataSource.generateLinkCode({ identity: 'almond' });
+      const result = await otpDataSource.getLinkCodeByCode({ code: otp.code });
+
+      expect(result.dataValues).toMatchObject(otp.dataValues);
+    });
+
+    it('should return null if no otp found with a given code', async () => {
+      const result = await otpDataSource.getLinkCodeByCode({ code: 'XXXX' });
+      expect(result).toBeNull();
+    });
+
+    it('should return null if the otp was found, but is expired', async () => {
+      const input = { identity: 'banana' };
+
+      // Create an expired OTP
+      const otp = await otpDataSource.generateLinkCode(input);
+      await otp.update({
+        expiresAt: '1989-01-15T21:12:00.000Z',
+      });
+
+      const result = await otpDataSource.getLinkCodeByCode({ code: otp.code });
+      expect(result).toBeNull();
+    });
+  });
 });
