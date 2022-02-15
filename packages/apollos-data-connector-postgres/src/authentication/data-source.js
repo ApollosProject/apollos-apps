@@ -173,7 +173,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       const person = await linkCode.getPerson();
 
       if (person) {
-        authenticatedPerson = this.createAuthenticatedPerson({ person });
+        authenticatedPerson = await this.createAuthenticatedPerson({ person });
       } else {
         result = 'USER_NOT_FOUND';
       }
