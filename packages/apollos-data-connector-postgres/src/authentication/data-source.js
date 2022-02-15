@@ -192,7 +192,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     // Validate link code is eligible to be claimed
     const linkCode = await OTP.getLinkCodeByCode({
-      code: input.code,
+      code: input.otp,
     });
 
     const isValid = Boolean(linkCode);
@@ -216,7 +216,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     // Claim the Link Code/OTP
     try {
       await OTP.claimLinkCode({
-        code: input.code,
+        code: input.otp,
         person,
       });
     } catch (otpUpdateError) {
