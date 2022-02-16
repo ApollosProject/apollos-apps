@@ -107,7 +107,6 @@ export default class OTPDataSource extends PostgresDataSource {
   };
 
   getLinkCodeByCode = async ({ code }) => {
-    console.log('🧡code:', code);
     return this.model.findOne({
       where: {
         code,
