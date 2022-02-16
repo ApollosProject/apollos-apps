@@ -58,8 +58,8 @@ describe('Apollos Postgres Notifications DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
   });
 
   it('should create and send notification', async () => {

@@ -76,8 +76,8 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     ContentItem.initialize({ context });
   });
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
     currentPerson = null;
   });
 

@@ -79,8 +79,8 @@ describe('Apollos Postgres User Likes DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
   });
 
   it('should support liking comment', async () => {

@@ -53,8 +53,8 @@ describe('Apollos Postgres People DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
   });
 
   it('should find a user by a rock id', async () => {
