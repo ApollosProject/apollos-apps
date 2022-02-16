@@ -71,8 +71,8 @@ describe('Likes dataSource', () => {
     });
   });
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
   });
 
   it('allows a user to like an item', async () => {

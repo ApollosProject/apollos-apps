@@ -76,8 +76,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     currentPersonId = person1.id;
   });
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
     currentPersonId = 1;
     notificationMock.mockReset();
   });

@@ -1,7 +1,5 @@
 import { sequelize } from '@apollosproject/data-connector-postgres';
 
-export migrations from './migrations';
-
 export const contextMiddleware = async ({ req, context: ctx }) => {
   let church;
   const churchHeader = req.headers['x-church'];

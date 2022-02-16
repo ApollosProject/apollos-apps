@@ -74,8 +74,8 @@ describe('Apollos Postgres Authentication DataSource', () => {
   });
 
   afterEach(async () => {
-    await globalSequelize.drop({ cascade: true });
-    await sequelize.drop({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
+    await sequelize.truncate({ cascade: true });
   });
 
   it('should return success on email login request', async () => {

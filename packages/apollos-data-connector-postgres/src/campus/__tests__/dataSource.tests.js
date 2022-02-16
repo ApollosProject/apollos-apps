@@ -87,8 +87,8 @@ describe('Apollos Postgres Campus DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
   });
 
   it('should return a list of campuses', async () => {

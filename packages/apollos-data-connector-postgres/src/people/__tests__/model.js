@@ -24,8 +24,8 @@ describe('People model', () => {
     );
   });
   afterEach(async () => {
-    await sequelize.drop({ cascade: true });
-    await globalSequelize.drop({ cascade: true });
+    await sequelize.truncate({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
   });
 
   it('constructs without issues', async () => {

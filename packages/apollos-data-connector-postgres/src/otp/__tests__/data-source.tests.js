@@ -24,8 +24,8 @@ describe('Apollos Postgres OTP DataSource', () => {
   });
 
   afterEach(async () => {
-    await globalSequelize.drop({ cascade: true });
-    await sequelize.drop({ cascade: true });
+    await globalSequelize.truncate({ cascade: true });
+    await sequelize.truncate({ cascade: true });
   });
 
   it('generates an otp for email', async () => {
