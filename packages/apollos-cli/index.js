@@ -86,6 +86,31 @@ mobile
   .description('Edit app icons and splash screen')
   .action(() => logo());
 
+mobile
+  .command('versions')
+  .description('Get current App Store and Play Store versions')
+  .action(() => {
+    const questions = [
+      {
+        type: 'text',
+        name: 'appleID',
+        message: 'Apple ID?',
+      },
+    ];
+    (async () => {
+      const response = await prompts(questions);
+      if (Object.keys(response).length === 1) {
+        try {
+          execa(`${__dirname}/scripts/get-mobile-versions.sh`, [
+            response.appleID,
+          ]).stdout.pipe(process.stdout);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    })();
+  });
+
 program
   .command('secrets')
   .description("Decrypt or encrypt your app's secrets")

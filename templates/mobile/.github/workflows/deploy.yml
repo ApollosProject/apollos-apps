@@ -30,9 +30,7 @@ jobs:
       run: yarn config set network-timeout 300000 && yarn
 
     - name: Generate Fragment Types
-      run: node ./scripts/get-introspection-data.js
-      env:
-        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+      run: eval $(grep APP_DATA_URL .env) && node ./scripts/get-introspection-data.js
 
     - name: Fastlane Deploy
       run: bundle exec fastlane ios deploy
@@ -62,9 +60,7 @@ jobs:
       run: yarn config set network-timeout 300000 && yarn
 
     - name: Generate Fragment Types
-      run: node ./scripts/get-introspection-data.js
-      env:
-        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+      run: eval $(grep APP_DATA_URL .env) && node ./scripts/get-introspection-data.js
 
     - name: Fastlane Deploy
       run: bundle exec fastlane android deploy
