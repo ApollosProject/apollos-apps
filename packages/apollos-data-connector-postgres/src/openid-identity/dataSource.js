@@ -3,7 +3,6 @@ import { pickBy } from 'lodash';
 import { Issuer } from 'openid-client';
 import jwt from 'jsonwebtoken';
 import { PostgresDataSource } from '../postgres';
-import { generateToken } from '../authentication/token';
 
 export default class OpenIdIdentity extends PostgresDataSource {
   modelName = 'openIdIdentity';
@@ -114,6 +113,7 @@ export default class OpenIdIdentity extends PostgresDataSource {
 
       userInfo = await client.userinfo(tokens.access_token);
     }
+
     return userInfo;
   }
 
@@ -175,18 +175,9 @@ export default class OpenIdIdentity extends PostgresDataSource {
       providerType: type,
     });
 
-    const accessToken = generateToken({ personId: person.id });
-    const refreshToken = await this.context.dataSources.RefreshToken.createToken(
-      {
-        personId: person.id,
-      }
-    );
-
-    return {
+    return this.context.dataSources.Authentication.createAuthenticatedPerson({
       person,
-      accessToken,
-      refreshToken,
-    };
+    });
   }
 
   // this is like a little migration so we don't have to do so much busy work in rock.

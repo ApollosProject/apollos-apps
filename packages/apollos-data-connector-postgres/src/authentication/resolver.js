@@ -21,6 +21,12 @@ const resolver = {
     ) => {
       return Authentication.validateLogin({ identity, otp });
     },
+    requestLinkCode: (root, { input }, { dataSources: { Authentication } }) => {
+      return Authentication.requestLinkCode({ input });
+    },
+    claimLinkCode: (root, { input }, { dataSources: { Authentication } }) => {
+      return Authentication.claimLinkCode({ input });
+    },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
       return Authentication.refreshSession(args);
     },

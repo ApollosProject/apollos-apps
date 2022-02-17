@@ -192,6 +192,12 @@ export const authenticationSchema = gql`
       identity: AuthenticationIdentityInput!
       otp: String!
     ): AuthenticatedPerson
+    requestLinkCode(
+      input: AuthenticationRequestLinkCodeInput!
+    ): RequestLinkCodeAttempt
+    claimLinkCode(
+      input: AuthenticationClaimLinkCodeInput!
+    ): ClaimLinkCodeAttempt
 
     # Uses a refresh token to get a new access token.
     refreshSession(refreshToken: String!): AuthenticatedPerson
@@ -227,6 +233,33 @@ export const authenticationSchema = gql`
   input AuthenticationIdentityInput {
     email: String
     phone: String
+  }
+
+  input AuthenticationRequestLinkCodeInput {
+    clientId: String!
+  }
+
+  input AuthenticationClaimLinkCodeInput {
+    otp: String!
+  }
+
+  enum LinkCodeAttemptResult {
+    INVALID_LINK_CODE
+    INVALID_USER
+    ERROR
+    SUCCESS
+  }
+
+  type RequestLinkCodeAttempt {
+    result: LinkCodeAttemptResult
+    otp: String
+    expiresAt: String
+    authenticatedPerson: AuthenticatedPerson
+  }
+
+  type ClaimLinkCodeAttempt {
+    result: LinkCodeAttemptResult
+    authenticatedPerson: AuthenticatedPerson
   }
 `;
 

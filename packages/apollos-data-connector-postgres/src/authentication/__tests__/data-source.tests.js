@@ -224,4 +224,66 @@ describe('Apollos Postgres Authentication DataSource', () => {
 
     expect(msg2.result).toEqual('SUCCESS');
   });
+
+  describe('requestLinkCode', () => {
+    it('should return an error result if not given a "link_code" identity', async () => {
+      const phoneOutput = await authenticationDataSource.requestLinkCode({
+        input: { phone: '15135555555' },
+      });
+      const emailOutput = await authenticationDataSource.requestLinkCode({
+        input: { email: 'a@b.com' },
+      });
+
+      expect(phoneOutput.result).toBe('ERROR');
+      expect(emailOutput.result).toBe('ERROR');
+    });
+
+    it('should return a new, unclaimed link code', async () => {
+      const output = await authenticationDataSource.requestLinkCode({
+        input: { clientId: 'ryan-tv' },
+      });
+
+      expect(output).toMatchObject({
+        result: 'SUCCESS',
+        otp: expect.any(String),
+        expiresAt: expect.any(Date),
+        authenticatedPerson: null,
+      });
+    });
+
+    it('should return a claimed link code', async () => {
+      const ryan = await personDataSource.model.create({
+        originId: '2112',
+        originType: 'rock',
+        firstName: 'Ryan',
+        lastName: 'Davidson',
+        email: 'a@b.com',
+      });
+
+      const unclaimedLinkCode = await authenticationDataSource.requestLinkCode({
+        input: { clientId: 'ryan-tv' },
+      });
+
+      // Note: Using the OTP datasource method directly
+      await otpDataSource.claimLinkCode({
+        code: unclaimedLinkCode.otp,
+        person: ryan,
+      });
+
+      const claimedLinkCode = await authenticationDataSource.requestLinkCode({
+        input: { clientId: 'ryan-tv' },
+      });
+
+      expect(claimedLinkCode).toMatchObject({
+        result: 'SUCCESS',
+        otp: expect.any(String),
+        expiresAt: expect.any(Date),
+        authenticatedPerson: expect.objectContaining({
+          person: expect.any(Object),
+          accessToken: expect.any(String),
+          refreshToken: expect.any(String),
+        }),
+      });
+    });
+  });
 });
