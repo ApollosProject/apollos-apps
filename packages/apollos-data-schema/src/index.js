@@ -822,7 +822,7 @@ export const followingsSchema = gql`
 
 export const passSchema = gql`
   extend type Query {
-    userPass: Pass
+    userPass: Pass @cacheControl(scope: PRIVATE)
   }
 
   type Pass implements Node {
