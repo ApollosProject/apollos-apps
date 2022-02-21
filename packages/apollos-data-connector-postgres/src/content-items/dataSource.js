@@ -8,6 +8,7 @@ import {
 } from '@apollosproject/server-core';
 import { Sequelize, Op } from 'sequelize';
 import { PostgresDataSource } from '../postgres';
+import { activeFilter } from './model';
 
 class ContentItemDataSource extends PostgresDataSource {
   modelName = 'contentItem';
@@ -117,6 +118,7 @@ class ContentItemDataSource extends PostgresDataSource {
         [Sequelize.literal('"contentItemsConnection".order'), 'ASC'],
         ['publishAt', 'ASC'],
       ],
+      where: { ...activeFilter, ...queryArgs?.where },
       ...queryArgs,
     });
   }
@@ -126,8 +128,9 @@ class ContentItemDataSource extends PostgresDataSource {
     if (parent) {
       return this.getChildren(parent, {
         // Calling `getChildren` ensures we have access to the ordering on the join table.
-        where: { parentId: parent.id, ...queryArgs?.where },
+        // We have to spread in activeFilter, b/c it doesn't work in hasManyThrough relationships
         ...queryArgs,
+        where: { parentId: parent.id, ...activeFilter, ...queryArgs?.where },
       });
     }
     return [];

@@ -19,23 +19,27 @@ const createModel = defineModel({
   },
 });
 
+const activeFilter = {
+  [Op.and]: [
+    { active: true },
+    {
+      publishAt: {
+        [Op.or]: [{ [Op.lte]: Sequelize.literal('NOW()') }, null],
+      },
+    },
+    {
+      expireAt: {
+        [Op.or]: [{ [Op.gte]: Sequelize.literal('NOW()') }, null],
+      },
+    },
+  ],
+};
+
 const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.contentItem.addScope('defaultScope', {
     include: [{ model: sequelize.models.media, as: 'coverImage' }],
     where: {
-      [Op.and]: [
-        { active: true },
-        {
-          publishAt: {
-            [Op.or]: [{ [Op.lte]: Sequelize.literal('NOW()') }, null],
-          },
-        },
-        {
-          expireAt: {
-            [Op.or]: [{ [Op.gte]: Sequelize.literal('NOW()') }, null],
-          },
-        },
-      ],
+      ...activeFilter,
     },
   });
   sequelize.models.contentItem.belongsTo(sequelize.models.media, {
@@ -54,4 +58,4 @@ const setupModel = configureModel(({ sequelize }) => {
   });
 });
 
-export { createModel, setupModel };
+export { createModel, setupModel, activeFilter };
