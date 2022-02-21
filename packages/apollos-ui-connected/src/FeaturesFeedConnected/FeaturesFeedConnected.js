@@ -41,6 +41,9 @@ export const ACTION_MAP = {
   OPEN_AUTHENTICATED_URL: ({ openUrl, relatedNode }) => {
     openUrl(relatedNode.url, {}, { useRockToken: true });
   },
+  OPEN_AUTHENTICATED_URL_EXTERNALLY: ({ openUrl, relatedNode }) => {
+    openUrl(relatedNode.url, { externalBrowser: true }, { useRockToken: true });
+  },
   OPEN_CHANNEL: ({ relatedNode, navigation }) => {
     navigation.navigate('ContentFeed', {
       itemId: relatedNode.id,

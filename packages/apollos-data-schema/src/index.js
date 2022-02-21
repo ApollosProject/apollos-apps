@@ -938,7 +938,7 @@ export const followingsSchema = gql`
 
 export const passSchema = gql`
   extend type Query {
-    userPass: Pass
+    userPass: Pass @cacheControl(scope: PRIVATE)
   }
 
   type Pass implements Node {
@@ -988,6 +988,7 @@ export const featuresSchema = gql`
     OPEN_URL
     OPEN_URL_EXTERNALLY
     OPEN_AUTHENTICATED_URL
+    OPEN_AUTHENTICATED_URL_EXTERNALLY
     OPEN_NODE
     OPEN_CHANNEL
     OPEN_FEED
