@@ -143,49 +143,43 @@ class ContentItemDataSource extends PostgresDataSource {
     } = this.context;
     const personId = await Person.getCurrentPersonId();
 
-    return this.model.findAll({
-      ...args,
-      ...(args.categoryIDs && args.categoryIDs.length
-        ? {
-            where: {
-              contentItemCategoryId: { [Op.in]: args.categoryIDs },
-              // When we are filtering personas by a channel,
-              // it's frequent that a church won't tag a specific item with a persona
-              // expecting that item to be seen by everyone.
-
-              // Those items will show up as having no tags, so we need to filter items that
-              // A. Don't have a tag. (id is null)
-              // B. Have a tag, with a person (that's current user)
-              [Op.or]: [
-                { '$tags.people.id$': { [Op.not]: null } },
-                { '$tags.id$': { [Op.is]: null } },
-              ],
-              ...args?.where,
-            },
-          }
-        : {
-            where: {
-              '$tags.people.id$': { [Op.not]: null },
-              ...args?.where,
-            },
-          }),
-      include: [
-        {
-          model: this.sequelize.models.tag,
-          as: 'tags',
-          where: { type: 'Persona' },
-          required: false,
-          duplicating: false,
-          include: {
-            model: this.sequelize.models.people,
-            where: { id: personId },
-            as: 'people',
-            required: false,
-            duplicating: false,
-          },
+    return this.sequelize.query(
+      `
+    SELECT content_item.*, count(tag.id) as tag_count, count(people_tag.tag_id) as people_tag_count 
+    FROM content_item
+      LEFT OUTER JOIN content_tag ON content_tag.content_item_id = content_item.id
+      LEFT OUTER JOIN tag ON content_tag.tag_id = tag.id AND tag.type = 'Persona'
+      LEFT OUTER JOIN people_tag ON tag.id = people_tag.tag_id and people_tag.person_id = :personId
+    WHERE
+      content_item.active = true
+      ${
+        args.categoryIDs?.length > 0
+          ? `AND content_item.content_item_category_id IN(:categoryIds)`
+          : ''
+      }
+      AND (
+        content_item.publish_at IS NULL or content_item.publish_at < now()
+      )
+      AND (
+        content_item.expire_at IS NULL OR content_item.expire_at > now()
+      )
+    GROUP BY content_item.id
+    HAVING ((count(tag.id) > 0 and count(people_tag.tag_id) > 0) OR (count(tag.id) = 0))
+    ORDER BY count(people_tag.tag_id) DESC, publish_at DESC
+    LIMIT :limit
+    OFFSET :offset;    
+    `,
+      {
+        replacements: {
+          personId,
+          categoryIds: args.categoryIDs || [],
+          limit: args.limit || 20,
+          offset: args.offset || 0,
         },
-      ],
-    });
+        model: this.sequelize.models.contentItem,
+        mapToModel: true,
+      }
+    );
   }
 
   getUserFeed = (args = {}) => this.model.findAll(args);
