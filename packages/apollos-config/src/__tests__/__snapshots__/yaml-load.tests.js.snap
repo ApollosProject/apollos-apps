@@ -2,6 +2,10 @@
 
 exports[`the yaml loader must load variables from a yaml 1`] = `
 Object {
+  "ALGOLIA": Object {
+    "API_KEY": "CHURCH_ALGOLIA_API_KEY",
+    "APPLICATION_ID": "CHURCH_ALGOLIA_APPLICATION_ID",
+  },
   "ANALYTICS": Object {},
   "BIBLE_API": Object {},
   "CLOUDINARY": Object {},
