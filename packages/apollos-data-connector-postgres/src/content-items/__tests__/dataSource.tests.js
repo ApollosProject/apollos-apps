@@ -356,6 +356,14 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       active: true,
     });
 
+    const personaItemNoTag = await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Sermon Item No Tag',
+      active: true,
+    });
+
     currentPerson = await sequelize.models.people.create({
       originId: '1',
       originType: 'rock',
@@ -384,7 +392,10 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     await currentPerson.addTag(validTag);
 
     const personaItems = await ContentItem.getPersonaFeed();
-    expect(personaItems.map(({ id }) => id)).toEqual([personaItem.id]);
+    expect(personaItems.map(({ id }) => id)).toEqual([
+      personaItem.id,
+      personaItemNoTag.id,
+    ]);
   });
   it('gets active items by default', async () => {
     await sequelize.models.contentItem.create({
@@ -434,6 +445,9 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     expect(initialItems.getTotalCount()).toEqual(31);
   });
   it('paginates a custom cursor', async () => {
+    // We need a clean slate.
+    await contentItem1.destroy();
+
     currentPerson = await sequelize.models.people.create({
       originId: '1',
       originType: 'rock',
@@ -500,7 +514,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       ({ node }) => node.id
     );
 
-    // uniqe, to make sure we aren't cheating,.
+    // uniq, to make sure we aren't cheating,.
     expect(uniq(allItemIds).length).toEqual(30);
     expect(initialItems.edges.length).toEqual(20);
     expect(lastItems.edges.length).toEqual(10);
