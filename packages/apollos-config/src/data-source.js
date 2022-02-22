@@ -38,6 +38,12 @@ const getSharedConfig = () => {
   return attachEnvVariables(globalYml, globalSecrets).SHARED;
 };
 
+export const mergeConfigs = ({ sharedConfig, config }) => {
+  const fullConfig = new Config();
+  merge(fullConfig, sharedConfig, config);
+  return fullConfig;
+};
+
 export const buildChurchConfig = ({ churchSlug, sharedConfig, configDir }) => {
   let envStage = process.env.ENV_STAGE;
 
@@ -76,8 +82,8 @@ export const buildChurchConfig = ({ churchSlug, sharedConfig, configDir }) => {
     configPath: `${configDir + churchSlug}.config.yml`,
     env: secrets,
   });
-  const fullConfig = merge(config, sharedConfig);
-  return fullConfig;
+
+  return mergeConfigs({ sharedConfig, config });
 };
 
 function loadConfigs() {
