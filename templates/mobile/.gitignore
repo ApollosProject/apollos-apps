@@ -152,8 +152,9 @@ fastlane/Preview.html
 *.app.dSYM.zip
 
 # iOS keys
-push.pem
+*.pem
 *.p8
+*.p12
 
 # Google Play authentication key
 key.json

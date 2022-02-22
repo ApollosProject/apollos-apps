@@ -48,6 +48,7 @@
     "react-native": "*"
   },
   "dependencies": {
+    "buffer": "^5.4.3",
     "entities": "^1.1.2",
     "htmlparser2": "3.9.2"
   },
