@@ -397,6 +397,64 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       personaItemNoTag.id,
     ]);
   });
+  it('gets from persona feed with most recent persona items first', async () => {
+    const now = new Date();
+    const old = new Date() - 60 * 60 * 12;
+
+    const newestItem = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Sermon Item',
+      active: true,
+      publishAt: now,
+    });
+
+    const lotsOfTags = await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Sermon Item Tagged',
+      active: true,
+      publishAt: old,
+    });
+
+    currentPerson = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'Vincent',
+      gender: 'MALE',
+    });
+
+    const validTag = await sequelize.models.tag.create({
+      type: 'Persona',
+      data: { guid: '123' },
+      originId: '1',
+      originType: 'rock',
+      name: 'Men',
+    });
+
+    const validTag2 = await sequelize.models.tag.create({
+      type: 'Persona',
+      data: { guid: '456' },
+      originId: '2',
+      originType: 'rock',
+      name: 'Old Men',
+    });
+
+    await newestItem.addTag(validTag);
+    await lotsOfTags.addTag(validTag);
+    await lotsOfTags.addTag(validTag2);
+    await currentPerson.addTag(validTag);
+    await currentPerson.addTag(validTag2);
+
+    const personaItems = await ContentItem.getPersonaFeed();
+    expect(personaItems.map(({ id }) => id)).toEqual([
+      newestItem.id, // fewest > 0 tags, newest
+      lotsOfTags.id, // more tags, older
+      contentItem1.id, // has no tags, sorted last
+    ]);
+  });
   it('gets active items by default', async () => {
     await sequelize.models.contentItem.create({
       originId: '2',

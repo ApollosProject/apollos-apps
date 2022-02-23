@@ -32,4 +32,3 @@ export default async ({ maxWorkers }) => {
 
   await client.end();
 };
-

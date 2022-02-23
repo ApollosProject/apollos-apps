@@ -165,7 +165,9 @@ class ContentItemDataSource extends PostgresDataSource {
       )
     GROUP BY content_item.id
     HAVING ((count(tag.id) > 0 and count(people_tag.tag_id) > 0) OR (count(tag.id) = 0))
-    ORDER BY count(people_tag.tag_id) DESC, publish_at DESC
+    ORDER BY 
+      CASE WHEN (count(people_tag.tag_id) > 0) THEN 1 ELSE 0 END DESC,
+      publish_at DESC
     LIMIT :limit
     OFFSET :offset;    
     `,

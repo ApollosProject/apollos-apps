@@ -28,9 +28,13 @@
     "setupFiles": [
       "jest-date-mock"
     ],
+    "setupFilesAfterEnv": [
+      "./jest.set-timeout.js"
+    ],
     "testEnvironment": "node",
     "globalSetup": "./jest.setup.js",
-    "globalTeardown": "./jest.teardown.js"
+    "globalTeardown": "./jest.teardown.js",
+    "testTimeout": 30000
   },
   "dependencies": {
     "@sendgrid/mail": "^7.6.0",
