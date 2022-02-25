@@ -22,8 +22,7 @@
     "generate-docs": "lerna run generate-docs",
     "generate-stories": "lerna run generate-stories",
     "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)",
-    "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)",
-    "cluster": "./scripts/setup-cluster.sh"
+    "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
@@ -35,7 +34,7 @@
     "@babel/parser": "7.16.12",
     "@babel/runtime": "7.16.7",
     "babel-core": "7.0.0-bridge.0",
-    "apollo-server": "^2.11.0",    
+    "apollo-server": "^2.11.0",
     "babel-jest": "27.4.6",
     "chokidar": "^3.0.1",
     "codecov": "3.7.1",
