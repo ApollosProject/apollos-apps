@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Apollos Postgres People DataSource should throw an error if current user isnt in the db 1`] = `[AuthenticationError: Person not found in the database]`;
