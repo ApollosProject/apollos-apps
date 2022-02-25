@@ -12,6 +12,7 @@ const createModel = defineModel({
     publishAt: DataTypes.DATE,
     expireAt: DataTypes.DATE,
     active: DataTypes.BOOLEAN,
+    priority: DataTypes.INTEGER,
   },
   sequelizeOptions: {
     tableName: 'content_item',
