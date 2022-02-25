@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { get } from 'lodash';
@@ -23,17 +23,18 @@ const ButtonStyles = styled(
     alignItems: 'center',
     justifyContent: 'center',
     opacity: disabled ? 0.5 : 1,
-    borderWidth: 2,
     ...(bordered
       ? {
+          borderWidth: StyleSheet.hairlineWidth,
           backgroundColor: theme.colors.transparent,
           borderColor: theme.colors.primary,
         }
       : {
+          borderWidth: StyleSheet.hairlineWidth,
           backgroundColor: theme.colors.background.screen,
           borderColor: theme.colors.background.screen,
-          elevation: 2,
         }),
+    ...Platform.select(theme.shadows.low),
   }),
   'ui-kit.Button.ButtonStyles'
 )(View);

@@ -1,41 +1,105 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import { PaddedView, Button, H1, H5, ErrorCard } from '@apollosproject/ui-kit';
+import WebView from 'react-native-webview';
 
-import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
+import {
+  PaddedView,
+  Button,
+  H4,
+  H3,
+  Card,
+  styled,
+  BodyText,
+} from '@apollosproject/ui-kit';
+import { FlexedSafeAreaView } from '../styles';
 
-const OpenID = ({ providerFriendlyName, onRequestOpenIdConnect, error }) => {
+const LandingCardContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
+  alignItems: 'center',
+  marginBottom: baseUnit,
+}))(PaddedView);
+
+const ButtonContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
+  width: '100%',
+  marginTop: baseUnit,
+}))(View);
+
+const PrimaryButton = styled(({ theme: { sizing: { baseUnit } } }) => ({
+  marginBottom: baseUnit / 2,
+}))(Button);
+
+const HeadingContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
+  marginVertical: baseUnit,
+  alignItems: 'center',
+}))(View);
+
+const ErrorText = styled(({ theme }) => ({
+  color: theme.colors.alert,
+  paddingTop: theme.sizing.baseUnit / 2,
+}))(BodyText);
+
+const BottomCard = styled(({ theme: { sizing: { baseUnit } } }) => ({
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  right: 0,
+  marginBottom: baseUnit * 2,
+}))(Card);
+
+const Overlay = styled(({ theme }) => ({
+  ...StyleSheet.absoluteFillObject,
+  backgroundColor: theme.colors.background.regular,
+}))(View);
+
+const OpenID = ({
+  providerFriendlyName,
+  onRequestOpenIdConnect,
+  demoUrl,
+  error,
+}) => {
   return (
-    <FlexedSafeAreaView
-      style={StyleSheet.absoluteFill}
-      edges={['right', 'top', 'left', 'bottom']}
-    >
-      <ScrollView contentInsetAdjustmentBehavior={'automatic'}>
-        <PaddedView vertical>
-          <H1>🎉</H1>
-          <TitleText>{'Welcome!'}</TitleText>
-          <PromptText>
-            {`To complete your profile and access all features, please connect with your ${
-              providerFriendlyName || 'online'
-            } account.`}
-          </PromptText>
-          {error && (
-            <ErrorCard
-              message={
-                'Something went wrong authenticating you. You can skip, or try again.'
+    <>
+      <WebView
+        source={{ uri: demoUrl }}
+        style={StyleSheet.absoluteFill}
+        automaticallyAdjustContentInsets
+        contentInsetAdjustmentBehavior="automatic"
+      />
+      <Overlay />
+      <FlexedSafeAreaView
+        style={StyleSheet.absoluteFill}
+        edges={['right', 'top', 'left', 'bottom']}
+      >
+        <BottomCard>
+          <LandingCardContainer>
+            <HeadingContainer>
+              <H4 secondary>{'Do you have a'}</H4>
+              <H3>{providerFriendlyName}</H3>
+              <H4 secondary>{'account?'}</H4>
+            </HeadingContainer>
+            <BodyText secondary>
+              {
+                'To finish setting up your profile, we need to connect your profile to your online account.'
               }
-            />
-          )}
-        </PaddedView>
-      </ScrollView>
-      <PaddedView>
-        <Button onPress={onRequestOpenIdConnect}>
-          <H5>{"Let's Go"}</H5>
-        </Button>
-      </PaddedView>
-    </FlexedSafeAreaView>
+            </BodyText>
+            {error && (
+              <ErrorText>
+                {
+                  'Something went wrong authenticating you. You can skip, or try again.'
+                }
+              </ErrorText>
+            )}
+            <ButtonContainer>
+              <PrimaryButton
+                onPress={onRequestOpenIdConnect}
+                title="Get connected"
+              />
+            </ButtonContainer>
+          </LandingCardContainer>
+        </BottomCard>
+      </FlexedSafeAreaView>
+    </>
   );
 };
 
@@ -46,6 +110,7 @@ OpenID.propTypes = {
   error: PropTypes.bool.isRequired,
   onRequestOpenIdConnect: PropTypes.func.isRequired,
   providerFriendlyName: PropTypes.string,
+  demoUrl: PropTypes.string,
 };
 
 export default OpenID;

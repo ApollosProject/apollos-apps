@@ -370,7 +370,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       "backgroundColor": "transparent",
                                       "borderColor": "#17B582",
                                       "borderRadius": 16,
-                                      "borderWidth": 2,
+                                      "borderWidth": 0.5,
                                       "flexDirection": "row",
                                       "height": 48,
                                       "justifyContent": "center",
@@ -378,6 +378,13 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       "opacity": 1,
                                       "overflow": "hidden",
                                       "paddingHorizontal": 16,
+                                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                                      "shadowOffset": Object {
+                                        "height": 2,
+                                        "width": 0,
+                                      },
+                                      "shadowOpacity": 1,
+                                      "shadowRadius": 8,
                                       "width": "100%",
                                     }
                                   }
@@ -1429,7 +1436,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       "backgroundColor": "transparent",
                                       "borderColor": "#17B582",
                                       "borderRadius": 16,
-                                      "borderWidth": 2,
+                                      "borderWidth": 0.5,
                                       "flexDirection": "row",
                                       "height": 48,
                                       "justifyContent": "center",
@@ -1437,6 +1444,13 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       "opacity": 1,
                                       "overflow": "hidden",
                                       "paddingHorizontal": 16,
+                                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                                      "shadowOffset": Object {
+                                        "height": 2,
+                                        "width": 0,
+                                      },
+                                      "shadowOpacity": 1,
+                                      "shadowRadius": 8,
                                       "width": "100%",
                                     }
                                   }

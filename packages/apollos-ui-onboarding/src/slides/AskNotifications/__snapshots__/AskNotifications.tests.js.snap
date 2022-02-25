@@ -459,21 +459,27 @@ exports[`The Onboarding AskNotifications component should render a button with c
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -790,21 +796,27 @@ exports[`The Onboarding AskNotifications component should render the button disa
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -941,21 +953,27 @@ exports[`The Onboarding AskNotifications component should render with a button 1
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,

@@ -58,8 +58,7 @@ exports[`The DateInput component should render 1`] = `
             "backgroundColor": "#17B582",
             "borderColor": "#17B582",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
+            "borderWidth": 0.5,
             "flexDirection": "row",
             "height": 32,
             "justifyContent": "center",
@@ -67,6 +66,13 @@ exports[`The DateInput component should render 1`] = `
             "opacity": 1,
             "overflow": "hidden",
             "paddingHorizontal": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
           }
         }
       />
@@ -166,8 +172,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
             "backgroundColor": "#17B582",
             "borderColor": "#17B582",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
+            "borderWidth": 0.5,
             "flexDirection": "row",
             "height": 32,
             "justifyContent": "center",
@@ -175,6 +180,13 @@ exports[`The DateInput component should render with a displayValue 1`] = `
             "opacity": 1,
             "overflow": "hidden",
             "paddingHorizontal": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
           }
         }
       >
@@ -182,7 +194,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "color": "#FFFFFF",
+              "color": "#F4F7F8",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -327,8 +339,7 @@ exports[`The DateInput component should render with a label 1`] = `
             "backgroundColor": "#17B582",
             "borderColor": "#17B582",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
+            "borderWidth": 0.5,
             "flexDirection": "row",
             "height": 32,
             "justifyContent": "center",
@@ -336,6 +347,13 @@ exports[`The DateInput component should render with a label 1`] = `
             "opacity": 1,
             "overflow": "hidden",
             "paddingHorizontal": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
           }
         }
       >
@@ -343,7 +361,7 @@ exports[`The DateInput component should render with a label 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "color": "#FFFFFF",
+              "color": "#F4F7F8",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -490,8 +508,7 @@ exports[`The DateInput component should render with a placeholder 1`] = `
             "backgroundColor": "#17B582",
             "borderColor": "#17B582",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
+            "borderWidth": 0.5,
             "flexDirection": "row",
             "height": 32,
             "justifyContent": "center",
@@ -499,6 +516,13 @@ exports[`The DateInput component should render with a placeholder 1`] = `
             "opacity": 1,
             "overflow": "hidden",
             "paddingHorizontal": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
           }
         }
       >
@@ -506,7 +530,7 @@ exports[`The DateInput component should render with a placeholder 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "color": "#FFFFFF",
+              "color": "#F4F7F8",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -651,8 +675,7 @@ exports[`The DateInput component should render with an error 1`] = `
             "backgroundColor": "#17B582",
             "borderColor": "#17B582",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
+            "borderWidth": 0.5,
             "flexDirection": "row",
             "height": 32,
             "justifyContent": "center",
@@ -660,6 +683,13 @@ exports[`The DateInput component should render with an error 1`] = `
             "opacity": 1,
             "overflow": "hidden",
             "paddingHorizontal": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
           }
         }
       />
@@ -772,8 +802,7 @@ exports[`The DateInput component should render without a maximum date 1`] = `
             "backgroundColor": "#17B582",
             "borderColor": "#17B582",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
+            "borderWidth": 0.5,
             "flexDirection": "row",
             "height": 32,
             "justifyContent": "center",
@@ -781,6 +810,13 @@ exports[`The DateInput component should render without a maximum date 1`] = `
             "opacity": 1,
             "overflow": "hidden",
             "paddingHorizontal": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
           }
         }
       >
@@ -788,7 +824,7 @@ exports[`The DateInput component should render without a maximum date 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "color": "#FFFFFF",
+              "color": "#F4F7F8",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",

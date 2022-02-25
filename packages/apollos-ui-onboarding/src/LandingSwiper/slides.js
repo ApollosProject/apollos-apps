@@ -36,7 +36,12 @@ export const Intro = named('ui-onboarding.LandingSwiper.slides.Intro')(
   ({ onPressLogin, ...slideProps }) => {
     const navigation = useNavigation();
     const onPress = useCallback(
-      () => (onPressLogin ? onPressLogin() : navigation.navigate('Auth')),
+      () =>
+        onPressLogin
+          ? onPressLogin()
+          : navigation.navigate('IdentityEntryConnected', {
+              newUser: false,
+            }),
       [onPressLogin, navigation]
     );
     return (

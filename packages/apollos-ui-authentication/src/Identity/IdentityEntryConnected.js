@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
@@ -27,6 +27,12 @@ function IdentityEntryConnected(props) {
     newUser,
     identity,
   } = React.useContext(LoginContext);
+
+  useEffect(() => {
+    if (props?.route?.params?.newUser != null) {
+      setNewUser(props?.route?.params?.newUser);
+    }
+  }, []);
 
   const handleOnSubmit = async (
     formIdentity,
@@ -145,6 +151,11 @@ IdentityEntryConnected.propTypes = {
   ]),
   client: PropTypes.shape({
     query: PropTypes.func,
+  }),
+  route: PropTypes.shape({
+    params: PropTypes.shape({
+      newUser: PropTypes.bool,
+    }),
   }),
   inputAutoComplete: PropTypes.string,
   inputLabel: PropTypes.string,

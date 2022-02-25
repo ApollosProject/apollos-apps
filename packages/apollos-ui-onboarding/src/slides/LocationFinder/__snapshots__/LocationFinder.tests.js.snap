@@ -103,21 +103,27 @@ exports[`The Onboarding LocationFinder component should pass additional props to
                 "backgroundColor": "#17B582",
                 "borderColor": "#17B582",
                 "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
+                "borderWidth": 0.5,
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
                 "opacity": 1,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
+                "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#F4F7F8",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -276,21 +282,27 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
                 "backgroundColor": "#17B582",
                 "borderColor": "#17B582",
                 "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
+                "borderWidth": 0.5,
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
                 "opacity": 1,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
+                "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#F4F7F8",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -441,21 +453,27 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
                 "backgroundColor": "#17B582",
                 "borderColor": "#17B582",
                 "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
+                "borderWidth": 0.5,
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
                 "opacity": 1,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
+                "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#F4F7F8",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -591,21 +609,27 @@ exports[`The Onboarding LocationFinder component should render a button with cus
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -726,21 +750,27 @@ exports[`The Onboarding LocationFinder component should render a custom descript
                 "backgroundColor": "#17B582",
                 "borderColor": "#17B582",
                 "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
+                "borderWidth": 0.5,
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
                 "opacity": 1,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
+                "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#F4F7F8",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -860,21 +890,27 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
                 "backgroundColor": "#17B582",
                 "borderColor": "#17B582",
                 "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
+                "borderWidth": 0.5,
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
                 "opacity": 1,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
+                "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#F4F7F8",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -1000,13 +1036,13 @@ exports[`The Onboarding LocationFinder component should render the campus card 1
                 "borderRadius": 16,
                 "margin": 8,
                 "marginBottom": 16,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -1153,21 +1189,27 @@ South Barrington, IL 60010-6143
               "backgroundColor": "#17B582",
               "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <Text
             style={
               Object {
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -1180,7 +1222,7 @@ South Barrington, IL 60010-6143
             align="xMidYMid"
             bbHeight={20}
             bbWidth={20}
-            color="#FFFFFF"
+            color="#F4F7F8"
             height={20}
             id="Raw"
             meetOrSlice={0}
@@ -1202,7 +1244,7 @@ South Barrington, IL 60010-6143
                 },
               ]
             }
-            tintColor="#FFFFFF"
+            tintColor="#F4F7F8"
             vbHeight={256}
             vbWidth={256}
             width={20}
@@ -1325,7 +1367,7 @@ South Barrington, IL 60010-6143
                 stroke={
                   Array [
                     0,
-                    4294967295,
+                    4294244344,
                   ]
                 }
                 strokeDasharray={null}
@@ -1378,7 +1420,7 @@ South Barrington, IL 60010-6143
                 stroke={
                   Array [
                     0,
-                    4294967295,
+                    4294244344,
                   ]
                 }
                 strokeDasharray={null}
@@ -1520,21 +1562,27 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,

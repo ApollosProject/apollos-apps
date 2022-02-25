@@ -33,13 +33,13 @@ exports[`the ActionCard component should accept additional Card props 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
         "shadowOffset": Object {
-          "height": 2,
+          "height": 20,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 8,
+        "shadowRadius": 48,
       }
     }
   >
@@ -111,13 +111,13 @@ exports[`the ActionCard component should render an action 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
         "shadowOffset": Object {
-          "height": 2,
+          "height": 20,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 8,
+        "shadowRadius": 48,
       }
     }
   >
@@ -467,14 +467,20 @@ exports[`the ActionCard component should render an action 1`] = `
               "backgroundColor": "#17B582",
               "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 32,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 12,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
@@ -490,7 +496,7 @@ exports[`the ActionCard component should render an action 1`] = `
               align="xMidYMid"
               bbHeight={16}
               bbWidth={16}
-              color="#FFFFFF"
+              color="#F4F7F8"
               height={16}
               id="Raw"
               meetOrSlice={0}
@@ -512,7 +518,7 @@ exports[`the ActionCard component should render an action 1`] = `
                   },
                 ]
               }
-              tintColor="#FFFFFF"
+              tintColor="#F4F7F8"
               vbHeight={256}
               vbWidth={256}
               width={16}
@@ -636,7 +642,7 @@ exports[`the ActionCard component should render an action 1`] = `
                   stroke={
                     Array [
                       0,
-                      4294967295,
+                      4294244344,
                     ]
                   }
                   strokeDasharray={null}
@@ -685,7 +691,7 @@ exports[`the ActionCard component should render an action 1`] = `
                   stroke={
                     Array [
                       0,
-                      4294967295,
+                      4294244344,
                     ]
                   }
                   strokeDasharray={null}
@@ -734,7 +740,7 @@ exports[`the ActionCard component should render an action 1`] = `
                   stroke={
                     Array [
                       0,
-                      4294967295,
+                      4294244344,
                     ]
                   }
                   strokeDasharray={null}
@@ -755,7 +761,7 @@ exports[`the ActionCard component should render an action 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
                 "justifyContent": "center",
@@ -805,13 +811,13 @@ exports[`the ActionCard component should render an icon and label 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
         "shadowOffset": Object {
-          "height": 2,
+          "height": 20,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 8,
+        "shadowRadius": 48,
       }
     }
   >
@@ -1175,13 +1181,13 @@ exports[`the ActionCard component should render children 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
         "shadowOffset": Object {
-          "height": 2,
+          "height": 20,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 8,
+        "shadowRadius": 48,
       }
     }
   >

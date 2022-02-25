@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { CardStyleInterpolators } from '@react-navigation/stack';
 
+import { useQuery, gql } from '@apollo/client';
 import { Intro, Scripture, Prayer, Community } from './slides';
 
 const Container = styled(
@@ -17,31 +18,43 @@ const Container = styled(
 
 const Stack = createSharedElementStackNavigator();
 
+const OPENID_PROVIDERS_QUERY = gql`
+  query openIdProviders {
+    openIdProviders {
+      authorizationUrl
+      providerType
+    }
+  }
+`;
+
 const LandingSwiper = ({ slides, sharedElements, onComplete }) => {
-  const slideComponents = useMemo(
-    () =>
-      slides.map((Slide, index) => {
-        const SlideComponent = ({ navigation }) => (
-          <Slide
-            index={index}
-            // Note: Eslint is complaining about `.length` not being apart of propType validation...but
-            // the propType is literally set as `.arrayOf` ... so not sure how to fix?
-            // eslint-disable-next-line react/prop-types
-            totalSlides={slides.length}
-            onContinue={() =>
-              // eslint-disable-next-line no-nested-ternary,react/prop-types
-              index < slides.length - 1
-                ? navigation.navigate(`LandingSlide-${index + 1}`)
-                : onComplete
-                ? onComplete()
-                : navigation.navigate(`Auth`)
-            }
-          />
-        );
-        return SlideComponent;
-      }),
-    [slides, onComplete]
-  );
+  const { data } = useQuery(OPENID_PROVIDERS_QUERY);
+  const slideComponents = useMemo(() => {
+    // Default to Auth / OpenID landing screen if we have OpenID providers, otherwise direct to IdentityEntry.
+    const defaultAuthScreen = data?.openIdProviders?.length
+      ? 'Auth'
+      : 'IdentityEntryConnected';
+    return slides.map((Slide, index) => {
+      const SlideComponent = ({ navigation }) => (
+        <Slide
+          index={index}
+          // Note: Eslint is complaining about `.length` not being apart of propType validation...but
+          // the propType is literally set as `.arrayOf` ... so not sure how to fix?
+          // eslint-disable-next-line react/prop-types
+          totalSlides={slides.length}
+          onContinue={() =>
+            // eslint-disable-next-line no-nested-ternary,react/prop-types
+            index < slides.length - 1
+              ? navigation.navigate(`LandingSlide-${index + 1}`)
+              : onComplete
+              ? onComplete()
+              : navigation.navigate(defaultAuthScreen)
+          }
+        />
+      );
+      return SlideComponent;
+    });
+  }, [slides, onComplete, data]);
 
   const screens = useMemo(
     () =>

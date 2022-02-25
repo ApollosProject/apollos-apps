@@ -1,3 +1,4 @@
+import URL from 'url';
 import React, { useLayoutEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useMutation, useQuery } from '@apollo/client';
@@ -86,7 +87,16 @@ const OpenIDConnected = ({ provider = 'rock', navigation }) => {
   }, [navigation]);
 
   return (
-    <OpenID onRequestOpenIdConnect={handleRequestOpenIdConnect} error={error} />
+    <OpenID
+      onRequestOpenIdConnect={handleRequestOpenIdConnect}
+      providerFriendlyName={
+        URL.parse(openIdProvider?.authorizationUrl || '')?.hostname
+      }
+      demoUrl={`https://${
+        URL.parse(openIdProvider?.authorizationUrl || '')?.hostname
+      }`}
+      error={error}
+    />
   );
 };
 

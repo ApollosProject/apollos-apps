@@ -1,8 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-import { withTheme } from '@apollosproject/ui-kit';
+import { useNavigation } from '@react-navigation/native';
+import { withTheme, UIText } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
 
+import { LandingSwiper } from '@apollosproject/ui-onboarding';
+import { LoginContext } from './LoginProvider';
 import {
   IdentityEntryConnected,
   IdentityVerificationConnected,
@@ -13,6 +16,11 @@ import {
   ProfileEntryConnected as AuthProfileEntryConnected,
 } from './Profile';
 import { OpenIDConnected } from './OpenID';
+
+import { IdentityConnectConnected } from './IdentityConnect';
+import { IdentityConnectVerificationConnected } from './IdentityConnectVerification';
+
+import { AuthLandingConnected } from './AuthLanding';
 
 export { default as AuthProvider, AuthConsumer } from './Provider';
 export { default as ProtectedRoute } from './ProtectedRoute';
@@ -27,31 +35,72 @@ export { AuthProfileEntry, AuthProfileEntryConnected };
 
 const AuthStack = createNativeStackNavigator();
 
+const skipButton = (to) => {
+  const SkipButton = () => {
+    const navigation = useNavigation();
+    return (
+      <UIText
+        secondary
+        onPress={typeof to === 'function' ? to : () => navigation.navigate(to)}
+      >
+        Skip
+      </UIText>
+    );
+  };
+  return SkipButton;
+};
+
 const AuthNavigator = ({
   alternateLoginText,
   authTitleText,
   confirmationPromptText,
   confirmationTitleText,
   screenOptions,
-}) => (
-  <AuthStack.Navigator screenOptions={screenOptions}>
-    <AuthStack.Screen
-      name="IdentityEntryConnected'"
-      component={IdentityEntryConnected}
-      initialParams={{ alternateLoginText, authTitleText }}
-    />
-    <AuthStack.Screen
-      name="IdentityVerificationConnected"
-      component={IdentityVerificationConnected}
-      initialParams={{ confirmationTitleText, confirmationPromptText }}
-    />
-    <AuthStack.Screen
-      name="AuthProfileEntryConnected"
-      component={AuthProfileEntryConnected}
-    />
-    <AuthStack.Screen name="OpenIDConnected" component={OpenIDConnected} />
-  </AuthStack.Navigator>
-);
+}) => {
+  const { closeAuth } = React.useContext(LoginContext);
+  return (
+    <AuthStack.Navigator screenOptions={screenOptions}>
+      <AuthStack.Screen
+        name="Landing"
+        component={LandingSwiper}
+        options={{ headerShown: false }}
+      />
+      <AuthStack.Screen
+        name="Auth"
+        component={AuthLandingConnected}
+        options={{
+          headerRight: skipButton('IdentityEntryConnected'),
+        }}
+      />
+      <AuthStack.Screen
+        name="IdentityEntryConnected"
+        component={IdentityEntryConnected}
+        initialParams={{ alternateLoginText, authTitleText }}
+      />
+      <AuthStack.Screen
+        name="IdentityVerificationConnected"
+        component={IdentityVerificationConnected}
+        initialParams={{ confirmationTitleText, confirmationPromptText }}
+      />
+      <AuthStack.Screen
+        name="IdentityConnectConnected"
+        component={IdentityConnectConnected}
+        options={{
+          headerRight: skipButton(closeAuth),
+        }}
+      />
+      <AuthStack.Screen
+        name="IdentityConnectVerificationConnected"
+        component={IdentityConnectVerificationConnected}
+      />
+      <AuthStack.Screen
+        name="AuthProfileEntryConnected"
+        component={AuthProfileEntryConnected}
+      />
+      <AuthStack.Screen name="OpenIDConnected" component={OpenIDConnected} />
+    </AuthStack.Navigator>
+  );
+};
 
 AuthNavigator.propTypes = {
   alternateLoginText: PropTypes.string,

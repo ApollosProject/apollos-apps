@@ -302,8 +302,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -311,6 +310,13 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -318,7 +324,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -455,21 +461,27 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
               "backgroundColor": "#17B582",
               "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <Text
             style={
               Object {
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -482,7 +494,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
             align="xMidYMid"
             bbHeight={20}
             bbWidth={20}
-            color="#FFFFFF"
+            color="#F4F7F8"
             height={20}
             id="Raw"
             meetOrSlice={0}
@@ -504,7 +516,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                 },
               ]
             }
-            tintColor="#FFFFFF"
+            tintColor="#F4F7F8"
             vbHeight={256}
             vbWidth={256}
             width={20}
@@ -627,7 +639,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                 stroke={
                   Array [
                     0,
-                    4294967295,
+                    4294244344,
                   ]
                 }
                 strokeDasharray={null}
@@ -680,7 +692,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                 stroke={
                   Array [
                     0,
-                    4294967295,
+                    4294244344,
                   ]
                 }
                 strokeDasharray={null}
@@ -1005,8 +1017,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -1014,6 +1025,13 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -1021,7 +1039,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -1444,8 +1462,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -1453,6 +1470,13 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -1460,7 +1484,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -1852,8 +1876,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -1861,6 +1884,13 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -1868,7 +1898,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -2211,8 +2241,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -2220,6 +2249,13 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -2227,7 +2263,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -2619,8 +2655,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -2628,6 +2663,13 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -2635,7 +2677,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -3039,8 +3081,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -3048,6 +3089,13 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -3055,7 +3103,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -3447,8 +3495,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -3456,6 +3503,13 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -3463,7 +3517,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
@@ -3877,8 +3931,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                   "backgroundColor": "#17B582",
                   "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 32,
                   "justifyContent": "center",
@@ -3886,6 +3939,13 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
@@ -3893,7 +3953,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",

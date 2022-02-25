@@ -541,6 +541,13 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
@@ -568,21 +575,27 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                             "backgroundColor": "#17B582",
                             "borderColor": "#17B582",
                             "borderRadius": 16,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -703,21 +716,27 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                               "backgroundColor": "#17B582",
                               "borderColor": "#17B582",
                               "borderRadius": 16,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -2110,21 +2129,27 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                           "backgroundColor": "#17B582",
                           "borderColor": "#17B582",
                           "borderRadius": 16,
-                          "borderWidth": 2,
-                          "elevation": 2,
+                          "borderWidth": 0.5,
                           "flexDirection": "row",
                           "height": 48,
                           "justifyContent": "center",
                           "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
+                          "shadowColor": "rgba(0, 0, 0, 0.25)",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 8,
                         }
                       }
                     >
                       <Text
                         style={
                           Object {
-                            "color": "#FFFFFF",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 16,
                             "lineHeight": 24,
@@ -2687,6 +2712,13 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
@@ -2714,21 +2746,27 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                             "backgroundColor": "#17B582",
                             "borderColor": "#17B582",
                             "borderRadius": 16,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -2849,21 +2887,27 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                               "backgroundColor": "#17B582",
                               "borderColor": "#17B582",
                               "borderRadius": 16,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -3572,6 +3616,13 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
@@ -3599,21 +3650,27 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                             "backgroundColor": "#17B582",
                             "borderColor": "#17B582",
                             "borderRadius": 16,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -3734,21 +3791,27 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                               "backgroundColor": "#17B582",
                               "borderColor": "#17B582",
                               "borderRadius": 16,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -5141,21 +5204,27 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                           "backgroundColor": "#17B582",
                           "borderColor": "#17B582",
                           "borderRadius": 16,
-                          "borderWidth": 2,
-                          "elevation": 2,
+                          "borderWidth": 0.5,
                           "flexDirection": "row",
                           "height": 48,
                           "justifyContent": "center",
                           "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
+                          "shadowColor": "rgba(0, 0, 0, 0.25)",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 8,
                         }
                       }
                     >
                       <Text
                         style={
                           Object {
-                            "color": "#FFFFFF",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 16,
                             "lineHeight": 24,
@@ -5718,6 +5787,13 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
@@ -5745,21 +5821,27 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                             "backgroundColor": "#17B582",
                             "borderColor": "#17B582",
                             "borderRadius": 16,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -5880,21 +5962,27 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                               "backgroundColor": "#17B582",
                               "borderColor": "#17B582",
                               "borderRadius": 16,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -7287,21 +7375,27 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                           "backgroundColor": "#17B582",
                           "borderColor": "#17B582",
                           "borderRadius": 16,
-                          "borderWidth": 2,
-                          "elevation": 2,
+                          "borderWidth": 0.5,
                           "flexDirection": "row",
                           "height": 48,
                           "justifyContent": "center",
                           "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
+                          "shadowColor": "rgba(0, 0, 0, 0.25)",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 8,
                         }
                       }
                     >
                       <Text
                         style={
                           Object {
-                            "color": "#FFFFFF",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 16,
                             "lineHeight": 24,

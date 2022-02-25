@@ -554,24 +554,30 @@ Stand by…
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 0.5,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <Text
             style={
               Object {
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -878,23 +884,29 @@ Stand by…
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <ActivityIndicator
             animating={true}
-            color="#FFFFFF"
+            color="#F4F7F8"
             hidesWhenStopped={true}
             size="small"
           />
@@ -1196,24 +1208,30 @@ Stand by…
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <Text
             style={
               Object {
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,

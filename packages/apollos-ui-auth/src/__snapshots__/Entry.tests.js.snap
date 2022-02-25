@@ -99,13 +99,13 @@ exports[`The Auth Entry component should render 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -193,13 +193,13 @@ exports[`The Auth Entry component should render 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -501,13 +501,13 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -595,13 +595,13 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -905,13 +905,13 @@ exports[`The Auth Entry component should render as disabled 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -999,13 +999,13 @@ exports[`The Auth Entry component should render as disabled 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -1236,24 +1236,30 @@ exports[`The Auth Entry component should render as disabled 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 0.5,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <Text
             style={
               Object {
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -1368,13 +1374,13 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -1462,13 +1468,13 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -1699,23 +1705,29 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <ActivityIndicator
             animating={true}
-            color="#FFFFFF"
+            color="#F4F7F8"
             hidesWhenStopped={true}
             size="small"
           />
@@ -1825,13 +1837,13 @@ exports[`The Auth Entry component should render in a next button 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -1919,13 +1931,13 @@ exports[`The Auth Entry component should render in a next button 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -2156,24 +2168,30 @@ exports[`The Auth Entry component should render in a next button 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "borderWidth": 0.5,
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
               "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
+              "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 8,
             }
           }
         >
           <Text
             style={
               Object {
-                "color": "#FFFFFF",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -2288,13 +2306,13 @@ exports[`The Auth Entry component should render in an error state 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -2382,13 +2400,13 @@ exports[`The Auth Entry component should render in an error state 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -2690,13 +2708,13 @@ exports[`The Auth Entry component should render with a custom additionalText 1`]
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -2794,13 +2812,13 @@ exports[`The Auth Entry component should render with a custom additionalText 1`]
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -3119,13 +3137,13 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -3269,13 +3287,13 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -3577,13 +3595,13 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -3671,13 +3689,13 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -3979,13 +3997,13 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -4073,13 +4091,13 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -4381,13 +4399,13 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -4477,13 +4495,13 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -4785,13 +4803,13 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -4879,13 +4897,13 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -5189,13 +5207,13 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -5283,13 +5301,13 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -5593,13 +5611,13 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -5687,13 +5705,13 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -5997,13 +6015,13 @@ exports[`The Auth Entry component should render with a value 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -6091,13 +6109,13 @@ exports[`The Auth Entry component should render with a value 1`] = `
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -6399,13 +6417,13 @@ exports[`The Auth Entry component should render with an alternate login option w
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -6547,13 +6565,13 @@ exports[`The Auth Entry component should render with an alternate login option w
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >
@@ -6855,13 +6873,13 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
                 "borderRadius": 16,
                 "marginHorizontal": 0,
                 "marginVertical": 0,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 20,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 48,
               }
             }
           >
@@ -6959,13 +6977,13 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
                     "marginHorizontal": 0,
                     "marginVertical": 0,
                     "paddingTop": 0,
-                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                     "shadowOffset": Object {
-                      "height": 2,
+                      "height": 20,
                       "width": 0,
                     },
                     "shadowOpacity": 0,
-                    "shadowRadius": 8,
+                    "shadowRadius": 48,
                   }
                 }
               >

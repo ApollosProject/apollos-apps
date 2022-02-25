@@ -58,6 +58,9 @@ const dark = ({ colors, alpha }) => ({
     },
     shadows: {
       default: Color(colors.black).fade(alpha.high).string(),
+      low: Color(colors.black).fade(0.75).string(),
+      medium: Color(colors.black).fade(0.5).string(),
+      high: Color(colors.black).fade(0.25).string(),
     },
     action: {
       default: colors.darkTertiary,

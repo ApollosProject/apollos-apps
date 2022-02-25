@@ -304,8 +304,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render 1`] = `
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -313,6 +312,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render 1`] = `
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -320,7 +326,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render 1`] = `
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -708,8 +714,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render a different backgroun
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -717,6 +722,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render a different backgroun
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -724,7 +736,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render a different backgroun
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -1120,8 +1132,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render a loading state 1`] =
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -1129,6 +1140,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render a loading state 1`] =
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -1136,7 +1154,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render a loading state 1`] =
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -1532,8 +1550,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render when disabled 1`] = `
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -1541,6 +1558,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render when disabled 1`] = `
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -1548,7 +1572,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render when disabled 1`] = `
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -1944,8 +1968,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different gend
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -1953,6 +1976,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different gend
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -1960,7 +1990,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different gend
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -2356,8 +2386,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different prom
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -2365,6 +2394,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different prom
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -2372,7 +2408,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with a different prom
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -2768,8 +2804,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with errors 1`] = `
                       "backgroundColor": "#17B582",
                       "borderColor": "#17B582",
                       "borderRadius": 16,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 32,
                       "justifyContent": "center",
@@ -2777,6 +2812,13 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with errors 1`] = `
                       "opacity": 1,
                       "overflow": "hidden",
                       "paddingHorizontal": 12,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
@@ -2784,7 +2826,7 @@ exports[`ui-auth/Profile/ProfileDetailsEntry should render with errors 1`] = `
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",

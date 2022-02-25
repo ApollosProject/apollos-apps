@@ -294,11 +294,10 @@ exports[`FollowListItem should render 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -306,13 +305,20 @@ exports[`FollowListItem should render 1`] = `
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -620,11 +626,10 @@ exports[`FollowListItem should render a confirmed follow 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -632,13 +637,20 @@ exports[`FollowListItem should render a confirmed follow 1`] = `
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -949,8 +961,7 @@ exports[`FollowListItem should render a confirmed request 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -958,13 +969,20 @@ exports[`FollowListItem should render a confirmed request 1`] = `
           "opacity": 0.5,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -1275,8 +1293,7 @@ exports[`FollowListItem should render a follower request 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -1284,13 +1301,20 @@ exports[`FollowListItem should render a follower request 1`] = `
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -1307,11 +1331,10 @@ exports[`FollowListItem should render a follower request 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -1319,13 +1342,20 @@ exports[`FollowListItem should render a follower request 1`] = `
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -1345,8 +1375,7 @@ exports[`FollowListItem should render a follower request 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -1354,13 +1383,20 @@ exports[`FollowListItem should render a follower request 1`] = `
           "opacity": 0.5,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -1668,11 +1704,10 @@ exports[`FollowListItem should render a follower suggestion 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -1680,13 +1715,20 @@ exports[`FollowListItem should render a follower suggestion 1`] = `
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -2311,11 +2353,10 @@ exports[`FollowListItem should render a sent follow request 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -2323,13 +2364,20 @@ exports[`FollowListItem should render a sent follow request 1`] = `
           "opacity": 0.5,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -2651,11 +2699,10 @@ exports[`FollowListItem should render with a name 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 32,
           "justifyContent": "center",
@@ -2663,13 +2710,20 @@ exports[`FollowListItem should render with a name 1`] = `
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,

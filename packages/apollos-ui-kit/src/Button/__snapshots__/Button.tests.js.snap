@@ -51,21 +51,27 @@ exports[`The Button component should render 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -127,24 +133,30 @@ exports[`The Button component should render a Tertiary button 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#6EC5B8",
-          "borderColor": "#6EC5B8",
+          "backgroundColor": "rgba(142, 142, 147, 0.2)",
+          "borderColor": "rgba(142, 142, 147, 0.2)",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -209,13 +221,20 @@ exports[`The Button component should render a bordered button 1`] = `
           "backgroundColor": "transparent",
           "borderColor": "#17B582",
           "borderRadius": 16,
-          "borderWidth": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
@@ -287,21 +306,27 @@ exports[`The Button component should render a disabled button 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 0.5,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -364,22 +389,29 @@ exports[`The Button component should render a ghost button 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#27272E",
+          "borderColor": "rgba(39, 39, 46, 0.6)",
           "borderRadius": 16,
-          "borderWidth": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#27272E",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -442,22 +474,29 @@ exports[`The Button component should render a ghost pill button 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#27272E",
+          "borderColor": "rgba(39, 39, 46, 0.6)",
           "borderRadius": 48,
-          "borderWidth": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#27272E",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -522,20 +561,26 @@ exports[`The Button component should render a loading state 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <ActivityIndicator
         animating={true}
-        color="#FFFFFF"
+        color="#F4F7F8"
         hidesWhenStopped={true}
         size="small"
       />
@@ -595,21 +640,27 @@ exports[`The Button component should render a pill button 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 48,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -671,24 +722,30 @@ exports[`The Button component should render a primary button 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -750,24 +807,30 @@ exports[`The Button component should render a secondary button 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#17B582",
-          "borderColor": "#17B582",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FFFFFF",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#17B582",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -832,21 +895,27 @@ exports[`The Button component should render as default type 1`] = `
           "backgroundColor": "#17B582",
           "borderColor": "#17B582",
           "borderRadius": 16,
-          "borderWidth": 2,
-          "elevation": 2,
+          "borderWidth": 0.5,
           "flexDirection": "row",
           "height": 48,
           "justifyContent": "center",
           "opacity": 1,
           "overflow": "hidden",
           "paddingHorizontal": 16,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -895,14 +964,20 @@ exports[`The Button component should render with children 1`] = `
         "backgroundColor": "#17B582",
         "borderColor": "#17B582",
         "borderRadius": 16,
-        "borderWidth": 2,
-        "elevation": 2,
+        "borderWidth": 0.5,
         "flexDirection": "row",
         "height": 48,
         "justifyContent": "center",
         "opacity": 1,
         "overflow": "hidden",
         "paddingHorizontal": 16,
+        "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >

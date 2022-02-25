@@ -38,7 +38,7 @@ class ProtectedRoute extends PureComponent {
   };
 
   static defaultProps = {
-    loggedOutRouteName: 'LandingScreen',
+    loggedOutRouteName: 'Auth',
     loggedInRouteName: 'Tabs',
   };
 

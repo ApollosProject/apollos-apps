@@ -82,6 +82,38 @@ const LoginProvider = ({ children, closeAuth }) => {
     }
   `);
 
+  const [requestOpenIdRegister] = useMutation(gql`
+    mutation requestOpenIdRegister($code: String!, $providerType: String!) {
+      requestOpenIdRegister(code: $code, providerType: $providerType) {
+        refreshToken
+        accessToken
+      }
+    }
+  `);
+
+  const [requestConnectIdentity] = useMutation(gql`
+    mutation requestConnectIdentity($input: AuthenticationIdentityInput!) {
+      requestConnectIdentity(identity: $input) {
+        result
+      }
+    }
+  `);
+
+  const [connectIdentity] = useMutation(gql`
+    mutation connectIdentity(
+      $identity: AuthenticationIdentityInput!
+      $otp: String!
+    ) {
+      connectIdentity(identity: $identity, otp: $otp) {
+        person {
+          id
+          phone
+          email
+        }
+      }
+    }
+  `);
+
   const handleRequestLogin = async ({ identity: idty }) => {
     setIdentity(idty);
 
@@ -114,6 +146,30 @@ const LoginProvider = ({ children, closeAuth }) => {
     return data.requestRegister;
   };
 
+  const handleRequestConnectIdentity = async ({
+    identity: idty,
+    identityType,
+  }) => {
+    setIdentity(idty);
+
+    const identityInput = { [identityType]: idty[identityType] };
+
+    const { data } = await requestConnectIdentity({
+      variables: { input: identityInput },
+    });
+    return data.requestConnectIdentity;
+  };
+
+  const handleConnectIdentity = async ({ code: otp }) => {
+    const identityInput = { [authType]: identity[authType] };
+
+    const { data } = await connectIdentity({
+      variables: { identity: identityInput, otp },
+    });
+
+    return data.connectIdentity;
+  };
+
   const handleValidateLogin = async ({ code: otp }) => {
     const identityInput = { [authType]: identity[authType] };
 
@@ -129,6 +185,17 @@ const LoginProvider = ({ children, closeAuth }) => {
     return data.validateLogin;
   };
 
+  const handleRequestOpenIdRegister = async ({
+    code: openIdCode,
+    providerType,
+  }) => {
+    const { data } = await requestOpenIdRegister({
+      variables: { code: openIdCode, providerType },
+    });
+
+    return data.requestOpenIdRegister;
+  };
+
   return (
     <LoginContext.Provider
       value={{
@@ -141,6 +208,9 @@ const LoginProvider = ({ children, closeAuth }) => {
         handleRequestLogin,
         handleRequestRegister,
         handleValidateLogin,
+        handleRequestConnectIdentity,
+        handleConnectIdentity,
+        handleRequestOpenIdRegister,
         closeAuth,
         code,
       }}

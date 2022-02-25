@@ -14,13 +14,9 @@ const VerificationConnected = (props) => {
     phone: Yup.string().matches(/^[6-9]\d{9}$/),
   });
 
-  const {
-    handleValidateLogin,
-    closeAuth,
-    newUser,
-    code,
-    authType,
-  } = React.useContext(LoginContext);
+  const { handleValidateLogin, closeAuth, code, authType } = React.useContext(
+    LoginContext
+  );
   const { login } = React.useContext(AuthContext);
 
   const handleOnSubmit = async (
@@ -33,11 +29,7 @@ const VerificationConnected = (props) => {
         code: formCode,
       });
       await login({ accessToken, refreshToken });
-      if (newUser) {
-        props.navigation.navigate('OpenIDConnected');
-      } else {
-        closeAuth();
-      }
+      closeAuth();
     } catch (e) {
       console.warn(e);
       setFieldError(

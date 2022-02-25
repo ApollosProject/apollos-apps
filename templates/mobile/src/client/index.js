@@ -34,7 +34,7 @@ const wipeData = () =>
 let storeIsResetting = false;
 const onAuthError = async () => {
   AsyncStorage.removeItem('accessToken');
-  AsyncStorage.removeItem('refreshToken');  
+  AsyncStorage.removeItem('refreshToken');
   if (!storeIsResetting) {
     storeIsResetting = true;
     await client.stop();
@@ -50,7 +50,7 @@ const uri = ApollosConfig.APP_DATA_URL.replace(
   Platform.OS === 'android' ? '10.0.2.2' : 'localhost'
 );
 
-const errorLink = buildErrorLink(onAuthError);
+const errorLink = buildErrorLink(onAuthError, uri);
 const apqLink = createPersistedQueryLink({
   sha256,
   useGETForHashedQueries: true,
