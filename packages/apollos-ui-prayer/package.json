@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -39,7 +39,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*|d3|d3-*|commander))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -57,7 +57,7 @@
     ]
   },
   "dependencies": {
-    "formik": "1.5.1",
+    "formik": "2.2.9",
     "lodash": "4.17.21",
     "react-is": "^16.9.0",
     "react-native-swiper": "^1.6.0",

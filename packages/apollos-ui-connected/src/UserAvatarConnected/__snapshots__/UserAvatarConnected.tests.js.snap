@@ -70,10 +70,11 @@ exports[`UserAvatarConnected component renders UserAvatarConnected without a pho
     themeSize={48}
   >
     <View
+      backgroundColor="hsl(108, 40%, 60%)"
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "hsl(108, 40%, 60%)",
           "borderRadius": 48,
           "height": 48,
           "justifyContent": "center",

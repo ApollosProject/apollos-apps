@@ -285,7 +285,7 @@ PODS:
     - React
   - react-native-geolocation (2.0.2):
     - React
-  - react-native-geolocation-service (5.2.0):
+  - react-native-geolocation-service (5.3.0-beta.4):
     - React
   - react-native-image-picker (3.8.1):
     - React-Core
@@ -428,7 +428,9 @@ PODS:
     - React-Core
   - RNSha256 (1.4.7):
     - React
-  - RNSVG (9.13.6):
+  - RNSharedElement (0.8.4):
+    - React-Core
+  - RNSVG (12.1.1):
     - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -519,6 +521,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSha256 (from `../node_modules/react-native-sha256`)
+  - RNSharedElement (from `../node_modules/react-native-shared-element`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -659,6 +662,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSha256:
     :path: "../node_modules/react-native-sha256"
+  RNSharedElement:
+    :path: "../node_modules/react-native-shared-element"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   Yoga:
@@ -702,7 +707,7 @@ SPEC CHECKSUMS:
   react-native-apollos-player: e8403a6087bdb92515ef2339e0be9f026212c3a3
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
-  react-native-geolocation-service: 7c9436da6dfdecd9526c62eac62ea2bc3f0cc8ea
+  react-native-geolocation-service: c0efb872258ed9240f1003a70fca9e9757e5c785
   react-native-image-picker: 31971f6184e7c1dcb4fc1f122e1ba2c3fb11ef1e
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
   react-native-music-control: 93b521377efdf2e49b46ccade8457f9503359b38
@@ -738,7 +743,8 @@ SPEC CHECKSUMS:
   RNReanimated: 1326679461fa5d2399d54c18ca1432ba3e816b9e
   RNScreens: c277bfc4b5bb7c2fe977d19635df6f974f95dfd6
   RNSha256: bf2c90a9e0cec6dcbcc4100e4e19715ae7feaa34
-  RNSVG: 8ba35cbeb385a52fd960fd28db9d7d18b4c2974f
+  RNSharedElement: eb7d506733952d58634f34c82ec17e82f557e377
+  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: 5cbf25add73edb290e1067017690f7ebf56c5468
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

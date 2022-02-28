@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Template (Lava) Data Source accepts a currentPersonId argument 1`] = `"{% person id:'5' %}{{ someLavaCode }}{% endperson %}"`;
-
-exports[`Template (Lava) Data Source renders a template 1`] = `"{% person id:'51' %}{{ someLavaCode }}{% endperson %}"`;
-
-exports[`Template (Lava) Data Source requires a currentPerson 1`] = `[AuthenticationError: Must be logged in]`;

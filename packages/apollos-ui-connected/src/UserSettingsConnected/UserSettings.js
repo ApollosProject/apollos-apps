@@ -1,8 +1,9 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { useQuery, useMutation, useApolloClient, gql } from '@apollo/client';
+import { useQuery, useApolloClient, gql } from '@apollo/client';
 import { useNavigation } from '@react-navigation/native';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
+import { useIsLoggedIn, useLogout } from '@apollosproject/ui-authentication';
 import { get } from 'lodash';
 
 import {
@@ -13,7 +14,6 @@ import {
   CellText,
   Divider,
   Touchable,
-  ActivityIndicator,
   NavigationService,
   H3,
   H4,
@@ -48,22 +48,8 @@ const Container = styled({
 
 const UserSettings = () => {
   const navigation = useNavigation();
-  const {
-    data: { isLoggedIn = false },
-    loading,
-  } = useQuery(
-    gql`
-      query {
-        isLoggedIn @client
-      }
-    `,
-    { fetchPolicy: 'cache-and-network' }
-  );
-  const [logout] = useMutation(gql`
-    mutation {
-      logout @client
-    }
-  `);
+  const isLoggedIn = useIsLoggedIn();
+  const logout = useLogout();
   const client = useApolloClient();
   const { data } = useQuery(gql`
     query currentUserId {
@@ -80,7 +66,7 @@ const UserSettings = () => {
   const firstName = get(data, 'currentUser.profile.firstName');
   const lastName = get(data, 'currentUser.profile.lastName');
 
-  if (loading) return <ActivityIndicator />;
+  // if (loading) return <ActivityIndicator />;
   if (!isLoggedIn) return null;
   return (
     <BackgroundView>
@@ -182,6 +168,14 @@ const UserSettings = () => {
               <H4>For development only</H4>
             </PaddedView>
             <TableView>
+              <Touchable
+                onPress={() => NavigationService.resetToAuth('OpenIDConnected')}
+              >
+                <Cell>
+                  <CellText>Launch OpenID Flow</CellText>
+                </Cell>
+              </Touchable>
+              <Divider />
               <Touchable
                 onPress={() =>
                   checkOnboardingStatusAndNavigate({

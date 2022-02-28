@@ -527,13 +527,13 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                         <View
                           bordered={true}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
                               "backgroundColor": "transparent",
-                              "borderColor": "#A5A5A5",
-                              "borderRadius": 48,
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
                               "borderWidth": 0,
                               "flexDirection": "row",
                               "height": 48,
@@ -541,13 +541,20 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#A5A5A5",
+                                "color": "#17B582",
                                 "fontFamily": "InterUI-Medium",
                                 "fontSize": 14,
                                 "lineHeight": 21,
@@ -561,28 +568,34 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                       <View
                         bordered={false}
                         disabled={true}
-                        pill={true}
+                        pill={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "backgroundColor": "#00676D",
-                            "borderColor": "#00676D",
-                            "borderRadius": 48,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "backgroundColor": "#17B582",
+                            "borderColor": "#17B582",
+                            "borderRadius": 16,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -696,28 +709,34 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                         <View
                           bordered={false}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#00676D",
-                              "borderColor": "#00676D",
-                              "borderRadius": 48,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "backgroundColor": "#17B582",
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -989,122 +1008,1042 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                   }
                 >
                   <View
+                    size={160}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                        "borderRadius": 80,
+                        "height": 160,
+                        "marginTop": 40,
+                        "overflow": "hidden",
+                        "width": 160,
                       }
                     }
                   >
-                    <Image
-                      avatarWidth="40%"
-                      fadeDuration={250}
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "__typename": "ImageMediaSource",
-                            "cache": "force-cache",
-                            "uri": "https://1234.image.com",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 1000,
-                          "width": "40%",
-                          "zIndex": 100,
-                        }
-                      }
-                    />
                     <View
-                      avatarWidth="20%"
-                      getXYPositions={
-                        Object {
-                          "left": "20%",
-                          "top": "40%",
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
+                            "value": 4,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 43.0388045597631,
+                          "value": 4,
+                          "x": 48.43206298672939,
+                          "y": 80,
                         }
                       }
-                      order={0}
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "left": "20%",
+                          "left": 5.393258426966291,
                           "position": "absolute",
-                          "top": "40%",
-                          "width": "20%",
-                          "zIndex": 0,
+                          "top": 36.9611954402369,
                         }
                       }
                     >
-                      <Image
-                        blurRadius={2}
-                        fadeDuration={250}
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "uri": "https://123.image-url.com",
-                            },
-                          ]
-                        }
+                      <View
                         style={
                           Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 1000,
-                            "width": "100%",
+                            "alignItems": "center",
+                            "height": 86.0776091195262,
+                            "justifyContent": "center",
+                            "width": 86.0776091195262,
                           }
                         }
-                      />
+                        themeSize={86.0776091195262}
+                      >
+                        <Image
+                          fadeDuration={250}
+                          onLoad={[Function]}
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://123.image-url.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 43.0388045597631,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={86.0776091195262}
+                        />
+                      </View>
                     </View>
                     <View
-                      avatarWidth="20%"
-                      getXYPositions={
-                        Object {
-                          "left": "79.79984993200891%",
-                          "top": "39.99999999999999%",
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
+                            "value": 1.7999999999999998,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 28.871307799787463,
+                          "value": 1.7999999999999998,
+                          "x": 125.73543377324624,
+                          "y": 80,
                         }
                       }
-                      order={4}
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "left": "79.79984993200891%",
+                          "left": 96.86412597345878,
                           "position": "absolute",
-                          "top": "39.99999999999999%",
-                          "width": "20%",
-                          "zIndex": 4,
+                          "top": 51.12869220021254,
                         }
                       }
                     >
-                      <Image
-                        blurRadius={1}
-                        fadeDuration={250}
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "uri": "https://123.image-url.com",
-                            },
-                          ]
-                        }
+                      <View
                         style={
                           Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 1000,
-                            "width": "100%",
+                            "alignItems": "center",
+                            "height": 57.742615599574926,
+                            "justifyContent": "center",
+                            "width": 57.742615599574926,
                           }
                         }
-                      />
+                        themeSize={57.742615599574926}
+                      >
+                        <Image
+                          fadeDuration={250}
+                          onLoad={[Function]}
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://123.image-url.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 28.871307799787463,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={57.742615599574926}
+                        />
+                      </View>
+                    </View>
+                    <View
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "null",
+                            "photo": null,
+                            "value": 0.72,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 18.259818335022597,
+                          "value": 0.72,
+                          "x": 98.00821417919377,
+                          "y": 124.60955354155165,
+                        }
+                      }
+                      style={
+                        Object {
+                          "left": 79.74839584417117,
+                          "position": "absolute",
+                          "top": 106.34973520652905,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 36.519636670045195,
+                            "justifyContent": "center",
+                            "width": 36.519636670045195,
+                          }
+                        }
+                        themeSize={36.519636670045195}
+                      >
+                        <View
+                          backgroundColor={null}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                              "borderRadius": 36.519636670045195,
+                              "height": 36.519636670045195,
+                              "justifyContent": "center",
+                              "width": 36.519636670045195,
+                            }
+                          }
+                          themeSize={36.519636670045195}
+                        >
+                          <RNSVGSvgView
+                            align="xMidYMid"
+                            bbHeight={18.259818335022597}
+                            bbWidth={18.259818335022597}
+                            color="rgba(244, 247, 248, 0.33)"
+                            height={18.259818335022597}
+                            id="Raw"
+                            meetOrSlice={0}
+                            minX={0}
+                            minY={0}
+                            size={18.259818335022597}
+                            style={
+                              Array [
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "borderWidth": 0,
+                                },
+                                Object {},
+                                null,
+                                Object {
+                                  "flex": 0,
+                                  "height": 18,
+                                  "width": 18,
+                                },
+                              ]
+                            }
+                            tintColor="rgba(244, 247, 248, 0.33)"
+                            vbHeight={256}
+                            vbWidth={256}
+                            width={18.259818335022597}
+                          >
+                            <RNSVGGroup
+                              fill={
+                                Array [
+                                  0,
+                                  4278190080,
+                                ]
+                              }
+                              fillOpacity={1}
+                              fillRule={1}
+                              font={Object {}}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={Array []}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            >
+                              <RNSVGRect
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                height={256}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                  ]
+                                }
+                                rotation={0}
+                                rx={0}
+                                ry={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={null}
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={1}
+                                vectorEffect={0}
+                                width={256}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGCircle
+                                cx={128}
+                                cy={96}
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeMiterlimit",
+                                  ]
+                                }
+                                r={64}
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={10}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGPath
+                                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeLinecap",
+                                    "strokeLinejoin",
+                                  ]
+                                }
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={1}
+                                strokeLinejoin={1}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                            </RNSVGGroup>
+                          </RNSVGSvgView>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": undefined,
+                            "photo": undefined,
+                            "value": 0.21599999999999997,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              [Circular],
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 10.001314398038298,
+                          "value": 0.21599999999999997,
+                          "x": 96.49466662519917,
+                          "y": 46.766797865958935,
+                        }
+                      }
+                      style={
+                        Object {
+                          "left": 86.49335222716087,
+                          "position": "absolute",
+                          "top": 36.76548346792064,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 20.002628796076596,
+                            "justifyContent": "center",
+                            "width": 20.002628796076596,
+                          }
+                        }
+                        themeSize={20.002628796076596}
+                      >
+                        <View
+                          backgroundColor={null}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                              "borderRadius": 20.002628796076596,
+                              "height": 20.002628796076596,
+                              "justifyContent": "center",
+                              "width": 20.002628796076596,
+                            }
+                          }
+                          themeSize={20.002628796076596}
+                        >
+                          <RNSVGSvgView
+                            align="xMidYMid"
+                            bbHeight={10.001314398038298}
+                            bbWidth={10.001314398038298}
+                            color="rgba(244, 247, 248, 0.33)"
+                            height={10.001314398038298}
+                            id="Raw"
+                            meetOrSlice={0}
+                            minX={0}
+                            minY={0}
+                            size={10.001314398038298}
+                            style={
+                              Array [
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "borderWidth": 0,
+                                },
+                                Object {},
+                                null,
+                                Object {
+                                  "flex": 0,
+                                  "height": 10,
+                                  "width": 10,
+                                },
+                              ]
+                            }
+                            tintColor="rgba(244, 247, 248, 0.33)"
+                            vbHeight={256}
+                            vbWidth={256}
+                            width={10.001314398038298}
+                          >
+                            <RNSVGGroup
+                              fill={
+                                Array [
+                                  0,
+                                  4278190080,
+                                ]
+                              }
+                              fillOpacity={1}
+                              fillRule={1}
+                              font={Object {}}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={Array []}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            >
+                              <RNSVGRect
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                height={256}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                  ]
+                                }
+                                rotation={0}
+                                rx={0}
+                                ry={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={null}
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={1}
+                                vectorEffect={0}
+                                width={256}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGCircle
+                                cx={128}
+                                cy={96}
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeMiterlimit",
+                                  ]
+                                }
+                                r={64}
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={10}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGPath
+                                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeLinecap",
+                                    "strokeLinejoin",
+                                  ]
+                                }
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={1}
+                                strokeLinejoin={1}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                            </RNSVGGroup>
+                          </RNSVGSvgView>
+                        </View>
+                      </View>
                     </View>
                   </View>
                   <View
@@ -1183,28 +2122,34 @@ exports[`The PrayerExperienceConnected component closes onboarding when button i
                     <View
                       bordered={false}
                       disabled={false}
-                      pill={true}
+                      pill={false}
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#00676D",
-                          "borderColor": "#00676D",
-                          "borderRadius": 48,
-                          "borderWidth": 2,
-                          "elevation": 2,
+                          "backgroundColor": "#17B582",
+                          "borderColor": "#17B582",
+                          "borderRadius": 16,
+                          "borderWidth": 0.5,
                           "flexDirection": "row",
                           "height": 48,
                           "justifyContent": "center",
                           "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
+                          "shadowColor": "rgba(0, 0, 0, 0.25)",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 8,
                         }
                       }
                     >
                       <Text
                         style={
                           Object {
-                            "color": "#FFFFFF",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 16,
                             "lineHeight": 24,
@@ -1753,13 +2698,13 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                         <View
                           bordered={true}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
                               "backgroundColor": "transparent",
-                              "borderColor": "#A5A5A5",
-                              "borderRadius": 48,
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
                               "borderWidth": 0,
                               "flexDirection": "row",
                               "height": 48,
@@ -1767,13 +2712,20 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#A5A5A5",
+                                "color": "#17B582",
                                 "fontFamily": "InterUI-Medium",
                                 "fontSize": 14,
                                 "lineHeight": 21,
@@ -1787,28 +2739,34 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                       <View
                         bordered={false}
                         disabled={true}
-                        pill={true}
+                        pill={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "backgroundColor": "#00676D",
-                            "borderColor": "#00676D",
-                            "borderRadius": 48,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "backgroundColor": "#17B582",
+                            "borderColor": "#17B582",
+                            "borderRadius": 16,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -1922,28 +2880,34 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
                         <View
                           bordered={false}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#00676D",
-                              "borderColor": "#00676D",
-                              "borderRadius": 48,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "backgroundColor": "#17B582",
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -2638,13 +3602,13 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                         <View
                           bordered={true}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
                               "backgroundColor": "transparent",
-                              "borderColor": "#A5A5A5",
-                              "borderRadius": 48,
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
                               "borderWidth": 0,
                               "flexDirection": "row",
                               "height": 48,
@@ -2652,13 +3616,20 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#A5A5A5",
+                                "color": "#17B582",
                                 "fontFamily": "InterUI-Medium",
                                 "fontSize": 14,
                                 "lineHeight": 21,
@@ -2672,28 +3643,34 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                       <View
                         bordered={false}
                         disabled={true}
-                        pill={true}
+                        pill={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "backgroundColor": "#00676D",
-                            "borderColor": "#00676D",
-                            "borderRadius": 48,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "backgroundColor": "#17B582",
+                            "borderColor": "#17B582",
+                            "borderRadius": 16,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -2807,28 +3784,34 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                         <View
                           bordered={false}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#00676D",
-                              "borderColor": "#00676D",
-                              "borderRadius": 48,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "backgroundColor": "#17B582",
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -3100,122 +4083,1042 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                   }
                 >
                   <View
+                    size={160}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                        "borderRadius": 80,
+                        "height": 160,
+                        "marginTop": 40,
+                        "overflow": "hidden",
+                        "width": 160,
                       }
                     }
                   >
-                    <Image
-                      avatarWidth="40%"
-                      fadeDuration={250}
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "__typename": "ImageMediaSource",
-                            "cache": "force-cache",
-                            "uri": "https://1234.image.com",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 1000,
-                          "width": "40%",
-                          "zIndex": 100,
-                        }
-                      }
-                    />
                     <View
-                      avatarWidth="20%"
-                      getXYPositions={
-                        Object {
-                          "left": "20%",
-                          "top": "40%",
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
+                            "value": 4,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 43.0388045597631,
+                          "value": 4,
+                          "x": 48.43206298672939,
+                          "y": 80,
                         }
                       }
-                      order={0}
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "left": "20%",
+                          "left": 5.393258426966291,
                           "position": "absolute",
-                          "top": "40%",
-                          "width": "20%",
-                          "zIndex": 0,
+                          "top": 36.9611954402369,
                         }
                       }
                     >
-                      <Image
-                        blurRadius={2}
-                        fadeDuration={250}
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "uri": "https://123.image-url.com",
-                            },
-                          ]
-                        }
+                      <View
                         style={
                           Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 1000,
-                            "width": "100%",
+                            "alignItems": "center",
+                            "height": 86.0776091195262,
+                            "justifyContent": "center",
+                            "width": 86.0776091195262,
                           }
                         }
-                      />
+                        themeSize={86.0776091195262}
+                      >
+                        <Image
+                          fadeDuration={250}
+                          onLoad={[Function]}
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://123.image-url.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 43.0388045597631,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={86.0776091195262}
+                        />
+                      </View>
                     </View>
                     <View
-                      avatarWidth="20%"
-                      getXYPositions={
-                        Object {
-                          "left": "79.79984993200891%",
-                          "top": "39.99999999999999%",
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
+                            "value": 1.7999999999999998,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 28.871307799787463,
+                          "value": 1.7999999999999998,
+                          "x": 125.73543377324624,
+                          "y": 80,
                         }
                       }
-                      order={4}
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "left": "79.79984993200891%",
+                          "left": 96.86412597345878,
                           "position": "absolute",
-                          "top": "39.99999999999999%",
-                          "width": "20%",
-                          "zIndex": 4,
+                          "top": 51.12869220021254,
                         }
                       }
                     >
-                      <Image
-                        blurRadius={1}
-                        fadeDuration={250}
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "uri": "https://123.image-url.com",
-                            },
-                          ]
-                        }
+                      <View
                         style={
                           Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 1000,
-                            "width": "100%",
+                            "alignItems": "center",
+                            "height": 57.742615599574926,
+                            "justifyContent": "center",
+                            "width": 57.742615599574926,
                           }
                         }
-                      />
+                        themeSize={57.742615599574926}
+                      >
+                        <Image
+                          fadeDuration={250}
+                          onLoad={[Function]}
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://123.image-url.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 28.871307799787463,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={57.742615599574926}
+                        />
+                      </View>
+                    </View>
+                    <View
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "null",
+                            "photo": null,
+                            "value": 0.72,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 18.259818335022597,
+                          "value": 0.72,
+                          "x": 98.00821417919377,
+                          "y": 124.60955354155165,
+                        }
+                      }
+                      style={
+                        Object {
+                          "left": 79.74839584417117,
+                          "position": "absolute",
+                          "top": 106.34973520652905,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 36.519636670045195,
+                            "justifyContent": "center",
+                            "width": 36.519636670045195,
+                          }
+                        }
+                        themeSize={36.519636670045195}
+                      >
+                        <View
+                          backgroundColor={null}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                              "borderRadius": 36.519636670045195,
+                              "height": 36.519636670045195,
+                              "justifyContent": "center",
+                              "width": 36.519636670045195,
+                            }
+                          }
+                          themeSize={36.519636670045195}
+                        >
+                          <RNSVGSvgView
+                            align="xMidYMid"
+                            bbHeight={18.259818335022597}
+                            bbWidth={18.259818335022597}
+                            color="rgba(244, 247, 248, 0.33)"
+                            height={18.259818335022597}
+                            id="Raw"
+                            meetOrSlice={0}
+                            minX={0}
+                            minY={0}
+                            size={18.259818335022597}
+                            style={
+                              Array [
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "borderWidth": 0,
+                                },
+                                Object {},
+                                null,
+                                Object {
+                                  "flex": 0,
+                                  "height": 18,
+                                  "width": 18,
+                                },
+                              ]
+                            }
+                            tintColor="rgba(244, 247, 248, 0.33)"
+                            vbHeight={256}
+                            vbWidth={256}
+                            width={18.259818335022597}
+                          >
+                            <RNSVGGroup
+                              fill={
+                                Array [
+                                  0,
+                                  4278190080,
+                                ]
+                              }
+                              fillOpacity={1}
+                              fillRule={1}
+                              font={Object {}}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={Array []}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            >
+                              <RNSVGRect
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                height={256}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                  ]
+                                }
+                                rotation={0}
+                                rx={0}
+                                ry={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={null}
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={1}
+                                vectorEffect={0}
+                                width={256}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGCircle
+                                cx={128}
+                                cy={96}
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeMiterlimit",
+                                  ]
+                                }
+                                r={64}
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={10}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGPath
+                                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeLinecap",
+                                    "strokeLinejoin",
+                                  ]
+                                }
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={1}
+                                strokeLinejoin={1}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                            </RNSVGGroup>
+                          </RNSVGSvgView>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": undefined,
+                            "photo": undefined,
+                            "value": 0.21599999999999997,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              [Circular],
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 10.001314398038298,
+                          "value": 0.21599999999999997,
+                          "x": 96.49466662519917,
+                          "y": 46.766797865958935,
+                        }
+                      }
+                      style={
+                        Object {
+                          "left": 86.49335222716087,
+                          "position": "absolute",
+                          "top": 36.76548346792064,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 20.002628796076596,
+                            "justifyContent": "center",
+                            "width": 20.002628796076596,
+                          }
+                        }
+                        themeSize={20.002628796076596}
+                      >
+                        <View
+                          backgroundColor={null}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                              "borderRadius": 20.002628796076596,
+                              "height": 20.002628796076596,
+                              "justifyContent": "center",
+                              "width": 20.002628796076596,
+                            }
+                          }
+                          themeSize={20.002628796076596}
+                        >
+                          <RNSVGSvgView
+                            align="xMidYMid"
+                            bbHeight={10.001314398038298}
+                            bbWidth={10.001314398038298}
+                            color="rgba(244, 247, 248, 0.33)"
+                            height={10.001314398038298}
+                            id="Raw"
+                            meetOrSlice={0}
+                            minX={0}
+                            minY={0}
+                            size={10.001314398038298}
+                            style={
+                              Array [
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "borderWidth": 0,
+                                },
+                                Object {},
+                                null,
+                                Object {
+                                  "flex": 0,
+                                  "height": 10,
+                                  "width": 10,
+                                },
+                              ]
+                            }
+                            tintColor="rgba(244, 247, 248, 0.33)"
+                            vbHeight={256}
+                            vbWidth={256}
+                            width={10.001314398038298}
+                          >
+                            <RNSVGGroup
+                              fill={
+                                Array [
+                                  0,
+                                  4278190080,
+                                ]
+                              }
+                              fillOpacity={1}
+                              fillRule={1}
+                              font={Object {}}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={Array []}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            >
+                              <RNSVGRect
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                height={256}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                  ]
+                                }
+                                rotation={0}
+                                rx={0}
+                                ry={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={null}
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={1}
+                                vectorEffect={0}
+                                width={256}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGCircle
+                                cx={128}
+                                cy={96}
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeMiterlimit",
+                                  ]
+                                }
+                                r={64}
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={10}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGPath
+                                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeLinecap",
+                                    "strokeLinejoin",
+                                  ]
+                                }
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={1}
+                                strokeLinejoin={1}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                            </RNSVGGroup>
+                          </RNSVGSvgView>
+                        </View>
+                      </View>
                     </View>
                   </View>
                   <View
@@ -3294,28 +5197,34 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                     <View
                       bordered={false}
                       disabled={false}
-                      pill={true}
+                      pill={false}
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#00676D",
-                          "borderColor": "#00676D",
-                          "borderRadius": 48,
-                          "borderWidth": 2,
-                          "elevation": 2,
+                          "backgroundColor": "#17B582",
+                          "borderColor": "#17B582",
+                          "borderRadius": 16,
+                          "borderWidth": 0.5,
                           "flexDirection": "row",
                           "height": 48,
                           "justifyContent": "center",
                           "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
+                          "shadowColor": "rgba(0, 0, 0, 0.25)",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 8,
                         }
                       }
                     >
                       <Text
                         style={
                           Object {
-                            "color": "#FFFFFF",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 16,
                             "lineHeight": 24,
@@ -3864,13 +5773,13 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                         <View
                           bordered={true}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
                               "backgroundColor": "transparent",
-                              "borderColor": "#A5A5A5",
-                              "borderRadius": 48,
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
                               "borderWidth": 0,
                               "flexDirection": "row",
                               "height": 48,
@@ -3878,13 +5787,20 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#A5A5A5",
+                                "color": "#17B582",
                                 "fontFamily": "InterUI-Medium",
                                 "fontSize": 14,
                                 "lineHeight": 21,
@@ -3898,28 +5814,34 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                       <View
                         bordered={false}
                         disabled={true}
-                        pill={true}
+                        pill={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "backgroundColor": "#00676D",
-                            "borderColor": "#00676D",
-                            "borderRadius": 48,
-                            "borderWidth": 2,
-                            "elevation": 2,
+                            "backgroundColor": "#17B582",
+                            "borderColor": "#17B582",
+                            "borderRadius": 16,
+                            "borderWidth": 0.5,
                             "flexDirection": "row",
                             "height": 48,
                             "justifyContent": "center",
                             "opacity": 0.5,
                             "overflow": "hidden",
                             "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
                         <Text
                           style={
                             Object {
-                              "color": "#FFFFFF",
+                              "color": "#F4F7F8",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 24,
@@ -4033,28 +5955,34 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                         <View
                           bordered={false}
                           disabled={false}
-                          pill={true}
+                          pill={false}
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#00676D",
-                              "borderColor": "#00676D",
-                              "borderRadius": 48,
-                              "borderWidth": 2,
-                              "elevation": 2,
+                              "backgroundColor": "#17B582",
+                              "borderColor": "#17B582",
+                              "borderRadius": 16,
+                              "borderWidth": 0.5,
                               "flexDirection": "row",
                               "height": 48,
                               "justifyContent": "center",
                               "opacity": 1,
                               "overflow": "hidden",
                               "paddingHorizontal": 16,
+                              "shadowColor": "rgba(0, 0, 0, 0.25)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
                             }
                           }
                         >
                           <Text
                             style={
                               Object {
-                                "color": "#FFFFFF",
+                                "color": "#F4F7F8",
                                 "fontFamily": "InterUI-Bold",
                                 "fontSize": 16,
                                 "lineHeight": 24,
@@ -4326,122 +6254,1042 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                   }
                 >
                   <View
+                    size={160}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                        "borderRadius": 80,
+                        "height": 160,
+                        "marginTop": 40,
+                        "overflow": "hidden",
+                        "width": 160,
                       }
                     }
                   >
-                    <Image
-                      avatarWidth="40%"
-                      fadeDuration={250}
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "__typename": "ImageMediaSource",
-                            "cache": "force-cache",
-                            "uri": "https://1234.image.com",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 1000,
-                          "width": "40%",
-                          "zIndex": 100,
-                        }
-                      }
-                    />
                     <View
-                      avatarWidth="20%"
-                      getXYPositions={
-                        Object {
-                          "left": "20%",
-                          "top": "40%",
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
+                            "value": 4,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 43.0388045597631,
+                          "value": 4,
+                          "x": 48.43206298672939,
+                          "y": 80,
                         }
                       }
-                      order={0}
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "left": "20%",
+                          "left": 5.393258426966291,
                           "position": "absolute",
-                          "top": "40%",
-                          "width": "20%",
-                          "zIndex": 0,
+                          "top": 36.9611954402369,
                         }
                       }
                     >
-                      <Image
-                        blurRadius={2}
-                        fadeDuration={250}
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "uri": "https://123.image-url.com",
-                            },
-                          ]
-                        }
+                      <View
                         style={
                           Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 1000,
-                            "width": "100%",
+                            "alignItems": "center",
+                            "height": 86.0776091195262,
+                            "justifyContent": "center",
+                            "width": 86.0776091195262,
                           }
                         }
-                      />
+                        themeSize={86.0776091195262}
+                      >
+                        <Image
+                          fadeDuration={250}
+                          onLoad={[Function]}
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://123.image-url.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 43.0388045597631,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={86.0776091195262}
+                        />
+                      </View>
                     </View>
                     <View
-                      avatarWidth="20%"
-                      getXYPositions={
-                        Object {
-                          "left": "79.79984993200891%",
-                          "top": "39.99999999999999%",
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
+                            "value": 1.7999999999999998,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 28.871307799787463,
+                          "value": 1.7999999999999998,
+                          "x": 125.73543377324624,
+                          "y": 80,
                         }
                       }
-                      order={4}
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "left": "79.79984993200891%",
+                          "left": 96.86412597345878,
                           "position": "absolute",
-                          "top": "39.99999999999999%",
-                          "width": "20%",
-                          "zIndex": 4,
+                          "top": 51.12869220021254,
                         }
                       }
                     >
-                      <Image
-                        blurRadius={1}
-                        fadeDuration={250}
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "uri": "https://123.image-url.com",
-                            },
-                          ]
-                        }
+                      <View
                         style={
                           Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 1000,
-                            "width": "100%",
+                            "alignItems": "center",
+                            "height": 57.742615599574926,
+                            "justifyContent": "center",
+                            "width": 57.742615599574926,
                           }
                         }
-                      />
+                        themeSize={57.742615599574926}
+                      >
+                        <Image
+                          fadeDuration={250}
+                          onLoad={[Function]}
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://123.image-url.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 28.871307799787463,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={57.742615599574926}
+                        />
+                      </View>
+                    </View>
+                    <View
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": "null",
+                            "photo": null,
+                            "value": 0.72,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              [Circular],
+                              Node {
+                                "data": Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 10.001314398038298,
+                                "value": 0.21599999999999997,
+                                "x": 96.49466662519917,
+                                "y": 46.766797865958935,
+                              },
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 18.259818335022597,
+                          "value": 0.72,
+                          "x": 98.00821417919377,
+                          "y": 124.60955354155165,
+                        }
+                      }
+                      style={
+                        Object {
+                          "left": 79.74839584417117,
+                          "position": "absolute",
+                          "top": 106.34973520652905,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 36.519636670045195,
+                            "justifyContent": "center",
+                            "width": 36.519636670045195,
+                          }
+                        }
+                        themeSize={36.519636670045195}
+                      >
+                        <View
+                          backgroundColor={null}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                              "borderRadius": 36.519636670045195,
+                              "height": 36.519636670045195,
+                              "justifyContent": "center",
+                              "width": 36.519636670045195,
+                            }
+                          }
+                          themeSize={36.519636670045195}
+                        >
+                          <RNSVGSvgView
+                            align="xMidYMid"
+                            bbHeight={18.259818335022597}
+                            bbWidth={18.259818335022597}
+                            color="rgba(244, 247, 248, 0.33)"
+                            height={18.259818335022597}
+                            id="Raw"
+                            meetOrSlice={0}
+                            minX={0}
+                            minY={0}
+                            size={18.259818335022597}
+                            style={
+                              Array [
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "borderWidth": 0,
+                                },
+                                Object {},
+                                null,
+                                Object {
+                                  "flex": 0,
+                                  "height": 18,
+                                  "width": 18,
+                                },
+                              ]
+                            }
+                            tintColor="rgba(244, 247, 248, 0.33)"
+                            vbHeight={256}
+                            vbWidth={256}
+                            width={18.259818335022597}
+                          >
+                            <RNSVGGroup
+                              fill={
+                                Array [
+                                  0,
+                                  4278190080,
+                                ]
+                              }
+                              fillOpacity={1}
+                              fillRule={1}
+                              font={Object {}}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={Array []}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            >
+                              <RNSVGRect
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                height={256}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                  ]
+                                }
+                                rotation={0}
+                                rx={0}
+                                ry={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={null}
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={1}
+                                vectorEffect={0}
+                                width={256}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGCircle
+                                cx={128}
+                                cy={96}
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeMiterlimit",
+                                  ]
+                                }
+                                r={64}
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={10}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGPath
+                                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeLinecap",
+                                    "strokeLinejoin",
+                                  ]
+                                }
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={1}
+                                strokeLinejoin={1}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                            </RNSVGGroup>
+                          </RNSVGSvgView>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      leaf={
+                        Node {
+                          "data": Object {
+                            "id": undefined,
+                            "photo": undefined,
+                            "value": 0.21599999999999997,
+                          },
+                          "depth": 1,
+                          "height": 0,
+                          "parent": Node {
+                            "children": Array [
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 43.0388045597631,
+                                "value": 4,
+                                "x": 48.43206298672939,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 28.871307799787463,
+                                "value": 1.7999999999999998,
+                                "x": 125.73543377324624,
+                                "y": 80,
+                              },
+                              Node {
+                                "data": Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                "depth": 1,
+                                "height": 0,
+                                "parent": [Circular],
+                                "r": 18.259818335022597,
+                                "value": 0.72,
+                                "x": 98.00821417919377,
+                                "y": 124.60955354155165,
+                              },
+                              [Circular],
+                            ],
+                            "data": Object {
+                              "children": Array [
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 4,
+                                },
+                                Object {
+                                  "id": "{\\"__typename\\":\\"ImageMediaSource\\",\\"uri\\":\\"https://123.image-url.com\\"}",
+                                  "photo": Object {
+                                    "__typename": "ImageMediaSource",
+                                    "uri": "https://123.image-url.com",
+                                  },
+                                  "value": 1.7999999999999998,
+                                },
+                                Object {
+                                  "id": "null",
+                                  "photo": null,
+                                  "value": 0.72,
+                                },
+                                Object {
+                                  "id": undefined,
+                                  "photo": undefined,
+                                  "value": 0.21599999999999997,
+                                },
+                              ],
+                            },
+                            "depth": 0,
+                            "height": 1,
+                            "parent": null,
+                            "r": 80,
+                            "value": 6.736,
+                            "x": 80,
+                            "y": 80,
+                          },
+                          "r": 10.001314398038298,
+                          "value": 0.21599999999999997,
+                          "x": 96.49466662519917,
+                          "y": 46.766797865958935,
+                        }
+                      }
+                      style={
+                        Object {
+                          "left": 86.49335222716087,
+                          "position": "absolute",
+                          "top": 36.76548346792064,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 20.002628796076596,
+                            "justifyContent": "center",
+                            "width": 20.002628796076596,
+                          }
+                        }
+                        themeSize={20.002628796076596}
+                      >
+                        <View
+                          backgroundColor={null}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "rgba(99, 99, 102, 0.36)",
+                              "borderRadius": 20.002628796076596,
+                              "height": 20.002628796076596,
+                              "justifyContent": "center",
+                              "width": 20.002628796076596,
+                            }
+                          }
+                          themeSize={20.002628796076596}
+                        >
+                          <RNSVGSvgView
+                            align="xMidYMid"
+                            bbHeight={10.001314398038298}
+                            bbWidth={10.001314398038298}
+                            color="rgba(244, 247, 248, 0.33)"
+                            height={10.001314398038298}
+                            id="Raw"
+                            meetOrSlice={0}
+                            minX={0}
+                            minY={0}
+                            size={10.001314398038298}
+                            style={
+                              Array [
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "borderWidth": 0,
+                                },
+                                Object {},
+                                null,
+                                Object {
+                                  "flex": 0,
+                                  "height": 10,
+                                  "width": 10,
+                                },
+                              ]
+                            }
+                            tintColor="rgba(244, 247, 248, 0.33)"
+                            vbHeight={256}
+                            vbWidth={256}
+                            width={10.001314398038298}
+                          >
+                            <RNSVGGroup
+                              fill={
+                                Array [
+                                  0,
+                                  4278190080,
+                                ]
+                              }
+                              fillOpacity={1}
+                              fillRule={1}
+                              font={Object {}}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={Array []}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            >
+                              <RNSVGRect
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                height={256}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                  ]
+                                }
+                                rotation={0}
+                                rx={0}
+                                ry={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={null}
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={1}
+                                vectorEffect={0}
+                                width={256}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGCircle
+                                cx={128}
+                                cy={96}
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeMiterlimit",
+                                  ]
+                                }
+                                r={64}
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={0}
+                                strokeLinejoin={0}
+                                strokeMiterlimit={10}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                              <RNSVGPath
+                                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                                fill={null}
+                                fillOpacity={1}
+                                fillRule={1}
+                                matrix={
+                                  Array [
+                                    1,
+                                    0,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                  ]
+                                }
+                                opacity={1}
+                                originX={0}
+                                originY={0}
+                                propList={
+                                  Array [
+                                    "fill",
+                                    "stroke",
+                                    "strokeWidth",
+                                    "strokeLinecap",
+                                    "strokeLinejoin",
+                                  ]
+                                }
+                                rotation={0}
+                                scaleX={1}
+                                scaleY={1}
+                                skewX={0}
+                                skewY={0}
+                                stroke={
+                                  Array [
+                                    0,
+                                    1425340408,
+                                  ]
+                                }
+                                strokeDasharray={null}
+                                strokeDashoffset={null}
+                                strokeLinecap={1}
+                                strokeLinejoin={1}
+                                strokeMiterlimit={4}
+                                strokeOpacity={1}
+                                strokeWidth={16}
+                                vectorEffect={0}
+                                x={0}
+                                y={0}
+                              />
+                            </RNSVGGroup>
+                          </RNSVGSvgView>
+                        </View>
+                      </View>
                     </View>
                   </View>
                   <View
@@ -4520,28 +7368,34 @@ exports[`The PrayerExperienceConnected component should render 1`] = `
                     <View
                       bordered={false}
                       disabled={false}
-                      pill={true}
+                      pill={false}
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#00676D",
-                          "borderColor": "#00676D",
-                          "borderRadius": 48,
-                          "borderWidth": 2,
-                          "elevation": 2,
+                          "backgroundColor": "#17B582",
+                          "borderColor": "#17B582",
+                          "borderRadius": 16,
+                          "borderWidth": 0.5,
                           "flexDirection": "row",
                           "height": 48,
                           "justifyContent": "center",
                           "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
+                          "shadowColor": "rgba(0, 0, 0, 0.25)",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 8,
                         }
                       }
                     >
                       <Text
                         style={
                           Object {
-                            "color": "#FFFFFF",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 16,
                             "lineHeight": 24,

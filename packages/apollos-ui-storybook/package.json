@@ -7,11 +7,10 @@
   "scripts": {
     "test": "echo \"No tests here!\""
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "./src/index.js",
   "peerDependencies": {
     "@apollosproject/ui-analytics": "*",
-    "@apollosproject/ui-auth": "*",
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",

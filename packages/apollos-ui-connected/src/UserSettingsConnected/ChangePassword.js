@@ -86,6 +86,7 @@ class ChangePassword extends PureComponent {
                 .oneOf([Yup.ref('password')], 'Passwords must match.')
                 .required('Password confirm is required'),
             })}
+            initialValues={{ password: '', confirmPassword: '' }}
             onSubmit={async (variables, { setSubmitting, setFieldError }) => {
               try {
                 await updatePassword({ variables });

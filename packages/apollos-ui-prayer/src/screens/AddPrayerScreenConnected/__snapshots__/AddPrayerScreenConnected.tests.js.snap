@@ -70,13 +70,13 @@ exports[`The AddPrayerScreenConnected component should accept a title 1`] = `
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -516,28 +516,34 @@ exports[`The AddPrayerScreenConnected component should accept a title 1`] = `
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -625,13 +631,13 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -1071,28 +1077,34 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -1215,37 +1227,286 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                 }
               >
                 <View
+                  size={160}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "justifyContent": "center",
+                      "alignSelf": "center",
+                      "backgroundColor": "rgba(142, 142, 147, 0.2)",
+                      "borderRadius": 80,
+                      "height": 160,
+                      "marginTop": 40,
+                      "overflow": "hidden",
+                      "width": 160,
                     }
                   }
                 >
-                  <Image
-                    avatarWidth="40%"
-                    fadeDuration={250}
-                    onLoad={[Function]}
-                    source={
-                      Array [
-                        Object {
-                          "__typename": "ImageMediaSource",
-                          "cache": "force-cache",
-                          "uri": "https://1234.image.com",
+                  <View
+                    leaf={
+                      Node {
+                        "data": Object {
+                          "children": Array [],
                         },
-                      ]
+                        "depth": 0,
+                        "height": 0,
+                        "parent": null,
+                        "r": NaN,
+                        "value": 0,
+                        "x": 80,
+                        "y": 80,
+                      }
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 1000,
-                        "width": "40%",
-                        "zIndex": 100,
+                        "left": NaN,
+                        "position": "absolute",
+                        "top": NaN,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 48,
+                          "justifyContent": "center",
+                          "width": 48,
+                        }
+                      }
+                      themeSize={48}
+                    >
+                      <View
+                        backgroundColor={null}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "rgba(142, 142, 147, 0.2)",
+                            "borderRadius": 48,
+                            "height": 48,
+                            "justifyContent": "center",
+                            "width": 48,
+                          }
+                        }
+                        themeSize={48}
+                      >
+                        <RNSVGSvgView
+                          align="xMidYMid"
+                          bbHeight={24}
+                          bbWidth={24}
+                          color="rgba(39, 39, 46, 0.3)"
+                          height={24}
+                          id="Raw"
+                          meetOrSlice={0}
+                          minX={0}
+                          minY={0}
+                          size={24}
+                          style={
+                            Array [
+                              Object {
+                                "backgroundColor": "transparent",
+                                "borderWidth": 0,
+                              },
+                              Object {},
+                              null,
+                              Object {
+                                "flex": 0,
+                                "height": 24,
+                                "width": 24,
+                              },
+                            ]
+                          }
+                          tintColor="rgba(39, 39, 46, 0.3)"
+                          vbHeight={256}
+                          vbWidth={256}
+                          width={24}
+                        >
+                          <RNSVGGroup
+                            fill={
+                              Array [
+                                0,
+                                4278190080,
+                              ]
+                            }
+                            fillOpacity={1}
+                            fillRule={1}
+                            font={Object {}}
+                            matrix={
+                              Array [
+                                1,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                              ]
+                            }
+                            opacity={1}
+                            originX={0}
+                            originY={0}
+                            propList={Array []}
+                            rotation={0}
+                            scaleX={1}
+                            scaleY={1}
+                            skewX={0}
+                            skewY={0}
+                            stroke={null}
+                            strokeDasharray={null}
+                            strokeDashoffset={null}
+                            strokeLinecap={0}
+                            strokeLinejoin={0}
+                            strokeMiterlimit={4}
+                            strokeOpacity={1}
+                            strokeWidth={1}
+                            vectorEffect={0}
+                            x={0}
+                            y={0}
+                          >
+                            <RNSVGRect
+                              fill={null}
+                              fillOpacity={1}
+                              fillRule={1}
+                              height={256}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={
+                                Array [
+                                  "fill",
+                                ]
+                              }
+                              rotation={0}
+                              rx={0}
+                              ry={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={null}
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={1}
+                              vectorEffect={0}
+                              width={256}
+                              x={0}
+                              y={0}
+                            />
+                            <RNSVGCircle
+                              cx={128}
+                              cy={96}
+                              fill={null}
+                              fillOpacity={1}
+                              fillRule={1}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={
+                                Array [
+                                  "fill",
+                                  "stroke",
+                                  "strokeWidth",
+                                  "strokeMiterlimit",
+                                ]
+                              }
+                              r={64}
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={
+                                Array [
+                                  0,
+                                  1294411566,
+                                ]
+                              }
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={0}
+                              strokeLinejoin={0}
+                              strokeMiterlimit={10}
+                              strokeOpacity={1}
+                              strokeWidth={16}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            />
+                            <RNSVGPath
+                              d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                              fill={null}
+                              fillOpacity={1}
+                              fillRule={1}
+                              matrix={
+                                Array [
+                                  1,
+                                  0,
+                                  0,
+                                  1,
+                                  0,
+                                  0,
+                                ]
+                              }
+                              opacity={1}
+                              originX={0}
+                              originY={0}
+                              propList={
+                                Array [
+                                  "fill",
+                                  "stroke",
+                                  "strokeWidth",
+                                  "strokeLinecap",
+                                  "strokeLinejoin",
+                                ]
+                              }
+                              rotation={0}
+                              scaleX={1}
+                              scaleY={1}
+                              skewX={0}
+                              skewY={0}
+                              stroke={
+                                Array [
+                                  0,
+                                  1294411566,
+                                ]
+                              }
+                              strokeDasharray={null}
+                              strokeDashoffset={null}
+                              strokeLinecap={1}
+                              strokeLinejoin={1}
+                              strokeMiterlimit={4}
+                              strokeOpacity={1}
+                              strokeWidth={16}
+                              vectorEffect={0}
+                              x={0}
+                              y={0}
+                            />
+                          </RNSVGGroup>
+                        </RNSVGSvgView>
+                      </View>
+                    </View>
+                  </View>
                 </View>
                 <View
                   style={
@@ -1358,28 +1619,34 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                 <View
                   bordered={false}
                   disabled={true}
-                  pill={true}
+                  pill={false}
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#00676D",
-                      "borderColor": "#00676D",
-                      "borderRadius": 48,
-                      "borderWidth": 2,
-                      "elevation": 2,
+                      "backgroundColor": "#17B582",
+                      "borderColor": "#17B582",
+                      "borderRadius": 16,
+                      "borderWidth": 0.5,
                       "flexDirection": "row",
                       "height": 48,
                       "justifyContent": "center",
                       "opacity": 0.5,
                       "overflow": "hidden",
                       "paddingHorizontal": 16,
+                      "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 1,
+                      "shadowRadius": 8,
                     }
                   }
                 >
                   <Text
                     style={
                       Object {
-                        "color": "#FFFFFF",
+                        "color": "#F4F7F8",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
                         "lineHeight": 24,
@@ -1469,13 +1736,13 @@ exports[`The AddPrayerScreenConnected component should render 1`] = `
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -1915,28 +2182,34 @@ exports[`The AddPrayerScreenConnected component should render 1`] = `
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -2030,28 +2303,34 @@ exports[`The AddPrayerScreenConnected component should render a custom component
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -2139,13 +2418,13 @@ exports[`The AddPrayerScreenConnected component should render a custom post-add 
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -2585,28 +2864,34 @@ exports[`The AddPrayerScreenConnected component should render a custom post-add 
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -2694,13 +2979,13 @@ exports[`The AddPrayerScreenConnected component should render a custom skipText 
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -3140,28 +3425,34 @@ exports[`The AddPrayerScreenConnected component should render a custom skipText 
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -3249,13 +3540,13 @@ exports[`The AddPrayerScreenConnected component should render avatars 1`] = `
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -3695,28 +3986,34 @@ exports[`The AddPrayerScreenConnected component should render avatars 1`] = `
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,

@@ -121,7 +121,7 @@ const Text = enhance(
           ) : null}
         </View>
 
-        {error && typeof error === 'string' ? (
+        {error && typeof error !== 'boolean' ? (
           <ErrorText>{error}</ErrorText>
         ) : null}
       </InputWrapper>
@@ -148,7 +148,11 @@ Text.propTypes = {
   labelShrunk: PropTypes.bool,
   style: PropTypes.any, // eslint-disable-line
   returnKeyType: PropTypes.string,
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
+    PropTypes.node,
+  ]),
   underlineColorAndroid: PropTypes.string,
   inputRef: PropTypes.func,
   underline: PropTypes.bool,

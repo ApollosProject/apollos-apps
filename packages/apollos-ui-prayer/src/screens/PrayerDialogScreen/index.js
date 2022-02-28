@@ -33,6 +33,11 @@ const ScreenBodyText = styled(
   'ui-prayer.PrayerDialogScreen.ScreenBodyText'
 )(BodyText);
 
+const StyledAvatarCloud = styled(({ theme }) => ({
+  alignSelf: 'center',
+  marginTop: theme.sizing.baseUnit * 2.5,
+}))(AvatarCloud);
+
 const PrayerDialogScreen = ({
   avatars,
   primaryAvatar,
@@ -71,11 +76,7 @@ const PrayerDialogScreen = ({
     >
       <BackgroundImageBlur source={primaryAvatar}>
         <PrayerView {...props}>
-          <AvatarCloud
-            maxAvatarWidth={0.4}
-            primaryAvatar={primaryAvatar}
-            avatars={avatars.slice(0, 4)}
-          />
+          <StyledAvatarCloud avatars={avatars} size="xlarge" />
           <Container>
             <HeadingText>{title}</HeadingText>
             <BodyContainer>

@@ -4,16 +4,13 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
-  "main": "lib/index.js",
-  "react-native": "react-native/index.js",
+  "version": "3.0.0",
+  "main": "src/index.js",
   "files": [
-    "lib/**",
-    "react-native/**"
+    "src/**"
   ],
   "scripts": {
     "test": "jest",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
     "lint": "eslint ./src --ext .js"
   },
   "jest": {
@@ -37,13 +34,14 @@
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.43.1",
+    "@apollosproject/babel-preset-apollos": "^3.0.0",
     "react-native-config": "0.11.7"
   },
   "peerDependencies": {
     "react-native-config": "*"
   },
   "dependencies": {
+    "dotenv": "10.0.0",
     "js-yaml": "^3.12.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",

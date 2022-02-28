@@ -90,28 +90,34 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
               <View
                 bordered={false}
                 disabled={false}
-                pill={true}
+                pill={false}
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
+                    "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
+                    "borderRadius": 16,
+                    "borderWidth": 0.5,
                     "flexDirection": "row",
                     "height": 48,
                     "justifyContent": "center",
                     "opacity": 1,
                     "overflow": "hidden",
                     "paddingHorizontal": 16,
+                    "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 8,
                   }
                 }
               >
                 <Text
                   style={
                     Object {
-                      "color": "#FFFFFF",
+                      "color": "#F4F7F8",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
                       "lineHeight": 24,
@@ -220,13 +226,13 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
               <View
                 bordered={true}
                 disabled={false}
-                pill={true}
+                pill={false}
                 style={
                   Object {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
-                    "borderColor": "#A5A5A5",
-                    "borderRadius": 48,
+                    "borderColor": "#17B582",
+                    "borderRadius": 16,
                     "borderWidth": 0,
                     "flexDirection": "row",
                     "height": 48,
@@ -234,13 +240,20 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
                     "opacity": 1,
                     "overflow": "hidden",
                     "paddingHorizontal": 16,
+                    "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 8,
                   }
                 }
               >
                 <Text
                   style={
                     Object {
-                      "color": "#A5A5A5",
+                      "color": "#17B582",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -254,28 +267,34 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -367,28 +386,34 @@ exports[`The PrayerView component should render 1`] = `
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -476,13 +501,13 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                   "shadowOffset": Object {
-                    "height": 2,
+                    "height": 20,
                     "width": 0,
                   },
                   "shadowOpacity": 1,
-                  "shadowRadius": 8,
+                  "shadowRadius": 48,
                 }
               }
             >
@@ -1114,13 +1139,13 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
               <View
                 bordered={true}
                 disabled={false}
-                pill={true}
+                pill={false}
                 style={
                   Object {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
-                    "borderColor": "#A5A5A5",
-                    "borderRadius": 48,
+                    "borderColor": "#17B582",
+                    "borderRadius": 16,
                     "borderWidth": 0,
                     "flexDirection": "row",
                     "height": 48,
@@ -1128,13 +1153,20 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                     "opacity": 1,
                     "overflow": "hidden",
                     "paddingHorizontal": 16,
+                    "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 8,
                   }
                 }
               >
                 <Text
                   style={
                     Object {
-                      "color": "#A5A5A5",
+                      "color": "#17B582",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -1148,28 +1180,34 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -1265,28 +1303,34 @@ exports[`The PrayerView component should render with children 1`] = `
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -1378,28 +1422,34 @@ exports[`The PrayerView component should render with custom primaryActionText 1`
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -1491,28 +1541,34 @@ exports[`The PrayerView component should render with custom secondaryActionText 
             <View
               bordered={false}
               disabled={true}
-              pill={true}
+              pill={false}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
