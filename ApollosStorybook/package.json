@@ -20,7 +20,6 @@
     "@apollosproject/config": "link:../packages/apollos-config",
     "@apollosproject/react-native-airplay-btn": "0.2.0",
     "@apollosproject/ui-analytics": "link:../packages/apollos-ui-analytics",
-    "@apollosproject/ui-auth": "link:../packages/apollos-ui-auth",
     "@apollosproject/ui-authentication": "link:../packages/apollos-ui-authentication",
     "@apollosproject/ui-connected": "link:../packages/apollos-ui-connected",
     "@apollosproject/ui-fragments": "link:../packages/apollos-ui-fragments",

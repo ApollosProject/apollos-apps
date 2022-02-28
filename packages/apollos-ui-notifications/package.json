@@ -44,7 +44,6 @@
   },
   "peerDependencies": {
     "@apollo/client": "*",
-    "@apollosproject/ui-auth": "*",
     "react": "*",
     "react-native": "*",
     "react-native-onesignal": "4.x.x",
