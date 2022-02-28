@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+
+### Features
+
+* Add action "OPEN_AUTHENTICATED_URL_EXTERNALLY" ([#2403](https://github.com/apollosproject/apollos-apps/issues/2403)) ([771ab7d](https://github.com/apollosproject/apollos-apps/commit/771ab7d30806f701f8f255b308ca974a4516c072))
+* adds external links to feature actions ([#2380](https://github.com/apollosproject/apollos-apps/issues/2380)) ([cf16a2c](https://github.com/apollosproject/apollos-apps/commit/cf16a2c417125cf3dd13c8d4503c86f36db7c730))
+* New Landing Swiper ([#2338](https://github.com/apollosproject/apollos-apps/issues/2338)) ([200427c](https://github.com/apollosproject/apollos-apps/commit/200427caa0613cb33fc59ac83821e12929e8af13))
+* Report Prayer Request ([#2283](https://github.com/apollosproject/apollos-apps/issues/2283)) ([04ada63](https://github.com/apollosproject/apollos-apps/commit/04ada63ea9db1b3bfb7e8f91474c380f6c8861de))
+* ui-authentication / (cluster authentication)  ([#2295](https://github.com/apollosproject/apollos-apps/issues/2295)) ([f97441a](https://github.com/apollosproject/apollos-apps/commit/f97441a9d954629d69d5f1db4e745a7d2d5b558c))
+* V2 of ui-authentication Flow ([#2393](https://github.com/apollosproject/apollos-apps/issues/2393)) ([753fd5b](https://github.com/apollosproject/apollos-apps/commit/753fd5bc333b42f5103af0db2abe16cd37d88d1b))
+* Webview players ([#2378](https://github.com/apollosproject/apollos-apps/issues/2378)) ([313008e](https://github.com/apollosproject/apollos-apps/commit/313008eddbfe52e0abad1eee4e073d2a780c25ab))
+
+
+### Bug Fixes
+
+* Form states caused by old formik ([#2347](https://github.com/apollosproject/apollos-apps/issues/2347)) ([c9f2bb7](https://github.com/apollosproject/apollos-apps/commit/c9f2bb7f9b769c4611b9241b0b049727f538881f))
+* show 'Prayer Request' in case no prayer requestor is found ([#2372](https://github.com/apollosproject/apollos-apps/issues/2372)) ([ad70a16](https://github.com/apollosproject/apollos-apps/commit/ad70a167a635f2cbd2cb158ee1c8ccc2ccbeb57e))
+
+
+
 ### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
 
 **Note:** Version bump only for package @apollosproject/ui-connected

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* test breaking change commit
+
+### Features
+
+* Added "register with openid " endpoint ([#2363](https://github.com/apollosproject/apollos-apps/issues/2363)) ([0582c1d](https://github.com/apollosproject/apollos-apps/commit/0582c1d75d8ab1a69b9f996fed48c99bdac84f39))
+
+
+### Bug Fixes
+
+* global config was overriding church config ([#2397](https://github.com/apollosproject/apollos-apps/issues/2397)) ([6411264](https://github.com/apollosproject/apollos-apps/commit/641126416f7dc2a8b228354b5a8ae0d1d2a9a970))
+* Migrations order and improve logging ([#2331](https://github.com/apollosproject/apollos-apps/issues/2331)) ([7e81fd0](https://github.com/apollosproject/apollos-apps/commit/7e81fd0ba6181479091eb55245be8ca6caf67083))
+
+
+### Miscellaneous Chores
+
+* test breaking change commit ([0b0bfa4](https://github.com/apollosproject/apollos-apps/commit/0b0bfa4c7d19c3c077371209fb993a174ae6f39d))
+
+
+
 ### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
 
 **Note:** Version bump only for package @apollosproject/config

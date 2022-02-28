@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+
+### Features
+
+* New Landing Swiper ([#2338](https://github.com/apollosproject/apollos-apps/issues/2338)) ([200427c](https://github.com/apollosproject/apollos-apps/commit/200427caa0613cb33fc59ac83821e12929e8af13))
+* Report Prayer Request ([#2283](https://github.com/apollosproject/apollos-apps/issues/2283)) ([04ada63](https://github.com/apollosproject/apollos-apps/commit/04ada63ea9db1b3bfb7e8f91474c380f6c8861de))
+* ui-authentication / (cluster authentication)  ([#2295](https://github.com/apollosproject/apollos-apps/issues/2295)) ([f97441a](https://github.com/apollosproject/apollos-apps/commit/f97441a9d954629d69d5f1db4e745a7d2d5b558c))
+
+
+
 ### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
 
 **Note:** Version bump only for package @apollosproject/ui-notifications

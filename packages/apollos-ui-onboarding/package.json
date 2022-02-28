@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -57,8 +57,8 @@
     "react": "*",
     "react-native": "*",
     "react-native-reanimated": "^2.0.0",
-    "react-navigation-shared-element": "*",
-    "react-native-safe-area-context": "*"
+    "react-native-safe-area-context": "*",
+    "react-navigation-shared-element": "*"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.5.1",
@@ -70,15 +70,15 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollosproject/ui-test-utils": "^2.43.1",
+    "@apollosproject/ui-test-utils": "^3.0.0",
     "@storybook/react-native": "5.2.4",
     "jest": "^25.1.0",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-safe-area-context": "^3.0.7",
-    "react-test-renderer": "16.13.1",
     "react-navigation-shared-element": "^2.0.0",
+    "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },
   "publishConfig": {

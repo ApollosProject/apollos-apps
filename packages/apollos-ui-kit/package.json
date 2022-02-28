@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -32,7 +32,7 @@
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-native|d3|d3-*|commander))"
-    ],    
+    ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
     ],

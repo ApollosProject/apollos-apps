@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+
+### Features
+
+* New Landing Swiper ([#2338](https://github.com/apollosproject/apollos-apps/issues/2338)) ([200427c](https://github.com/apollosproject/apollos-apps/commit/200427caa0613cb33fc59ac83821e12929e8af13))
+* UI authentication polish ([#2339](https://github.com/apollosproject/apollos-apps/issues/2339)) ([83ae247](https://github.com/apollosproject/apollos-apps/commit/83ae2475317211f43008c02a1d8a5a29dc325737))
+* ui-authentication / (cluster authentication)  ([#2295](https://github.com/apollosproject/apollos-apps/issues/2295)) ([f97441a](https://github.com/apollosproject/apollos-apps/commit/f97441a9d954629d69d5f1db4e745a7d2d5b558c))
+* V2 of ui-authentication Flow ([#2393](https://github.com/apollosproject/apollos-apps/issues/2393)) ([753fd5b](https://github.com/apollosproject/apollos-apps/commit/753fd5bc333b42f5103af0db2abe16cd37d88d1b))
+
+
+### Bug Fixes
+
+* cleans up and fixes app tabs ([#2350](https://github.com/apollosproject/apollos-apps/issues/2350)) ([c2d6f36](https://github.com/apollosproject/apollos-apps/commit/c2d6f36b869ecd710dd9de70cb51d20b37cc24fc))
+* Form states caused by old formik ([#2347](https://github.com/apollosproject/apollos-apps/issues/2347)) ([c9f2bb7](https://github.com/apollosproject/apollos-apps/commit/c9f2bb7f9b769c4611b9241b0b049727f538881f))
+
+
+
 ## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 **Note:** Version bump only for package @apollosproject/ui-auth
