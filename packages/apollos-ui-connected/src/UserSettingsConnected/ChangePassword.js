@@ -35,14 +35,14 @@ class ChangePassword extends PureComponent {
         <TextInput
           label="New Password"
           type="password"
-          value={props.values.password}
+          value={props.values?.password}
           error={props.touched.password && props.errors.password}
           onChangeText={(text) => props.setFieldValue('password', text)}
         />
         <TextInput
           label="Confirm Password"
           type="password"
-          value={props.values.confirmPassword}
+          value={props.values?.confirmPassword}
           error={props.touched.confirmPassword && props.errors.confirmPassword}
           onChangeText={(text) => props.setFieldValue('confirmPassword', text)}
         />

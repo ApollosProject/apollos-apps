@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { ErrorCard, named } from '@apollosproject/ui-kit';
+import { useNavigation } from '@react-navigation/native';
 
 import FeaturesFeedConnected, {
   FEATURE_FEED_ACTION_MAP,
@@ -16,6 +17,8 @@ function handleOnPress({ action, ...props }) {
 }
 
 const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
+  const navigation = useNavigation();
+
   const { data, loading, error } = useQuery(GET_NODE_FEATURES, {
     fetchPolicy: 'cache-and-network',
     variables: { nodeId },
@@ -32,6 +35,7 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
           openUrl={openUrl}
           featureFeedId={data?.node?.featureFeed?.id}
           onPressActionItem={handleOnPress}
+          navigation={navigation}
           {...props}
         />
       )}

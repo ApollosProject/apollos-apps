@@ -10,6 +10,12 @@ exports[`NodeFeaturesConnected should render 1`] = `
 >
   <FeaturesFeedConnected
     featureFeedId="FeatureFeed:123"
+    navigation={
+      Object {
+        "dispatch": [MockFunction],
+        "navigate": [MockFunction],
+      }
+    }
     onPressActionItem={[Function]}
     openUrl={[Function]}
   />
