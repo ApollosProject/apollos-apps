@@ -1,7 +1,5 @@
 # `@apollos/config`
 
-> TODO: description
-
 ## Usage
 
 ```
