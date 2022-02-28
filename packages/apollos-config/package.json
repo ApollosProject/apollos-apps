@@ -5,15 +5,12 @@
     "node": ">=14"
   },
   "version": "2.43.1",
-  "main": "lib/index.js",
-  "react-native": "react-native/index.js",
+  "main": "src/index.js",
   "files": [
-    "lib/**",
-    "react-native/**"
+    "src/**"
   ],
   "scripts": {
     "test": "jest",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
     "lint": "eslint ./src --ext .js"
   },
   "jest": {

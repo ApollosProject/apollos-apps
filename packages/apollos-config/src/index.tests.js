@@ -1,4 +1,4 @@
-import ApollosConfig from '..';
+import ApollosConfig from '.';
 
 describe('The ApollosConfig Package', () => {
   it('loads from JS', () => {
