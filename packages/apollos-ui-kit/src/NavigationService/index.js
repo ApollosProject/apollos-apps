@@ -38,10 +38,10 @@ const dispatch = (...args) => {
   _navigator.dispatch(...args);
 };
 
-const resetToAuth = performWhenReady(() => {
+const resetToAuth = performWhenReady((screen = 'Identity') => {
   _navigator.reset({
     index: 0,
-    routes: [{ name: 'Auth', params: { screen: 'Identity' } }],
+    routes: [{ name: 'Auth', params: { screen } }],
   });
 });
 

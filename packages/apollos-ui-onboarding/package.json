@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -29,7 +29,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*))"
+      "node_modules/(?!((jest-)?react-native|react-navigation-shared-element|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*|d3|d3-*|commander))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -56,11 +56,13 @@
     "@apollosproject/ui-notifications": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-safe-area-context": "*"
+    "react-native-reanimated": "^2.0.0",
+    "react-native-safe-area-context": "*",
+    "react-navigation-shared-element": "*"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.5.1",
-    "formik": "1.5.1",
+    "formik": "2.2.9",
     "lodash": "4.17.21",
     "moment": "2.22.2",
     "react-is": "^16.9.0",
@@ -68,13 +70,14 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollo/client": "3.3.20",
+    "@apollosproject/ui-test-utils": "^3.0.0",
     "@storybook/react-native": "5.2.4",
     "jest": "^25.1.0",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-safe-area-context": "^3.0.7",
+    "react-navigation-shared-element": "^2.0.0",
     "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },

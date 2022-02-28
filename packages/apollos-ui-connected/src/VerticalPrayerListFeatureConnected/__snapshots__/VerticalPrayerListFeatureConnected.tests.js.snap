@@ -49,13 +49,13 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
           "borderRadius": 16,
           "marginHorizontal": 16,
           "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
           "shadowOffset": Object {
-            "height": 2,
+            "height": 20,
             "width": 0,
           },
           "shadowOpacity": 1,
-          "shadowRadius": 8,
+          "shadowRadius": 48,
         }
       }
     >
@@ -95,32 +95,34 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
               }
               themeSize={72}
             >
-              <View
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMedia",
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
-                    "alignItems": "center",
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 72,
-                    "height": 72,
-                    "justifyContent": "center",
-                    "width": 72,
+                    "borderRadius": 36,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
                 }
                 themeSize={72}
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(249, 249, 251)",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 36,
-                    }
-                  }
-                  themeSize={72}
-                >
-                  MN
-                </Text>
-              </View>
+              />
             </View>
           </View>
           <Text
@@ -189,17 +191,23 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                   "width": "100%",
                 }
               }
@@ -207,7 +215,7 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -236,13 +244,13 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
           "borderRadius": 16,
           "marginHorizontal": 16,
           "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
           "shadowOffset": Object {
-            "height": 2,
+            "height": 20,
             "width": 0,
           },
           "shadowOpacity": 1,
-          "shadowRadius": 8,
+          "shadowRadius": 48,
         }
       }
     >
@@ -282,32 +290,34 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
               }
               themeSize={72}
             >
-              <View
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMedia",
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
-                    "alignItems": "center",
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 72,
-                    "height": 72,
-                    "justifyContent": "center",
-                    "width": 72,
+                    "borderRadius": 36,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   }
                 }
                 themeSize={72}
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(249, 249, 251)",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 36,
-                    }
-                  }
-                  themeSize={72}
-                >
-                  MN
-                </Text>
-              </View>
+              />
             </View>
           </View>
           <Text
@@ -376,17 +386,23 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
                   "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
+                  "borderWidth": 0.5,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
                   "opacity": 1,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                   "width": "100%",
                 }
               }
@@ -394,7 +410,7 @@ exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerList
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
+                    "color": "#F4F7F8",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,

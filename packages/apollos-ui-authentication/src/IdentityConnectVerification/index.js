@@ -1,0 +1,1 @@
+export IdentityConnectVerificationConnected from './IdentityConnectVerificationConnected';

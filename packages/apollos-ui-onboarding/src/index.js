@@ -1,5 +1,8 @@
 export { default as OnboardingSwiper } from './OnboardingSwiper';
 export { default as LandingSwiper } from './LandingSwiper';
+export { default as PhoneOutline } from './LandingSwiper/PhoneOutline';
+export { default as AnimatedAppIcon } from './LandingSwiper/AnimatedAppIcon';
+
 export {
   AboutYou,
   AboutYouConnected,

@@ -65,6 +65,7 @@ jobs:
     - name: Install Dependencies
       run: yarn
 
+
     - name: Jest
       run: ./scripts/test-all.sh
       env:

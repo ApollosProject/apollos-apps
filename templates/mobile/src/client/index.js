@@ -7,9 +7,10 @@ import { getVersion, getApplicationName } from 'react-native-device-info';
 import { Platform } from 'react-native';
 import { createUploadLink } from 'apollo-upload-client';
 import ApollosConfig from '@apollosproject/config';
+import AsyncStorage from '@react-native-community/async-storage';
 
-import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
-import { updatePushId } from '@apollosproject/ui-notifications';
+import { authLink, buildErrorLink } from '@apollosproject/ui-authentication';
+// import { updatePushId } from '@apollosproject/ui-notifications';
 
 import { NavigationService } from '@apollosproject/ui-kit';
 
@@ -32,6 +33,8 @@ const wipeData = () =>
 
 let storeIsResetting = false;
 const onAuthError = async () => {
+  AsyncStorage.removeItem('accessToken');
+  AsyncStorage.removeItem('refreshToken');
   if (!storeIsResetting) {
     storeIsResetting = true;
     await client.stop();
@@ -47,7 +50,7 @@ const uri = ApollosConfig.APP_DATA_URL.replace(
   Platform.OS === 'android' ? '10.0.2.2' : 'localhost'
 );
 
-const errorLink = buildErrorLink(onAuthError);
+const errorLink = buildErrorLink(onAuthError, uri);
 const apqLink = createPersistedQueryLink({
   sha256,
   useGETForHashedQueries: true,
@@ -99,23 +102,6 @@ const ClientProvider = ({ children }) => {
           cacheLoaded: true,
         },
       });
-      const { isLoggedIn } = client.readQuery({
-        query: gql`
-          query {
-            isLoggedIn @client
-          }
-        `,
-      });
-      const { pushId } = client.readQuery({
-        query: gql`
-          query {
-            pushId @client
-          }
-        `,
-      });
-      if (isLoggedIn && pushId) {
-        updatePushId({ pushId, client });
-      }
     };
     initialize();
   }, []);

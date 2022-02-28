@@ -20,28 +20,28 @@ Object {
       "fill": "#c64f55",
     },
     "default": Object {
-      "accent": "#27272E",
-      "fill": "#A5A5A5",
+      "accent": "#F4F7F8",
+      "fill": "#17B582",
     },
     "ghost": Object {
-      "accent": "#27272E",
-      "fill": "#27272E",
+      "accent": "rgba(39, 39, 46, 0.6)",
+      "fill": "rgba(39, 39, 46, 0.6)",
     },
     "overlay": Object {
       "accent": "#FFFFFF",
       "fill": "rgba(255, 255, 255, 0.4)",
     },
     "primary": Object {
-      "accent": "#FFFFFF",
-      "fill": "#00676D",
-    },
-    "secondary": Object {
-      "accent": "#FFFFFF",
+      "accent": "#F4F7F8",
       "fill": "#17B582",
     },
+    "secondary": Object {
+      "accent": "#17B582",
+      "fill": "#FFFFFF",
+    },
     "tertiary": Object {
-      "accent": "#FFFFFF",
-      "fill": "#6EC5B8",
+      "accent": "#27272E",
+      "fill": "rgba(142, 142, 147, 0.2)",
     },
   },
   "colors": Object {
@@ -129,16 +129,58 @@ Object {
   "shadows": Object {
     "default": Object {
       "android": Object {
-        "elevation": 5,
+        "elevation": 3,
       },
       "ios": Object {
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      },
+    },
+    "high": Object {
+      "android": Object {
+        "elevation": 3,
+      },
+      "ios": Object {
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      },
+    },
+    "low": Object {
+      "android": Object {
+        "elevation": 1,
+      },
+      "ios": Object {
+        "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
         "shadowOffset": Object {
           "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
         "shadowRadius": 8,
+      },
+    },
+    "medium": Object {
+      "android": Object {
+        "elevation": 3,
+      },
+      "ios": Object {
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
       },
     },
     "none": Object {
@@ -155,6 +197,7 @@ Object {
       "large": 120,
       "medium": 72,
       "small": 48,
+      "xlarge": 160,
       "xsmall": 24,
     },
     "baseBorderRadius": 16,
@@ -199,6 +242,9 @@ Object {
         "screen": "#000000",
         "shadows": Object {
           "default": "rgba(0, 0, 0, 0.09999999999999998)",
+          "high": "rgba(0, 0, 0, 0.75)",
+          "low": "rgba(0, 0, 0, 0.25)",
+          "medium": "rgba(0, 0, 0, 0.5)",
         },
         "text": Object {
           "action": "#17B582",
@@ -426,27 +472,27 @@ Object {
     },
     "default": Object {
       "accent": "#F4F7F8",
-      "fill": "#A5A5A5",
+      "fill": "#17B582",
     },
     "ghost": Object {
-      "accent": "#F4F7F8",
-      "fill": "#F4F7F8",
+      "accent": "rgba(244, 247, 248, 0.6)",
+      "fill": "rgba(244, 247, 248, 0.6)",
     },
     "overlay": Object {
       "accent": "#FFFFFF",
       "fill": "rgba(255, 255, 255, 0.4)",
     },
     "primary": Object {
-      "accent": "#FFFFFF",
-      "fill": "#00676D",
-    },
-    "secondary": Object {
-      "accent": "#FFFFFF",
+      "accent": "#F4F7F8",
       "fill": "#17B582",
     },
+    "secondary": Object {
+      "accent": "#17B582",
+      "fill": "#1C1C1E",
+    },
     "tertiary": Object {
-      "accent": "#FFFFFF",
-      "fill": "#6EC5B8",
+      "accent": "#F4F7F8",
+      "fill": "rgba(99, 99, 102, 0.36)",
     },
   },
   "colors": Object {
@@ -495,6 +541,9 @@ Object {
     "secondary": "#17B582",
     "shadows": Object {
       "default": "rgba(0, 0, 0, 0.09999999999999998)",
+      "high": "rgba(0, 0, 0, 0.75)",
+      "low": "rgba(0, 0, 0, 0.25)",
+      "medium": "rgba(0, 0, 0, 0.5)",
     },
     "success": "#17B569",
     "tertiary": "#6EC5B8",
@@ -530,16 +579,58 @@ Object {
   "shadows": Object {
     "default": Object {
       "android": Object {
-        "elevation": 5,
+        "elevation": 3,
       },
       "ios": Object {
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      },
+    },
+    "high": Object {
+      "android": Object {
+        "elevation": 3,
+      },
+      "ios": Object {
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      },
+    },
+    "low": Object {
+      "android": Object {
+        "elevation": 1,
+      },
+      "ios": Object {
+        "shadowColor": "rgba(0, 0, 0, 0.25)",
         "shadowOffset": Object {
           "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
         "shadowRadius": 8,
+      },
+    },
+    "medium": Object {
+      "android": Object {
+        "elevation": 3,
+      },
+      "ios": Object {
+        "shadowColor": "rgba(0, 0, 0, 0.5)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
       },
     },
     "none": Object {
@@ -556,6 +647,7 @@ Object {
       "large": 120,
       "medium": 72,
       "small": 48,
+      "xlarge": 160,
       "xsmall": 24,
     },
     "baseBorderRadius": 16,
@@ -600,6 +692,9 @@ Object {
         "screen": "#000000",
         "shadows": Object {
           "default": "rgba(0, 0, 0, 0.09999999999999998)",
+          "high": "rgba(0, 0, 0, 0.75)",
+          "low": "rgba(0, 0, 0, 0.25)",
+          "medium": "rgba(0, 0, 0, 0.5)",
         },
         "text": Object {
           "action": "#17B582",

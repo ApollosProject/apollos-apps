@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import Avatar from '../Avatar';
-import { withTheme } from '../theme';
+import ByLine from '../ByLine';
 import styled from '../styled';
-import { H4, BodyText, H6 } from '../typography';
+import { BodyText } from '../typography';
 import CommentLikeButton from './CommentLikeButton';
 import ActionMenu from './ActionMenu';
 
@@ -15,34 +14,6 @@ const HeaderContainer = styled(
   },
   'ui-kit.Comment.HeaderContainer'
 )(View);
-
-const CommentAvatar = withTheme(
-  ({ theme: { sizing } }) => ({
-    themeSize: sizing.baseUnit * 3,
-  }),
-  'ui-kit.Comment.CommentAvatar'
-)(Avatar);
-
-const HeaderTextContainer = styled(
-  ({ theme: { sizing } }) => ({
-    marginLeft: sizing.baseUnit / 2,
-    justifyContent: 'center',
-  }),
-  'ui-kit.Comment.HeaderTextContainer'
-)(View);
-
-const Subtitle = styled(
-  ({
-    theme: {
-      colors: {
-        text: { tertiary },
-      },
-    },
-  }) => ({
-    color: tertiary,
-  }),
-  'ui-kit.Comment.Subtitle'
-)(H6);
 
 const CommentContainer = styled(
   ({ theme: { sizing } }) => ({
@@ -72,11 +43,7 @@ const Comment = ({
   return (
     <CommentContainer>
       <HeaderContainer>
-        <CommentAvatar profile={profile} />
-        <HeaderTextContainer>
-          <H4>{profile.nickName}</H4>
-          <Subtitle>{subtitle}</Subtitle>
-        </HeaderTextContainer>
+        <ByLine profile={profile} subtitle={subtitle} />
         {onPressActionMenu && <ActionMenu onPress={onPressActionMenu} />}
       </HeaderContainer>
       <CommentText>{commentText}</CommentText>

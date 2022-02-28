@@ -358,13 +358,13 @@ exports[`The MapViewConnected component should render 1`] = `
                                     "margin": 8,
                                     "marginBottom": 12,
                                     "marginHorizontal": 4,
-                                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                                     "shadowOffset": Object {
-                                      "height": 2,
+                                      "height": 20,
                                       "width": 0,
                                     },
                                     "shadowOpacity": 1,
-                                    "shadowRadius": 8,
+                                    "shadowRadius": 48,
                                     "width": 714,
                                   }
                                 }
@@ -510,13 +510,13 @@ South Barrington, IL 60010-6143
                                     "margin": 8,
                                     "marginBottom": 12,
                                     "marginHorizontal": 4,
-                                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                                     "shadowOffset": Object {
-                                      "height": 2,
+                                      "height": 20,
                                       "width": 0,
                                     },
                                     "shadowOpacity": 1,
-                                    "shadowRadius": 8,
+                                    "shadowRadius": 48,
                                     "width": 714,
                                   }
                                 }
@@ -662,13 +662,13 @@ Anderson, SC 29621-3619
                                     "margin": 8,
                                     "marginBottom": 12,
                                     "marginHorizontal": 4,
-                                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                                     "shadowOffset": Object {
-                                      "height": 2,
+                                      "height": 20,
                                       "width": 0,
                                     },
                                     "shadowOpacity": 1,
-                                    "shadowRadius": 8,
+                                    "shadowRadius": 48,
                                     "width": 714,
                                   }
                                 }
@@ -814,13 +814,13 @@ Richardson, TX 75080-5525
                                     "margin": 8,
                                     "marginBottom": 12,
                                     "marginHorizontal": 4,
-                                    "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                    "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                                     "shadowOffset": Object {
-                                      "height": 2,
+                                      "height": 20,
                                       "width": 0,
                                     },
                                     "shadowOpacity": 1,
-                                    "shadowRadius": 8,
+                                    "shadowRadius": 48,
                                     "width": 714,
                                   }
                                 }
@@ -972,24 +972,30 @@ Cincinnati, OH 45202-2118
                               style={
                                 Object {
                                   "alignItems": "center",
-                                  "backgroundColor": "#17B582",
-                                  "borderColor": "#17B582",
+                                  "backgroundColor": "#FFFFFF",
+                                  "borderColor": "#FFFFFF",
                                   "borderRadius": 16,
-                                  "borderWidth": 2,
-                                  "elevation": 2,
+                                  "borderWidth": 0.5,
                                   "flexDirection": "row",
                                   "height": 48,
                                   "justifyContent": "center",
                                   "opacity": 1,
                                   "overflow": "hidden",
                                   "paddingHorizontal": 16,
+                                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                                  "shadowOffset": Object {
+                                    "height": 2,
+                                    "width": 0,
+                                  },
+                                  "shadowOpacity": 1,
+                                  "shadowRadius": 8,
                                 }
                               }
                             >
                               <Text
                                 style={
                                   Object {
-                                    "color": "#FFFFFF",
+                                    "color": "#17B582",
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 16,
                                     "lineHeight": 24,

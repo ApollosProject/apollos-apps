@@ -15,13 +15,13 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
         "shadowOffset": Object {
-          "height": 2,
+          "height": 20,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 8,
+        "shadowRadius": 48,
       }
     }
   >
@@ -172,9 +172,9 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
               Object {
                 "alignItems": "center",
                 "backgroundColor": "transparent",
-                "borderColor": "#A5A5A5",
+                "borderColor": "#17B582",
                 "borderRadius": 16,
-                "borderWidth": 2,
+                "borderWidth": 0.5,
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
@@ -182,6 +182,13 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
                 "opacity": 1,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
+                "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
                 "width": "100%",
               }
             }
@@ -189,7 +196,7 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#A5A5A5",
+                  "color": "#17B582",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -222,13 +229,13 @@ exports[`The ActionListFeatureConnected component should render a loading state 
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
         "shadowOffset": Object {
-          "height": 2,
+          "height": 20,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 8,
+        "shadowRadius": 48,
       }
     }
   >

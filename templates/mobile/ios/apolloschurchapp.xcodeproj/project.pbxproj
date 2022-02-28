@@ -28,7 +28,6 @@
 		B7F5B1A94CB950A20A2A929C /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4445787DC6D7ABD4542C54B /* libPods-apolloschurchapp-apolloschurchappTests.a */; };
 		BF49AE872649A852001C7B78 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49AE862649A852001C7B78 /* NotificationService.swift */; };
 		BF49AE8B2649A852001C7B78 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BF49AE842649A852001C7B78 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BFC9F08425757C2D00FF49D7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9F08325757C2D00FF49D7 /* File.swift */; };
 		DA07807F92220A73112048A8 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEFAE19BCB49EF4930AB288 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		FCB3069DB5DD4170B2CAEFC4 /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */; };
 /* End PBXBuildFile section */
@@ -95,9 +94,9 @@
 		BF49AE842649A852001C7B78 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF49AE862649A852001C7B78 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		BF49AE882649A852001C7B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC50C3727A2EB0E0099A350 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BFC57C392649ADC400EC15D9 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		BFC9F08225757C2D00FF49D7 /* apolloschurchapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apolloschurchapp-Bridging-Header.h"; sourceTree = "<group>"; };
-		BFC9F08325757C2D00FF49D7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C4445787DC6D7ABD4542C54B /* libPods-apolloschurchapp-apolloschurchappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-apolloschurchappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5157D807E164356ADE87867 /* Inter-UI-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Bold.otf"; path = "../assets/fonts/Inter-UI-Bold.otf"; sourceTree = "<group>"; };
 		DB2771246817FBAC933AAF6C /* libPods-apolloschurchapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,8 +165,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */,
-				BFC9F08325757C2D00FF49D7 /* File.swift */,
 				BFC9F08225757C2D00FF49D7 /* apolloschurchapp-Bridging-Header.h */,
+				BFC50C3727A2EB0E0099A350 /* File.swift */,
 			);
 			name = apolloschurchapp;
 			sourceTree = "<group>";
@@ -622,7 +621,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				BFC9F08425757C2D00FF49D7 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,7 +666,10 @@
 				INFOPLIST_FILE = apolloschurchappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -693,7 +694,10 @@
 				INFOPLIST_FILE = apolloschurchappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -722,6 +726,10 @@
 				);
 				INFOPLIST_FILE = apolloschurchapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -754,6 +762,10 @@
 				);
 				INFOPLIST_FILE = apolloschurchapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -889,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B297F8C8100098CB6D3F24AD /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -905,6 +918,10 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(inherited)",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos.OneSignalNotificationServiceExtension;
@@ -922,6 +939,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE781E0BA65C9190C30831E3 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -939,6 +957,10 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(inherited)",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";

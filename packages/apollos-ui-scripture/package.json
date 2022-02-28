@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -29,7 +29,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject|d3|d3-*|commander))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -52,7 +52,7 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^2.43.1",
+    "@apollosproject/ui-storybook": "^3.0.0",
     "@storybook/react-native": "5.2.4",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.56.0",

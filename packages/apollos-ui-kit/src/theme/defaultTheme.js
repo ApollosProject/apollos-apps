@@ -99,6 +99,7 @@ export const sizing = {
     small: 48,
     medium: 72,
     large: 120,
+    xlarge: 160,
   },
 };
 
@@ -125,10 +126,13 @@ export const alpha = {
 export const type = 'light';
 export { types };
 
-export const shadows = ({ colors: themeColors }) => ({
-  default: {
+export const shadows = ({ colors: themeColors }) => {
+  const black = Color(colors.black);
+  const _shadows = {};
+
+  _shadows.low = {
     ios: {
-      shadowColor: themeColors.shadows.default,
+      shadowColor: themeColors.shadows.low || black.fade(0.96).string(),
       shadowOffset: {
         width: 0,
         height: 2,
@@ -137,39 +141,73 @@ export const shadows = ({ colors: themeColors }) => ({
       shadowRadius: 8,
     },
     android: {
-      elevation: 5,
+      elevation: 1,
     },
-  },
-  none: {
+  };
+
+  _shadows.medium = {
+    ios: {
+      shadowColor: themeColors.shadows.medium || black.fade(0.95).string(),
+      shadowOffset: {
+        width: 0,
+        height: 5,
+      },
+      shadowOpacity: 1,
+      shadowRadius: 24,
+    },
+    android: {
+      elevation: 3,
+    },
+  };
+
+  _shadows.high = {
+    ios: {
+      shadowColor: themeColors.shadows.high || black.fade(0.91).string(),
+      shadowOffset: {
+        width: 0,
+        height: 20,
+      },
+      shadowOpacity: 1,
+      shadowRadius: 48,
+    },
+    android: {
+      elevation: 3,
+    },
+  };
+  _shadows.none = {
     ios: {
       shadowOpacity: 0,
     },
     android: {
       elevation: 0,
     },
-  },
-});
+  };
+
+  _shadows.default = _shadows.high;
+
+  return _shadows;
+};
 
 export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   default: {
-    fill: themeColors.action.default,
-    accent: themeColors.text.primary,
+    fill: themeColors.text.action,
+    accent: themeColors.lightPrimary,
   },
   primary: {
-    fill: themeColors.action.primary,
-    accent: themeColors.white,
+    fill: themeColors.text.action,
+    accent: themeColors.lightPrimary,
   },
   secondary: {
-    fill: themeColors.action.secondary,
-    accent: themeColors.white,
+    fill: themeColors.paper,
+    accent: themeColors.text.action,
   },
   tertiary: {
-    fill: themeColors.action.tertiary,
-    accent: themeColors.white,
+    fill: themeColors.background.system,
+    accent: themeColors.text.primary,
   },
   ghost: {
-    fill: themeColors.text.primary,
-    accent: themeColors.text.primary,
+    fill: themeColors.text.secondary,
+    accent: themeColors.text.secondary,
   },
   overlay: {
     fill: Color(themeColors.white).alpha(themeAlpha.low).string(),

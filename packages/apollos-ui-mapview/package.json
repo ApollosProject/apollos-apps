@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.43.1",
+  "version": "3.0.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -29,7 +29,7 @@
       "clover"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@react-native-picker))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@react-native-picker|d3|d3-*|commander))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -64,7 +64,7 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-geolocation-service": "^5.1.1",
+    "react-native-geolocation-service": "5.3.0-beta.4",
     "react-native-maps": "0.26.1",
     "react-native-safe-area-context": "^3.0.7",
     "react-test-renderer": "16.13.1",

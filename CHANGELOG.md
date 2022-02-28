@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/ApollosProject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* test breaking change commit
+
+### Features
+
+* Add action "OPEN_AUTHENTICATED_URL_EXTERNALLY" ([#2403](https://github.com/ApollosProject/apollos-apps/issues/2403)) ([771ab7d](https://github.com/ApollosProject/apollos-apps/commit/771ab7d30806f701f8f255b308ca974a4516c072))
+* Add Algolia Index Name Option to Config ([#2389](https://github.com/ApollosProject/apollos-apps/issues/2389)) ([9aed7d0](https://github.com/ApollosProject/apollos-apps/commit/9aed7d0da3a82dae22c14dc1e10970dc25da0fd2))
+* Add totalCount to Search ([#2395](https://github.com/ApollosProject/apollos-apps/issues/2395)) ([f30a423](https://github.com/ApollosProject/apollos-apps/commit/f30a423c374a7271eb961394e578f0d555b78727))
+* Added "register with openid " endpoint ([#2363](https://github.com/ApollosProject/apollos-apps/issues/2363)) ([0582c1d](https://github.com/ApollosProject/apollos-apps/commit/0582c1d75d8ab1a69b9f996fed48c99bdac84f39))
+* adds campus tags to content feeds ([#2383](https://github.com/ApollosProject/apollos-apps/issues/2383)) ([04031f6](https://github.com/ApollosProject/apollos-apps/commit/04031f6fcaf238dd01e3c929998db86c6f85a624))
+* adds external links to feature actions ([#2380](https://github.com/ApollosProject/apollos-apps/issues/2380)) ([cf16a2c](https://github.com/ApollosProject/apollos-apps/commit/cf16a2c417125cf3dd13c8d4503c86f36db7c730))
+* adds opening external links via features ([#2376](https://github.com/ApollosProject/apollos-apps/issues/2376)) ([b9e8c62](https://github.com/ApollosProject/apollos-apps/commit/b9e8c628994e9bece53c03c1a42e185c1968966f))
+* Better auth errors ([#2345](https://github.com/ApollosProject/apollos-apps/issues/2345)) ([e408811](https://github.com/ApollosProject/apollos-apps/commit/e4088119f4028703ce4c63da96d51ede7a2a4f70))
+* Better persona feed ([#2409](https://github.com/ApollosProject/apollos-apps/issues/2409)) ([647232c](https://github.com/ApollosProject/apollos-apps/commit/647232c986eb746814fa6449dc2fb1b4ddf1d3ba))
+* Connect identity ([#2374](https://github.com/ApollosProject/apollos-apps/issues/2374)) ([eb0b906](https://github.com/ApollosProject/apollos-apps/commit/eb0b906fe06bfc054ae36ebe2bbf7d497174fa53))
+* New Landing Swiper ([#2338](https://github.com/ApollosProject/apollos-apps/issues/2338)) ([200427c](https://github.com/ApollosProject/apollos-apps/commit/200427caa0613cb33fc59ac83821e12929e8af13))
+* Priority ([#2413](https://github.com/ApollosProject/apollos-apps/issues/2413)) ([b7b6331](https://github.com/ApollosProject/apollos-apps/commit/b7b6331e426d8659ccaff9a952726d6d0b30c72a))
+* Report Prayer Request ([#2283](https://github.com/ApollosProject/apollos-apps/issues/2283)) ([04ada63](https://github.com/ApollosProject/apollos-apps/commit/04ada63ea9db1b3bfb7e8f91474c380f6c8861de))
+* Setup content without tags to include everyone ([#2388](https://github.com/ApollosProject/apollos-apps/issues/2388)) ([323db0c](https://github.com/ApollosProject/apollos-apps/commit/323db0cc651fb4d88ad492a97ad33c69ff17cbd0))
+* Sort newest items with tags first ([#2412](https://github.com/ApollosProject/apollos-apps/issues/2412)) ([3f4ca97](https://github.com/ApollosProject/apollos-apps/commit/3f4ca974f8b29e6a0b16b057db78c7b4d4582169))
+* UI authentication polish ([#2339](https://github.com/ApollosProject/apollos-apps/issues/2339)) ([83ae247](https://github.com/ApollosProject/apollos-apps/commit/83ae2475317211f43008c02a1d8a5a29dc325737))
+* ui-authentication / (cluster authentication)  ([#2295](https://github.com/ApollosProject/apollos-apps/issues/2295)) ([f97441a](https://github.com/ApollosProject/apollos-apps/commit/f97441a9d954629d69d5f1db4e745a7d2d5b558c))
+* V2 of ui-authentication Flow ([#2393](https://github.com/ApollosProject/apollos-apps/issues/2393)) ([753fd5b](https://github.com/ApollosProject/apollos-apps/commit/753fd5bc333b42f5103af0db2abe16cd37d88d1b))
+* Webview players ([#2378](https://github.com/ApollosProject/apollos-apps/issues/2378)) ([313008e](https://github.com/ApollosProject/apollos-apps/commit/313008eddbfe52e0abad1eee4e073d2a780c25ab))
+
+
+### Bug Fixes
+
+* adds follow people feature to rock DS ([#2399](https://github.com/ApollosProject/apollos-apps/issues/2399)) ([9b1f90d](https://github.com/ApollosProject/apollos-apps/commit/9b1f90dec3616b81d4e50e8d88eaef1caefcbb89))
+* Allow datasources to pass sources array ([#2407](https://github.com/ApollosProject/apollos-apps/issues/2407)) ([8a4174e](https://github.com/ApollosProject/apollos-apps/commit/8a4174e525eec9db67684743c07c0fe371c85e6a))
+* cleans up and fixes app tabs ([#2350](https://github.com/ApollosProject/apollos-apps/issues/2350)) ([c2d6f36](https://github.com/ApollosProject/apollos-apps/commit/c2d6f36b869ecd710dd9de70cb51d20b37cc24fc))
+* Form states caused by old formik ([#2347](https://github.com/ApollosProject/apollos-apps/issues/2347)) ([c9f2bb7](https://github.com/ApollosProject/apollos-apps/commit/c9f2bb7f9b769c4611b9241b0b049727f538881f))
+* global config was overriding church config ([#2397](https://github.com/ApollosProject/apollos-apps/issues/2397)) ([6411264](https://github.com/ApollosProject/apollos-apps/commit/641126416f7dc2a8b228354b5a8ae0d1d2a9a970))
+* Migrations order and improve logging ([#2331](https://github.com/ApollosProject/apollos-apps/issues/2331)) ([7e81fd0](https://github.com/ApollosProject/apollos-apps/commit/7e81fd0ba6181479091eb55245be8ca6caf67083))
+* my prayers bug and clean up action algo ([#2356](https://github.com/ApollosProject/apollos-apps/issues/2356)) ([0161caa](https://github.com/ApollosProject/apollos-apps/commit/0161caa188166d075dfee3bfbc7bf4f700d82f7e))
+* properly adds feature action IDs ([#2375](https://github.com/ApollosProject/apollos-apps/issues/2375)) ([5d25ccd](https://github.com/ApollosProject/apollos-apps/commit/5d25ccdd2e1449f51263848ffa5ca4a0ba40ade0))
+* removes incorrect prayer index ([#2335](https://github.com/ApollosProject/apollos-apps/issues/2335)) ([a06a4c3](https://github.com/ApollosProject/apollos-apps/commit/a06a4c30a196aa7b159394af5d0e6bbd03c89178))
+* resolves action table actions ([#2373](https://github.com/ApollosProject/apollos-apps/issues/2373)) ([4e453d6](https://github.com/ApollosProject/apollos-apps/commit/4e453d627cb0e8714d308e5eab737654d857c453))
+* resolves scriptures on media content items ([#2394](https://github.com/ApollosProject/apollos-apps/issues/2394)) ([f4ed02e](https://github.com/ApollosProject/apollos-apps/commit/f4ed02e5f2f62fb6101c5bcfe5a0480ea08433c2))
+* show 'Prayer Request' in case no prayer requestor is found ([#2372](https://github.com/ApollosProject/apollos-apps/issues/2372)) ([ad70a16](https://github.com/ApollosProject/apollos-apps/commit/ad70a167a635f2cbd2cb158ee1c8ccc2ccbeb57e))
+
+
+### Miscellaneous Chores
+
+* test breaking change commit ([0b0bfa4](https://github.com/ApollosProject/apollos-apps/commit/0b0bfa4c7d19c3c077371209fb993a174ae6f39d))
+
+
+
 ### [2.43.1](https://github.com/ApollosProject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
 
 

@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, SafeAreaView } from 'react-native';
-import { styled, PaddedView, H1, H4, H5, Button } from '@apollosproject/ui-kit';
-import { useNavigation } from '@react-navigation/native';
-import { times } from 'lodash';
+import { View, StyleSheet } from 'react-native';
+import {
+  styled,
+  PaddedView,
+  H5,
+  Button,
+  withTheme,
+} from '@apollosproject/ui-kit';
+import LinearGradient from 'react-native-linear-gradient';
+import Color from 'color';
+import { SharedElement } from 'react-navigation-shared-element';
+
+import PhoneOutline from './PhoneOutline';
 
 const dotStyles = ({ theme }) => ({
   width: theme.sizing.baseUnit / 2,
@@ -12,44 +21,36 @@ const dotStyles = ({ theme }) => ({
   margin: theme.sizing.baseUnit / 4,
 });
 
-const Container = styled(
-  () => ({
+const PhoneContainer = styled(
+  ({ theme }) => ({
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: theme.sizing.baseUnit * 2,
   }),
-  'ui-onboarding.LandingSwiper.LandingSlide.Container'
+  'ui-onboarding.LandingSwiper.LandingSlide.PhoneContainer'
 )(View);
 
-const ContentContainer = styled(
-  () => ({ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }),
-  'ui-onboarding.LandingSwiper.LandingSlide.ContentContainer'
-)(View);
+const ChildrenContainer = styled({ flex: 0.5 })(View);
+
+const PhoneMask = withTheme(({ theme }) => ({
+  style: StyleSheet.absoluteFill,
+  colors: [
+    Color(theme.colors.background.screen).alpha(0).toString(),
+    Color(theme.colors.background.screen).alpha(0.25).toString(),
+    theme.colors.background.screen,
+  ],
+}))(LinearGradient);
 
 const DotContainer = styled(
-  () => ({ flexDirection: 'row' }),
+  () => ({ flexDirection: 'row', justifyContent: 'center' }),
   'ui-onboarding.LandingSwiper.LandingSlide.DotContainer'
 )(View);
 
 const ButtonContainer = styled(
   () => ({ width: '100%' }),
   'ui-onboarding.LandingSwiper.LandingSlide.ButtonContainer'
-)(SafeAreaView);
-
-const Title = styled(
-  ({ theme, color }) => ({
-    marginVertical: theme.sizing.baseUnit,
-    ...(color ? { color } : {}),
-    textAlign: 'center',
-  }),
-  'ui-onboarding.LandingSwiper.LandingSlide.Title'
-)(H1);
-
-const Subtitle = styled(
-  ({ color }) => ({
-    ...(color ? { color } : {}),
-    textAlign: 'center',
-  }),
-  'ui-onboarding.LandingSwiper.LandingSlide.Subtitle'
-)(H4);
+)(View);
 
 const PrimaryButton = styled(
   {},
@@ -58,7 +59,7 @@ const PrimaryButton = styled(
 
 const PaginationDot = styled(
   ({ theme }) => ({
-    backgroundColor: theme.colors.background.inactive,
+    backgroundColor: theme.colors.background.system,
     ...dotStyles({ theme }),
   }),
   'ui-onboarding.LandingSwiper.PaginationDot'
@@ -66,55 +67,77 @@ const PaginationDot = styled(
 
 const PaginationDotActive = styled(
   ({ theme }) => ({
-    backgroundColor: theme.colors.action.primary,
+    backgroundColor: theme.colors.text.action,
     ...dotStyles({ theme }),
   }),
   'ui-onboarding.LandingSwiper.PaginationDotActive'
 )(View);
 
-export default function LandingSlide({
-  slideTitle,
-  slideDescription,
-  slideCount,
-  slideIndex,
-  swipeForward,
-}) {
-  const navigation = useNavigation();
+const PositionedSharedElement = styled(({ location = 'top' }) => ({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  // eslint-disable-next-line no-nested-ternary
+  top: location === 'top' ? '15%' : location === 'centered' ? '50%' : undefined,
+  bottom: location === 'bottom' ? '5%' : undefined,
+}))(SharedElement);
 
-  function onContinue() {
-    if (slideIndex === slideCount - 1) {
-      navigation.navigate('Auth');
-    } else {
-      swipeForward();
-    }
-  }
-
-  return (
-    <Container>
-      <ContentContainer>
-        <DotContainer>
-          {times(slideCount, String).map((_, i) =>
-            i === slideIndex ? <PaginationDotActive /> : <PaginationDot />
-          )}
-        </DotContainer>
-        <Title>{slideTitle}</Title>
-        <Subtitle>{slideDescription}</Subtitle>
-      </ContentContainer>
+const LandingSlide = ({
+  screenChildren,
+  index,
+  totalSlides,
+  calloutChildren,
+  calloutLocation,
+  children,
+  onContinue,
+  primaryButtonText = 'Continue',
+  secondaryButtonChildren,
+}) => (
+  <>
+    <PhoneContainer>
+      <PhoneOutline>{screenChildren}</PhoneOutline>
+      <SharedElement id="phone-mask" style={StyleSheet.absoluteFill}>
+        <PhoneMask />
+      </SharedElement>
+      <PositionedSharedElement id="callout" location={calloutLocation}>
+        {calloutChildren}
+      </PositionedSharedElement>
+    </PhoneContainer>
+    <ChildrenContainer>{children}</ChildrenContainer>
+    <SharedElement id="next-button">
+      <DotContainer>
+        {Array.from(Array(totalSlides)).map((_, i) =>
+          i === index ? (
+            // eslint-disable-next-line react/no-array-index-key
+            <PaginationDotActive key={i} />
+          ) : (
+            // eslint-disable-next-line react/no-array-index-key
+            <PaginationDot key={i} />
+          )
+        )}
+      </DotContainer>
       <ButtonContainer>
         <PaddedView>
           <PrimaryButton onPress={onContinue}>
-            <H5>Continue</H5>
+            <H5>{primaryButtonText}</H5>
           </PrimaryButton>
+          {secondaryButtonChildren}
         </PaddedView>
       </ButtonContainer>
-    </Container>
-  );
-}
+    </SharedElement>
+  </>
+);
 
 LandingSlide.propTypes = {
-  slideTitle: PropTypes.string,
-  slideDescription: PropTypes.string,
-  slideCount: PropTypes.number,
-  slideIndex: PropTypes.number,
-  swipeForward: PropTypes.func,
+  screenChildren: PropTypes.node,
+  index: PropTypes.number,
+  totalSlides: PropTypes.number,
+  calloutChildren: PropTypes.node,
+  calloutLocation: PropTypes.oneOf(['top', 'bottom', 'centered']),
+  children: PropTypes.node,
+  onContinue: PropTypes.func,
+  primaryButtonText: PropTypes.string,
+  secondaryButtonChildren: PropTypes.node,
 };
+
+export default LandingSlide;
