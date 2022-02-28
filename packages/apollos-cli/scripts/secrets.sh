@@ -5,23 +5,23 @@ if [ $# -ne 2 ]; then
 fi
 
 POSSIBLE_PATHS=(
-    $(brew --prefix openssl)/bin/openssl
-    $(brew --prefix openssl@1.1)/bin/openssl
-    $(which openssl)
+  $(brew --prefix openssl)/bin/openssl
+  $(brew --prefix openssl@1.1)/bin/openssl
+  $(which openssl)
 )
 
-for DIR in "${POSSIBLE_PATHS[@]}" ; do
-  if [[ -e "$DIR" ]] ; then
+for DIR in "${POSSIBLE_PATHS[@]}"; do
+  if [[ -e "$DIR" ]]; then
     OPENSSL=$DIR
     break
   fi
 done
 
-if [ -z ${OPENSSL+x} ]; then 
+if [ -z ${OPENSSL+x} ]; then
   echo "No OpenSSL found."
   echo "brew install openssl"
   exit 1
-else 
+else
   echo
   $OPENSSL version
   echo
@@ -32,10 +32,9 @@ if $OPENSSL version | grep -q 'LibreSSL'; then
   echo "brew install openssl"
   echo
   $OPENSSL version
-  echo  
+  echo
   exit 1
 fi
-
 
 function encrypt() {
   $OPENSSL enc -aes-256-cbc -pbkdf2 -iter 20000 -in "$1" -out "$1".enc -k "$2"
@@ -47,9 +46,9 @@ function decrypt() {
 
 SECRETS=(
   ".env.shared"
-  "android/key.json"
   "android/app/apollos.keystore"
-  "ios/apollos.p8"
+  "fastlane/apple-api-key.json"
+  "fastlane/google-api-key.json"
 )
 
 for file in "${SECRETS[@]}"; do

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { dirname } from 'path';
-
 import { fileURLToPath } from 'url';
 
 import util from 'util';
@@ -12,6 +11,7 @@ import { program } from 'commander';
 
 /* eslint-disable import/extensions */
 import logo from './commands/logo.js';
+import makeDeployCommand from './commands/deploy.js';
 
 const exec = util.promisify(baseExec);
 
@@ -23,6 +23,8 @@ program.version('1.0.0');
 const mobile = program
   .command('mobile')
   .description('Manage Apollos mobile apps');
+
+mobile.addCommand(makeDeployCommand());
 
 mobile
   .command('init')
@@ -39,11 +41,11 @@ mobile
         name: 'iosID',
         message: 'iOS Bundle Identifier?',
         initial: (prev) =>
-          `com.apollos.${prev.toLowerCase().replace(/ /g, '_')}`,
+          `com.apollos.${prev.toLowerCase().replace(/ /g, '-')}`,
         validate: (value) =>
-          value.match(/\w.]+/)[0] === value
+          value.match(/[A-Za-z0-9-.]+/)[0] === value
             ? true
-            : `Alphanumeric and underscores only!`,
+            : `Alphanumeric, hyphens, and periods only!`,
       },
       {
         type: 'text',
@@ -51,9 +53,9 @@ mobile
         message: 'Android App ID?',
         initial: (prev) => prev,
         validate: (value) =>
-          value.match(/[\w.]+/)[0] === value
+          value.match(/[A-Za-z0-9-.]+/)[0] === value
             ? true
-            : `Alphanumeric and underscores only!`,
+            : `Alphanumeric, hyphens, and periods only!`,
       },
       {
         type: 'text',
@@ -62,17 +64,23 @@ mobile
         validate: (value) =>
           value.match(/^http.*/)[0] === value ? true : `Must be a valid URL!`,
       },
+      {
+        type: 'text',
+        name: 'googleMapsKey',
+        message: 'Google Maps API Key?',
+      },
     ];
 
     (async () => {
       const response = await prompts(questions);
-      if (Object.keys(response).length === 4) {
+      if (Object.keys(response).length === 5) {
         try {
           execa(`${__dirname}/scripts/create-mobile.sh`, [
             response.appName,
             response.iosID,
             response.androidID,
             response.serverURL,
+            response.googleMapsKey,
           ]).stdout.pipe(process.stdout);
         } catch (e) {
           console.log(e);

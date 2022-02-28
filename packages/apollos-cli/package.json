@@ -15,11 +15,15 @@
     "access": "public"
   },
   "license": "ISC",
+  "peerDependencies": {
+    "@bam.tech/react-native-make": "^3.0.3"
+  },
   "dependencies": {
-    "@bam.tech/react-native-make": "^3.0.3",
     "canvas": "^2.9.0",
     "commander": "^8.0.0",
+    "consola": "^2.15.3",
     "execa": "^6.0.0",
+    "ora": "^6.1.0",
     "prompts": "^2.4.2",
     "tmp": "^0.2.1"
   }

@@ -2,6 +2,7 @@ APP=$1
 IOS_BUNDLE=$2
 ANDROID_BUNDLE=$3
 SERVER_URL=$4
+GOOGLE_MAPS_KEY=$5
 PROJ=$(echo "$APP" | tr "[:upper:]" "[:lower:]" | sed "s/ /-/g")
 echo "Creating mobile app template in ./$PROJ folder..."
 TMP_DIR=$(mktemp -d)
@@ -53,7 +54,9 @@ sed -i "" -E "s/com\.differential\.apollos/$ANDROID_BUNDLE/g" android/app/_BUCK.
 rm "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme"
 
 echo "APP_DATA_URL=$SERVER_URL
-GOOGLE_MAPS_API_KEY=getthislater" >.env
+GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_KEY" >.env
+
+node scripts/get-introspection-data.js
 
 mv "$TMP_DIR/$PROJ" "$DIR/$PROJ"
 rm -rf "$TMP_DIR"
