@@ -49,6 +49,9 @@ SECRETS=(
   "android/app/apollos.keystore"
   "fastlane/apple-api-key.json"
   "fastlane/google-api-key.json"
+  # deprecated support for these files
+  "android/key.json"
+  "ios/apollos.p8"
 )
 
 for file in "${SECRETS[@]}"; do
