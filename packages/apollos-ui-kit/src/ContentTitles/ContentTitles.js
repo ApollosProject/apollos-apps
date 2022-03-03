@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
 import Icon from '../Icon';
 
-import { withTheme } from '../theme';
+import { named, withTheme } from '../theme';
 import { H2, H3, H4, BodyText, BodySmall } from '../typography';
 import PaddedView from '../PaddedView';
 import FlexedView from '../FlexedView';
@@ -153,4 +153,4 @@ ContentTitles.propTypes = {
   isLoading: PropTypes.bool,
 };
 
-export default ContentTitles;
+export default named('ui-kit.ContentTitles')(ContentTitles);
