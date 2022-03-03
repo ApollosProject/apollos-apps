@@ -83,7 +83,7 @@ const PrayerScreen = ({
         prayer={prayer.text}
         profile={prayer.requestor}
         title={`Pray for ${
-          prayer.requestor?.nickName || prayer.requestor?.firstName
+          prayer.requestor?.nickName || prayer.requestor?.firstName || 'request'
         }`}
         reportPrayer={reportPrayer}
       />
