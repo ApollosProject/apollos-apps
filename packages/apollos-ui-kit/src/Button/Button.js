@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { get } from 'lodash';
 
-import { withTheme, withThemeMixin } from '../theme';
+import { named, withTheme, withThemeMixin } from '../theme';
 import styled from '../styled';
 import Touchable from '../Touchable';
 import { H4 } from '../typography';
@@ -146,6 +146,7 @@ Button.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
   bordered: PropTypes.bool,
+  onPress: PropTypes.func,
   pill: PropTypes.bool,
   to: PropTypes.string,
   type: PropTypes.oneOf([
@@ -160,4 +161,4 @@ Button.propTypes = {
   ...Touchable.propTypes,
 };
 
-export default Button;
+export default named('ui-kit.Button')(Button);
