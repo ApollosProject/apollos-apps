@@ -345,8 +345,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -958,8 +956,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -1574,8 +1570,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -2187,8 +2181,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -2803,8 +2795,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -3416,8 +3406,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -4032,8 +4020,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -4645,8 +4631,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -5261,8 +5245,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={
@@ -5874,8 +5856,6 @@ exports[`The CommentListFeatureConnected component should render 1`] = `
                   }
                 >
                   Albert Flores
-                   
-                  Flores
                 </Text>
                 <Text
                   style={

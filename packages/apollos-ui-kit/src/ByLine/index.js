@@ -47,11 +47,7 @@ const ByLine = ({ profile, subtitle, avatarProps = {}, children }) => (
     {/* eslint-disable-next-line react/jsx-props-no-spreading */}
     <CommentAvatar profile={profile} {...avatarProps} />
     <HeaderTextContainer>
-      {children || (
-        <H4>
-          {profile.nickName || profile.firstName} {profile.lastName}
-        </H4>
-      )}
+      {children || <H4>{profile.nickName || profile.firstName || 'A User'}</H4>}
       {subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
     </HeaderTextContainer>
   </Container>
