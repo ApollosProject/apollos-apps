@@ -7,7 +7,7 @@ import util from 'util';
 import { exec as baseExec } from 'child_process';
 import prompts from 'prompts';
 import { execa } from 'execa';
-import { program } from 'commander';
+import { program, Argument } from 'commander';
 
 /* eslint-disable import/extensions */
 import logo from './commands/logo.js';
@@ -118,6 +118,16 @@ mobile
       }
     })();
   });
+
+const upgradeTag = new Argument('[tag]').default('latest');
+
+program
+  .command('upgrade')
+  .description('Upgrades Apollos NPM packages')
+  .addArgument(upgradeTag)
+  .action((tag) =>
+    execa(`${__dirname}/scripts/upgrade.sh`, [tag]).stdout.pipe(process.stdout)
+  );
 
 program
   .command('secrets')
