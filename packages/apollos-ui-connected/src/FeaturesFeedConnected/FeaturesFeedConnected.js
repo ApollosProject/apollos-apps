@@ -50,10 +50,9 @@ export const ACTION_MAP = {
       itemTitle: relatedNode.name,
     });
   },
-  OPEN_FEED: ({ relatedNode, navigation, title }) => {
+  OPEN_FEED: ({ relatedNode, navigation }) => {
     navigation.navigate('FeatureFeed', {
       id: relatedNode.id,
-      title,
     });
   },
 };

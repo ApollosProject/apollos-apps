@@ -77,9 +77,10 @@ export const createFeatureFeedTab = ({
       <TabStack.Screen
         component={FeaturesFeedConnected}
         name="FeatureFeed"
-        options={({ route }) => ({
-          title: route?.params?.title || 'Feed',
-        })}
+        options={{
+          title: '',
+          headerLargeTitle: false,
+        }}
       />
     </TabStack.Navigator>
   );
