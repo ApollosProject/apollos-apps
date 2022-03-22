@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/ApollosProject/apollos-apps/compare/v3.0.2...v3.1.0) (2022-03-22)
+
+
+### Features
+
+* named Button component for overriding ([#2433](https://github.com/ApollosProject/apollos-apps/issues/2433)) ([59c1eef](https://github.com/ApollosProject/apollos-apps/commit/59c1eef62cf85426a81919d23eb8b497b83550df))
+* named Content Titles for overriding capability ([#2431](https://github.com/ApollosProject/apollos-apps/issues/2431)) ([1cacfea](https://github.com/ApollosProject/apollos-apps/commit/1cacfeaad94f315ac58b81dafb4a67c584975044))
+
+
+### Bug Fixes
+
+* adds support for prayers with no name ([#2432](https://github.com/ApollosProject/apollos-apps/issues/2432)) ([d0ad07b](https://github.com/ApollosProject/apollos-apps/commit/d0ad07bbe46edd37668bfdfc4bc85d32037f4637))
+* handles comments from users with no name ([#2434](https://github.com/ApollosProject/apollos-apps/issues/2434)) ([4bbbd14](https://github.com/ApollosProject/apollos-apps/commit/4bbbd145b13213d5ce3fdeb93ecf7c7f3b362db6))
+* makes search button tappable on Android ([#2429](https://github.com/ApollosProject/apollos-apps/issues/2429)) ([50725b5](https://github.com/ApollosProject/apollos-apps/commit/50725b548018f7d6a13463b4890c6fdb0b958b3f))
+* uses correct youtube URL regex to detect player ([#2443](https://github.com/ApollosProject/apollos-apps/issues/2443)) ([dcb0e7b](https://github.com/ApollosProject/apollos-apps/commit/dcb0e7bec7093a6c0573d436ec48fbf95ddc2b92))
+
+
+
 ### [3.0.2](https://github.com/ApollosProject/apollos-apps/compare/v3.0.1...v3.0.2) (2022-03-01)
 
 

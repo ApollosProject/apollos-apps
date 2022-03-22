@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.0.2...v3.1.0) (2022-03-22)
+
+
+### Bug Fixes
+
+* uses correct youtube URL regex to detect player ([#2443](https://github.com/apollosproject/apollos-apps/issues/2443)) ([dcb0e7b](https://github.com/apollosproject/apollos-apps/commit/dcb0e7bec7093a6c0573d436ec48fbf95ddc2b92))
+
+
+
 ### [3.0.2](https://github.com/apollosproject/apollos-apps/compare/v3.0.1...v3.0.2) (2022-03-01)
 
 **Note:** Version bump only for package @apollosproject/ui-media-player
