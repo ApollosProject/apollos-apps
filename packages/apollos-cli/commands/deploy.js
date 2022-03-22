@@ -122,9 +122,10 @@ export default () => {
       } catch (e) {
         spinner.fail('Failed');
         consola.error(e.stdout);
-        return;
+        return 1;
       }
       spinner.succeed('Deployed!');
+      return 0;
     });
 
   const android = new Command('android');
@@ -173,9 +174,10 @@ export default () => {
       } catch (e) {
         spinner.fail('Failed');
         consola.error(e.stdout);
-        return;
+        return 1;
       }
       spinner.succeed('Deployed!');
+      return 0;
     });
 
   deploy.addCommand(ios);

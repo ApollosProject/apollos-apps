@@ -23,10 +23,10 @@ if [ "$TRACK" = "internal" ]; then
 else
   fastlane run supply \
     track:internal \
-    track_promote_to: $TRACK \
-    version_code: $COMMITS \
+    track_promote_to:$TRACK \
+    version_code:$COMMITS \
     skip_upload_apk:true \
-    skip_upload_aab: true \
+    skip_upload_aab:true \
     json_key:fastlane/google-api-key.json \
     package_name:$PACKAGE
 fi

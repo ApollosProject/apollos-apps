@@ -36,7 +36,7 @@ echo "[
 
 echo "---
 fastlane produce -a $APP_ID -u $USER
-fastlane produce enable_services --app-group --push-notification -a $APP_ID -u $USER
+fastlane produce enable_services --app-group --push-notification --associated-domains -a $APP_ID -u $USER
 fastlane produce -a $APP_ID.OneSignalNotificationServiceExtension --skip_itc -u $USER
 fastlane produce enable_services --app-group -a $APP_ID.OneSignalNotificationServiceExtension -u $USER
 fastlane produce group -g group.$APP_ID.onesignal -n \"OneSignal Group\" -u $USER
