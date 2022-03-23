@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [3.1.1](https://github.com/ApollosProject/apollos-apps/compare/v3.1.0...v3.1.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* grabs correct keychain for ios deploys ([#2447](https://github.com/ApollosProject/apollos-apps/issues/2447)) ([3df784e](https://github.com/ApollosProject/apollos-apps/commit/3df784e2563760aefef5568f6f6e7e7fe668f402))
+
+
+
 ## [3.1.0](https://github.com/ApollosProject/apollos-apps/compare/v3.0.2...v3.1.0) (2022-03-22)
 
 
