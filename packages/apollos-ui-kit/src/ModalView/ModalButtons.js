@@ -34,7 +34,7 @@ export const ModalBackButton = (props) => {
 export const ModalCloseButton = (props) => {
   const navigation = useNavigation();
   const onPress = () => navigation.goBack();
-  return <ModalButton name={'close'} onPress={onPress} {...props} />;
+  return <ModalButton name={'x'} onPress={onPress} {...props} />;
 };
 
 export default ModalButton;
