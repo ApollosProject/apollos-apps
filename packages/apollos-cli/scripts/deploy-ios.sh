@@ -12,8 +12,8 @@ VERSION=$(fastlane run get_version_number xcodeproj:ios target:$TARGET |
 
 if [ "$TRACK" = "internal" ]; then
   fastlane run setup_ci
-  KEYCHAIN=$(security list-keychains -d user | sed -E "s/.*Keychains\/(.*)-.*/\1/")
-  fastlane match appstore -a "$APP_ID,$APP_ID.OneSignalNotificationServiceExtension" keychain_name:"$KEYCHAIN" --readonly
+  fastlane run unlock_keychain path:fastlane_tmp_keychain
+  fastlane match appstore -a "$APP_ID,$APP_ID.OneSignalNotificationServiceExtension" keychain_name:fastlane_tmp_keychain --readonly
   fastlane run increment_build_number build_number:"$COMMITS" xcodeproj:"ios/$TARGET.xcodeproj"
   fastlane run build_app scheme:$TARGET workspace:"ios/$TARGET.xcworkspace"
   fastlane run changelog_from_git_commits

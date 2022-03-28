@@ -121,8 +121,9 @@ export default () => {
         await execa(`${__dirname}/../scripts/deploy-ios.sh`, [track]);
       } catch (e) {
         spinner.fail('Failed');
-        consola.error(e.stdout);
-        throw new Error('Deploy failed');
+        consola.debug(e.stdout);
+        consola.error(e.stderr);
+        process.exit(1);
       }
       spinner.succeed('Deployed!');
     });
@@ -172,8 +173,9 @@ export default () => {
         await execa(`${__dirname}/../scripts/deploy-android.sh`, [track]);
       } catch (e) {
         spinner.fail('Failed');
-        consola.error(e.stdout);
-        throw new Error('Deploy failed');
+        consola.debug(e.stdout);
+        consola.error(e.stderr);
+        process.exit(1);
       }
       spinner.succeed('Deployed!');
     });
