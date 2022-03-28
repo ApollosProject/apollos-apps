@@ -50,8 +50,6 @@ export const colors = {
   success: '#17B569',
 
   gray: '#8E8E93',
-  darkPrimary: '#27272E',
-  lightPrimary: '#F4F7F8',
 
   wordOfChrist: '#8b0000', // only used in Scripture.
 
@@ -61,9 +59,11 @@ export const colors = {
 
   // Below colors are deprecated.
   // Dark shades
+  darkPrimary: '#27272E',
   darkSecondary: '#505050',
   darkTertiary: '#A5A5A5',
   // Light shades
+  lightPrimary: '#F4F7F8',
   lightSecondary: '#DBDBD9',
   lightTertiary: '#A5A5A5',
   // (note: paper and screen are now set within the theme type directly)
