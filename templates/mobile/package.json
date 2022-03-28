@@ -100,6 +100,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
+    "@apollosproject/react-native-make": "^3.0.4",
     "@babel/core": "7.16.12",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.7",
     "@babel/plugin-proposal-optional-chaining": "^7.16.7",
@@ -109,7 +110,6 @@
     "@babel/plugin-transform-template-literals": "^7.16.7",
     "@babel/preset-typescript": "7.9.0",
     "@babel/runtime": "7.16.7",
-    "@bam.tech/react-native-make": "^3.0.3",
     "@carimus/metro-symlinked-deps": "^1.1.0",
     "@react-native-community/eslint-config": "^3.0.0",
     "babel-jest": "27.4.6",
