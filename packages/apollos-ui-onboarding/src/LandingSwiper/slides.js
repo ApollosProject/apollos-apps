@@ -2,12 +2,14 @@ import React, { useCallback } from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
+  H1,
   H3,
   H5,
   styled,
   Icon,
   named,
   ButtonLink,
+  useTheme,
 } from '@apollosproject/ui-kit';
 
 import LandingSlide from './LandingSlide';
@@ -29,11 +31,41 @@ const TextContainer = styled(({ theme }) => ({
   alignSelf: 'center',
 }))(View);
 
+const CustomIntroTextContainer = styled(({ theme }) => ({
+  padding: theme.sizing.baseUnit * 2,
+  alignItems: 'flex-start',
+  textAlign: 'flex-start',
+  alignSelf: 'flex-start',
+}))(View);
+
+const ItemContainer = styled(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  paddingTop: theme.sizing.baseUnit,
+}))(View);
+
+const Greeting = styled({ textAlign: 'left' })(H5);
+const LeftSubTitle = styled(({ theme }) => ({
+  color: theme.colors.secondary,
+  textAlign: 'left',
+}))(H1);
 const Title = styled({ textAlign: 'center' })(H3);
 const SubTitle = styled({ textAlign: 'center' })(H5);
+const ItemText = styled(({ theme }) => ({
+  lineHeight: 32,
+  paddingLeft: theme.sizing.baseUnit,
+}))(H5);
 
 export const Intro = named('ui-onboarding.LandingSwiper.slides.Intro')(
-  ({ onPressLogin, ...slideProps }) => {
+  ({
+    onPressLogin,
+    listItems,
+    greeting,
+    appIconSize,
+    subtitle = 'Build a daily spiritual habit with others.',
+    ...slideProps
+  }) => {
+    const theme = useTheme();
     const navigation = useNavigation();
     const onPress = useCallback(
       () =>
@@ -47,8 +79,8 @@ export const Intro = named('ui-onboarding.LandingSwiper.slides.Intro')(
     return (
       <LandingSlide
         screenChildren={<PlaceholderSpringboard />}
-        calloutChildren={<AnimatedAppIcon />}
-        calloutLocation="centered"
+        calloutChildren={<AnimatedAppIcon size={appIconSize} />}
+        calloutLocation={greeting ? 'top-mid' : 'centered'}
         secondaryButtonChildren={
           <H5 secondary padded centered>
             Already have an account?{' '}
@@ -57,12 +89,30 @@ export const Intro = named('ui-onboarding.LandingSwiper.slides.Intro')(
         }
         {...slideProps}
       >
-        <TextContainer>
-          <Icon name="brand-logo" size={60} />
-          <SubTitle secondary>
-            Build a daily spiritual habit with others.
-          </SubTitle>
-        </TextContainer>
+        {greeting ? (
+          <CustomIntroTextContainer>
+            <Greeting secondary>{greeting}</Greeting>
+            <LeftSubTitle primary>{subtitle}</LeftSubTitle>
+            {listItems?.map((item, i) => {
+              return (
+                // eslint-disable-next-line react/no-array-index-key
+                <ItemContainer key={i}>
+                  <Icon
+                    name={item.icon}
+                    weight="fill"
+                    fill={theme.colors.text.secondary}
+                  />
+                  <ItemText primary>{item.text}</ItemText>
+                </ItemContainer>
+              );
+            })}
+          </CustomIntroTextContainer>
+        ) : (
+          <TextContainer>
+            <Icon name="brand-logo" size={60} />
+            <SubTitle secondary>{subtitle}</SubTitle>
+          </TextContainer>
+        )}
       </LandingSlide>
     );
   }

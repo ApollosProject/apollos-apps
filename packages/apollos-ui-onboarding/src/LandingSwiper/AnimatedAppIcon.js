@@ -16,7 +16,7 @@ const RotatorContainer = styled({
   position: 'absolute',
 })(Animated.View);
 
-const Rotator = ({ index }) => {
+const Rotator = ({ index, size = 134 }) => {
   const entering = () => {
     'worklet';
 
@@ -44,23 +44,28 @@ const Rotator = ({ index }) => {
 
   return (
     <RotatorContainer entering={entering}>
-      <AppIcon size={134} />
+      <AppIcon size={size} />
     </RotatorContainer>
   );
 };
 
 Rotator.propTypes = {
   index: PropTypes.number,
+  size: PropTypes.number,
 };
 
-const AnimatedAppIcon = () => {
+const AnimatedAppIcon = ({ size }) => {
   return (
     <Container>
-      <Rotator index={2} />
-      <Rotator index={1} />
-      <Rotator index={0} />
+      <Rotator index={2} size={size} />
+      <Rotator index={1} size={size} />
+      <Rotator index={0} size={size} />
     </Container>
   );
+};
+
+AnimatedAppIcon.propTypes = {
+  size: PropTypes.number,
 };
 
 export default AnimatedAppIcon;

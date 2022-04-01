@@ -31,7 +31,10 @@ const PhoneContainer = styled(
   'ui-onboarding.LandingSwiper.LandingSlide.PhoneContainer'
 )(View);
 
-const ChildrenContainer = styled({ flex: 0.5 })(View);
+const ChildrenContainer = styled(
+  () => ({ flex: 0.5 }),
+  'ui-onboarding.LandingSwiper.LandingSlide.ChildrenContainer'
+)(View);
 
 const PhoneMask = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
@@ -77,8 +80,16 @@ const PositionedSharedElement = styled(({ location = 'top' }) => ({
   position: 'absolute',
   left: 0,
   right: 0,
-  // eslint-disable-next-line no-nested-ternary
-  top: location === 'top' ? '15%' : location === 'centered' ? '50%' : undefined,
+  top:
+    // eslint-disable-next-line no-nested-ternary
+    location === 'top'
+      ? '15%'
+      : // eslint-disable-next-line no-nested-ternary
+      location === 'centered'
+      ? '50%'
+      : location === 'top-mid'
+      ? '20%'
+      : undefined,
   bottom: location === 'bottom' ? '5%' : undefined,
 }))(SharedElement);
 
@@ -105,17 +116,20 @@ const LandingSlide = ({
     </PhoneContainer>
     <ChildrenContainer>{children}</ChildrenContainer>
     <SharedElement id="next-button">
-      <DotContainer>
-        {Array.from(Array(totalSlides)).map((_, i) =>
-          i === index ? (
-            // eslint-disable-next-line react/no-array-index-key
-            <PaginationDotActive key={i} />
-          ) : (
-            // eslint-disable-next-line react/no-array-index-key
-            <PaginationDot key={i} />
-          )
-        )}
-      </DotContainer>
+      {Array.from(Array(totalSlides)).length > 1 ? (
+        // Don't show the dot container if there is only one slide
+        <DotContainer>
+          {Array.from(Array(totalSlides)).map((_, i) =>
+            i === index ? (
+              // eslint-disable-next-line react/no-array-index-key
+              <PaginationDotActive key={i} />
+            ) : (
+              // eslint-disable-next-line react/no-array-index-key
+              <PaginationDot key={i} />
+            )
+          )}
+        </DotContainer>
+      ) : null}
       <ButtonContainer>
         <PaddedView>
           <PrimaryButton onPress={onContinue}>
@@ -133,7 +147,7 @@ LandingSlide.propTypes = {
   index: PropTypes.number,
   totalSlides: PropTypes.number,
   calloutChildren: PropTypes.node,
-  calloutLocation: PropTypes.oneOf(['top', 'bottom', 'centered']),
+  calloutLocation: PropTypes.oneOf(['top', 'top-mid', 'bottom', 'centered']),
   children: PropTypes.node,
   onContinue: PropTypes.func,
   primaryButtonText: PropTypes.string,
