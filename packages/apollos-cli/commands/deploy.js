@@ -121,7 +121,7 @@ export default () => {
         await execa(`${__dirname}/../scripts/deploy-ios.sh`, [track]);
       } catch (e) {
         spinner.fail('Failed');
-        consola.debug(e.stdout);
+        consola.log(e.stdout);
         consola.error(e.stderr);
         process.exit(1);
       }
@@ -173,7 +173,7 @@ export default () => {
         await execa(`${__dirname}/../scripts/deploy-android.sh`, [track]);
       } catch (e) {
         spinner.fail('Failed');
-        consola.debug(e.stdout);
+        consola.log(e.stdout);
         consola.error(e.stderr);
         process.exit(1);
       }
