@@ -235,7 +235,7 @@ const Editor = ({
         ) : null}
       </CommentInputContainer>
 
-      {Platform.OS === 'android' ? (
+      {Platform.OS === 'android' && headerShown ? (
         <Animated.View style={androidHeaderStyles}>
           {showCancel && <HeaderLeft />}
           <HeaderRight />
