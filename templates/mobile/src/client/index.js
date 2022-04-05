@@ -82,6 +82,19 @@ export const client = new ApolloClient({
   shouldBatch: true,
   name: getApplicationName(),
   version: getVersion(),
+  defaultOptions: {
+    watchQuery: {
+      nextFetchPolicy(lastFetchPolicy) {
+        if (
+          lastFetchPolicy === 'cache-and-network' ||
+          lastFetchPolicy === 'network-only'
+        ) {
+          return 'cache-first';
+        }
+        return lastFetchPolicy;
+      },
+    },
+  },
 });
 
 wipeData();
