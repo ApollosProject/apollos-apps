@@ -4,11 +4,13 @@ import { fromPromise } from '@apollo/client';
 import AsyncStorage from '@react-native-community/async-storage';
 import fetch from 'node-fetch';
 
-const getNewToken = async ({ url }) => {
+const getNewToken = async ({ url, headers: oldHeaders }) => {
+  const headers = oldHeaders;
+  delete headers.Authorization;
   const refreshToken = await AsyncStorage.getItem('refreshToken');
   const result = await fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: JSON.stringify({
       query: `
       mutation token($refreshToken: String!) {
@@ -16,7 +18,7 @@ const getNewToken = async ({ url }) => {
           accessToken
           refreshToken
         }
-      }      
+      }
       `,
       variables: { refreshToken },
     }),
@@ -33,7 +35,10 @@ const buildErrorLink = (onAuthError, url) =>
         switch (err.extensions.code) {
           case 'UNAUTHENTICATED':
             return fromPromise(
-              getNewToken({ url }).catch(() => {
+              getNewToken({
+                url,
+                headers: operation.getContext().headers,
+              }).catch(() => {
                 onAuthError();
               })
             )
