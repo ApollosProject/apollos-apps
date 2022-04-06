@@ -122,7 +122,6 @@ export default () => {
       } catch (e) {
         spinner.fail('Failed');
         consola.log(e.stdout);
-        consola.error(e.stderr);
         process.exit(1);
       }
       spinner.succeed('Deployed!');
@@ -174,7 +173,6 @@ export default () => {
       } catch (e) {
         spinner.fail('Failed');
         consola.log(e.stdout);
-        consola.error(e.stderr);
         process.exit(1);
       }
       spinner.succeed('Deployed!');
