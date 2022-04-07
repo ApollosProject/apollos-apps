@@ -7,19 +7,19 @@ const ChipText = styled(({ theme, selected }) => {
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    color: selected ? theme.colors.white : theme.colors.tertiary,
+    color: selected ? theme.colors.white : theme.colors.secondary,
   };
 })(H6);
 
 const TagChipButton = styled(({ theme, selected }) => ({
-  backgroundColor: selected ? theme.colors.tertiary : theme.colors.paper,
-  borderColor: selected ? theme.colors.tertiary : theme.colors.paper,
+  backgroundColor: selected ? theme.colors.secondary : theme.colors.paper,
+  borderColor: selected ? theme.colors.secondary : theme.colors.paper,
 }))(Chip);
 
 export default function TagChip({ selected, onPress, title }) {
   return (
     <TagChipButton
-      type={selected ? 'tertiary' : 'overlay'}
+      type={selected ? 'secondary' : 'overlay'}
       onPress={onPress}
       selected={selected}
       chipList
