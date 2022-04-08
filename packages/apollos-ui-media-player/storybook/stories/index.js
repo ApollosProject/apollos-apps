@@ -161,7 +161,7 @@ const BasicPlayer = (props) => (
   <ApollosPlayerContainer
     source={{
       uri:
-        'http://embed.wistia.com/deliveries/0e364f7e6f6604384ece8a35905a53a864386e9f.bin',
+        'https://player.vimeo.com/external/571891787.m3u8?s=dd9980634828664e654f99068ffb1ae765b8d0b1',
     }}
     presentationProps={{
       title: 'Video Title',
@@ -170,6 +170,9 @@ const BasicPlayer = (props) => (
     coverImage={{
       uri: `https://picsum.photos/seed/${Math.random()}/100/100`,
     }}
+    onPlay={(e) => console.log('playing!', e)}
+    onPause={(e) => console.log('pausing!', e)}
+    onEnd={(e) => console.log('ending!', e)}
     {...props}
   >
     <PlayerExamples />

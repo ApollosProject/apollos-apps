@@ -17,7 +17,7 @@ export const youtubeRegEx = new RegExp(
   /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
 );
 
-const YoutubeVideoPresentation = () => {
+const YoutubeVideoPresentation = ({ onEnd }: { onEnd: Function }) => {
   const nowPlaying = useNowPlaying();
   const { isPlaying, play, pause } = usePlayerControls();
   const {
@@ -66,13 +66,16 @@ const YoutubeVideoPresentation = () => {
 
   const handleChangeState = React.useCallback(
     (state) => {
+      if (state === 'ended') {
+        onEnd();
+      }
       if (state === 'playing') {
         play();
       } else if (state !== 'buffering') {
         pause();
       }
     },
-    [pause, play]
+    [pause, play, onEnd]
   );
 
   const skip = React.useCallback(

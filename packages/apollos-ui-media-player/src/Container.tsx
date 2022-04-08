@@ -23,10 +23,21 @@ import useSourceComponents from './useSourceComponents';
 
 interface ContainerProps extends IPlayerMedia, FullScreenSlidingPlayerProps {
   autoplay?: Boolean;
+  onPlay?: Function;
+  onPause?: Function;
+  onEnd?: Function;
 
   /** The Player Component. Defaults to FullscreenSlidingPlayer */
   PlayerComponent?: React.FunctionComponent;
 }
+
+const usePrevious = (value: any) => {
+  const ref = React.useRef(value);
+  React.useEffect(() => {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+};
 
 const Container: React.FunctionComponent<ContainerProps> = ({
   VideoComponent,
@@ -43,6 +54,9 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   useNativeFullscreeniOS,
   scrollViewRef,
   videos,
+  onPlay = () => {},
+  onPause = () => {},
+  onEnd = () => {},
 }) => {
   /*
     We're going to set up 4 context state objects in this component:
@@ -75,6 +89,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   // ---------
   // setup PlayerControls Context
   const [isPlaying, setIsPlaying] = React.useState<boolean>(!!autoplay);
+  const prevIsPlaying = usePrevious(isPlaying);
   const [seek, setSeekHandler] = React.useState<IPlayerControls['seek']>(
     () => {}
   );
@@ -151,6 +166,35 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     ControlsComponent,
   });
 
+  // we need a session id for some analytics events. The session ID should be
+  // created on mount, and different for each video player
+  const { current: sessionId } = React.useRef<string>(Date.now().toString());
+  const analyticsMeta = { sessionId };
+
+  // ---------
+  // setup onEnd effect on unmount
+  React.useEffect(
+    () => {
+      const { elapsedTime, totalDuration } = playhead;
+      if (autoplay) {
+        onPlay({ elapsedTime, totalDuration, ...analyticsMeta });
+      }
+      return () => {
+        return onEnd({ elapsedTime, totalDuration, ...analyticsMeta });
+      };
+    },
+    [] // eslint-disable-line react-hooks/exhaustive-deps
+  );
+
+  React.useEffect(() => {
+    const { elapsedTime, totalDuration } = playhead;
+    if (prevIsPlaying && !isPlaying) {
+      onPause({ elapsedTime, totalDuration, ...analyticsMeta });
+    } else if (!prevIsPlaying && isPlaying) {
+      onPlay({ elapsedTime, totalDuration, ...analyticsMeta });
+    }
+  }, [isPlaying, prevIsPlaying]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // ---------
   // 🚀 Go Time
   return (
@@ -168,6 +212,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                     useNativeFullscreeniOS={useNativeFullscreeniOS}
                     scrollViewRef={scrollViewRef}
                     videos={videos}
+                    onEnd={onEnd}
                   >
                     {children}
                   </PlayerComponent>
@@ -180,6 +225,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                 useNativeFullscreeniOS,
                 scrollViewRef,
                 videos,
+                onEnd,
               ]
             )}
           </PlayheadContext.Provider>

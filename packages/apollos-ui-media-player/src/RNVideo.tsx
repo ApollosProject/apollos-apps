@@ -29,8 +29,10 @@ interface VideoExpanded extends Video {
 
 const RNVideoPresentation = ({
   useNativeFullscreeniOS,
+  onEnd,
 }: {
   useNativeFullscreeniOS?: boolean;
+  onEnd: Function;
 }) => {
   const nowPlaying = useNowPlaying();
   const { isPlaying, pictureMode, setPictureMode, pause } = usePlayerControls();
@@ -155,6 +157,11 @@ const RNVideoPresentation = ({
     };
   }, []);
 
+  const handleVideoEnded = () => {
+    onEnd();
+    pause();
+  };
+
   return (
     <Container>
       {nowPlaying?.source ? (
@@ -177,7 +184,7 @@ const RNVideoPresentation = ({
             setShowLoading(true);
             setShowCoverImage(true);
           }}
-          onEnd={pause}
+          onEnd={handleVideoEnded}
           onFullscreenPlayerWillDismiss={() => {
             setPictureMode(PictureMode.Normal);
             if (Platform.OS === 'ios') pause();

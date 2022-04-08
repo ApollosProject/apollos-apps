@@ -50,6 +50,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   allowFullscreenControl = true,
   scrollViewRef: scrollViewRefProp,
   videos,
+  onEnd,
 }) => {
   // Setup layout and window objects for size references inside of computed
   // styles that are below.
@@ -254,6 +255,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
         <VideoPresentationContainer
           VideoComponent={VideoComponent}
           useNativeFullscreeniOS={useNativeFullscreeniOS}
+          onEnd={onEnd}
         />
         {(!isFullscreen || Platform.OS === 'android') && ControlsComponent ? (
           <ControlsComponent
