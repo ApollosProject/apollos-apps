@@ -181,7 +181,7 @@ class MapView extends Component {
   scrollToIndex = (index) => {
     const cardScrollPosition = index * this.cardScrollPositionOffset;
 
-    this.scrollView.getNode().scrollTo({
+    this.scrollView.scrollTo({
       x: cardScrollPosition,
       y: 0,
       animated: true,
