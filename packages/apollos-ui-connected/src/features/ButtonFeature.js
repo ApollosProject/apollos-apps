@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Linking } from 'react-native';
 import { useMutation, useQuery, gql } from '@apollo/client';
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
 import { Button, PaddedView, styled } from '@apollosproject/ui-kit';
+import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
 
 const ButtonFeature = ({ action }) => {
   const ButtonWithAnalytics = styled(
@@ -41,23 +41,39 @@ const ButtonFeature = ({ action }) => {
     }
   );
 
-  const handlePress = () => {
+  const handlePress = (openUrl) => {
+    const externalActions = [
+      'OPEN_URL_EXTERNALLY',
+      'OPEN_AUTHENTICATED_URL_EXTERNALLY',
+    ];
+    const rockAuthenticatedActions = [
+      'OPEN_AUTHENTICATED_URL',
+      'OPEN_AUTHENTICATED_URL_EXTERNALLY',
+    ];
     if (action.action === 'COMPLETE_NODE') {
       complete();
     } else {
-      Linking.openURL(action.relatedNode?.url);
+      openUrl(
+        action.relatedNode?.url,
+        { externalBrowser: externalActions.includes(action.action) },
+        { useRockToken: rockAuthenticatedActions.includes(action.action) }
+      );
     }
   };
 
   return (
     <PaddedView>
-      <ButtonWithAnalytics
-        title={action?.title || 'Go!'}
-        onPress={handlePress}
-        disabled={isDisabled}
-        trackEventName={action?.title || 'Button Clicked'}
-        trackProperties={{ itemId: action?.relatedNode?.id }}
-      />
+      <RockAuthedWebBrowser>
+        {(openUrl) => (
+          <ButtonWithAnalytics
+            title={action?.title || 'Go!'}
+            onPress={() => handlePress(openUrl)}
+            disabled={isDisabled}
+            trackEventName={action?.title || 'Button Clicked'}
+            trackProperties={{ itemId: action?.relatedNode?.id }}
+          />
+        )}
+      </RockAuthedWebBrowser>
     </PaddedView>
   );
 };
