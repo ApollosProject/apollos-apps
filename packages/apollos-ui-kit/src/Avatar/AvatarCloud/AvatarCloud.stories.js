@@ -30,6 +30,7 @@ function Examples(props) {
       <H4>Number of avatars</H4>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
       <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+        <Button title="0" onPress={() => setAvatars(0)} />
         <Button title="1" onPress={() => setAvatars(1)} />
         <Button title="2" onPress={() => setAvatars(2)} />
         <Button title="3" onPress={() => setAvatars(3)} />

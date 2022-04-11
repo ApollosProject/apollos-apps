@@ -20,8 +20,8 @@ const Container = styled(
 const Leaf = styled(
   ({ leaf }) => ({
     position: 'absolute',
-    left: leaf.x - leaf.r,
-    top: leaf.y - leaf.r,
+    left: leaf.x - leaf.r || null,
+    top: leaf.y - leaf.r || null,
   }),
   'AvatarCloud.Leaf'
 )(View);
@@ -78,7 +78,7 @@ const AvatarCloud = ({
     <Container size={themeSize} {...props}>
       {leaves.map((leaf) => (
         <Leaf key={leaf.data.id} leaf={leaf}>
-          <Avatar profile={leaf.data} themeSize={leaf.r * 2} />
+          <Avatar profile={leaf.data} themeSize={leaf.r * 2 || themeSize} />
         </Leaf>
       ))}
     </Container>

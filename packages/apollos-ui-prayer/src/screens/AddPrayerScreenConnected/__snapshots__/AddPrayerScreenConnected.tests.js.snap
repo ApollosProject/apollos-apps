@@ -1257,9 +1257,9 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                     }
                     style={
                       Object {
-                        "left": NaN,
+                        "left": null,
                         "position": "absolute",
-                        "top": NaN,
+                        "top": null,
                       }
                     }
                   >
@@ -1267,12 +1267,12 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "height": 48,
+                          "height": 160,
                           "justifyContent": "center",
-                          "width": 48,
+                          "width": 160,
                         }
                       }
-                      themeSize={48}
+                      themeSize={160}
                     >
                       <View
                         backgroundColor={null}
@@ -1280,25 +1280,25 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                           Object {
                             "alignItems": "center",
                             "backgroundColor": "rgba(142, 142, 147, 0.2)",
-                            "borderRadius": 48,
-                            "height": 48,
+                            "borderRadius": 160,
+                            "height": 160,
                             "justifyContent": "center",
-                            "width": 48,
+                            "width": 160,
                           }
                         }
-                        themeSize={48}
+                        themeSize={160}
                       >
                         <RNSVGSvgView
                           align="xMidYMid"
-                          bbHeight={24}
-                          bbWidth={24}
+                          bbHeight={80}
+                          bbWidth={80}
                           color="rgba(39, 39, 46, 0.3)"
-                          height={24}
+                          height={80}
                           id="Raw"
                           meetOrSlice={0}
                           minX={0}
                           minY={0}
-                          size={24}
+                          size={80}
                           style={
                             Array [
                               Object {
@@ -1309,15 +1309,15 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                               null,
                               Object {
                                 "flex": 0,
-                                "height": 24,
-                                "width": 24,
+                                "height": 80,
+                                "width": 80,
                               },
                             ]
                           }
                           tintColor="rgba(39, 39, 46, 0.3)"
                           vbHeight={256}
                           vbWidth={256}
-                          width={24}
+                          width={80}
                         >
                           <RNSVGGroup
                             fill={
