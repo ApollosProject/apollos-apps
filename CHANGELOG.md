@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.0](https://github.com/ApollosProject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
+
+
+### Features
+
+* adds optional background colors to icon generation ([#2470](https://github.com/ApollosProject/apollos-apps/issues/2470)) ([420170f](https://github.com/ApollosProject/apollos-apps/commit/420170f959b4c20ffea43dcea67891b3f7810296))
+* onPlay, onPause, and onEnd side effects for the media player ([#2418](https://github.com/ApollosProject/apollos-apps/issues/2418)) ([09f9ffa](https://github.com/ApollosProject/apollos-apps/commit/09f9ffa994c94bc17017def255c39fbc87abc16a))
+
+
+### Bug Fixes
+
+* give button features authenticated link support ([#2458](https://github.com/ApollosProject/apollos-apps/issues/2458)) ([1e9025c](https://github.com/ApollosProject/apollos-apps/commit/1e9025c9965f0c446c0baa084630f9f59511879e))
+* updates iOS to SDK13 ([#2426](https://github.com/ApollosProject/apollos-apps/issues/2426)) ([fde31fc](https://github.com/ApollosProject/apollos-apps/commit/fde31fc9f69f4ef57ff3eeacf3313a2b8937be4c))
+
+
+
 ### [3.2.1](https://github.com/ApollosProject/apollos-apps/compare/v3.2.0...v3.2.1) (2022-04-06)
 
 

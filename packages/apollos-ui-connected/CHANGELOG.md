@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.0](https://github.com/apollosproject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
+
+
+### Bug Fixes
+
+* give button features authenticated link support ([#2458](https://github.com/apollosproject/apollos-apps/issues/2458)) ([1e9025c](https://github.com/apollosproject/apollos-apps/commit/1e9025c9965f0c446c0baa084630f9f59511879e))
+
+
+
 ### [3.2.1](https://github.com/apollosproject/apollos-apps/compare/v3.2.0...v3.2.1) (2022-04-06)
 
 **Note:** Version bump only for package @apollosproject/ui-connected

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.0](https://github.com/ApollosProject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
+
+
+### Features
+
+* adds optional background colors to icon generation ([#2470](https://github.com/ApollosProject/apollos-apps/issues/2470)) ([420170f](https://github.com/ApollosProject/apollos-apps/commit/420170f959b4c20ffea43dcea67891b3f7810296))
+
+
+
 ### [3.2.1](https://github.com/ApollosProject/apollos-apps/compare/v3.2.0...v3.2.1) (2022-04-06)
 
 **Note:** Version bump only for package @apollosproject/apollos-cli
