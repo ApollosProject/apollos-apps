@@ -116,28 +116,30 @@ const LandingSlide = ({
     </PhoneContainer>
     <ChildrenContainer>{children}</ChildrenContainer>
     <SharedElement id="next-button">
-      {Array.from(Array(totalSlides)).length > 1 ? (
-        // Don't show the dot container if there is only one slide
-        <DotContainer>
-          {Array.from(Array(totalSlides)).map((_, i) =>
-            i === index ? (
-              // eslint-disable-next-line react/no-array-index-key
-              <PaginationDotActive key={i} />
-            ) : (
-              // eslint-disable-next-line react/no-array-index-key
-              <PaginationDot key={i} />
-            )
-          )}
-        </DotContainer>
-      ) : null}
-      <ButtonContainer>
-        <PaddedView>
-          <PrimaryButton onPress={onContinue}>
-            <H5>{primaryButtonText}</H5>
-          </PrimaryButton>
-          {secondaryButtonChildren}
-        </PaddedView>
-      </ButtonContainer>
+      <>
+        {Array.from(Array(totalSlides)).length > 1 ? (
+          // Don't show the dot container if there is only one slide
+          <DotContainer>
+            {Array.from(Array(totalSlides)).map((_, i) =>
+              i === index ? (
+                // eslint-disable-next-line react/no-array-index-key
+                <PaginationDotActive key={i} />
+              ) : (
+                // eslint-disable-next-line react/no-array-index-key
+                <PaginationDot key={i} />
+              )
+            )}
+          </DotContainer>
+        ) : null}
+        <ButtonContainer>
+          <PaddedView>
+            <PrimaryButton onPress={onContinue}>
+              <H5>{primaryButtonText}</H5>
+            </PrimaryButton>
+            {secondaryButtonChildren}
+          </PaddedView>
+        </ButtonContainer>
+      </>
     </SharedElement>
   </>
 );
