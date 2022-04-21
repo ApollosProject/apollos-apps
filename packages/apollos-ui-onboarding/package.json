@@ -64,7 +64,7 @@
     "@react-native-community/async-storage": "^1.5.1",
     "formik": "2.2.9",
     "lodash": "4.17.21",
-    "moment": "2.22.2",
+    "moment": "2.29.2",
     "react-is": "^16.9.0",
     "react-native-swiper": "^1.5.14",
     "yup": "0.26.6"
