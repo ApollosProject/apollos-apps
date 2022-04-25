@@ -3,6 +3,8 @@ IOS_BUNDLE=$2
 ANDROID_BUNDLE=$3
 SERVER_URL=$4
 GOOGLE_MAPS_KEY=$5
+ENCRYPTION_KEY=$6
+
 PROJ=$(echo "$APP" | tr "[:upper:]" "[:lower:]" | sed "s/ /-/g")
 echo "Creating mobile app template in ./$PROJ folder..."
 TMP_DIR=$(mktemp -d)
@@ -28,15 +30,12 @@ yarn add --dev $DEVPKGS --ignore-scripts >/dev/null 2>&1
 echo "Installing Cocoapods..."
 yarn postinstall >/dev/null 2>&1
 
-# remove template encrypted files
+# remove template files
 rm .env.shared.enc
 rm android/key.json.enc
 rm android/app/apollos.keystore.enc
 rm ios/apollos.p8.enc
-
-# remove demo app metadata
-rm -rf fastlane/metadata
-rm -rf fastlane/screenshots
+rm -rf fastlane
 
 CLEAN_APP=$(echo "$APP" | tr -d '[:space:]')
 npx react-native-rename "$CLEAN_APP" -b "$ANDROID_BUNDLE"
@@ -55,6 +54,8 @@ rm "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme"
 
 echo "APP_DATA_URL=$SERVER_URL
 GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_KEY" >.env
+cp .env .env.shared
+npx @apollosproject/apollos-cli secrets -e "$ENCRYPTION_KEY"
 
 node scripts/get-introspection-data.js
 

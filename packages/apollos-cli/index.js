@@ -69,11 +69,16 @@ mobile
         name: 'googleMapsKey',
         message: 'Google Maps API Key?',
       },
+      {
+        type: 'text',
+        name: 'encryptionKey',
+        message: 'Encryption Key?',
+      },
     ];
 
     (async () => {
       const response = await prompts(questions);
-      if (Object.keys(response).length === 5) {
+      if (Object.keys(response).length === questions.length) {
         try {
           execa(`${__dirname}/scripts/create-mobile.sh`, [
             response.appName,
@@ -81,6 +86,7 @@ mobile
             response.androidID,
             response.serverURL,
             response.googleMapsKey,
+            response.encryptionKey,
           ]).stdout.pipe(process.stdout);
         } catch (e) {
           console.log(e);
