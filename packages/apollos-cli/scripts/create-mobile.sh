@@ -29,6 +29,7 @@ yarn add $PKGS --ignore-scripts >/dev/null 2>&1
 yarn add --dev $DEVPKGS --ignore-scripts >/dev/null 2>&1
 echo "Installing Cocoapods..."
 yarn postinstall >/dev/null 2>&1
+yarn add --dev @apollosproject/react-native-make # problem with the sharp module not installing properly the first time
 
 # remove template files
 rm .env.shared.enc
