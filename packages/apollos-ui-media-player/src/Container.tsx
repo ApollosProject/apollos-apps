@@ -16,6 +16,7 @@ import {
   PlayheadContext,
   InternalPlayerContext,
 } from './context';
+import { named } from '@apollosproject/ui-kit';
 
 import NativeControls from './NativeControls';
 
@@ -235,4 +236,4 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   );
 };
 
-export default Container;
+export default named('ui-media-player.ApollosPlayerContainer')(Container);
