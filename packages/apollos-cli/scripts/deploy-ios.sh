@@ -16,11 +16,12 @@ VERSION=$(fastlane run get_version_number xcodeproj:ios target:$TARGET |
   grep Result |
   sed -E "s/.*Result: (.*)/\1/")
 
+fastlane run setup_ci
+
 export MATCH_KEYCHAIN_NAME="fastlane_tmp_keychain"
 export MATCH_KEYCHAIN_PASSWORD=""
 
 if [ "$TRACK" = "internal" ]; then
-  fastlane run setup_ci
   fastlane match appstore -a "$APP_ID,$APP_ID.OneSignalNotificationServiceExtension" --readonly
   fastlane run increment_build_number build_number:"$COMMITS" xcodeproj:"ios/$TARGET.xcodeproj"
   fastlane run build_app scheme:$TARGET workspace:"ios/$TARGET.xcworkspace"
