@@ -2,10 +2,9 @@ TRACK=$1
 
 if [ -n "$(git status --porcelain)" ]; then
   echo "Git status not clean!"
+  git status --porcelain
   exit 1
 fi
-
-git pull >/dev/null 2>&1
 
 COMMITS=$(git rev-list --count HEAD)
 sed -i "" -E "s/versionCode [0-9]+\s*$/versionCode $COMMITS/g" android/app/build.gradle

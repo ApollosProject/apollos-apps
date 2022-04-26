@@ -1,5 +1,11 @@
 TRACK=$1
 
+if [ -n "$(git status --porcelain)" ]; then
+  echo "Git status not clean!"
+  git status --porcelain
+  exit 1
+fi
+
 APP_ID=$(grep "PRODUCT_BUNDLE_IDENTIFIER.*One" ios/*.xcodeproj/project.pbxproj |
   sed -n 1p |
   sed -E "s/.*PRODUCT_BUNDLE_IDENTIFIER = \"?(.*).One.*/\1/")
