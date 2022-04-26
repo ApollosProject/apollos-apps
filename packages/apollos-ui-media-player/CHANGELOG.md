@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.0](https://github.com/apollosproject/apollos-apps/compare/v3.3.0...v3.4.0) (2022-04-26)
+
+
+### Features
+
+* adds overriding for video Container ([#2480](https://github.com/apollosproject/apollos-apps/issues/2480)) ([27aa0a9](https://github.com/apollosproject/apollos-apps/commit/27aa0a94509abe36aa76e7efa9eb5b703f9c8604))
+
+
+
 ## [3.3.0](https://github.com/apollosproject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
 
 

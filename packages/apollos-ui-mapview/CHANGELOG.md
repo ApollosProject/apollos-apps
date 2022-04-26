@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.0](https://github.com/apollosproject/apollos-apps/compare/v3.3.0...v3.4.0) (2022-04-26)
+
+
+### Bug Fixes
+
+* no longer crash when you tap on marker and set marker color to secondary ([#2477](https://github.com/apollosproject/apollos-apps/issues/2477)) ([70583d9](https://github.com/apollosproject/apollos-apps/commit/70583d9a595a66131b4fce244a0feb51bbc0f281))
+
+
+
 ## [3.3.0](https://github.com/apollosproject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
 
 **Note:** Version bump only for package @apollosproject/ui-mapview
