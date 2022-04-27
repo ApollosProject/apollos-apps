@@ -1,36 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ActionCard, PaddedView } from '@apollosproject/ui-kit';
+import { ActionCard, PaddedView, named } from '@apollosproject/ui-kit';
 import { ScriptureItem } from '@apollosproject/ui-scripture';
 import ShareButtonConnected from '../ShareButtonConnected';
 
 const ScriptureFeature = ({
-  scriptures,
-  sharing: { message } = {},
-  title,
-  isLoading,
   contentId,
-  nodeId,
   featureId,
   isCard,
+  isLoading,
+  nodeId,
+  scriptures,
+  sharing: { message } = {},
+  showShareButton,
+  title,
 }) => {
   const Wrapper = (
     { children } // eslint-disable-line react/prop-types
   ) =>
+    // eslint-disable-next-line no-nested-ternary
     isCard ? (
-      <ActionCard
-        label={title}
-        icon={'text'}
-        action={
-          <ShareButtonConnected
-            message={message}
-            itemId={nodeId || contentId || featureId}
-          />
-        }
-      >
-        {children}
-      </ActionCard>
+      showShareButton ? (
+        <ActionCard
+          label={title}
+          icon={'text'}
+          action={
+            <ShareButtonConnected
+              message={message}
+              itemId={nodeId || contentId || featureId}
+            />
+          }
+        >
+          {children}
+        </ActionCard>
+      ) : (
+        <ActionCard label={title} icon={'text'}>
+          {children}
+        </ActionCard>
+      )
     ) : (
       <PaddedView>{children}</PaddedView>
     );
@@ -53,6 +61,7 @@ const ScriptureFeature = ({
 
 ScriptureFeature.defaultProps = {
   isCard: true,
+  showShareButton: true,
 };
 
 ScriptureFeature.propTypes = {
@@ -72,6 +81,7 @@ ScriptureFeature.propTypes = {
   title: PropTypes.string,
   nodeId: PropTypes.string,
   featureId: PropTypes.string,
+  showShareButton: PropTypes.bool,
 };
 
-export default ScriptureFeature;
+export default named('ui-connected.ScriptureFeature')(ScriptureFeature);
