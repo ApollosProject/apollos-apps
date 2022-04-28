@@ -8,6 +8,7 @@ import { exec as baseExec } from 'child_process';
 import prompts from 'prompts';
 import { execa } from 'execa';
 import { program, Argument } from 'commander';
+import consola from 'consola';
 
 /* eslint-disable import/extensions */
 import logo from './commands/logo.js';
@@ -19,6 +20,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 program.name('apollos');
 program.version('1.0.0');
+
+consola.warn(
+  'This package has been DEPRECATED. Please use @apollosproject/cli moving forward.'
+);
 
 const mobile = program
   .command('mobile')
