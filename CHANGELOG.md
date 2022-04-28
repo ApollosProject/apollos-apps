@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.0](https://github.com/ApollosProject/apollos-apps/compare/v3.4.2...v3.5.0) (2022-04-28)
+
+
+### Features
+
+* named Scripture Feature and ability to show or hide share button ([#2491](https://github.com/ApollosProject/apollos-apps/issues/2491)) ([0cd3f86](https://github.com/ApollosProject/apollos-apps/commit/0cd3f864fa8e9deb237b743fb4d4314f01baa6ea))
+
+
+
 ### [3.4.2](https://github.com/ApollosProject/apollos-apps/compare/v3.4.1...v3.4.2) (2022-04-26)
 
 **Note:** Version bump only for package apollos
