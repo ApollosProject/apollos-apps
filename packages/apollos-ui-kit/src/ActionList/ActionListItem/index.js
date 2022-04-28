@@ -7,6 +7,7 @@ import styled from '../../styled';
 import TouchableScale from '../../TouchableScale';
 import { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
+import { named } from '../../theme';
 import ActionListImage from './ActionListImage';
 
 const Label = styled(
@@ -40,16 +41,23 @@ const RenderAsTouchable = ({ children, onPress }) =>
     children
   );
 
-const ActionListItem = ({ imageSource, title, label, onPress, start }) => (
+const ActionListItem = ({
+  LabelComponent,
+  imageSource,
+  title,
+  label,
+  onPress,
+  start,
+}) => (
   <RenderAsTouchable onPress={onPress}>
     <Cell>
       <ActionListImage source={imageSource} start={start} />
       <TextContainer>
         {title ? <H5 numberOfLines={!label ? 2 : 1}>{title}</H5> : null}
         {label ? (
-          <Label numberOfLines={!title ? 3 : 2} ellipsizeMode="tail">
+          <LabelComponent numberOfLines={!title ? 3 : 2} ellipsizeMode="tail">
             {label}
-          </Label>
+          </LabelComponent>
         ) : null}
       </TextContainer>
     </Cell>
@@ -57,6 +65,7 @@ const ActionListItem = ({ imageSource, title, label, onPress, start }) => (
 );
 
 ActionListItem.propTypes = {
+  LabelComponent: PropTypes.element,
   imageSource: ImageSourceType.isRequired,
   title: PropTypes.string,
   label: PropTypes.string,
@@ -64,4 +73,8 @@ ActionListItem.propTypes = {
   start: PropTypes.string,
 };
 
-export default ActionListItem;
+ActionListItem.defaultProps = {
+  LabelComponent: Label,
+};
+
+export default named('ActionListItem')(ActionListItem);

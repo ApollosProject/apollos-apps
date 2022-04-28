@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Text } from 'react-native';
 
 import Providers from '../../Providers';
 import { withIsLoading } from '../../isLoading';
@@ -31,6 +32,18 @@ describe('ActionListItem', () => {
       <Providers>
         <ActionListItem
           imageSource={'https://picsum.photos/600/400/?random'}
+          label={'What'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a custom label', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListItem
+          imageSource={'https://picsum.photos/600/400/?random'}
+          LabelComponent={Text}
           label={'What'}
         />
       </Providers>
