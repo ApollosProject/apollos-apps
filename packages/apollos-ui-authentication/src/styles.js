@@ -62,7 +62,7 @@ const ButtonLinkText = styled(
     color: theme.colors.primary,
     fontWeight: 'normal',
   }),
-  'ui-auth.styles.LegalText'
+  'ui-auth.styles.ButtonLinkText'
 )(H6);
 
 const SkipButton = styled(
