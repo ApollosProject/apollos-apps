@@ -27,9 +27,9 @@ import {
   ContentFeedConnected,
   SearchScreenConnected,
   UserSettingsConnected,
+  TabsConnected as Tabs,
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
-import Tabs from './tabs';
 
 enableScreens(); // improves performance for react-navigation
 

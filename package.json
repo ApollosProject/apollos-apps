@@ -19,8 +19,8 @@
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
     "generate-stories": "lerna run generate-stories",
-    "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)",
-    "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)"
+    "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)",
+    "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"

@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "3.4.1",
+    "@react-navigation/bottom-tabs": "^5.11.8",
     "apollo-upload-client": "^17.0.0",
     "graphql": "^16.3.0",
     "graphql-tag": "2.9.2",
