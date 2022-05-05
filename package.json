@@ -8,7 +8,6 @@
     "nohoist": []
   },
   "scripts": {
-    "start": "lerna run build && node ./scripts/watch.js",
     "lint": "lerna run lint",
     "test": "TZ=utc lerna run test",
     "release": "lerna publish --conventional-commits --create-release github --force-publish",
@@ -19,7 +18,6 @@
     "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn",
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
-    "generate-docs": "lerna run generate-docs",
     "generate-stories": "lerna run generate-stories",
     "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)",
     "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)"
