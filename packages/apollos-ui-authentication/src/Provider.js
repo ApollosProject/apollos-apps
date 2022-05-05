@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import AsyncStorage from '@react-native-community/async-storage';
 import { gql, useQuery, useMutation, useApolloClient } from '@apollo/client';
-// import { track } from '@apollosproject/ui-analytics';
 import { LoginProvider } from './LoginProvider';
 
 const defaultContext = {

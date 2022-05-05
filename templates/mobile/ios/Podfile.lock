@@ -297,7 +297,7 @@ PODS:
   - React-jsinspector (0.67.2)
   - React-logger (0.67.2):
     - glog
-  - react-native-apollos-player (3.1.2):
+  - react-native-apollos-player (3.3.0):
     - React
   - react-native-config (0.11.7):
     - React
@@ -721,7 +721,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 52beb652bbc61201bd70cbe4f0b8edb607e8da4f
   React-jsinspector: 595f76eba2176ebd8817a1fffd47b84fbdab9383
   React-logger: 23de8ea0f44fa00ee77e96060273225607fd4d78
-  react-native-apollos-player: fe92d51c7795019e9c2df7b9e16a3966ce49bcf5
+  react-native-apollos-player: b9bd46b7231e01eec1d2fa737a3cfe2250745c26
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: c0efb872258ed9240f1003a70fca9e9757e5c785
