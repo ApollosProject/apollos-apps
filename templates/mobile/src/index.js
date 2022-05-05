@@ -13,7 +13,7 @@ import { enableScreens } from 'react-native-screens';
 import ApollosConfig from '@apollosproject/config';
 import {
   BackgroundView,
-  withTheme,
+  useTheme,
   NavigationService,
   Providers as ThemeProvider,
 } from '@apollosproject/ui-kit';
@@ -33,10 +33,15 @@ import Tabs from './tabs';
 
 enableScreens(); // improves performance for react-navigation
 
-const AppStatusBar = withTheme(({ theme }) => ({
-  barStyle: theme.barStyle,
-  backgroundColor: theme.colors.background.paper,
-}))(StatusBar);
+const AppStatusBar = () => {
+  const theme = useTheme();
+  return (
+    <StatusBar
+      barStyle={theme.barStyle}
+      backgroundColor={theme.colors.background.paper}
+    />
+  );
+};
 
 const ProtectedRouteWithSplashScreen = () => {
   const handleOnRouteChange = () => SplashScreen.hide();
@@ -49,22 +54,28 @@ const ProtectedRouteWithSplashScreen = () => {
   );
 };
 
-const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
-  theme: {
-    ...(theme.type === 'dark' ? DarkTheme : DefaultTheme),
-    dark: theme.type === 'dark',
-    colors: {
-      ...(theme.type === 'dark' ? DarkTheme.colors : DefaultTheme.colors),
-      primary: theme.colors.secondary,
-      background: theme.colors.background.screen,
-      card: theme.colors.background.paper,
-      text: theme.colors.text.primary,
-    },
-  },
-  ...props,
-}))(({ containerRef, ...props }) => (
-  <NavigationContainer ref={containerRef} {...props} />
-));
+const ThemedNavigationContainer = ({ children }) => {
+  const theme = useTheme();
+  return (
+    <NavigationContainer
+      ref={NavigationService.setTopLevelNavigator}
+      onReady={NavigationService.setIsReady}
+      theme={{
+        ...(theme.type === 'dark' ? DarkTheme : DefaultTheme),
+        dark: theme.type === 'dark',
+        colors: {
+          ...(theme.type === 'dark' ? DarkTheme.colors : DefaultTheme.colors),
+          primary: theme.colors.secondary,
+          background: theme.colors.background.screen,
+          card: theme.colors.background.paper,
+          text: theme.colors.text.primary,
+        },
+      }}
+    >
+      {children}
+    </NavigationContainer>
+  );
+};
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -72,10 +83,7 @@ const App = () => (
   <ThemeProvider theme={ApollosConfig.THEME} icons={ApollosConfig.ICONS}>
     <BackgroundView>
       <AppStatusBar />
-      <ThemedNavigationContainer
-        containerRef={NavigationService.setTopLevelNavigator}
-        onReady={NavigationService.setIsReady}
-      >
+      <ThemedNavigationContainer>
         <Providers>
           <Navigator
             screenOptions={{ headerShown: false, stackPresentation: 'modal' }}
