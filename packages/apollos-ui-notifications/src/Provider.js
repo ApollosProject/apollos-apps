@@ -10,7 +10,6 @@ import OneSignal from 'react-native-onesignal';
 import ApollosConfig from '@apollosproject/config';
 
 import PushProvider from './pushProvider';
-import updatePushId from './updatePushId';
 
 const APP_ID = ApollosConfig.ONESIGNAL_APP_ID || ApollosConfig.ONE_SIGNAL_KEY;
 
@@ -64,7 +63,7 @@ class NotificationsInit extends Component {
   }
 
   async componentDidMount() {
-    // One Signal 4.x
+    // OneSignal 4.x
     if (OneSignal.setAppId && APP_ID) {
       OneSignal.setAppId(APP_ID);
       OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
@@ -173,16 +172,6 @@ class NotificationsInit extends Component {
         pushId: device.userId,
       },
     });
-    const { isLoggedIn } = this.props.client.readQuery({
-      query: gql`
-        query {
-          isLoggedIn @client
-        }
-      `,
-    });
-    if (isLoggedIn) {
-      updatePushId({ pushId: device.userId, client: this.props.client });
-    }
   };
 
   render() {
