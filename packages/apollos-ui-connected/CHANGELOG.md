@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.0](https://github.com/apollosproject/apollos-apps/compare/v3.5.0...v3.6.0) (2022-05-05)
+
+
+### Features
+
+* adds dynamic tabs ([#2348](https://github.com/apollosproject/apollos-apps/issues/2348)) ([4671c1a](https://github.com/apollosproject/apollos-apps/commit/4671c1aa10de3cc5dd5c2fbb992676aae41bf732))
+
+
+
 ## [3.5.0](https://github.com/apollosproject/apollos-apps/compare/v3.4.2...v3.5.0) (2022-04-28)
 
 
