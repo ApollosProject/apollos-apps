@@ -767,7 +767,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
         }
       }
     >
-      <View />
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      />
       <View
         accessible={true}
         focusable={true}
@@ -1828,7 +1834,13 @@ exports[`The HorizontalCardListFeature component should render a section title 1
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           primary={true}
           style={
@@ -2602,7 +2614,13 @@ exports[`The HorizontalCardListFeature component should render with a section su
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={

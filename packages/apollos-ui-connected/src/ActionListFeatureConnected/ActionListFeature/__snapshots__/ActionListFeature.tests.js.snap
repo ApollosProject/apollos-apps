@@ -52,7 +52,13 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
         }
       >
-        <View />
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        />
         <View
           style={
             Object {
@@ -385,7 +391,13 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
         }
       >
-        <View />
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        />
         <View
           style={
             Object {
@@ -778,7 +790,13 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
         }
       >
-        <View />
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        />
         <View
           style={
             Object {
@@ -991,7 +1009,13 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -1338,7 +1362,13 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             primary={true}
             style={

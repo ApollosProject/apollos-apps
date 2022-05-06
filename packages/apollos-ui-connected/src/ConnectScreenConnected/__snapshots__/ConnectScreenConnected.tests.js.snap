@@ -328,7 +328,13 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   }
                                 }
                               >
-                                <View>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexShrink": 1,
+                                    }
+                                  }
+                                >
                                   <Text
                                     secondary={true}
                                     style={
@@ -1394,7 +1400,13 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   }
                                 }
                               >
-                                <View>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexShrink": 1,
+                                    }
+                                  }
+                                >
                                   <Text
                                     secondary={true}
                                     style={

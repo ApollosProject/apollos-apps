@@ -329,7 +329,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
           }
           vertical={false}
         >
-          <View />
+          <View
+            style={
+              Object {
+                "flexShrink": 1,
+              }
+            }
+          />
         </View>
       </View>
       <View
@@ -623,7 +629,13 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
           }
           vertical={false}
         >
-          <View>
+          <View
+            style={
+              Object {
+                "flexShrink": 1,
+              }
+            }
+          >
             <Text
               primary={true}
               style={
@@ -912,7 +924,13 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
           }
           vertical={false}
         >
-          <View>
+          <View
+            style={
+              Object {
+                "flexShrink": 1,
+              }
+            }
+          >
             <Text
               secondary={true}
               style={

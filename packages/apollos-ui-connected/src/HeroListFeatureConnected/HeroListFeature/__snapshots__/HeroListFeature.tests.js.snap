@@ -611,7 +611,13 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
       }
     }
   >
-    <View />
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    />
     <View
       style={
         Object {
@@ -900,7 +906,13 @@ exports[`The HeroListFeatures component should render with a subtitle 1`] = `
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         secondary={true}
         style={
@@ -1220,7 +1232,13 @@ exports[`The HeroListFeatures component should render with a title 1`] = `
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         primary={true}
         style={

@@ -58,7 +58,13 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -1177,7 +1183,13 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -2025,7 +2037,13 @@ exports[`The PrayerFeature component should render 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -2874,7 +2892,13 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -3710,7 +3734,13 @@ exports[`The PrayerFeature component should render a loading state without a \`C
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         secondary={true}
         style={
@@ -4495,7 +4525,13 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -5343,7 +5379,13 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -6179,7 +6221,13 @@ exports[`The PrayerFeature component should render without a \`Card\` border 1`]
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         secondary={true}
         style={

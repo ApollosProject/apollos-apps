@@ -33,7 +33,13 @@ exports[`The FollowingListConnected component should render with data 1`] = `
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={

@@ -27,7 +27,13 @@ exports[`The HeroListFeatureConnected component should render 1`] = `
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         secondary={true}
         style={
@@ -422,7 +428,13 @@ exports[`The HeroListFeatureConnected component should render a loading state wh
       }
     }
   >
-    <View />
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    />
     <View
       style={
         Object {
@@ -711,7 +723,13 @@ exports[`The HeroListFeatureConnected component should render without a hero car
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         secondary={true}
         style={
@@ -897,7 +915,13 @@ exports[`The HeroListFeatureConnected component should render without actions 1`
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
       <Text
         secondary={true}
         style={

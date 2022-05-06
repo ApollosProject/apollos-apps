@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import { H3, H4 } from '../typography';
-import { named } from '../theme';
+import styled from '../styled/index';
 
-const Container = named('ui-kit.FeatureTitles.Container')(View);
+const Container = styled(
+  {
+    flexShrink: 1,
+  },
+  'ui-kit.FeatureTitles.Container'
+)(View);
 
 /**
  * FeatureTitles

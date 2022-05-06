@@ -291,7 +291,13 @@ exports[`The VerticalCardListFeature component should render a loading state for
         }
       }
     >
-      <View />
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      />
     </View>
     <RCTScrollView
       data={
@@ -2649,7 +2655,13 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           primary={true}
           style={
@@ -2947,7 +2959,13 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={

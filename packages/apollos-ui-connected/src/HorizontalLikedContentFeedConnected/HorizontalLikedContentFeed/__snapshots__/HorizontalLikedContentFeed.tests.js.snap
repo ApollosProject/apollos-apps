@@ -28,7 +28,13 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={
@@ -430,7 +436,13 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={

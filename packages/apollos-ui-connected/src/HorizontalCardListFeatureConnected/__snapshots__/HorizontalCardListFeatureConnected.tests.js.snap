@@ -31,7 +31,13 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={
@@ -374,7 +380,13 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         }
       }
     >
-      <View />
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      />
       <View
         accessible={true}
         focusable={true}

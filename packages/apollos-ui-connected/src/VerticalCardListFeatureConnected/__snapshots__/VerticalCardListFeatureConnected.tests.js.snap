@@ -39,7 +39,13 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
         <Text
           secondary={true}
           style={
@@ -422,7 +428,13 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
           }
           vertical={false}
         >
-          <View />
+          <View
+            style={
+              Object {
+                "flexShrink": 1,
+              }
+            }
+          />
         </View>
       </View>
       <View
@@ -657,7 +669,13 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
         }
       }
     >
-      <View />
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      />
     </View>
     <RCTScrollView
       data={
@@ -3076,7 +3094,13 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
           }
           vertical={false}
         >
-          <View>
+          <View
+            style={
+              Object {
+                "flexShrink": 1,
+              }
+            }
+          >
             <Text
               secondary={true}
               style={

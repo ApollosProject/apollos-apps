@@ -42,7 +42,13 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        >
           <Text
             secondary={true}
             style={
@@ -256,7 +262,13 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
         }
       >
-        <View />
+        <View
+          style={
+            Object {
+              "flexShrink": 1,
+            }
+          }
+        />
         <View
           style={
             Object {
