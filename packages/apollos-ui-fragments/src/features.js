@@ -415,6 +415,9 @@ const RELATED_NODE_FRAGMENT = gql`
     ... on Message {
       message
     }
+    ... on Event {
+      start
+    }
   }
 `;
 
