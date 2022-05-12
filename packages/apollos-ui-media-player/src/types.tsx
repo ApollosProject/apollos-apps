@@ -89,3 +89,9 @@ export interface IInternalPlayer {
   // Used by the internal VideoComponent to inform of playhead updates
   updatePlayhead: React.Dispatch<React.SetStateAction<IPlayhead>>;
 }
+
+export interface IVideo {
+  id: string;
+  name?: string;
+  duration?: number;
+}

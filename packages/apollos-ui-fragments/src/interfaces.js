@@ -17,6 +17,12 @@ const VIDEO_NODE_FRAGMENT = gql`
       sources {
         uri
       }
+      id
+      duration
+      userProgress {
+        playhead
+        complete
+      }
       embedHtml
     }
   }

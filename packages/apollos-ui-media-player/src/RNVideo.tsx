@@ -9,7 +9,12 @@ import {
 import Video from 'react-native-video';
 import { styled, ActivityIndicator } from '@apollosproject/ui-kit';
 
-import { useNowPlaying, usePlayerControls, useInternalPlayer } from './context';
+import {
+  useNowPlaying,
+  usePlayerControls,
+  useInternalPlayer,
+  usePlayhead,
+} from './context';
 import { PictureMode } from './types';
 
 import CoverImage from './CoverImage';
@@ -57,11 +62,12 @@ const RNVideoPresentation = ({
     updatePlayhead,
   } = useInternalPlayer();
 
+  const playheadContext = usePlayhead();
   const playheadRef = React.useRef({
-    totalDuration: 1,
-    seekableDuration: 1,
-    playableDuration: 1,
-    elapsedTime: 0,
+    totalDuration: playheadContext.totalDuration,
+    seekableDuration: playheadContext.seekableDuration,
+    playableDuration: playheadContext.playableDuration,
+    elapsedTime: playheadContext.elapsedTime,
   });
 
   const handleProgressProp = React.useCallback(
@@ -82,7 +88,6 @@ const RNVideoPresentation = ({
         playableDuration: playhead.playableDuration,
         elapsedTime: playhead.currentTime,
       };
-
       playheadRef.current = newPlayhead;
       // the default currentTime is often a very low value
       // ex: 0.000009999999747378752
@@ -97,6 +102,9 @@ const RNVideoPresentation = ({
     setShowLoading(false);
     playheadRef.current = { ...playheadRef.current, totalDuration: duration };
     updatePlayhead(playheadRef.current);
+    if (playheadRef.current.elapsedTime > 0.01) {
+      seek(playheadRef.current.elapsedTime);
+    }
   };
 
   const videoRef = React.useRef<VideoExpanded>(null);

@@ -10,7 +10,6 @@ import {
   StretchyViewExperimental as StretchyView,
   named,
 } from '@apollosproject/ui-kit';
-import { ApollosPlayerContainer } from '@apollosproject/ui-media-player';
 
 import ContentNodeConnected from '../ContentNodeConnected';
 import ContentParentFeedConnected from '../ContentParentFeedConnected';
@@ -18,14 +17,12 @@ import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
 import NodeFeaturesConnected from '../NodeFeaturesConnected';
 import ScriptureNodeConnected from '../ScriptureNodeConnected';
+import ApollosPlayerConnected from '../ApollosPlayerConnected';
 
 import GET_MEDIA from './getMedia';
 import GET_TITLE from './getTitle';
 
-const Noop = () => null;
-
 const FlexedScrollView = styled({ flex: 1 })(Reanimated.ScrollView);
-
 const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
   <View {...props}>
     <ContentNodeConnected
@@ -128,18 +125,14 @@ const NodeSingleConnectedWithMedia = ({
 
   return (
     <BackgroundView>
-      <ApollosPlayerContainer
-        source={mediaSource}
-        coverImage={data.node?.coverImage?.sources}
-        presentationProps={{
-          title: data.node.title,
-        }}
+      <ApollosPlayerConnected
+        nodeId={nodeId}
+        mediaSource={mediaSource}
+        Component={Component}
         audioOnly={!hasLivestream && !hasVideo && hasAudio}
-        videos={data?.node?.videos}
       >
-        <Component nodeId={nodeId} ImageWrapperComponent={Noop} {...props} />
-      </ApollosPlayerContainer>
-      {children}
+        {children}
+      </ApollosPlayerConnected>
     </BackgroundView>
   );
 };

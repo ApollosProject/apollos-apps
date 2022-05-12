@@ -6,6 +6,7 @@ import {
   IPlayhead,
   IPlayerControls,
   IInternalPlayer,
+  IVideo,
 } from './types';
 import FullscreenSlidingPlayer, {
   FullScreenSlidingPlayerProps,
@@ -27,6 +28,8 @@ interface ContainerProps extends IPlayerMedia, FullScreenSlidingPlayerProps {
   onPlay?: Function;
   onPause?: Function;
   onEnd?: Function;
+  playheadStart?: number;
+  videos?: Array<IVideo>;
 
   /** The Player Component. Defaults to FullscreenSlidingPlayer */
   PlayerComponent?: React.FunctionComponent;
@@ -54,10 +57,11 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   autoplay = false,
   useNativeFullscreeniOS,
   scrollViewRef,
-  videos,
+  videos = [],
   onPlay = () => {},
   onPause = () => {},
   onEnd = () => {},
+  playheadStart = 0,
 }) => {
   /*
     We're going to set up 4 context state objects in this component:
@@ -138,7 +142,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     totalDuration: 1,
     seekableDuration: 1,
     playableDuration: 1,
-    elapsedTime: 0,
+    elapsedTime: playheadStart,
   });
 
   // Vincent not using useMemo here is for you 😘
@@ -170,7 +174,9 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   // we need a session id for some analytics events. The session ID should be
   // created on mount, and different for each video player
   const { current: sessionId } = React.useRef<string>(Date.now().toString());
-  const analyticsMeta = { sessionId };
+  const { title = null } = presentationProps ?? {};
+  const id = videos[0]?.id ?? null;
+  const analyticsMeta = { sessionId, title, id };
 
   // ---------
   // setup onEnd effect on unmount
