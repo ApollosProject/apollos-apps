@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, ScrollView, StyleSheet } from 'react-native';
+import {
+  Platform,
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+} from 'react-native';
 import { get } from 'lodash';
 import {
   Button,
@@ -74,7 +79,9 @@ const IdentityEntry = ({
       style={StyleSheet.absoluteFill}
       edges={['right', 'top', 'left', 'bottom']}
     >
-      <FlexedKeyboardAvoidingView behavior={'padding'}>
+      <FlexedKeyboardAvoidingView
+        behavior={Platform.select({ android: undefined, ios: 'padding' })}
+      >
         <ScrollView
           keyboardShouldPersistTaps="always"
           contentInsetAdjustmentBehavior={'automatic'}
