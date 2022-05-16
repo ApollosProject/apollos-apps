@@ -297,7 +297,7 @@ PODS:
   - React-jsinspector (0.67.2)
   - React-logger (0.67.2):
     - glog
-  - react-native-apollos-player (3.5.0):
+  - react-native-apollos-player (3.6.0):
     - React
   - react-native-config (0.11.7):
     - React
@@ -309,7 +309,7 @@ PODS:
     - React-Core
   - react-native-maps (0.27.1):
     - React
-  - react-native-music-control (1.4.0):
+  - react-native-music-control (1.4.1):
     - React-Core
   - react-native-onesignal (4.3.6):
     - OneSignalXCFramework (= 3.10.0)
@@ -721,13 +721,13 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 52beb652bbc61201bd70cbe4f0b8edb607e8da4f
   React-jsinspector: 595f76eba2176ebd8817a1fffd47b84fbdab9383
   React-logger: 23de8ea0f44fa00ee77e96060273225607fd4d78
-  react-native-apollos-player: d68362bac15f6db6f48d8284bf83e67bebaa2aaf
+  react-native-apollos-player: 6c8da72f7a0e72bdd46fa9f8f0f8276ea6e5e221
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: c0efb872258ed9240f1003a70fca9e9757e5c785
   react-native-image-picker: 31971f6184e7c1dcb4fc1f122e1ba2c3fb11ef1e
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
-  react-native-music-control: 93b521377efdf2e49b46ccade8457f9503359b38
+  react-native-music-control: 3fc719c179a6562e18af1ac6e30ba9e33b397a31
   react-native-onesignal: 3ca13c0004f12bff30f479f1a303286fd119dd56
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
