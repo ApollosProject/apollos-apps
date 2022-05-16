@@ -15,8 +15,9 @@ const ProtectedRoute = () => {
     SplashScreen.hide();
     if (isLoggedIn) {
       navigation.replace('Tabs');
+    } else {
+      navigation.replace('Auth');
     }
-    navigation.replace('Auth');
   }, [isLoggedIn, navigation]);
 
   return null;
