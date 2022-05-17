@@ -2,65 +2,41 @@ name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   ios:
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Setup Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
-
-    - name: Install Bundler
-      run: gem install bundler
-
-    - name: Decrypt Environment Variables and Apple API Key
-      run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
-
-    - run: cp .env.shared .env
-
-    - name: Install Dependencies
-      run: yarn config set network-timeout 300000 && yarn
-
-    - name: Generate Fragment Types
-      run: eval $(grep APP_DATA_URL .env) && node ./scripts/get-introspection-data.js
-
-    - name: Fastlane Deploy
-      run: bundle exec fastlane ios deploy
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: ruby/setup-ruby@v1
+      - run: npm i -g @apollosproject/cli
+      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
+      - run: cp .env.shared .env
+      - run: yarn config set network-timeout 300000
+      - run: yarn
+      - run: node ./scripts/get-introspection-data.js
+      - run: apollos mobile deploy ios publish
 
   android:
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Setup Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
-
-    - name: Install Bundler
-      run: gem install bundler
-
-    - name: Decrypt Environment Variables and Keystore
-      run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
-
-    - run: cp .env.shared .env
-
-    - name: Install Dependencies
-      run: yarn config set network-timeout 300000 && yarn
-
-    - name: Generate Fragment Types
-      run: eval $(grep APP_DATA_URL .env) && node ./scripts/get-introspection-data.js
-
-    - name: Fastlane Deploy
-      run: bundle exec fastlane android deploy
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: ruby/setup-ruby@v1
+      - run: npm i -g @apollosproject/cli
+      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
+      - run: cp .env.shared .env
+      - run: yarn config set network-timeout 300000
+      - run: yarn
+      - run: node ./scripts/get-introspection-data.js
+      - run: apollos mobile deploy android publish
