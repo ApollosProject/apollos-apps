@@ -24,9 +24,15 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
     variables: { nodeId },
   });
 
-  if (error) return <ErrorCard error={error} />;
-  if (loading) return null;
-  if (!data?.node?.featureFeed?.id) return null;
+  if (error) {
+    return <ErrorCard error={error} />;
+  }
+  if (loading) {
+    return null;
+  }
+  if (!data?.node?.featureFeed?.id) {
+    return null;
+  }
 
   return (
     <RockAuthedWebBrowser>

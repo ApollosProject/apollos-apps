@@ -8,7 +8,9 @@ import safeOpenUrl from '../safeOpenUrl';
 import GET_CONTENT_ITEM_CONTENT from './getContentItemContent';
 
 const ContentHTMLViewConnected = ({ Component, contentId, onPressAnchor }) => {
-  if (!contentId) return <HTMLView isLoading />;
+  if (!contentId) {
+    return <HTMLView isLoading />;
+  }
 
   return (
     <Query
@@ -17,7 +19,9 @@ const ContentHTMLViewConnected = ({ Component, contentId, onPressAnchor }) => {
       fetchPolicy={'cache-and-network'}
     >
       {({ data: { node: { htmlContent } = {} } = {}, loading, error }) => {
-        if (!htmlContent && error) return <ErrorCard error={error} />;
+        if (!htmlContent && error) {
+          return <ErrorCard error={error} />;
+        }
         return (
           <Component
             isLoading={!htmlContent && loading}

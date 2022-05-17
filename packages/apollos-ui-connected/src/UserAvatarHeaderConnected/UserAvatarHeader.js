@@ -27,7 +27,10 @@ const UserAvatarHeader = ({
   });
 
   useEffect(() => {
-    if (refetch && refetchRef) refetchRef({ refetch, id: 'user-profile' });
+    if (refetch && refetchRef) {
+      refetchRef({ refetch, id: 'user-profile' });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const firstName = get(data, 'currentUser.profile.firstName');

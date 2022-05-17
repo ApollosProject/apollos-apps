@@ -204,8 +204,9 @@ function CommentListFeatureConnected({
     }
   };
 
-  if (featureId && refetch && refetchRef)
+  if (featureId && refetch && refetchRef) {
     refetchRef({ refetch, id: featureId });
+  }
 
   return (
     <>

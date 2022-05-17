@@ -19,8 +19,9 @@ function HeroListFeatureConnected({
       fetchPolicy="cache-and-network"
     >
       {({ data, loading, refetch }) => {
-        if (featureId && refetch && refetchRef)
+        if (featureId && refetch && refetchRef) {
           refetchRef({ refetch, id: featureId });
+        }
         return (
           <Component
             {...get(data, 'node')}

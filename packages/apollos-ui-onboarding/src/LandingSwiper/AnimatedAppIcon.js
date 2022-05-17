@@ -34,7 +34,7 @@ const Rotator = ({ index, size = 134 }) => {
     };
     const initialValues = {
       opacity: 0,
-      transform: [{ rotate: `0deg` }, { scale: 5 }],
+      transform: [{ rotate: '0deg' }, { scale: 5 }],
     };
     return {
       initialValues,

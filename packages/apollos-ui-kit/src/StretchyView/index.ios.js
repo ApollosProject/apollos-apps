@@ -10,9 +10,13 @@ import Stretchy from './Stretchy';
 const circular = () => {
   const seen = new WeakSet();
   return (key, value) => {
-    if (key.startsWith('_')) return undefined; // Don't compare React's internal props.
+    if (key.startsWith('_')) {
+      return undefined;
+    } // Don't compare React's internal props.
     if (typeof value === 'object' && value !== null) {
-      if (seen.has(value)) return undefined;
+      if (seen.has(value)) {
+        return undefined;
+      }
       seen.add(value);
     }
     return value;
@@ -64,8 +68,9 @@ class StretchyView extends PureComponent {
     const childrenAsComparableString = JSON.stringify(children, circular());
 
     // our linter isn't smart enough to detect that this is a functional component
-    useEffect(() => { // eslint-disable-line
-      if (this.state.stretchies[stretchyKey])
+    // eslint-disable-next-line
+    useEffect(() => {
+      if (this.state.stretchies[stretchyKey]) {
         this.handleStretchyLayout({
           stretchyKey,
           stretchOn,
@@ -73,6 +78,8 @@ class StretchyView extends PureComponent {
           style,
           ...otherProps,
         });
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [childrenAsComparableString]);
 
     return (
@@ -99,7 +106,9 @@ class StretchyView extends PureComponent {
   };
 
   getStretchyPortalOpacity = (key) => {
-    if (!this.state.stretchies[key]) return 1;
+    if (!this.state.stretchies[key]) {
+      return 1;
+    }
     const { stretchOn, y, height } = this.state.stretchies[key];
 
     if (stretchOn === 'top') {

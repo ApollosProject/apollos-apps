@@ -97,7 +97,9 @@ const NodeSingleConnectedWithMedia = ({
     data?.node?.liveStream?.media?.sources?.length;
 
   const mediaSource = useMemo(() => {
-    if (hasLivestream) return data?.node?.liveStream?.media?.sources[0];
+    if (hasLivestream) {
+      return data?.node?.liveStream?.media?.sources[0];
+    }
 
     if (hasVideo) {
       const video = data?.node?.videos?.find(({ sources }) => sources?.length);
@@ -116,12 +118,13 @@ const NodeSingleConnectedWithMedia = ({
     return null;
   }, [data, hasLivestream, hasVideo, hasAudio]);
 
-  if (!mediaSource)
+  if (!mediaSource) {
     return (
       <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
         {children}
       </NodeSingleConnected>
     );
+  }
 
   return (
     <BackgroundView>

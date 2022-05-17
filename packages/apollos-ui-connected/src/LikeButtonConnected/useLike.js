@@ -48,7 +48,9 @@ const useLike = (nodeId) => {
   });
 
   const like = useCallback(async () => {
-    if (!isLikeable) return;
+    if (!isLikeable) {
+      return;
+    }
     try {
       await likeInteraction();
       track({

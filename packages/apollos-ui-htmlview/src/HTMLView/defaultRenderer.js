@@ -60,7 +60,9 @@ export const wrapTextChildren = ({
       <Component key="composed-children">{currentTextChildren}</Component>
     );
   }
-  if (strip) return stripIllegalMarkup(newChildren);
+  if (strip) {
+    return stripIllegalMarkup(newChildren);
+  }
   return newChildren;
 };
 
@@ -168,7 +170,9 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
         url: node.attribs.src,
       };
 
-      if (source.url && isLocalImg(source.url)) return null;
+      if (source.url && isLocalImg(source.url)) {
+        return null;
+      }
 
       const imgStyles = {
         resizeMode: 'contain',

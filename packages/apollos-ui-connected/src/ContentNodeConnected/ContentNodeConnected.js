@@ -72,9 +72,13 @@ const ContentNodeConnected = ({
       fetchPolicy: 'cache-first',
     }
   );
-  if (!nodeId) return <HTMLView isLoading />;
+  if (!nodeId) {
+    return <HTMLView isLoading />;
+  }
 
-  if (!node?.htmlContent && error) return <ErrorCard error={error} />;
+  if (!node?.htmlContent && error) {
+    return <ErrorCard error={error} />;
+  }
 
   const coverImageSources = node?.coverImage?.sources || [];
   return (

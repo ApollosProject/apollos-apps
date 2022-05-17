@@ -43,7 +43,9 @@ const ProfileEntryConnected = ({ navigation, profileSchema, Component }) => {
     }
   `);
 
-  if (loading) return null;
+  if (loading) {
+    return null;
+  }
 
   return (
     <Formik

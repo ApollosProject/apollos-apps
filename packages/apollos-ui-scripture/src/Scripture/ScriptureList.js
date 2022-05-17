@@ -18,8 +18,12 @@ const ScriptureList = ({
   tabDestination,
   commas = true,
 }) => {
-  if (!references && commas) return '';
-  if (!references) return [];
+  if (!references && commas) {
+    return '';
+  }
+  if (!references) {
+    return [];
+  }
 
   let combo = references.map((reference) => `${reference}`);
 

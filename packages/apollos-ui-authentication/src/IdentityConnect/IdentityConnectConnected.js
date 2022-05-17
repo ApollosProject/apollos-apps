@@ -29,7 +29,9 @@ const IdentityConnectConnected = ({
     }
   `);
 
-  if (loading) return null;
+  if (loading) {
+    return null;
+  }
 
   return (
     <Formik

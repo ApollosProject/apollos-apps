@@ -6,7 +6,9 @@ import { PaddedView, named } from '@apollosproject/ui-kit';
 import GET_SCRIPTURE_NODE from './getScriptureNode';
 
 const ScriptureNodeConnected = ({ nodeId }) => {
-  if (!nodeId) return <ScriptureItem isLoading />;
+  if (!nodeId) {
+    return <ScriptureItem isLoading />;
+  }
   return (
     <Query
       query={GET_SCRIPTURE_NODE}

@@ -15,7 +15,9 @@ export const fieldProps = {
 
 const FieldTextAlignment = styled(({ textAlignment = 'LEFT' }) => {
   let textAlign = textAlignment.toLowerCase();
-  if (textAlign === 'natural') textAlign = 'left';
+  if (textAlign === 'natural') {
+    textAlign = 'left';
+  }
   return { textAlign };
 }, 'ui-passes.PassView.Fields.Field.FieldTextAlignment')(Text);
 

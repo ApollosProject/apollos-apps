@@ -42,7 +42,7 @@ const AddCommentInput = ({
   const safeArea = useSafeAreaInsets();
   const [bottomSheetIndex, setBottomSheetIndex] = useState(-1);
 
-  const fullScreenSnapPoints = useMemo(() => ['100%'], [safeArea.bottom]);
+  const fullScreenSnapPoints = ['100%'];
   // todo: when we have useTheme() replace this
   const snapPoints = useMemo(
     () => [48 + 16 + (safeArea.bottom || 16), '100%'],

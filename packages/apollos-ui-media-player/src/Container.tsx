@@ -225,6 +225,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                   </PlayerComponent>
                 </React.Fragment>
               ),
+              // eslint-disable-next-line react-hooks/exhaustive-deps
               [
                 children,
                 sourceComponents,

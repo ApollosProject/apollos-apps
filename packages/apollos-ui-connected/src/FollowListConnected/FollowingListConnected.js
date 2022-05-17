@@ -16,7 +16,10 @@ const FollowingListConnected = ({
   });
 
   useEffect(() => {
-    if (refetch && refetchRef) refetchRef({ refetch, id: 'following-list' });
+    if (refetch && refetchRef) {
+      refetchRef({ refetch, id: 'following-list' });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const suggestedFollows = data?.usersFollowing || [];

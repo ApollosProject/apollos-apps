@@ -12,7 +12,9 @@ const ContentParentFeedConnected = ({
   ...props
 }) => {
   const loadingEnabled = loadingStateTypes.includes(nodeId.split(':')[0]);
-  if (!nodeId && !loadingEnabled) return null;
+  if (!nodeId && !loadingEnabled) {
+    return null;
+  }
 
   return (
     <HorizontalFeedConnected

@@ -65,7 +65,9 @@ const PrayerScreen = ({
   });
 
   const handleOnPressPrimary = () => {
-    if (onPressPrimary) onPressPrimary();
+    if (onPressPrimary) {
+      onPressPrimary();
+    }
     pray();
   };
 

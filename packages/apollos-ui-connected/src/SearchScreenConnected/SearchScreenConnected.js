@@ -34,6 +34,7 @@ function SearchScreenConnected(props) {
     if (!isFocused && searchText === '') {
       props.navigation.pop();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFocused]);
 
   const navigation = useNavigation();

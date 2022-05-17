@@ -19,8 +19,10 @@ const UserAvatarConnected = ({
   });
 
   useEffect(() => {
-    if (refetch && refetchRef)
+    if (refetch && refetchRef) {
       refetchRef({ refetch, id: 'user-profile-image' });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const profile = data?.currentUser?.profile || {};

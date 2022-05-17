@@ -33,6 +33,7 @@ const NotificationsConnected = () => {
     return () => {
       AppState.removeEventListener('change', handleAppStateChange);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

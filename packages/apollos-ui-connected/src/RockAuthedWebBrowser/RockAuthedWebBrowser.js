@@ -36,9 +36,12 @@ const RockAuthedInAppBrowser = {
       // use auth cookie or query param
       if (auth.useRockCookie || auth.useRockToken) {
         creds = await getRockAuthDetails(client);
-        if (auth.useRockCookie) headers = { Cookie: creds.authCookie };
-        if (auth.useRockToken)
+        if (auth.useRockCookie) {
+          headers = { Cookie: creds.authCookie };
+        }
+        if (auth.useRockToken) {
           url.searchParams.append('rckipid', creds.authToken);
+        }
       }
       const isValidUrl = ['http', 'https'].includes(
         url.toString().split(':')[0].toLowerCase()
@@ -52,7 +55,9 @@ const RockAuthedInAppBrowser = {
           headers,
           ...options,
         });
-      } else Linking.openURL(isValidUrl ? url.toString() : baseURL);
+      } else {
+        Linking.openURL(isValidUrl ? url.toString() : baseURL);
+      }
     } catch (e) {
       // eslint-disable-next-line no-console
       console.warn(e);

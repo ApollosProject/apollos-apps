@@ -13,9 +13,12 @@ const VerticalPrayerListFeatureConnected = ({ featureId, refetchRef }) => {
       variables: { featureId },
     }
   );
-  if (error || loading) return null;
-  if (featureId && refetch && refetchRef)
+  if (error || loading) {
+    return null;
+  }
+  if (featureId && refetch && refetchRef) {
     refetchRef({ refetch, id: featureId });
+  }
   return (
     <VerticalPrayerListFeature
       title={data?.node?.title ?? ''}

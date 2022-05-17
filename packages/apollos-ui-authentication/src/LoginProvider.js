@@ -9,8 +9,12 @@ function getParameterByName(paramName, url) {
   const fixedName = paramName.replace(/[[\]]/g, '\\$&');
   const regex = new RegExp(`[?&]${fixedName}(=([^&#]*)|&|#|$)`);
   const results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
+  if (!results) {
+    return null;
+  }
+  if (!results[2]) {
+    return '';
+  }
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
@@ -31,10 +35,15 @@ const LoginProvider = ({ children, closeAuth }) => {
       const urlIdentity = getParameterByName('identity', url);
       const urlCode = getParameterByName('code', url);
       const urlAuthType = getParameterByName('authType', url);
-      if (urlCode) setCode(urlCode);
-      if (urlAuthType) setAuthType(urlAuthType);
-      if (urlIdentity && urlAuthType)
+      if (urlCode) {
+        setCode(urlCode);
+      }
+      if (urlAuthType) {
+        setAuthType(urlAuthType);
+      }
+      if (urlIdentity && urlAuthType) {
         setIdentity({ [urlAuthType]: urlIdentity });
+      }
     }
   };
 

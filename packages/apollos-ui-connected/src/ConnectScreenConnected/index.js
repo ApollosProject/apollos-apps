@@ -21,9 +21,9 @@ const ConnectScreenConnected = (props) => {
   const refetchFunctions = useRef({});
   const [isRefetching, setIsRefetching] = useState(false);
 
-  const refetchRef = useCallback(({ id, refetch }) => {
+  const refetchRef = ({ id, refetch }) => {
     refetchFunctions.current[id] = refetch;
-  });
+  };
 
   const handleRefetch = async () => {
     if (!isRefetching) {

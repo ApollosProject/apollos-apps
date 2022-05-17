@@ -24,8 +24,10 @@ const HorizontalFeedConnected = ({
     variables,
     fetchPolicy: 'cache-and-network',
   });
-  if (error) return null;
-  if (isLoading || loading)
+  if (error) {
+    return null;
+  }
+  if (isLoading || loading) {
     return (
       <Component
         isLoading
@@ -46,6 +48,7 @@ const HorizontalFeedConnected = ({
         initialScrollIndex={0}
       />
     );
+  }
 
   const { content, nextCursor, currentIndex } = mapContentFromData({
     data,

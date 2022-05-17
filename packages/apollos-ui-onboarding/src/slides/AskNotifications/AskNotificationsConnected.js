@@ -36,6 +36,7 @@ const AskNotificationsWithStatus = ({
       ? status.hasPushPermission || status.hasPrompted
       : status.hasPushPermission;
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => status.checkPermissions(), []);
   return (
     <Component

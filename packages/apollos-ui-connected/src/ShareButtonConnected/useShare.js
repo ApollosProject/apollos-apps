@@ -17,8 +17,9 @@ const useShare = (nodeId, { title, message, url } = {}) => {
   return useCallback(() => {
     const sharing = node?.sharing || {};
 
-    if (!loading && !sharing?.title && !sharing?.message && !sharing?.url)
+    if (!loading && !sharing?.title && !sharing?.message && !sharing?.url) {
       return null;
+    }
 
     const content = {
       id: nodeId,

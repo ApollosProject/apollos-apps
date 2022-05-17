@@ -12,7 +12,9 @@ export default function fetchMoreResolver({
     const edgePath = `${collectionName}.edges`;
 
     const after = get(data, `${pageInfoPath}.endCursor`);
-    if (!after) return;
+    if (!after) {
+      return;
+    }
 
     fetchMore({
       variables: { ...variables, after },

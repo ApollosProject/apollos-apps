@@ -10,7 +10,9 @@ async function safeHandleUrl(url, { external = false } = {}) {
 
     const canWeOpenUrl = await Linking.canOpenURL(url);
 
-    if (canWeOpenUrl) return Linking.openURL(url);
+    if (canWeOpenUrl) {
+      return Linking.openURL(url);
+    }
   } catch (e) {
     console.warn(e);
   }

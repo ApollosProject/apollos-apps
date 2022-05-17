@@ -20,7 +20,7 @@ const mock = {
           __typename: 'Person',
           id: 'Person:123',
           photo: {
-            uri: `https://picsum.photos/200`,
+            uri: 'https://picsum.photos/200',
             __typename: 'ImageMediaSource',
           },
         },

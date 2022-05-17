@@ -9,7 +9,7 @@ import { MockedProvider } from '@apollo/client/testing';
 
 import RockAuthedWebBrowser from '.';
 
-describe(`RockAuthedWebBrowser Consumer`, () => {
+describe('RockAuthedWebBrowser Consumer', () => {
   it('passes a function', async () => {
     renderer.create(
       <Providers MockedProvider={MockedProvider}>

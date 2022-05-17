@@ -88,7 +88,9 @@ class AddToAppleWalletButton extends Component {
   };
 
   render() {
-    if (!this.state.canAddPasses || !this.props.url) return null;
+    if (!this.state.canAddPasses || !this.props.url) {
+      return null;
+    }
     return (
       <AppleWalletButton
         onPress={this.handlePress}

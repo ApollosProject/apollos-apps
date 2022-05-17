@@ -33,6 +33,7 @@ function PrayerFeatureConnected({
 
   useEffect(() => {
     setHasSeenOnboarding();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [onboardingKey]);
 
   const handleOpenTo = (index = 0) => {
@@ -48,13 +49,16 @@ function PrayerFeatureConnected({
       fetchPolicy="cache-and-network"
     >
       {({ data, loading, refetch }) => {
-        if (featureId && refetch && refetchRef)
+        if (featureId && refetch && refetchRef) {
           refetchRef({ refetch, id: featureId });
+        }
 
         const handleOnFinish = () => {
           const prayers = data?.node?.prayers || [];
           const allPrayed = !prayers.find((prayer) => !prayer.isPrayed);
-          if (allPrayed) refetch();
+          if (allPrayed) {
+            refetch();
+          }
           setModalOpened(false);
         };
 

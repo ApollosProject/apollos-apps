@@ -20,7 +20,9 @@ const HorizontalLikedContentFeedConnected = ({ Component, refetchRef }) => {
   });
 
   useEffect(() => {
-    if (refetch && refetchRef) refetchRef({ refetch, id: 'liked-list' });
+    if (refetch && refetchRef) {
+      refetchRef({ refetch, id: 'liked-list' });
+    }
   }, [refetchRef, refetch]);
 
   return edges.length ? (

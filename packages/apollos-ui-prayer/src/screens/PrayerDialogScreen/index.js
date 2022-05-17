@@ -54,6 +54,7 @@ const PrayerDialogScreen = ({
       toValue: visible ? 1 : 0,
       useNativeDriver: true,
     }).start();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
 
   const window = Dimensions.get('window');

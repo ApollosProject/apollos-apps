@@ -126,6 +126,7 @@ const PrayerInput = ({
     if (completed) {
       handleOnChangeText('');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [completed]);
 
   return !isEditing && prayer === '' ? (

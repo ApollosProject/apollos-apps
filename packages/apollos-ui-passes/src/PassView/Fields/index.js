@@ -15,7 +15,7 @@ export const FieldSet = styled(
 
 const Fields = ({ fields, isLoading, ...other }) => {
   let fieldsToRender = fields;
-  if (isLoading)
+  if (isLoading) {
     fieldsToRender = [
       {
         key: 'loading',
@@ -24,6 +24,7 @@ const Fields = ({ fields, isLoading, ...other }) => {
         label: '',
       },
     ];
+  }
   return fieldsToRender.map((field) => (
     <Field {...field} key={field.key} {...other} />
   ));

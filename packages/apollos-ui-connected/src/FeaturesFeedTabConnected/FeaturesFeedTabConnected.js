@@ -110,7 +110,9 @@ const FeatureFeedTabConnected = ({
     }
   );
 
-  if (loading || error) return null;
+  if (loading || error) {
+    return null;
+  }
   return (
     <>
       {useTagFilter ? (

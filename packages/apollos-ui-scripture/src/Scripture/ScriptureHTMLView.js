@@ -40,7 +40,7 @@ const renderer = (node, { children, ...other }) => {
       <VerseNumber>
         {' '}
         {children}
-        {`\u00A0`}
+        {'\u00A0'}
       </VerseNumber>
     );
   }
@@ -118,9 +118,9 @@ const renderer = (node, { children, ...other }) => {
   if (className.includes('qs')) {
     return (
       <PoeticPause>
-        {Platform.OS === 'ios' ? `\n` : null}
+        {Platform.OS === 'ios' ? '\n' : null}
         {children}
-        {Platform.OS === 'ios' ? `\n` : `\n\n`}
+        {Platform.OS === 'ios' ? '\n' : '\n\n'}
       </PoeticPause>
     );
   }

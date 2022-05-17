@@ -63,7 +63,9 @@ class HTMLView extends PureComponent {
     return dom
       .map((node, index) => {
         let children = [];
-        if (node.children) children = this.renderDom(node.children);
+        if (node.children) {
+          children = this.renderDom(node.children);
+        }
 
         let renderedNode = this.props.renderer(
           node,

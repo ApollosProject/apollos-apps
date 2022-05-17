@@ -32,6 +32,7 @@ function IdentityEntryConnected(props) {
     if (props?.route?.params?.newUser != null) {
       setNewUser(props?.route?.params?.newUser);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOnSubmit = async (

@@ -11,15 +11,18 @@ import GET_CONTENT_CARD from './getContentCard';
 
 const ContentCardConnected = named('ContentCardConnected')(
   ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
-    if (!contentId || isLoading)
+    if (!contentId || isLoading) {
       return <Component {...otherProps} isLoading tile={tile} />;
+    }
 
     return (
       <LiveConsumer contentId={contentId}>
         {(liveStream) => (
           <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
             {({ data: { node = {} } = {}, loading, error }) => {
-              if (error) return <ErrorCard error={error} />;
+              if (error) {
+                return <ErrorCard error={error} />;
+              }
 
               const coverImage = get(node, 'coverImage.sources', undefined);
               const hasMedia = !!get(node, 'videos.[0].sources[0]', null);

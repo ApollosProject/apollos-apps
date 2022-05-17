@@ -1,3 +1,5 @@
+/* global React, JSX */
+
 export interface IPlayerMedia {
   /** Media Source to play. Passed unaltered to underyling Video component */
   source?: { uri?: string; html?: string };

@@ -67,7 +67,9 @@ const UserSettings = () => {
   const lastName = get(data, 'currentUser.profile.lastName');
 
   // if (loading) return <ActivityIndicator />;
-  if (!isLoggedIn) return null;
+  if (!isLoggedIn) {
+    return null;
+  }
   return (
     <BackgroundView>
       <ScrollView>

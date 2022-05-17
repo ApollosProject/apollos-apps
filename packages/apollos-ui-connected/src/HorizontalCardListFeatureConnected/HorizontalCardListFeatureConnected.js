@@ -19,8 +19,9 @@ const HorizontalCardListFeatureConnected = ({
     variables={{ featureId }}
   >
     {({ data, loading, refetch }) => {
-      if (featureId && refetch && refetchRef)
+      if (featureId && refetch && refetchRef) {
         refetchRef({ refetch, id: featureId });
+      }
       return (
         <Component
           {...get(data, 'node')}

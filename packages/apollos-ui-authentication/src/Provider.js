@@ -76,6 +76,7 @@ const AuthContextProvider = ({ children }) => {
     if (pushId && isLoggedIn) {
       updatePushId({ variables: { input: { pushProviderUserId: pushId } } });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pushId, isLoggedIn]);
 
   // Callback used for logging in.
@@ -102,6 +103,7 @@ const AuthContextProvider = ({ children }) => {
     setRefreshToken(null);
 
     setLoggedIn(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

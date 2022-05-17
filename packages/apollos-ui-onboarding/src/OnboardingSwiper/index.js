@@ -76,7 +76,9 @@ class OnboardingSwiper extends Component {
     });
 
     // if there are no slides, we're done
-    if (!unseenSlides.length) this.props.onComplete();
+    if (!unseenSlides.length) {
+      this.props.onComplete();
+    }
 
     return unseenSlides;
   }

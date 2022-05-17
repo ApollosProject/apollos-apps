@@ -104,7 +104,9 @@ class NotificationsInit extends Component {
   }
 
   navigate = (rawUrl) => {
-    if (!rawUrl) return;
+    if (!rawUrl) {
+      return;
+    }
     // this is the long term solution
     if (this.props.handleExternalLink) {
       this.props.handleExternalLink(rawUrl);

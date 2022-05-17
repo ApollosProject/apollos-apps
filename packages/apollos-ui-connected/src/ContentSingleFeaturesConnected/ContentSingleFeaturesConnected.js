@@ -13,7 +13,9 @@ const ContentSingleFeaturesConnected = ({
   nodeId,
   ...props
 }) => {
-  if (!contentId && !nodeId) return null;
+  if (!contentId && !nodeId) {
+    return null;
+  }
 
   return (
     <Query
@@ -22,12 +24,18 @@ const ContentSingleFeaturesConnected = ({
       variables={{ contentId: contentId || nodeId }}
     >
       {({ data: { node } = {}, loading, error }) => {
-        if (error) return <ErrorCard error={error} />;
+        if (error) {
+          return <ErrorCard error={error} />;
+        }
         // TODO: set an optimistic response for this query to return a visually appeallying empty query so we can enable loading states
-        if (loading) return null;
+        if (loading) {
+          return null;
+        }
 
         const features = get(node, 'features', []);
-        if (!features || !features.length) return null;
+        if (!features || !features.length) {
+          return null;
+        }
 
         return (
           console.warn(

@@ -11,8 +11,9 @@ const ActionBarConnected = ({ featureId, refetchRef, ...props }) => (
     fetchPolicy="cache-and-network"
   >
     {({ data, refetch }) => {
-      if (featureId && refetch && refetchRef)
+      if (featureId && refetch && refetchRef) {
         refetchRef({ refetch, id: featureId });
+      }
       const node = data?.node || {};
       return (
         <ActionBarFeature {...props} {...node} actions={node.actions || []} />

@@ -26,8 +26,9 @@ const AddCommentFeatureConnected = ({
     },
   });
 
-  if (featureId && refetch && refetchRef)
+  if (featureId && refetch && refetchRef) {
     refetchRef({ refetch, id: featureId });
+  }
 
   const currentPerson = data?.currentUser;
   const node = data?.node;
