@@ -11,13 +11,13 @@ import FeaturesFeedConnected from '../FeaturesFeedConnected';
 import ContentFeed from '../ContentFeedConnected';
 import TagFilterConnected from '../TagFilterConnected';
 
-const Tab = ({ useTagFilter, feedViewProps, additionalFeatures }) => {
+const Tab = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const [filteredTags, setFilteredTags] = useState([]);
   return (
     <>
-      {useTagFilter ? (
+      {route.params.showTags ? (
         <TagFilterConnected
           filteredTags={filteredTags}
           setFilteredTags={setFilteredTags}
@@ -30,8 +30,6 @@ const Tab = ({ useTagFilter, feedViewProps, additionalFeatures }) => {
               openUrl={openUrl}
               featureFeedId={route.params.featureFeedId}
               navigation={navigation}
-              feedViewProps={feedViewProps}
-              additionalFeatures={additionalFeatures}
             />
           </BackgroundView>
         )}
@@ -40,33 +38,20 @@ const Tab = ({ useTagFilter, feedViewProps, additionalFeatures }) => {
   );
 };
 
-Tab.propTypes = {
-  useTagFilter: PropTypes.bool,
-  feedViewProps: PropTypes.shape({}),
-  additionalFeatures: PropTypes.shape({}),
-};
-
-Tab.defaultProps = {
-  useTagFilter: false,
-  feedViewProps: {},
-  additionalFeatures: {},
-};
-
-export const createTab = ({ featureFeedId, title, screenOptions, options }) => {
+export const createTab = ({ featureFeedId, title, options, showTags }) => {
   const TabStack = createNativeStackNavigator();
   const TabNav = () => (
     <TabStack.Navigator
       screenOptions={{
         headerHideShadow: true,
         headerLargeTitle: true,
-        ...screenOptions,
       }}
     >
       <TabStack.Screen
         name={title}
         component={Tab}
         options={options}
-        initialParams={{ featureFeedId }}
+        initialParams={{ featureFeedId, showTags }}
       />
       <TabStack.Screen
         component={ContentFeed}

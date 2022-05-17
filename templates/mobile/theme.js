@@ -30,6 +30,7 @@ const TABS = {
   },
   Read: {
     showProfile: true,
+    showTags: true,
   },
   Watch: {
     showProfile: true,

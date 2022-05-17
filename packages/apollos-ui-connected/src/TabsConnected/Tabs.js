@@ -87,12 +87,13 @@ const Tabs = ({ tabs }) => {
   }, [client]);
   const tabNavs = useMemo(
     () =>
-      tabs.map(({ title, icon, feed }) => ({
+      tabs.map(({ title, icon, feed }, i) => ({
         title,
         icon,
         component: createTab({
           featureFeedId: feed.id,
           options: {
+            headerLargeTitle: i !== 0,
             ...(ApollosConfig.TABS[title]?.showLogo
               ? { headerCenter: HeaderLogo }
               : {}),
@@ -102,9 +103,9 @@ const Tabs = ({ tabs }) => {
             ...(ApollosConfig.TABS[title]?.showProfile
               ? { headerLeft: ProfileButton }
               : {}),
-            ...(ApollosConfig.TABS[title] ?? {}),
           },
           title,
+          showTags: ApollosConfig.TABS[title]?.showTags || false,
         }),
       })),
     [tabs]
