@@ -54,6 +54,7 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-map-view": "*",
     "@apollosproject/ui-notifications": "*",
+    "@react-native-community/async-storage": "*",
     "react": "*",
     "react-native": "*",
     "react-native-reanimated": "^2.0.0",
@@ -61,7 +62,6 @@
     "react-navigation-shared-element": "*"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.5.1",
     "formik": "2.2.9",
     "lodash": "4.17.21",
     "moment": "2.29.2",
