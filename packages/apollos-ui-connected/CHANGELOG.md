@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
+
+
+### Features
+
+* Content progression ([#2500](https://github.com/apollosproject/apollos-apps/issues/2500)) ([fbbaaea](https://github.com/apollosproject/apollos-apps/commit/fbbaaeabf0fa023a9acedb612dc324aa12f3dd5e))
+
+
+### Bug Fixes
+
+* adds a default style prop to handle title overflow ([#2479](https://github.com/apollosproject/apollos-apps/issues/2479)) ([be980a0](https://github.com/apollosproject/apollos-apps/commit/be980a0a7d7ff4f6ddb91a228821a084b5816183))
+* repair tags list on tabs ([#2506](https://github.com/apollosproject/apollos-apps/issues/2506)) ([a060af5](https://github.com/apollosproject/apollos-apps/commit/a060af5a89d298ec865281d957b6bca531743812))
+
+
+
 ## [3.6.0](https://github.com/apollosproject/apollos-apps/compare/v3.5.0...v3.6.0) (2022-05-05)
 
 

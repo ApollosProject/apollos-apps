@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
+
+
+### Bug Fixes
+
+* adds a default style prop to handle title overflow ([#2479](https://github.com/apollosproject/apollos-apps/issues/2479)) ([be980a0](https://github.com/apollosproject/apollos-apps/commit/be980a0a7d7ff4f6ddb91a228821a084b5816183))
+
+
+
 ## [3.6.0](https://github.com/apollosproject/apollos-apps/compare/v3.5.0...v3.6.0) (2022-05-05)
 
 **Note:** Version bump only for package @apollosproject/ui-prayer

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
+
+
+### Bug Fixes
+
+* only set KeyboardAvoidingView behavior for ios ([#2503](https://github.com/apollosproject/apollos-apps/issues/2503)) ([ae97268](https://github.com/apollosproject/apollos-apps/commit/ae97268138b8f82a85c3e29eaa7a94475235b535))
+
+
+
 ## [3.6.0](https://github.com/apollosproject/apollos-apps/compare/v3.5.0...v3.6.0) (2022-05-05)
 
 
