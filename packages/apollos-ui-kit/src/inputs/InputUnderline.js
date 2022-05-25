@@ -40,7 +40,9 @@ const InputUnderline = ({
     inputRange: [0, 1],
     outputRange: [0.0001, 1],
   });
-  if (hasError) scaleX = 1;
+  if (hasError) {
+    scaleX = 1;
+  }
 
   const transform = [{ scaleX }];
 

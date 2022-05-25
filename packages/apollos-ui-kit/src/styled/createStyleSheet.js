@@ -11,7 +11,9 @@ const createStyleSheet = (stylesToGenerate) => {
 
   // Load style from cache or add style to stylesheet
   styles.forEach((style, index) => {
-    if (typeof style !== 'object' || !style) return;
+    if (typeof style !== 'object' || !style) {
+      return;
+    }
     const hash = styleHasher(style);
     if (cachedStyles[hash]) {
       styles[index] = cachedStyles[hash];

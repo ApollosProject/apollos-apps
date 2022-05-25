@@ -93,21 +93,32 @@ const ContentTitles = ({
   onPressShare,
   actionIcon,
 }) => {
-  if (featured && micro)
+  if (featured && micro) {
     console.warn(
       'You are using both featured and micro on ContentTitles, which is not supported'
     );
+  }
 
   let Title = H3;
-  if (featured) Title = H2;
-  if (micro) Title = H4;
+  if (featured) {
+    Title = H2;
+  }
+  if (micro) {
+    Title = H4;
+  }
 
   let Summary = BodyText;
-  if (micro) Summary = BodySmall;
+  if (micro) {
+    Summary = BodySmall;
+  }
 
   let numberOfTitleLines = 3;
-  if (summary || micro) numberOfTitleLines = 2;
-  if (micro && summary && label) numberOfTitleLines = 1;
+  if (summary || micro) {
+    numberOfTitleLines = 2;
+  }
+  if (micro && summary && label) {
+    numberOfTitleLines = 1;
+  }
 
   return (
     <Container>

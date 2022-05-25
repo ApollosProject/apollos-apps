@@ -23,7 +23,7 @@ Object.keys(icons).forEach((iconName) => {
   });
 });
 
-describe(`The Icon component`, () => {
+describe('The Icon component', () => {
   it('return null for a missing icon', () => {
     const tree = renderer.create(
       <Providers>

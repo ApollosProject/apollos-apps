@@ -39,11 +39,15 @@ class DateInput extends PureComponent {
 
   handleClose = () => {
     this.setState({ isVisible: false });
-    if (this.props.onBlur) this.props.onBlur();
+    if (this.props.onBlur) {
+      this.props.onBlur();
+    }
   };
 
   handleConfirm = (value) => {
-    if (this.props.onChange) this.props.onChange(value);
+    if (this.props.onChange) {
+      this.props.onChange(value);
+    }
     if (this.props.onChangeText) {
       this.props.onChangeText(moment(value).format('MM/DD/YYYY'));
     }

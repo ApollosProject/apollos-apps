@@ -11,7 +11,9 @@ import Stretchy from './ReanimatedStretchy';
 
 const StretchyView = ({ children, scrollY: scrollYProp }) => {
   let scrollY = useSharedValue(0);
-  if (scrollYProp) scrollY = scrollYProp;
+  if (scrollYProp) {
+    scrollY = scrollYProp;
+  }
 
   const onScroll = useAnimatedScrollHandler((event) => {
     scrollY.value = event.contentOffset.y;

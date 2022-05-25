@@ -67,10 +67,11 @@ const Chip = enhance(
     ...buttonProps
   }) => {
     // TODO remove deprecated props
-    if (icon)
+    if (icon) {
       console.warn(
         'icon prop deprecated. Passing a custom Icon through children is recommended.'
       );
+    }
     return (
       <StyledButton
         TouchableComponent={TouchableOpacity}

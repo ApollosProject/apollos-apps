@@ -64,8 +64,12 @@ const SocialBar = ({ onPressLike, onPressShare, isLiked, children, style }) => {
   // If only share button, flex the button to the right
   // Otherwise, distribute space between the buttons
   let justifyContent = 'space-between';
-  if (!onPressLike && onPressShare && !children) justifyContent = 'flex-end';
-  if (onPressLike && !onPressShare && !children) justifyContent = 'flex-start';
+  if (!onPressLike && onPressShare && !children) {
+    justifyContent = 'flex-end';
+  }
+  if (onPressLike && !onPressShare && !children) {
+    justifyContent = 'flex-start';
+  }
   const containerStyle = useMemo(() => ({ justifyContent }), [justifyContent]);
 
   return (

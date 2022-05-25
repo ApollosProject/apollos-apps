@@ -108,7 +108,9 @@ const Editor = ({
 
   const handleStopWriting = useCallback(() => {
     setIsEditing(false);
-    if (!text.value?.length) bottomSheetModalRef.current?.collapse();
+    if (!text.value?.length) {
+      bottomSheetModalRef.current?.collapse();
+    }
   }, [bottomSheetModalRef, text]);
 
   const handleDismiss = useCallback(() => {
@@ -151,7 +153,9 @@ const Editor = ({
     // the navigation header while the keyboard is visible is borked on the
     // react-native-screens side of things. Not sure why 🤔
     let shouldShowHeader = headerShown;
-    if (Platform.OS === 'android') shouldShowHeader = false;
+    if (Platform.OS === 'android') {
+      shouldShowHeader = false;
+    }
 
     navigation.setOptions({
       headerShown: shouldShowHeader,

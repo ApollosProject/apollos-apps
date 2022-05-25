@@ -10,7 +10,9 @@ storiesOf('ui-kit/typography/OrderedListItem', module)
   .add('Default', () => (
     <PaddedView>
       <OrderedListItem index={1}>
-        {`"God's work done in God's way will never lack God's supplies." – Hudson Taylor`}
+        {
+          "\"God's work done in God's way will never lack God's supplies.\" – Hudson Taylor"
+        }
       </OrderedListItem>
     </PaddedView>
   ))
@@ -20,7 +22,9 @@ storiesOf('ui-kit/typography/OrderedListItem', module)
     return (
       <SetIsLoading isLoading>
         <OrderedListItem index={1}>
-          {`"God's work done in God's way will never lack God's supplies." – Hudson Taylor`}
+          {
+            "\"God's work done in God's way will never lack God's supplies.\" – Hudson Taylor"
+          }
         </OrderedListItem>
       </SetIsLoading>
     );

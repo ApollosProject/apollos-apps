@@ -33,7 +33,9 @@ const PlaceholderInitials = styled(({ themeSize, theme }) => ({
 }))(Text);
 
 const initialsToColor = (initials, s = 40, l = 60) => {
-  if (!initials) return null;
+  if (!initials) {
+    return null;
+  }
 
   let hash = 0;
   initials.split('').forEach((char) => {

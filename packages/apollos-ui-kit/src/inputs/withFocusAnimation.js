@@ -35,15 +35,21 @@ const withFocusAnimation = (Component) =>
     };
 
     handleFocus = (...args) => {
-      if (this.props.onFocus) this.props.onFocus(...args);
+      if (this.props.onFocus) {
+        this.props.onFocus(...args);
+      }
       this.focused = true;
       this.playAnimation(1);
     };
 
     handleBlur = (event, ...other) => {
-      if (this.props.onBlur) this.props.onBlur(event, ...other);
+      if (this.props.onBlur) {
+        this.props.onBlur(event, ...other);
+      }
       this.focused = false;
-      if (!event.nativeEvent.text) this.playAnimation(0);
+      if (!event.nativeEvent.text) {
+        this.playAnimation(0);
+      }
     };
 
     render() {

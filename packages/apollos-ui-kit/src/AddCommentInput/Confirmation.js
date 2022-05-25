@@ -75,7 +75,9 @@ const Confirmation = ({
   const headerRight = useMemo(
     // eslint-disable-next-line react/display-name
     () => () => {
-      if (isSubmitting) return <ActivityIndicator />;
+      if (isSubmitting) {
+        return <ActivityIndicator />;
+      }
       return (
         <SaveButton onPress={onPressSave}>
           {share === 'PUBLIC' ? 'Share' : 'Save'}

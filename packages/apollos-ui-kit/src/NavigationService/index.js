@@ -55,7 +55,9 @@ const goBack = performWhenReady((from) => {
   let key;
   if (from) {
     const route = _navigator.state.nav.routes.find((r) => r.routeName === from);
-    if (route) ({ key } = route);
+    if (route) {
+      ({ key } = route);
+    }
   }
   _navigator.dispatch(CommonActions.back({ key }));
 });

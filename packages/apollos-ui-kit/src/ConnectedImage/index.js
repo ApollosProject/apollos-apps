@@ -17,18 +17,30 @@ export const ImageSourceType = PropTypes.oneOfType([
 export const sizeCache = {};
 
 export const getCacheKey = (source) => {
-  if (!source) return undefined;
-  if (source.url) return source.url;
-  if (source.uri) return source.uri;
-  if (typeof source === 'string') return source;
+  if (!source) {
+    return undefined;
+  }
+  if (source.url) {
+    return source.url;
+  }
+  if (source.uri) {
+    return source.uri;
+  }
+  if (typeof source === 'string') {
+    return source;
+  }
   return undefined;
 };
 
 export const getCachedSources = (_sources = []) => {
   let sources = _sources;
-  if (!Array.isArray(sources)) sources = [sources];
+  if (!Array.isArray(sources)) {
+    sources = [sources];
+  }
   sources = sources.map((source) => {
-    if (typeof source === 'string') return { url: source };
+    if (typeof source === 'string') {
+      return { url: source };
+    }
     return source;
   });
 
@@ -93,7 +105,9 @@ const ConnectedImage = ({
   }
 
   const handleOnLoad = (e) => {
-    if (onLoad) onLoad(e);
+    if (onLoad) {
+      onLoad(e);
+    }
     const {
       nativeEvent: { source: loadedSource },
     } = e;
@@ -118,7 +132,9 @@ const ConnectedImage = ({
 };
 
 const aspectRatioPropValidator = (props, propName, componentName) => {
-  if (props[propName] === undefined) return;
+  if (props[propName] === undefined) {
+    return;
+  }
 
   let errorMessage = '';
 

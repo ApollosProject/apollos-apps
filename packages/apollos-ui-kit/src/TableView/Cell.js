@@ -25,7 +25,9 @@ const Container = styled(
 const Cell = ({ children, ...otherProps }) => (
   <Container {...otherProps}>
     {Children.map(children, (child, i) => {
-      if (i === 0) return asFirstChild(child);
+      if (i === 0) {
+        return asFirstChild(child);
+      }
       return child;
     })}
   </Container>

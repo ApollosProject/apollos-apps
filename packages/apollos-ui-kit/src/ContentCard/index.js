@@ -17,7 +17,9 @@ import CardFooter from './CardFooter';
 
 const ContentCardWrapper = styled(({ tile }) => {
   const style = {};
-  if (tile) style.width = Dimensions.get('window').width * 0.66;
+  if (tile) {
+    style.width = Dimensions.get('window').width * 0.66;
+  }
   return style;
 })(Card);
 
@@ -47,7 +49,9 @@ class ContentCard extends PureComponent {
   };
 
   renderCardHeader() {
-    if (this.props.header) return this.props.header;
+    if (this.props.header) {
+      return this.props.header;
+    }
     if (this.props.coverImage || this.props.isLoading) {
       let forceRatio = null;
       if (this.props.isLoading) {
@@ -72,8 +76,12 @@ class ContentCard extends PureComponent {
   }
 
   renderCardContent() {
-    if (this.props.content) return this.props.content;
-    if (!this.props.title && !this.props.isLoading) return null;
+    if (this.props.content) {
+      return this.props.content;
+    }
+    if (!this.props.title && !this.props.isLoading) {
+      return null;
+    }
     return (
       <ContentText
         tile={this.props.tile}
@@ -85,8 +93,12 @@ class ContentCard extends PureComponent {
   }
 
   renderCardFooter() {
-    if (this.props.footer) return this.props.footer;
-    if (!this.props.metrics && !this.props.isLoading) return null;
+    if (this.props.footer) {
+      return this.props.footer;
+    }
+    if (!this.props.metrics && !this.props.isLoading) {
+      return null;
+    }
 
     const floating =
       !this.props.isLoading && this.props.coverImage && !this.props.title;

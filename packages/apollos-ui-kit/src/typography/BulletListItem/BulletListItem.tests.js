@@ -12,7 +12,9 @@ describe('the BulletListItem component', () => {
     const tree = renderer.create(
       <Providers>
         <BulletListItem>
-          {`"God's work done in God's way will never lack God's supplies." – Hudson Taylor`}
+          {
+            "\"God's work done in God's way will never lack God's supplies.\" – Hudson Taylor"
+          }
         </BulletListItem>
       </Providers>
     );
@@ -23,7 +25,9 @@ describe('the BulletListItem component', () => {
       <Providers>
         <BulletListItem>
           <H5>
-            {`"God's work done in God's way will never lack God's supplies." – Hudson Taylor`}
+            {
+              "\"God's work done in God's way will never lack God's supplies.\" – Hudson Taylor"
+            }
           </H5>
         </BulletListItem>
       </Providers>
@@ -35,7 +39,9 @@ describe('the BulletListItem component', () => {
     const tree = renderer.create(
       <Providers>
         <BulletListLoadingState isLoading>
-          {`"God's work done in God's way will never lack God's supplies." – Hudson Taylor`}
+          {
+            "\"God's work done in God's way will never lack God's supplies.\" – Hudson Taylor"
+          }
         </BulletListLoadingState>
       </Providers>
     );

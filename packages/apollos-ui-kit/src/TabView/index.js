@@ -29,8 +29,12 @@ const TabView = compose(
   ),
   withProps((props) => {
     function onIndexChange(index) {
-      if (isFunction(props.onIndexChange)) props.onIndexChange(index);
-      if (isFunction(props.onChange)) props.onChange(index);
+      if (isFunction(props.onIndexChange)) {
+        props.onIndexChange(index);
+      }
+      if (isFunction(props.onChange)) {
+        props.onChange(index);
+      }
     }
 
     return {

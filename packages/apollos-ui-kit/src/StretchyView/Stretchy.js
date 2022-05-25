@@ -18,7 +18,9 @@ class Stretchy extends Component {
   };
 
   get stretchyYPosition() {
-    if (!this.props.scrollY || !this.props.height) return 0;
+    if (!this.props.scrollY || !this.props.height) {
+      return 0;
+    }
 
     if (this.props.stretchOn === 'top') {
       return this.props.scrollY.interpolate({
@@ -53,7 +55,9 @@ class Stretchy extends Component {
   }
 
   get stretchyScale() {
-    if (!this.props.scrollY) return 1;
+    if (!this.props.scrollY) {
+      return 1;
+    }
 
     if (this.props.stretchOn === 'top') {
       return this.props.scrollY.interpolate({
@@ -84,7 +88,9 @@ class Stretchy extends Component {
   }
 
   get stretchyOpacity() {
-    if (!this.props.scrollY || !this.props.height) return 0;
+    if (!this.props.scrollY || !this.props.height) {
+      return 0;
+    }
 
     if (this.props.stretchOn === 'top') {
       return this.props.scrollY.interpolate({

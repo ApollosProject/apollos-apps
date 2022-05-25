@@ -28,8 +28,12 @@ export const Paragraph = ({
   <View style={style}>
     {times(lineNumber, (i) => {
       let lineWidth = width;
-      if (i === 0 && firstLineWidth) lineWidth = firstLineWidth;
-      if (i === lineNumber - 1 && lastLineWidth) lineWidth = lastLineWidth;
+      if (i === 0 && firstLineWidth) {
+        lineWidth = firstLineWidth;
+      }
+      if (i === lineNumber - 1 && lastLineWidth) {
+        lineWidth = lastLineWidth;
+      }
       return <ParagraphLine key={i} width={lineWidth} style={lineStyle} />;
     })}
   </View>

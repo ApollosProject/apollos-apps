@@ -54,7 +54,9 @@ const Themer = ({ theme: newThemeInput, icons: customIcons, children }) => {
   const newTheme = createTheme(mergedThemeInput);
 
   let icons = useIcons();
-  if (!icons) icons = Icons;
+  if (!icons) {
+    icons = Icons;
+  }
 
   return (
     <IconContext.Provider value={{ ...icons, ...customIcons }}>

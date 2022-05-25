@@ -35,8 +35,9 @@ const getStyleLiteralFromStyledInput = (
   { ownProps = {}, theme = {} }
 ) => {
   let generatedStyle = styleInput;
-  if (typeof generatedStyle === 'function')
+  if (typeof generatedStyle === 'function') {
     generatedStyle = generatedStyle({ theme, ...ownProps });
+  }
   return generatedStyle;
 };
 

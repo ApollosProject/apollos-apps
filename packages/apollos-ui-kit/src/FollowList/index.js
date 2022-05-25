@@ -87,7 +87,9 @@ class FollowList extends PureComponent {
 
     const showButton = onPressFollowListButton && followListButtonTitle;
 
-    if (followers?.length === 0 && !isLoading && !showButton) return null;
+    if (followers?.length === 0 && !isLoading && !showButton) {
+      return null;
+    }
 
     return (
       <RenderAsCard>

@@ -10,7 +10,9 @@ const ProtectedRoute = () => {
   useEffect(() => {
     // if we don't have the logged in state, do nothing
     // we're still showing the splash screen
-    if (isLoggedIn == null) return;
+    if (isLoggedIn == null) {
+      return;
+    }
 
     SplashScreen.hide();
     if (isLoggedIn) {

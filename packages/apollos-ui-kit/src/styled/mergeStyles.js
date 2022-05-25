@@ -6,7 +6,9 @@ const mergeStyles = (...stylesToMerge) =>
     let style = accumulatedStyle;
     const styleRight = currentStyle;
 
-    if (!styleRight && typeof styleRight !== 'number') return accumulatedStyle;
+    if (!styleRight && typeof styleRight !== 'number') {
+      return accumulatedStyle;
+    }
 
     // both styles are objects, we should turn them into a single object:
     if (

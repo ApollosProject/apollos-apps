@@ -18,11 +18,15 @@ const {
 // that depend on the given theme to compute. This processes these parts into objects
 // so we can merge a clean object. It's recursive and fairly abstract for flexibility.
 export const getDynamicThemePart = (part, theme) => {
-  if (typeof part === 'function') return part(theme);
-  if (Array.isArray(part))
+  if (typeof part === 'function') {
+    return part(theme);
+  }
+  if (Array.isArray(part)) {
     return part.map((item) => getDynamicThemePart(item, theme));
-  if (typeof part === 'object')
+  }
+  if (typeof part === 'object') {
     return mapValues(part, (value) => getDynamicThemePart(value, theme));
+  }
   return part;
 };
 
@@ -50,8 +54,9 @@ const createTheme = ({
   merge(theme, getDynamicThemePart({ types }, theme));
   merge(theme, getDynamicThemePart({ types: typesInput }, theme));
   const availableTypes = theme.types;
-  if (!availableTypes[theme.type])
+  if (!availableTypes[theme.type]) {
     throw new Error(`The theme type ${theme.type} is not supported`);
+  }
 
   merge(theme, availableTypes[theme.type], { colors: colorsInput });
 

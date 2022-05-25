@@ -38,8 +38,12 @@ const TabsConnected = ({ hasCampus }) => {
     },
     fetchPolicy: 'cache-and-network',
   });
-  if (error) return null;
-  if (loading) return <ActivityIndicator />;
+  if (error) {
+    return null;
+  }
+  if (loading) {
+    return <ActivityIndicator />;
+  }
   return <Tabs tabs={data?.tabs ?? []} />;
 };
 

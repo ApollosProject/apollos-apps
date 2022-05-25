@@ -98,7 +98,9 @@ const Button = enhance(
     ...touchableProps
   }) => {
     const accessibilityTraits = ['button'];
-    if (disabled || loading) accessibilityTraits.push('disabled');
+    if (disabled || loading) {
+      accessibilityTraits.push('disabled');
+    }
 
     const buttonContent = (
       <ButtonStyles

@@ -27,7 +27,9 @@ export const ModalBackButton = (props) => {
         key: route.state.routes[route.state.index - 1]?.key,
       });
   }
-  if (!onPress) return null;
+  if (!onPress) {
+    return null;
+  }
   return <ModalButton name={'arrow-back'} onPress={onPress} {...props} />;
 };
 
