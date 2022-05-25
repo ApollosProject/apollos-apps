@@ -6,7 +6,13 @@ import { gql } from '@apollo/client';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { Button, TextInput, PaddedView, styled } from '@apollosproject/ui-kit';
+import {
+  BackgroundView,
+  Button,
+  TextInput,
+  PaddedView,
+  styled,
+} from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CHANGE_PASSWORD from './passwordChange';
@@ -30,34 +36,40 @@ class ChangePassword extends PureComponent {
   };
 
   renderForm = (props) => (
-    <FlexedKeyboardAvoidingView behavior="padding">
-      <PaddedView>
-        <TextInput
-          label="New Password"
-          type="password"
-          value={props.values?.password}
-          error={props.touched.password && props.errors.password}
-          onChangeText={(text) => props.setFieldValue('password', text)}
-        />
-        <TextInput
-          label="Confirm Password"
-          type="password"
-          value={props.values?.confirmPassword}
-          error={props.touched.confirmPassword && props.errors.confirmPassword}
-          onChangeText={(text) => props.setFieldValue('confirmPassword', text)}
-        />
-      </PaddedView>
-      <Footer>
+    <BackgroundView avoidHeader>
+      <FlexedKeyboardAvoidingView behavior="padding">
         <PaddedView>
-          <Button
-            disabled={props.isSubmitting}
-            onPress={props.handleSubmit}
-            title="Save"
-            loading={props.isSubmitting}
+          <TextInput
+            label="New Password"
+            type="password"
+            value={props.values?.password}
+            error={props.touched.password && props.errors.password}
+            onChangeText={(text) => props.setFieldValue('password', text)}
+          />
+          <TextInput
+            label="Confirm Password"
+            type="password"
+            value={props.values?.confirmPassword}
+            error={
+              props.touched.confirmPassword && props.errors.confirmPassword
+            }
+            onChangeText={(text) =>
+              props.setFieldValue('confirmPassword', text)
+            }
           />
         </PaddedView>
-      </Footer>
-    </FlexedKeyboardAvoidingView>
+        <Footer>
+          <PaddedView>
+            <Button
+              disabled={props.isSubmitting}
+              onPress={props.handleSubmit}
+              title="Save"
+              loading={props.isSubmitting}
+            />
+          </PaddedView>
+        </Footer>
+      </FlexedKeyboardAvoidingView>
+    </BackgroundView>
   );
 
   render() {

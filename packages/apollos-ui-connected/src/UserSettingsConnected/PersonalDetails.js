@@ -6,7 +6,13 @@ import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { TextInput, PaddedView, Button, styled } from '@apollosproject/ui-kit';
+import {
+  BackgroundView,
+  TextInput,
+  PaddedView,
+  Button,
+  styled,
+} from '@apollosproject/ui-kit';
 
 import { GET_USER_PROFILE } from '../UserAvatarHeaderConnected';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
@@ -31,41 +37,43 @@ class PersonalDetails extends PureComponent {
 
   renderForm = (props) => (
     // have to add the offset to account for @react-navigation/native header
-    <FlexedKeyboardAvoidingView behavior="padding">
-      <PaddedView>
-        <TextInput
-          label="First Name"
-          type="text"
-          value={props.values.firstName}
-          error={props.touched.firstName && props.errors.firstName}
-          onChangeText={(text) => props.setFieldValue('firstName', text)}
-        />
-        <TextInput
-          label="Last Name"
-          type="text"
-          value={props.values.lastName}
-          error={props.touched.lastName && props.errors.lastName}
-          onChangeText={(text) => props.setFieldValue('lastName', text)}
-        />
-        <TextInput
-          label="Email"
-          type="email"
-          value={props.values.email}
-          error={props.touched.email && props.errors.email}
-          onChangeText={(text) => props.setFieldValue('email', text)}
-        />
-      </PaddedView>
-      <Footer>
+    <BackgroundView avoidHeader>
+      <FlexedKeyboardAvoidingView behavior="padding">
         <PaddedView>
-          <Button
-            disabled={props.isSubmitting}
-            onPress={props.handleSubmit}
-            title="Save"
-            loading={props.isSubmitting}
+          <TextInput
+            label="First Name"
+            type="text"
+            value={props.values.firstName}
+            error={props.touched.firstName && props.errors.firstName}
+            onChangeText={(text) => props.setFieldValue('firstName', text)}
+          />
+          <TextInput
+            label="Last Name"
+            type="text"
+            value={props.values.lastName}
+            error={props.touched.lastName && props.errors.lastName}
+            onChangeText={(text) => props.setFieldValue('lastName', text)}
+          />
+          <TextInput
+            label="Email"
+            type="email"
+            value={props.values.email}
+            error={props.touched.email && props.errors.email}
+            onChangeText={(text) => props.setFieldValue('email', text)}
           />
         </PaddedView>
-      </Footer>
-    </FlexedKeyboardAvoidingView>
+        <Footer>
+          <PaddedView>
+            <Button
+              disabled={props.isSubmitting}
+              onPress={props.handleSubmit}
+              title="Save"
+              loading={props.isSubmitting}
+            />
+          </PaddedView>
+        </Footer>
+      </FlexedKeyboardAvoidingView>
+    </BackgroundView>
   );
 
   render() {

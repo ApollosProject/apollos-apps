@@ -71,7 +71,7 @@ const UserSettings = () => {
     return null;
   }
   return (
-    <BackgroundView>
+    <BackgroundView avoidHeader>
       <ScrollView>
         <Container>
           <UserAvatarUpdate />

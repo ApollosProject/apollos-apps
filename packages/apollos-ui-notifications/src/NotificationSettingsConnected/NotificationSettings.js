@@ -6,7 +6,7 @@ const NotificationSettings = ({
   allNotificationsEnabled,
   toggleNotifications,
 }) => (
-  <BackgroundView>
+  <BackgroundView avoidHeader>
     <PaddedView>
       <Switch
         value={allNotificationsEnabled}

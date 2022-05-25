@@ -26,6 +26,7 @@ exports[`The NotificationSettings toggle switch should render correctly 1`] = `
     }
   />
   <View
+    avoidHeader={true}
     style={
       Object {
         "backgroundColor": "rgb(249, 249, 251)",

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 
-import { FeedView, named } from '@apollosproject/ui-kit';
+import { BackgroundView, FeedView, named } from '@apollosproject/ui-kit';
 
 import featuresFeedComponentMapper from './featuresFeedComponentMapper';
 import GET_FEATURE_FEED from './getFeatureFeed';
@@ -117,27 +117,29 @@ class FeaturesFeedConnected extends PureComponent {
     const featureFeedId =
       this.props.route?.params.id || this.props.featureFeedId;
     return (
-      <Query
-        query={GET_FEATURE_FEED}
-        variables={{ featureFeedId }}
-        fetchPolicy="cache-and-network"
-      >
-        {({ error, data, loading, refetch }) => {
-          const features = get(data, 'node.features', []);
-          this.refetchRef({ refetch, id: 'feed' });
-          return (
-            <FeedView
-              error={error}
-              content={features}
-              loadingStateData={this.loadingStateData}
-              renderItem={this.renderFeatures}
-              loading={loading}
-              refetch={this.refetch}
-              {...this.props.feedViewProps}
-            />
-          );
-        }}
-      </Query>
+      <BackgroundView avoidHeader>
+        <Query
+          query={GET_FEATURE_FEED}
+          variables={{ featureFeedId }}
+          fetchPolicy="cache-and-network"
+        >
+          {({ error, data, loading, refetch }) => {
+            const features = get(data, 'node.features', []);
+            this.refetchRef({ refetch, id: 'feed' });
+            return (
+              <FeedView
+                error={error}
+                content={features}
+                loadingStateData={this.loadingStateData}
+                renderItem={this.renderFeatures}
+                loading={loading}
+                refetch={this.refetch}
+                {...this.props.feedViewProps}
+              />
+            );
+          }}
+        </Query>
+      </BackgroundView>
     );
   }
 }

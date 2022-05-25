@@ -60,7 +60,7 @@ class LikedContentFeedConnected extends PureComponent {
     const { Component, ContentCardComponent } = this.props;
 
     return (
-      <BackgroundView>
+      <BackgroundView avoidHeader>
         <Query
           query={GET_LIKED_CONTENT}
           fetchPolicy="cache-and-network"
