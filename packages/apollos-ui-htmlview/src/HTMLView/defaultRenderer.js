@@ -2,7 +2,6 @@ import React, { Children } from 'react';
 import { Text, View } from 'react-native';
 import { decodeHTML } from 'entities';
 import { get } from 'lodash';
-
 import {
   BodyText,
   H1,
@@ -17,10 +16,11 @@ import {
   OrderedListItem,
   ButtonLink,
   ConnectedImage,
+  ScriptureLink,
 } from '@apollosproject/ui-kit';
 
 const LINE_BREAK = '\n';
-const TEXT_TYPES_THAT_SHOULD_WRAP = [Text, BodyText, ButtonLink];
+const TEXT_TYPES_THAT_SHOULD_WRAP = [Text, BodyText, ButtonLink, ScriptureLink];
 const ILLEGAL_TEXT_CHILDREN_TYPES = [ConnectedImage, View];
 
 // Detects if the image urls are relative.
@@ -68,7 +68,6 @@ export const wrapTextChildren = ({
 
 const defaultRenderer = (node, { children }, handlePressAnchor) => {
   const blockElements = ['p', 'div', 'blockquote'];
-
   if (node.type === 'text' && node.data) {
     const text = decodeHTML(node.data);
     const blankText = !text.trim();
@@ -91,8 +90,13 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
       return <Text>{text}</Text>;
     }
   }
-
+  const keepPadding =
+    node.children?.filter((child) => child.name === 'scripture').length == 0;
   switch (node.name) {
+    case 'scripture':
+      return (
+        <ScriptureLink verse={node.attribs.verse}>{children}</ScriptureLink>
+      );
     case 'div':
       return <View>{wrapTextChildren({ children, strip: false })}</View>;
     case 'p':
@@ -116,17 +120,41 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
         </BlockQuote>
       );
     case 'h1':
-      return <H1 padded>{wrapTextChildren({ children, Component: Text })}</H1>;
+      return (
+        <H1 padded={keepPadding}>
+          {wrapTextChildren({ children, Component: Text })}
+        </H1>
+      );
     case 'h2':
-      return <H2 padded>{wrapTextChildren({ children, Component: Text })}</H2>;
+      return (
+        <H2 padded={keepPadding}>
+          {wrapTextChildren({ children, Component: Text })}
+        </H2>
+      );
     case 'h3':
-      return <H3 padded>{wrapTextChildren({ children, Component: Text })}</H3>;
+      return (
+        <H3 padded={keepPadding}>
+          {wrapTextChildren({ children, Component: Text })}
+        </H3>
+      );
     case 'h4':
-      return <H4 padded>{wrapTextChildren({ children, Component: Text })}</H4>;
+      return (
+        <H4 padded={keepPadding}>
+          {wrapTextChildren({ children, Component: Text })}
+        </H4>
+      );
     case 'h5':
-      return <H5 padded>{wrapTextChildren({ children, Component: Text })}</H5>;
+      return (
+        <H5 padded={keepPadding}>
+          {wrapTextChildren({ children, Component: Text })}
+        </H5>
+      );
     case 'h6':
-      return <H6 padded>{wrapTextChildren({ children, Component: Text })}</H6>;
+      return (
+        <H6 padded={keepPadding}>
+          {wrapTextChildren({ children, Component: Text })}
+        </H6>
+      );
     case 'ul':
       return <Paragraph>{children}</Paragraph>;
     case 'li':

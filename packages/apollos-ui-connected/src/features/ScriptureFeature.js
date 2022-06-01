@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { ActionCard, PaddedView, named } from '@apollosproject/ui-kit';
-import { ScriptureItem } from '@apollosproject/ui-scripture';
+import { useNavigation } from '@react-navigation/native';
+import {
+  ActionCard,
+  PaddedView,
+  named,
+  Touchable,
+  H4,
+} from '@apollosproject/ui-kit';
 import ShareButtonConnected from '../ShareButtonConnected';
 
 const ScriptureFeature = ({
@@ -42,26 +47,24 @@ const ScriptureFeature = ({
     ) : (
       <PaddedView>{children}</PaddedView>
     );
-
-  return (
-    <Wrapper>
-      {scriptures.map(({ copyright, reference, html, id, version }) => (
-        <ScriptureItem
-          key={id}
-          reference={reference}
-          html={html}
-          isLoading={isLoading}
-          copyright={copyright}
-          version={version}
-        />
-      ))}
-    </Wrapper>
-  );
+  const navigation = useNavigation();
+  return scriptures.map((scripture) => (
+    <Touchable
+      onPress={() => {
+        navigation.navigate('Scripture', { ...scripture, isLoading });
+      }}
+      key={scripture.id}
+    >
+      <Wrapper>
+        <H4>{scripture.reference}</H4>
+      </Wrapper>
+    </Touchable>
+  ));
 };
 
 ScriptureFeature.defaultProps = {
   isCard: true,
-  showShareButton: true,
+  showShareButton: false,
 };
 
 ScriptureFeature.propTypes = {

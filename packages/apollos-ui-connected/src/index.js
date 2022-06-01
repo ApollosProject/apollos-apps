@@ -89,6 +89,7 @@ export NodeSingleConnected, {
 } from './NodeSingleConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
+export ScriptureScreenConnected from './ScriptureScreenConnected';
 export SearchCardConnected from './SearchCardConnected';
 export SearchScreenConnected from './SearchScreenConnected';
 export SearchFeedConnected, {

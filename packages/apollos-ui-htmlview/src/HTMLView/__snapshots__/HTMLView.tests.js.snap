@@ -297,7 +297,41 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
             </Text>
           </Text>
           <Text>
-             by God, who exists in community as Father, Son, and Holy Spirit (John 1:1-2, Genesis 2:18). 
+             by God, who exists in community as Father, Son, and Holy Spirit (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              John 1:1-2
+            </Text>
+          </Text>
+          <Text>
+            , 
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Genesis 2:18
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -345,7 +379,58 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
           }
         >
           <Text>
-            Jesus said loving God and loving others is greatest of all God’s commandments (Matthew 22:38-40). And, after trying everything the world had to offer, King Solomon reminded his people that their relationships with God and others are the only things that really matter (Ecclesiastes 2:24-26, Ecclesiastes 3:9). 
+            Jesus said loving God and loving others is greatest of all God’s commandments (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Matthew 22:38-40
+            </Text>
+          </Text>
+          <Text>
+            ). And, after trying everything the world had to offer, King Solomon reminded his people that their relationships with God and others are the only things that really matter (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Ecclesiastes 2:24-26
+            </Text>
+          </Text>
+          <Text>
+            , 
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Ecclesiastes 3:9
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -673,7 +758,24 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
           }
         >
           <Text>
-            I can almost hear Jesus saying, “Greater love has no one than this: to lay down one’s phone for one’s loved ones”  (John 15:13). 
+            I can almost hear Jesus saying, “Greater love has no one than this: to lay down one’s phone for one’s loved ones”  (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              John 15:13
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -1092,7 +1194,24 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
           }
         >
           <Text>
-            Intentionally taking advantage of time with loved ones sometimes does require sacrificing our own immediate desires or comforts, but that’s what we are commanded to do (Philippians 2:3). 
+            Intentionally taking advantage of time with loved ones sometimes does require sacrificing our own immediate desires or comforts, but that’s what we are commanded to do (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Philippians 2:3
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -3173,7 +3292,41 @@ exports[`the HTMLView component should render example HTML 1`] = `
             </Text>
           </Text>
           <Text>
-             by God, who exists in community as Father, Son, and Holy Spirit (John 1:1-2, Genesis 2:18). 
+             by God, who exists in community as Father, Son, and Holy Spirit (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              John 1:1-2
+            </Text>
+          </Text>
+          <Text>
+            , 
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Genesis 2:18
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -3221,7 +3374,58 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            Jesus said loving God and loving others is greatest of all God’s commandments (Matthew 22:38-40). And, after trying everything the world had to offer, King Solomon reminded his people that their relationships with God and others are the only things that really matter (Ecclesiastes 2:24-26, Ecclesiastes 3:9). 
+            Jesus said loving God and loving others is greatest of all God’s commandments (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Matthew 22:38-40
+            </Text>
+          </Text>
+          <Text>
+            ). And, after trying everything the world had to offer, King Solomon reminded his people that their relationships with God and others are the only things that really matter (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Ecclesiastes 2:24-26
+            </Text>
+          </Text>
+          <Text>
+            , 
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Ecclesiastes 3:9
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -3549,7 +3753,24 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            I can almost hear Jesus saying, “Greater love has no one than this: to lay down one’s phone for one’s loved ones”  (John 15:13). 
+            I can almost hear Jesus saying, “Greater love has no one than this: to lay down one’s phone for one’s loved ones”  (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              John 15:13
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>
@@ -3968,7 +4189,24 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            Intentionally taking advantage of time with loved ones sometimes does require sacrificing our own immediate desires or comforts, but that’s what we are commanded to do (Philippians 2:3). 
+            Intentionally taking advantage of time with loved ones sometimes does require sacrificing our own immediate desires or comforts, but that’s what we are commanded to do (
+          </Text>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#17B582",
+                "textDecorationLine": "underline",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            <Text>
+              Philippians 2:3
+            </Text>
+          </Text>
+          <Text>
+            ). 
           </Text>
         </Text>
       </View>

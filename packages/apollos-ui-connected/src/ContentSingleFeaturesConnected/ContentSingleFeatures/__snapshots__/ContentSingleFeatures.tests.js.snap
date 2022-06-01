@@ -106,39 +106,54 @@ exports[`ContentSingleFeatures should render 1`] = `
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -146,177 +161,64 @@ exports[`ContentSingleFeatures should render 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                Mark 1:12
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                KJV
-              </Text>
-            </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        ¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.6)",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 9.6,
-                  "lineHeight": 10.8,
-                }
-              }
-            >
-              PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent
+              Mark 1:12
             </Text>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -324,154 +226,13 @@ exports[`ContentSingleFeatures should render 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                John 3:16
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                WEB
-              </Text>
+              John 3:16
             </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        For God so loved the world, that he gave his only born
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        Son, that whoever believes in him should not perish, but have eternal life, forever. 
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
   </View>
@@ -865,787 +626,131 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View>
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "40%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "100%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "100%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "100%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "60%",
-                }
-              }
-            />
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
           <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={32}
-              bbWidth={32}
-              color="#17B582"
-              height={32}
-              id="Raw"
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              size={32}
+            <Text
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  Object {},
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 32,
-                    "width": 32,
-                  },
-                ]
+                Object {
+                  "color": "#27272E",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
               }
-              tintColor="#17B582"
-              vbHeight={256}
-              vbWidth={256}
-              width={32}
             >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGRect
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  height={256}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  rx={0}
-                  ry={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  width={256}
-                  x={0}
-                  y={0}
-                />
-                <RNSVGPath
-                  d="M176 152 224 104 176 56"
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={
-                    Array [
-                      0,
-                      4279743874,
-                    ]
-                  }
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={1}
-                  strokeLinejoin={1}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={16}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-                <RNSVGPath
-                  d="M192,216H40a8,8,0,0,1-8-8V88"
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={
-                    Array [
-                      0,
-                      4279743874,
-                    ]
-                  }
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={1}
-                  strokeLinejoin={1}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={16}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-                <RNSVGPath
-                  d="M75.0245,175.99967A96.04041,96.04041,0,0,1,168,104h56"
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={
-                    Array [
-                      0,
-                      4279743874,
-                    ]
-                  }
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={1}
-                  strokeLinejoin={1}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={16}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+              Mark 1:12
+            </Text>
           </View>
         </View>
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View>
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "40%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "100%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "100%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "100%",
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 16,
-                  "marginVertical": 5,
-                  "width": "60%",
-                }
-              }
-            />
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
           <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={32}
-              bbWidth={32}
-              color="#17B582"
-              height={32}
-              id="Raw"
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              size={32}
+            <Text
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  Object {},
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 32,
-                    "width": 32,
-                  },
-                ]
+                Object {
+                  "color": "#27272E",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
               }
-              tintColor="#17B582"
-              vbHeight={256}
-              vbWidth={256}
-              width={32}
             >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGRect
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  height={256}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  rx={0}
-                  ry={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  width={256}
-                  x={0}
-                  y={0}
-                />
-                <RNSVGPath
-                  d="M176 152 224 104 176 56"
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={
-                    Array [
-                      0,
-                      4279743874,
-                    ]
-                  }
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={1}
-                  strokeLinejoin={1}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={16}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-                <RNSVGPath
-                  d="M192,216H40a8,8,0,0,1-8-8V88"
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={
-                    Array [
-                      0,
-                      4279743874,
-                    ]
-                  }
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={1}
-                  strokeLinejoin={1}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={16}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-                <RNSVGPath
-                  d="M75.0245,175.99967A96.04041,96.04041,0,0,1,168,104h56"
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={
-                    Array [
-                      0,
-                      4279743874,
-                    ]
-                  }
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={1}
-                  strokeLinejoin={1}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={16}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+              John 3:16
+            </Text>
           </View>
         </View>
       </View>
@@ -1760,39 +865,54 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -1800,177 +920,64 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                Mark 1:12
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                KJV
-              </Text>
-            </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        ¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.6)",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 9.6,
-                  "lineHeight": 10.8,
-                }
-              }
-            >
-              PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent
+              Mark 1:12
             </Text>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -1978,154 +985,13 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                John 3:16
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                WEB
-              </Text>
+              John 3:16
             </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        For God so loved the world, that he gave his only born
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        Son, that whoever believes in him should not perish, but have eternal life, forever. 
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
   </View>

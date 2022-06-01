@@ -5395,6 +5395,11 @@ body-parser@1.19.1, body-parser@^1.18.3:
     raw-body "2.4.2"
     type-is "~1.6.18"
 
+books-of-the-bible@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/books-of-the-bible/-/books-of-the-bible-1.0.0.tgz#f16fffcf611fc88059051296acef4db948fb95a2"
+  integrity sha512-1svLUGyYcXYVmJOdP7bFQFxjErcLpJ92Gl/3TiImAJNSd1iQSq6yDBHoGBtqZf5mZZ2YIgKKYlBecRaRYiqbBw==
+
 bplist-creator@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/bplist-creator/-/bplist-creator-0.0.8.tgz#56b2a6e79e9aec3fc33bf831d09347d73794e79c"
@@ -13150,6 +13155,11 @@ regenerator-transform@^0.14.2:
   dependencies:
     "@babel/runtime" "^7.8.4"
 
+regex-fun@~2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/regex-fun/-/regex-fun-2.0.3.tgz#493b77e01d24fa27711a40a0c76640fa12965c72"
+  integrity sha512-oWd3WfKONKsdYqUpNpZwt5sDLakhVCCZHkVCZrlGVe2GEbF9LDSm7bl+FYEU2p5ymSo008MOa3nAIvD3gESE/Q==
+
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
@@ -15098,6 +15108,15 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+verse-reference-regex@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/verse-reference-regex/-/verse-reference-regex-1.3.0.tgz#36752b016df383fb7de7abc39991c43f579dda9a"
+  integrity sha512-k9jJvpZMYAFbVGPwcUmtxMYSQZjtQJJnJEkykbBC4WDHuS0FmlJzfEhcqIcWZY3nmsUW29DmHzFOWiJ53gFf6w==
+  dependencies:
+    books-of-the-bible "~1.0.0"
+    flatmap "0.0.3"
+    regex-fun "~2.0.2"
 
 vlq@^1.0.0:
   version "1.0.1"

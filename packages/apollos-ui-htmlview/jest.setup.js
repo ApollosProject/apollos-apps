@@ -6,6 +6,17 @@ jest.mock('react-native-safe-area-context/', () => ({
   SafeAreaProvider: ({ children }) => children,
 }));
 
+jest.mock('@react-navigation/native', () => {
+  const actualNav = jest.requireActual('@react-navigation/native');
+  return {
+    ...actualNav,
+    useNavigation: () => ({
+      navigate: jest.fn(),
+      dispatch: jest.fn(),
+    }),
+  };
+});
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

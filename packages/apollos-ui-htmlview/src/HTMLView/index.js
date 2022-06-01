@@ -2,6 +2,7 @@ import React, { PureComponent, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import { Linking, View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
+import { createRegex } from 'verse-reference-regex';
 
 import { Paragraph, named } from '@apollosproject/ui-kit';
 
@@ -15,15 +16,21 @@ class HTMLView extends PureComponent {
     isLoading: PropTypes.bool,
     onPressAnchor: PropTypes.func,
     renderer: PropTypes.func,
+    detectVerse: PropTypes.bool,
   };
 
   static defaultProps = {
     onPressAnchor: (url) => Linking.openURL(url),
     renderer: defaultRenderer,
+    detectVerse: true,
   };
 
   constructor(...args) {
     super(...args);
+    this.verseRequiringRegex = createRegex({
+      requireVerse: false,
+      flags: 'ig',
+    });
 
     this.parser = new Parser(
       new DomHandler(
@@ -53,8 +60,17 @@ class HTMLView extends PureComponent {
     }
   }
 
+  // Set up the new scripture route here to open in the modal.
+
   parse(html = '') {
-    this.parser.write(html);
+    if (this.props.detectVerse) {
+      const replaced = html.replace(this.verseRequiringRegex, (verse) => {
+        return `<scripture verse="${verse}">${verse}</scripture>`;
+      });
+      this.parser.write(replaced);
+    } else {
+      this.parser.write(html);
+    }
     this.parser.done();
     this.parser.reset();
   }

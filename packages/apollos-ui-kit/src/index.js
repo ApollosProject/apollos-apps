@@ -70,6 +70,7 @@ export ModalView, {
 export PaddedView from './PaddedView';
 export Placeholder, { withPlaceholder } from './Placeholder';
 export Comment, { CommentLikeButton, ActionMenu } from './Comment';
+export ScriptureLink from './ScriptureLink';
 export SideBySideView from './SideBySideView';
 export styled from './styled';
 export StretchyView from './StretchyView';

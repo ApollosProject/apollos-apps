@@ -256,39 +256,54 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -296,177 +311,64 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                Mark 1:12
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                KJV
-              </Text>
-            </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        ¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.6)",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 9.6,
-                  "lineHeight": 10.8,
-                }
-              }
-            >
-              PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent
+              Mark 1:12
             </Text>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -474,154 +376,13 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                John 3:16
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                WEB
-              </Text>
+              John 3:16
             </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        For God so loved the world, that he gave his only born
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        Son, that whoever believes in him should not perish, but have eternal life, forever. 
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
   </View>
@@ -884,39 +645,54 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -924,177 +700,64 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                Mark 1:12
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                KJV
-              </Text>
-            </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        ¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.6)",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 9.6,
-                  "lineHeight": 10.8,
-                }
-              }
-            >
-              PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent
+              Mark 1:12
             </Text>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
-          "shadowOffset": Object {
-            "height": 20,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 48,
+          "opacity": 1,
         }
       }
     >
       <View
         style={
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
-            "overflow": "hidden",
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+            "shadowOffset": Object {
+              "height": 20,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 48,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "borderRadius": 16,
+              "overflow": "hidden",
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
             <Text
               style={
                 Object {
@@ -1102,154 +765,13 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
-                  "paddingBottom": 12,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#27272E",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                John 3:16
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.6)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-              >
-                 
-                WEB
-              </Text>
+              John 3:16
             </Text>
-            <View
-              style={
-                Object {
-                  "paddingBottom": 18,
-                }
-              }
-            >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 0,
-                    }
-                  }
-                >
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#27272E",
-                        "fontFamily": "DroidSerif",
-                        "fontSize": 16,
-                        "lineHeight": 32,
-                      }
-                    }
-                  >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 9.6,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                       
-                      <Text>
-                        16
-                      </Text>
-                       
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        For God so loved the world, that he gave his only born
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#8b0000",
-                        }
-                      }
-                    >
-                      <Text>
-                        Son, that whoever believes in him should not perish, but have eternal life, forever. 
-                      </Text>
-                    </Text>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#27272E",
-                          "fontFamily": "DroidSerif",
-                          "fontSize": 16,
-                          "lineHeight": 32,
-                        }
-                      }
-                    >
-                      <Text>
-                         
-                      </Text>
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingTop": 0,
-              "paddingVertical": 16,
-            }
-          }
-        />
       </View>
     </View>
   </View>

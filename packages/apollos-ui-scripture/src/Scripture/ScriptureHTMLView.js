@@ -140,6 +140,7 @@ const renderer = (node, { children, ...other }) => {
 
 const ScriptureHTMLView = withProps({
   renderer,
+  detectVerse: false,
 })(HTMLView);
 
 export default ScriptureHTMLView;
