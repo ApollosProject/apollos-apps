@@ -1676,12 +1676,13 @@ exports[`DefaultCard should render with an actionIcon and subtitle 1`] = `
             }
           >
             <Text
+              labelColor="rgba(39, 39, 46, 0.6)"
               style={
                 Object {
                   "color": "rgba(39, 39, 46, 0.6)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
@@ -1867,12 +1868,13 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
           }
         >
           <Text
+            labelColor="rgba(39, 39, 46, 0.6)"
             style={
               Object {
                 "color": "rgba(39, 39, 46, 0.6)",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >
@@ -2057,12 +2059,13 @@ exports[`DefaultCard should render with custom labelText 1`] = `
           }
         >
           <Text
+            labelColor="rgba(39, 39, 46, 0.6)"
             style={
               Object {
                 "color": "rgba(39, 39, 46, 0.6)",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >
@@ -2246,87 +2249,53 @@ exports[`DefaultCard should render with isLive support 1`] = `
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={7}
-            bbWidth={7}
-            height={7}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                Object {
-                  "marginRight": 8,
-                },
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 7,
-                  "width": 7,
-                },
-              ]
+              Object {
+                "flex": 0,
+                "marginRight": 8,
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={7}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={7}
+              bbWidth={7}
+              height={7}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {
+                    "marginRight": 8,
+                  },
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 7,
+                    "width": 7,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={7}
             >
-              <RNSVGCircle
-                cx="12"
-                cy="12"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    1294411566,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -2340,12 +2309,7 @@ exports[`DefaultCard should render with isLive support 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                r="12"
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -2362,16 +2326,65 @@ exports[`DefaultCard should render with isLive support 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
+              >
+                <RNSVGCircle
+                  cx="12"
+                  cy="12"
+                  fill={
+                    Array [
+                      0,
+                      1294411566,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  r="12"
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
           <Text
+            labelColor="rgba(39, 39, 46, 0.6)"
             style={
               Object {
                 "color": "rgba(39, 39, 46, 0.6)",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >

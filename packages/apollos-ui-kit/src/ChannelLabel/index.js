@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 
 import { useTheme } from '../theme';
 import styled from '../styled';
-import { H4 } from '../typography';
+import { H5 } from '../typography';
 import Icon from '../Icon';
+import FlexedView from '../FlexedView';
 
 /**
  * ChannelLabel
@@ -28,24 +29,48 @@ const Wrapper = styled(
   'ui-kit.ChannelLabel.Wrapper'
 )(View);
 
-const LabelText = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-}))(H4);
+const LabelText = styled(
+  ({ labelColor }) => ({
+    color: labelColor,
+  }),
+  'ui-kit.ChannelLabel.LabelText'
+)(H5);
 
-const ChannelLabel = ({ label, icon, IconComponent, isLoading }) => {
+const FlexedIconLayout = styled(
+  ({ theme }) => ({
+    marginRight: theme.sizing.baseUnit * 0.5,
+    flex: 0,
+  }),
+  'ui-kit.ChannelLabel.FlexedIconLayout'
+)(FlexedView);
+
+const ChannelLabel = ({
+  label,
+  labelColor,
+  icon,
+  IconComponent,
+  isLoading,
+}) => {
   const theme = useTheme();
   const ComponentForIcon = IconComponent || Icon;
   return (
     <Wrapper>
       {icon || isLoading ? (
-        <ComponentForIcon
-          name={icon}
-          fill={theme.colors.text.tertiary}
-          isLoading={!icon && isLoading}
-        />
+        <FlexedIconLayout>
+          <ComponentForIcon
+            name={icon}
+            fill={theme.colors.text.tertiary}
+            isLoading={!icon && isLoading}
+          />
+        </FlexedIconLayout>
       ) : null}
       {label || isLoading ? (
-        <LabelText isLoading={!label && isLoading}>{label}</LabelText>
+        <LabelText
+          labelColor={labelColor || theme.colors.text.secondary}
+          isLoading={!label && isLoading}
+        >
+          {label}
+        </LabelText>
       ) : null}
     </Wrapper>
   );
@@ -59,6 +84,7 @@ ChannelLabel.propTypes = {
     PropTypes.element,
   ]),
   isLoading: PropTypes.bool,
+  labelColor: PropTypes.string,
 };
 
 export default ChannelLabel;

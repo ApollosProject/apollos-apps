@@ -143,12 +143,13 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   >
                     <Text
+                      labelColor="rgba(39, 39, 46, 0.6)"
                       style={
                         Object {
                           "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 16,
-                          "lineHeight": 24,
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -283,12 +284,13 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   >
                     <Text
+                      labelColor="rgba(39, 39, 46, 0.6)"
                       style={
                         Object {
                           "color": "rgba(39, 39, 46, 0.6)",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 16,
-                          "lineHeight": 24,
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 21,
                         }
                       }
                     >

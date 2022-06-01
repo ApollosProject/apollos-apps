@@ -314,12 +314,13 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
           }
         >
           <Text
+            labelColor="rgba(244, 247, 248, 0.6)"
             style={
               Object {
                 "color": "rgba(244, 247, 248, 0.6)",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >
@@ -1465,12 +1466,13 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
           }
         >
           <Text
+            labelColor="rgba(244, 247, 248, 0.6)"
             style={
               Object {
                 "color": "rgba(244, 247, 248, 0.6)",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >
@@ -1657,12 +1659,13 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
           }
         >
           <Text
+            labelColor="rgba(244, 247, 248, 0.6)"
             style={
               Object {
                 "color": "rgba(244, 247, 248, 0.6)",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >

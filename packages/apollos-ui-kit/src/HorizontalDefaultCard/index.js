@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import { withTheme } from '../theme';
+import { useTheme, withTheme } from '../theme';
 import styled from '../styled';
-import Card, { CardImage } from '../Card';
+import Card, { CardImage, CardLabel } from '../Card';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 import BackgroundImageBlur from '../BackgroundImageBlur';
+import Icon from '../Icon';
 
 import ContentTitles from '../ContentTitles';
 
@@ -39,39 +40,86 @@ const Image = withTheme(
   'ui-kit.HorizontalDefaultCard.Image'
 )(CardImage);
 
+const CheckmarkIcon = withTheme(
+  ({ theme }) => ({
+    size: theme.sizing.baseUnit,
+    weight: 'fill',
+    fill: theme.colors.success,
+  }),
+  'ui-kit.HorizontalDefaultCard.CheckmarkIcon'
+)(Icon);
+
+const CompletedLabel = ({ labelText, labelColor }) => (
+  <CardLabel
+    title={labelText}
+    type={'secondary'}
+    icon={'circle-outline-check-mark'}
+    IconComponent={CheckmarkIcon}
+    labelColor={labelColor}
+  />
+);
+
 const HorizontalDefaultCard = withIsLoading(
-  ({ coverImage, isLiked, isLoading, summary, title }) => (
-    <SquareCard isLoading={isLoading} inHorizontalList>
-      {coverImage ? (
-        <>
-          <BackgroundImageBlur source={coverImage} />
-          <Image
-            source={coverImage}
-            hasTitleAndSummary={!!summary && !!title}
-          />
-          <TitlesPositioner>
+  ({
+    coverImage,
+    isLiked,
+    isLoading,
+    summary,
+    title,
+    labelText,
+    labelColor,
+  }) => {
+    const theme = useTheme();
+
+    return (
+      <SquareCard isLoading={isLoading} inHorizontalList>
+        {coverImage ? (
+          <>
+            <BackgroundImageBlur source={coverImage} />
+            <Image
+              source={coverImage}
+              hasTitleAndSummary={!!summary && !!title}
+            />
+            <TitlesPositioner>
+              <ContentTitles
+                micro
+                title={title}
+                summary={summary}
+                isLiked={isLiked}
+                isLoading={isLoading}
+                label={
+                  labelText === 'Completed' ? (
+                    <CompletedLabel
+                      labelText={labelText}
+                      labelColor={labelColor || theme.colors.success}
+                    />
+                  ) : undefined
+                }
+              />
+            </TitlesPositioner>
+          </>
+        ) : (
+          <NoImageTitlesPositioner>
             <ContentTitles
               micro
               title={title}
               summary={summary}
               isLiked={isLiked}
               isLoading={isLoading}
+              label={
+                labelText === 'Completed' ? (
+                  <CompletedLabel
+                    labelText={labelText}
+                    labelColor={labelColor || theme.colors.success}
+                  />
+                ) : undefined
+              }
             />
-          </TitlesPositioner>
-        </>
-      ) : (
-        <NoImageTitlesPositioner>
-          <ContentTitles
-            micro
-            title={title}
-            summary={summary}
-            isLiked={isLiked}
-            isLoading={isLoading}
-          />
-        </NoImageTitlesPositioner>
-      )}
-    </SquareCard>
-  )
+          </NoImageTitlesPositioner>
+        )}
+      </SquareCard>
+    );
+  }
 );
 
 HorizontalDefaultCard.propTypes = {
@@ -83,6 +131,8 @@ HorizontalDefaultCard.propTypes = {
   summary: PropTypes.string,
   title: PropTypes.string,
   isLoading: PropTypes.bool,
+  labelText: PropTypes.string,
+  labelColor: PropTypes.string,
 };
 
 HorizontalDefaultCard.displayName = 'HorizontalDefaultCard';
