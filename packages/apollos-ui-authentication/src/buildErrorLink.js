@@ -1,4 +1,5 @@
 /* eslint-disable default-case, no-restricted-syntax */
+import ApollosConfig from '@apollosproject/config';
 import { onError } from '@apollo/client/link/error';
 import { fromPromise } from '@apollo/client';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -7,10 +8,17 @@ import fetch from 'node-fetch';
 const getNewToken = async ({ url, headers: oldHeaders }) => {
   const headers = oldHeaders;
   delete headers.Authorization;
+  delete headers.authorization;
   const refreshToken = await AsyncStorage.getItem('refreshToken');
   const result = await fetch(url, {
     method: 'POST',
-    headers,
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json',
+      ...(ApollosConfig.CHURCH_HEADER
+        ? { 'x-church': ApollosConfig.CHURCH_HEADER }
+        : {}),
+    },
     body: JSON.stringify({
       query: `
       mutation token($refreshToken: String!) {
