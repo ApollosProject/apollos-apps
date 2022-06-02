@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.0](https://github.com/apollosproject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
+
+**Note:** Version bump only for package @apollosproject/ui-authentication
+
+
+
+
+
 ## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.0](https://github.com/apollosproject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
+
+
+### Features
+
+* Scripture route and scripture detection ([#2509](https://github.com/apollosproject/apollos-apps/issues/2509)) ([5509687](https://github.com/apollosproject/apollos-apps/commit/5509687ce75f349ef2bcba0c1253f5ab4975bac7))
+
+
+
 ## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
 
 **Note:** Version bump only for package @apollosproject/ui-htmlview

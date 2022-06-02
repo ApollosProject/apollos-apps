@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.0](https://github.com/apollosproject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
+
+
+### Features
+
+* Add label support to horizontal default cards ([#2513](https://github.com/apollosproject/apollos-apps/issues/2513)) ([602b684](https://github.com/apollosproject/apollos-apps/commit/602b68477f63506305489b6707591d327150911d))
+* Scripture route and scripture detection ([#2509](https://github.com/apollosproject/apollos-apps/issues/2509)) ([5509687](https://github.com/apollosproject/apollos-apps/commit/5509687ce75f349ef2bcba0c1253f5ab4975bac7))
+
+
+### Bug Fixes
+
+* adjust content feed padding to account for header height on Android ([#2510](https://github.com/apollosproject/apollos-apps/issues/2510)) ([718b7fe](https://github.com/apollosproject/apollos-apps/commit/718b7feff8e2087e03e2e912c238d10bf8d8e070))
+
+
+
 ## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
 
 
