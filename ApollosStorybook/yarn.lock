@@ -87,6 +87,7 @@
     buffer "^5.4.3"
     entities "^1.1.2"
     htmlparser2 "3.9.2"
+    verse-reference-regex "^1.3.0"
 
 "@apollosproject/ui-kit@link:../packages/apollos-ui-kit":
   version "3.7.0"
@@ -4324,6 +4325,11 @@ body-parser@1.19.1:
     raw-body "2.4.2"
     type-is "~1.6.18"
 
+books-of-the-bible@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/books-of-the-bible/-/books-of-the-bible-1.0.0.tgz#f16fffcf611fc88059051296acef4db948fb95a2"
+  integrity sha512-1svLUGyYcXYVmJOdP7bFQFxjErcLpJ92Gl/3TiImAJNSd1iQSq6yDBHoGBtqZf5mZZ2YIgKKYlBecRaRYiqbBw==
+
 boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
@@ -4363,10 +4369,10 @@ bplist-creator@0.1.0:
   dependencies:
     stream-buffers "2.2.x"
 
-bplist-parser@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/bplist-parser/-/bplist-parser-0.3.0.tgz#ba50666370f61bbf94881636cd9f7d23c5286090"
-  integrity sha512-zgmaRvT6AN1JpPPV+S0a1/FAtoxSreYDccZGIqEMSvZl9DMe70mJ7MFzpxa1X+gHVdkToE2haRUHHMiW1OdejA==
+bplist-parser@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/bplist-parser/-/bplist-parser-0.3.1.tgz#e1c90b2ca2a9f9474cc72f6862bbf3fee8341fd1"
+  integrity sha512-PyJxiNtA5T2PlLIeBot4lbp7rj4OadzjnMZD/G5zuBNt8ei/yCU7+wW0h2bag9vr8c+/WuRWmSxbqAl9hL1rBA==
   dependencies:
     big-integer "1.6.x"
 
@@ -7217,6 +7223,11 @@ flat-cache@^3.0.4:
   dependencies:
     flatted "^3.1.0"
     rimraf "^3.0.2"
+
+flatmap@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/flatmap/-/flatmap-0.0.3.tgz#1f18a4d938152d495965f9c958d923ab2dd669b4"
+  integrity sha512-OuR+o7kHVe+x9RtIujPay7Uw3bvDZBZFSBXClEphZuSDLmZTqMdclasf4vFSsogC8baDz0eaC2NdO/2dlXHBKQ==
 
 flatted@^3.1.0:
   version "3.2.5"
@@ -11675,7 +11686,7 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-plist@^3.0.1, plist@^3.0.2, plist@^3.0.4:
+plist@^3.0.1, plist@^3.0.2, plist@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/plist/-/plist-3.0.5.tgz#2cbeb52d10e3cdccccf0c11a63a85d830970a987"
   integrity sha512-83vX4eYdQp3vP9SxuYgEM/G/pJQqLUz/V/xzPrzruLs7fz7jxGQ1msZ/mg1nwZxUSuOp4sb+/bEIbRrbzZRxDA==
@@ -13016,6 +13027,11 @@ regenerator-transform@^0.14.2:
   dependencies:
     "@babel/runtime" "^7.8.4"
 
+regex-fun@~2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/regex-fun/-/regex-fun-2.0.3.tgz#493b77e01d24fa27711a40a0c76640fa12965c72"
+  integrity sha512-oWd3WfKONKsdYqUpNpZwt5sDLakhVCCZHkVCZrlGVe2GEbF9LDSm7bl+FYEU2p5ymSo008MOa3nAIvD3gESE/Q==
+
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
@@ -13672,13 +13688,13 @@ simple-get@^3.0.3, simple-get@^3.1.0:
     simple-concat "^1.0.0"
 
 simple-plist@^1.0.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/simple-plist/-/simple-plist-1.3.0.tgz#f451997663eafd8ea6bad353a01caf49ef186d43"
-  integrity sha512-uYWpeGFtZtVt2NhG4AHgpwx323zxD85x42heMJBan1qAiqqozIlaGrwrEt6kRjXWRWIXsuV1VLCvVmZan2B5dg==
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/simple-plist/-/simple-plist-1.3.1.tgz#16e1d8f62c6c9b691b8383127663d834112fb017"
+  integrity sha512-iMSw5i0XseMnrhtIzRb7XpQEXepa9xhWxGUojHBL43SIpQuDQkh3Wpy67ZbDzZVr6EKxvwVChnVpdl8hEVLDiw==
   dependencies:
     bplist-creator "0.1.0"
-    bplist-parser "0.3.0"
-    plist "^3.0.4"
+    bplist-parser "0.3.1"
+    plist "^3.0.5"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
@@ -15087,6 +15103,15 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+verse-reference-regex@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/verse-reference-regex/-/verse-reference-regex-1.3.0.tgz#36752b016df383fb7de7abc39991c43f579dda9a"
+  integrity sha512-k9jJvpZMYAFbVGPwcUmtxMYSQZjtQJJnJEkykbBC4WDHuS0FmlJzfEhcqIcWZY3nmsUW29DmHzFOWiJ53gFf6w==
+  dependencies:
+    books-of-the-bible "~1.0.0"
+    flatmap "0.0.3"
+    regex-fun "~2.0.2"
 
 vlq@^1.0.0:
   version "1.0.1"
