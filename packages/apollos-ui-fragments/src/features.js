@@ -129,6 +129,9 @@ const LITE_FEATURES_FRAGMENT = gql`
         }
       }
     }
+    ... on HtmlFeature {
+      content
+    }
   }
 `;
 

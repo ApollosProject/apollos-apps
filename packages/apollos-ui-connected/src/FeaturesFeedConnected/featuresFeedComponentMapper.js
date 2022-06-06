@@ -17,6 +17,7 @@ import ButtonFeature from '../features/ButtonFeature';
 import CommentListFeatureConnected from '../CommentListFeatureConnected';
 import AddCommentFeatureConnected from '../AddCommentFeatureConnected';
 import FollowPeopleFeature from '../FollowPeopleFeature';
+import HtmlFeature from '../features/HtmlFeature';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
@@ -37,6 +38,7 @@ const MAPPINGS = {
   TextFeature,
   WebviewFeature,
   ButtonFeature,
+  HtmlFeature,
 };
 
 const featuresFeedComponentMapper = ({
