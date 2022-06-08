@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
@@ -22,7 +21,6 @@ async function renderWithApolloData(
   });
   if (renderCount - 1 > 0) {
     for (let i = 0; i < renderCount; i += 1) {
-      // eslint-disable-next-line
       await renderer.act(async function () {
         await wait(0);
         tree.update(component);
@@ -32,7 +30,6 @@ async function renderWithApolloData(
   return tree;
 }
 
-// eslint-disable-next-line
 function ApolloProvider({ MockedProvider, children, ...props }) {
   let MockedApolloProvider = React.Fragment;
   if (MockedProvider) {
@@ -61,7 +58,6 @@ function ApolloProvider({ MockedProvider, children, ...props }) {
   );
 }
 
-// eslint-disable-next-line
 function Providers({ children, ...props }) {
   return (
     <UIProviders {...props}>

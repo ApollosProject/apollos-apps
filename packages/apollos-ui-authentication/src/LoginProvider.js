@@ -235,6 +235,4 @@ LoginProvider.propTypes = {
   children: PropTypes.any,
 };
 
-const { Consumer } = LoginContext;
-
-export { LoginProvider, Consumer as LoginConsumer };
+export { LoginProvider };

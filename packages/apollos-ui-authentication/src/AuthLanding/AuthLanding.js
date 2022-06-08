@@ -108,9 +108,6 @@ const AuthLanding = ({
 };
 
 AuthLanding.propTypes = {
-  values: PropTypes.shape({
-    code: PropTypes.string,
-  }),
   error: PropTypes.bool.isRequired,
   onRegisterWithOpenId: PropTypes.func.isRequired,
   providerFriendlyName: PropTypes.string,

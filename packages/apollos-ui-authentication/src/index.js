@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { useNavigation } from '@react-navigation/native';
-import { withTheme, UIText } from '@apollosproject/ui-kit';
+import { UIText } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
 
 import { LandingSwiper } from '@apollosproject/ui-onboarding';
@@ -11,27 +11,13 @@ import {
   IdentityVerificationConnected,
 } from './Identity';
 
-import {
-  ProfileEntry as AuthProfileEntry,
-  ProfileEntryConnected as AuthProfileEntryConnected,
-} from './Profile';
+import { ProfileEntryConnected as AuthProfileEntryConnected } from './Profile';
 import { OpenIDConnected } from './OpenID';
 
 import { IdentityConnectConnected } from './IdentityConnect';
 import { IdentityConnectVerificationConnected } from './IdentityConnectVerification';
 
 import { AuthLandingConnected } from './AuthLanding';
-
-export { default as AuthProvider, AuthConsumer } from './Provider';
-export { default as ProtectedRoute } from './ProtectedRoute';
-
-export { default as authLink } from './authLink';
-export { default as buildErrorLink } from './buildErrorLink';
-
-export * from './LoginProvider';
-export { useIsLoggedIn, useLogout } from './Provider';
-
-export { AuthProfileEntry, AuthProfileEntryConnected };
 
 const AuthStack = createNativeStackNavigator();
 
@@ -55,11 +41,22 @@ const AuthNavigator = ({
   authTitleText,
   confirmationPromptText,
   confirmationTitleText,
-  screenOptions,
 }) => {
   const { closeAuth } = React.useContext(LoginContext);
   return (
-    <AuthStack.Navigator screenOptions={screenOptions}>
+    <AuthStack.Navigator
+      screenOptions={{
+        headerStyle: {
+          blurEffect: 'systemChromeMaterial',
+          backgroundColor: 'transparent',
+        },
+        headerTranslucent: true,
+        headerHideShadow: true,
+        headerTitle: '',
+        headerBackTitle: 'Back',
+        headerShown: true,
+      }}
+    >
       <AuthStack.Screen
         name="Landing"
         component={LandingSwiper}
@@ -107,33 +104,14 @@ AuthNavigator.propTypes = {
   authTitleText: PropTypes.string,
   confirmationTitleText: PropTypes.string,
   confirmationPromptText: PropTypes.string,
-  screenOptions: PropTypes.shape({
-    headerTintColor: PropTypes.string,
-    headerTitleStyle: PropTypes.shape({
-      color: PropTypes.string,
-    }),
-    headerStyle: PropTypes.shape({
-      backgroundColor: PropTypes.string,
-    }),
-    headerHideShadow: PropTypes.bool,
-    headerTitle: PropTypes.string,
-    headerBackTitle: PropTypes.string,
-    headerShown: PropTypes.bool,
-  }),
 };
 
-const ThemedAuthNavigator = withTheme(() => ({
-  screenOptions: {
-    headerStyle: {
-      blurEffect: 'systemChromeMaterial',
-      backgroundColor: 'transparent',
-    },
-    headerTranslucent: true,
-    headerHideShadow: true,
-    headerTitle: '',
-    headerBackTitle: 'Back',
-    headerShown: true,
-  },
-}))(AuthNavigator);
+export { default as AuthProvider } from './Provider';
+export { default as ProtectedRoute } from './ProtectedRoute';
 
-export default ThemedAuthNavigator;
+export { default as authLink } from './authLink';
+export { default as buildErrorLink } from './buildErrorLink';
+
+export { useIsLoggedIn, useLogout } from './Provider';
+
+export default AuthNavigator;

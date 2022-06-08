@@ -100,8 +100,6 @@ function IdentityEntryConnected(props) {
     setSubmitting(false);
   };
 
-  const IdentityEntryComponent = props.Component;
-
   return (
     <Formik
       initialValues={{ phone: '', email: '', ...identity }}
@@ -118,7 +116,7 @@ function IdentityEntryConnected(props) {
         touched,
         errors,
       }) => (
-        <IdentityEntryComponent
+        <IdentityEntry
           disabled={isSubmitting || !isValid}
           errors={touched.phone && errors}
           isLoading={isSubmitting}
@@ -144,12 +142,6 @@ function IdentityEntryConnected(props) {
 
 IdentityEntryConnected.propTypes = {
   alternateLoginText: PropTypes.string,
-  // Custom component to be rendered. Defaults to Entry
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.object, // type check for React fragments
-  ]),
   client: PropTypes.shape({
     query: PropTypes.func,
   }),
@@ -163,10 +155,6 @@ IdentityEntryConnected.propTypes = {
   inputType: PropTypes.string,
   policyInfo: PropTypes.string,
   tabTitle: PropTypes.string,
-};
-
-IdentityEntryConnected.defaultProps = {
-  Component: IdentityEntry,
 };
 
 export default IdentityEntryConnected;

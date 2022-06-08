@@ -1,6 +1,4 @@
-/* eslint-disable react/no-unused-prop-types, react/jsx-handler-names */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -40,8 +38,6 @@ const VerificationConnected = (props) => {
     setSubmitting(false);
   };
 
-  const VerificationComponent = props.Component;
-
   return (
     <Formik
       initialValues={{ code }}
@@ -60,7 +56,7 @@ const VerificationConnected = (props) => {
         touched,
         errors,
       }) => (
-        <VerificationComponent
+        <Verification
           errors={touched.code && errors}
           disabled={isSubmitting || !isValid}
           isLoading={isSubmitting}
@@ -75,18 +71,6 @@ const VerificationConnected = (props) => {
       )}
     </Formik>
   );
-};
-
-VerificationConnected.propTypes = {
-  // Custom component to be rendered. Defaults to Verification
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.object, // type check for React fragments
-  ]),
-};
-VerificationConnected.defaultProps = {
-  Component: Verification,
 };
 
 export default VerificationConnected;

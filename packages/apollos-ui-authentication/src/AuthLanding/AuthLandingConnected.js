@@ -76,9 +76,6 @@ const AuthLandingConnected = ({ provider = 'rock', navigation }) => {
   return (
     <AuthLanding
       onRegisterWithOpenId={handleRegisterWithOpenId}
-      onRegisterWithApollos={() =>
-        navigation.navigate('IdentityEntryConnected')
-      }
       providerFriendlyName={
         URL.parse(openIdProvider?.authorizationUrl || '')?.hostname
       }
