@@ -180,8 +180,7 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
       if (url && url.startsWith('//')) {
         url = `http:${url}`;
       }
-      const external = get(node, 'attribs.target') === '_blank';
-      const onPress = () => handlePressAnchor(url, { external });
+      const onPress = () => handlePressAnchor(url);
       if (url) {
         return (
           <ButtonLink onPress={onPress}>
