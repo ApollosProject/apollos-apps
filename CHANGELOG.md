@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.0](https://github.com/ApollosProject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
+
+
+### Features
+
+* removed scripture component and add htmlFeature ([#2520](https://github.com/ApollosProject/apollos-apps/issues/2520)) ([564f542](https://github.com/ApollosProject/apollos-apps/commit/564f5427015a4d4862a761d8c5e78145b38cbe31))
+
+
+### Bug Fixes
+
+* campus formatting ([#2524](https://github.com/ApollosProject/apollos-apps/issues/2524)) ([b2533b7](https://github.com/ApollosProject/apollos-apps/commit/b2533b7eae1999cba8884a2c3c99411317038f2c))
+
+
+
 ## [3.8.0](https://github.com/ApollosProject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
 
 

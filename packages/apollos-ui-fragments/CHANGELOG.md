@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.0](https://github.com/apollosproject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
+
+
+### Features
+
+* removed scripture component and add htmlFeature ([#2520](https://github.com/apollosproject/apollos-apps/issues/2520)) ([564f542](https://github.com/apollosproject/apollos-apps/commit/564f5427015a4d4862a761d8c5e78145b38cbe31))
+
+
+
 ## [3.8.0](https://github.com/apollosproject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
 
 **Note:** Version bump only for package @apollosproject/ui-fragments
