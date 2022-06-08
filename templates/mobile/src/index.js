@@ -44,17 +44,6 @@ const AppStatusBar = () => {
   );
 };
 
-const ProtectedRouteWithSplashScreen = () => {
-  const handleOnRouteChange = () => SplashScreen.hide();
-  const navigation = useNavigation();
-  return (
-    <ProtectedRoute
-      onRouteChange={handleOnRouteChange}
-      navigation={navigation}
-    />
-  );
-};
-
 const ThemedNavigationContainer = ({ children }) => {
   const theme = useTheme();
   return (
@@ -89,10 +78,7 @@ const App = () => (
           <Navigator
             screenOptions={{ headerShown: false, stackPresentation: 'modal' }}
           >
-            <Screen
-              name="ProtectedRoute"
-              component={ProtectedRouteWithSplashScreen}
-            />
+            <Screen name="ProtectedRoute" component={ProtectedRoute} />
             <Screen
               name="Tabs"
               component={Tabs}
