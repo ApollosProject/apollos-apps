@@ -176,7 +176,12 @@ class MapView extends Component {
   }
 
   getCampusAddress = (campus) =>
-    `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
+    [
+      [campus.street1, campus.city].filter(Boolean).join('\n'),
+      [campus.state, campus.postalCode].filter(Boolean).join(' '),
+    ]
+      .filter(Boolean)
+      .join(', ');
 
   scrollToIndex = (index) => {
     const cardScrollPosition = index * this.cardScrollPositionOffset;

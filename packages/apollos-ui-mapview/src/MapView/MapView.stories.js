@@ -29,6 +29,30 @@ const campuses = [
     state: 'OH',
     street1: '120 E 8th St',
   },
+  {
+    city: '',
+    distanceFromLocation: 2037.6461577685534,
+    id: 'Campus:4f68015ba18662a7409d1219a4ce013f',
+    image: 'https://www.placecage.com/c/220/220',
+    latitude: null,
+    longitude: null,
+    name: 'Online Campus',
+    postalCode: '',
+    state: '',
+    street1: '',
+  },
+  {
+    city: '',
+    distanceFromLocation: 2037.6461577685534,
+    id: 'Campus:4f68015ba18662a7409d1219a4ce013f',
+    image: 'https://www.placecage.com/c/220/220',
+    latitude: null,
+    longitude: null,
+    name: 'Another Online Campus',
+    postalCode: '',
+    state: '',
+    street1: 'Find us at Newspring.cc',
+  },
 ];
 
 const currentCampus = {
