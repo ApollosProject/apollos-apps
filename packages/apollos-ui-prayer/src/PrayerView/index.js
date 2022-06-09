@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardAvoidingView, ScrollView, View } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, View, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -49,6 +49,8 @@ const SecondaryActionButton = withTheme(
   'ui-prayer.PrayerView.SecondaryActionButton'
 )(Button);
 
+const keyboardAvoidingBehavior = Platform.OS === 'ios' ? 'padding' : 'height';
+
 const PrayerView = ({
   children,
   isLoading,
@@ -58,7 +60,10 @@ const PrayerView = ({
   secondaryActionText,
 }) => (
   <FlexedSafeAreaView>
-    <FlexedKeyboardAvoidingView behavior={'padding'}>
+    <FlexedKeyboardAvoidingView
+      behavior={keyboardAvoidingBehavior}
+      keyboardVerticalOffset={20}
+    >
       <FlexedScrollView
         keyboardShouldPersistTaps={'never'}
         keyboardDismissMode={'on-drag'}
