@@ -73,6 +73,8 @@ const AuthLanding = ({
         style={StyleSheet.absoluteFill}
         automaticallyAdjustContentInsets
         contentInsetAdjustmentBehavior="automatic"
+        allowsInlineMediaPlayback
+        mediaPlaybackRequiresUserAction
       />
       <Overlay />
       <FlexedSafeAreaView edges={['right', 'left', 'bottom']}>
