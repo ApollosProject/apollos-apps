@@ -1,4 +1,4 @@
-# [The Apollos Project](https://apollosapp.io)
+# [The Apollos Project](https://apollos.app)
 
 ## Develop
 
