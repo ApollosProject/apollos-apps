@@ -54,13 +54,6 @@ class PersonalDetails extends PureComponent {
             error={props.touched.lastName && props.errors.lastName}
             onChangeText={(text) => props.setFieldValue('lastName', text)}
           />
-          <TextInput
-            label="Email"
-            type="email"
-            value={props.values.email}
-            error={props.touched.email && props.errors.email}
-            onChangeText={(text) => props.setFieldValue('email', text)}
-          />
         </PaddedView>
         <Footer>
           <PaddedView>
@@ -82,7 +75,7 @@ class PersonalDetails extends PureComponent {
         {({ data }) => {
           if (data) {
             const { currentUser } = data;
-            const { firstName, lastName, email } = data.currentUser.profile;
+            const { firstName, lastName } = data.currentUser.profile;
 
             return (
               <Mutation
@@ -97,7 +90,6 @@ class PersonalDetails extends PureComponent {
                           ...currentUser.profile,
                           firstName: updateProfileFields.firstName,
                           lastName: updateProfileFields.lastName,
-                          email: updateProfileFields.email,
                         },
                       },
                     },
@@ -106,17 +98,13 @@ class PersonalDetails extends PureComponent {
               >
                 {(updateDetails) => (
                   <Formik
-                    initialValues={{ firstName, lastName, email }}
+                    initialValues={{ firstName, lastName }}
                     validationSchema={Yup.object().shape({
                       firstName: Yup.string()
                         .required('First Name is required!')
                         .nullable(),
                       lastName: Yup.string()
                         .required('Last Name is required!')
-                        .nullable(),
-                      email: Yup.string()
-                        .email('Invalid email address')
-                        .required('Email is required!')
                         .nullable(),
                     })}
                     onSubmit={async (
@@ -135,12 +123,7 @@ class PersonalDetails extends PureComponent {
                           )
                         ) {
                           setFieldError(
-                            'email',
-                            'There is already a user with this email'
-                          );
-                        } else {
-                          setFieldError(
-                            'email',
+                            'personal_details',
                             'Unknown error. Please try again later.'
                           );
                         }

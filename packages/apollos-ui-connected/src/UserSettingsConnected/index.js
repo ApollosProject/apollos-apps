@@ -55,7 +55,7 @@ const UserSettingsNavigator = () => (
     <Screen
       name="PersonalDetails"
       component={PersonalDetails}
-      options={{ title: 'Personal Details' }}
+      options={{ headerRight: () => null, title: 'Personal Details' }}
     />
     <Screen
       component={LikedContentFeedConnected}
