@@ -117,17 +117,6 @@ const UserSettings = () => {
           <Divider />
           <Touchable
             onPress={() => {
-              navigation.navigate('ChangePassword');
-            }}
-          >
-            <Cell>
-              <CellText>Change Password</CellText>
-              <StyledCellIcon name="arrow-next" />
-            </Cell>
-          </Touchable>
-          <Divider />
-          <Touchable
-            onPress={() => {
               navigation.navigate('Notifications');
             }}
           >

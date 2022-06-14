@@ -9,7 +9,6 @@ import { NotificationSettingsConnected } from '@apollosproject/ui-notifications'
 
 import LikedContentFeedConnected from '../LikedContentFeedConnected';
 import PersonalDetails from './PersonalDetails';
-import ChangePassword from './ChangePassword';
 import UserSettings from './UserSettings';
 
 const StyledText = withTheme(({ theme }) => ({
@@ -57,11 +56,6 @@ const UserSettingsNavigator = () => (
       name="PersonalDetails"
       component={PersonalDetails}
       options={{ title: 'Personal Details' }}
-    />
-    <Screen
-      name="ChangePassword"
-      component={ChangePassword}
-      options={{ title: 'Change Password' }}
     />
     <Screen
       component={LikedContentFeedConnected}
