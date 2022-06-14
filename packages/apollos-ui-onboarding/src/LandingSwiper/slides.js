@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
   H1,
@@ -22,14 +22,6 @@ import {
 
 import { Post, Notification, Prompt } from './callouts';
 import AnimatedAppIcon from './AnimatedAppIcon';
-
-const TextContainer = styled(({ theme }) => ({
-  padding: theme.sizing.baseUnit,
-  width: '58%',
-  alignItems: 'center',
-  textAlign: 'center',
-  alignSelf: 'center',
-}))(View);
 
 const CustomIntroTextContainer = styled(({ theme }) => ({
   padding: theme.sizing.baseUnit * 2,
@@ -55,6 +47,16 @@ const ItemText = styled(({ theme }) => ({
   lineHeight: 32,
   paddingLeft: theme.sizing.baseUnit,
 }))(H5);
+
+const SlideText = ({ title, subtitle }) => {
+  const theme = useTheme();
+  return (
+    <View style={styles.textContainer(theme)}>
+      <Title>{title}</Title>
+      <SubTitle secondary>{subtitle}</SubTitle>
+    </View>
+  );
+};
 
 export const Intro = named('ui-onboarding.LandingSwiper.slides.Intro')(
   ({
@@ -108,10 +110,12 @@ export const Intro = named('ui-onboarding.LandingSwiper.slides.Intro')(
             })}
           </CustomIntroTextContainer>
         ) : (
-          <TextContainer>
-            <Icon name="brand-logo" size={60} />
+          <View style={styles.textContainer(theme)}>
+            <View style={styles.wordmarkContainer(theme)}>
+              <Icon name="brand-logo" size={60} />
+            </View>
             <SubTitle secondary>{subtitle}</SubTitle>
-          </TextContainer>
+          </View>
         )}
       </LandingSlide>
     );
@@ -136,10 +140,7 @@ export const Scripture = named('ui-onboarding.LandingSwiper.slides.Scripture')(
       calloutLocation="centered"
       {...slideProps}
     >
-      <TextContainer>
-        <Title>{title}</Title>
-        <SubTitle secondary>{subtitle}</SubTitle>
-      </TextContainer>
+      <SlideText title={title} subtitle={subtitle} />
     </LandingSlide>
   )
 );
@@ -158,10 +159,7 @@ export const Prayer = named('ui-onboarding.LandingSwiper.slides.Prayer')(
       calloutLocation="top"
       {...slideProps}
     >
-      <TextContainer>
-        <Title>{title}</Title>
-        <SubTitle secondary>{subtitle}</SubTitle>
-      </TextContainer>
+      <SlideText title={title} subtitle={subtitle} />
     </LandingSlide>
   )
 );
@@ -183,10 +181,19 @@ export const Community = named('ui-onboarding.LandingSwiper.slides.Community')(
       calloutLocation="bottom"
       {...slideProps}
     >
-      <TextContainer>
-        <Title>{title}</Title>
-        <SubTitle secondary>{subtitle}</SubTitle>
-      </TextContainer>
+      <SlideText title={title} subtitle={subtitle} />
     </LandingSlide>
   )
 );
+
+const styles = StyleSheet.create({
+  wordmarkContainer: (theme) => ({
+    marginBottom: theme.sizing.baseUnit,
+  }),
+  textContainer: (theme) => ({
+    padding: theme.sizing.baseUnit,
+    alignItems: 'center',
+    textAlign: 'center',
+    alignSelf: 'center',
+  }),
+});
