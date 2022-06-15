@@ -1,6 +1,8 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { useNavigation } from '@react-navigation/native';
+import { HeaderBackButton } from '@react-navigation/stack';
 import { UIText } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
 
@@ -20,6 +22,9 @@ import { IdentityConnectVerificationConnected } from './IdentityConnectVerificat
 import { AuthLandingConnected } from './AuthLanding';
 
 const AuthStack = createNativeStackNavigator();
+
+const PlatformSpecificBackButton =
+  Platform.OS === 'android' ? () => null : HeaderBackButton;
 
 const skipButton = (to) => {
   const SkipButton = () => {
@@ -55,6 +60,7 @@ const AuthNavigator = ({
         headerTitle: '',
         headerBackTitle: 'Back',
         headerShown: true,
+        headerLeft: PlatformSpecificBackButton,
       }}
     >
       <AuthStack.Screen

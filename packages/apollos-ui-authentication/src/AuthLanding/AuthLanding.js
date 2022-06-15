@@ -6,6 +6,7 @@ import WebView from 'react-native-webview';
 import {
   AppIcon,
   PaddedView,
+  BackgroundView,
   Button,
   H4,
   H3,
@@ -67,7 +68,7 @@ const AuthLanding = ({
   error,
 }) => {
   return (
-    <>
+    <BackgroundView avoidHeader>
       <WebView
         source={{ uri: demoUrl }}
         style={StyleSheet.absoluteFill}
@@ -105,7 +106,7 @@ const AuthLanding = ({
 
         <BottomAppIcon size={66} />
       </FlexedSafeAreaView>
-    </>
+    </BackgroundView>
   );
 };
 
