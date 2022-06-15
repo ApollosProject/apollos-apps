@@ -23,6 +23,7 @@ const TextInputWrapper = styled(
     borderRadius: theme.sizing.baseBorderRadius,
     backgroundColor: theme.colors.background.screen,
     overflow: 'hidden',
+    paddingLeft: theme.sizing.baseUnit / 2,
   }),
   'ui-kit.inputs.Search.styles.TextInputWrapper'
 )(View);

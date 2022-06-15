@@ -49,7 +49,7 @@ const NoResults = ({ searchText }) => (
     <PaddedView vertical={false}>
       <StyledBodySmall>
         {"Looks like we couldn't find anything for "}
-        <StyledBodySmall bold>{`"${searchText}."`}</StyledBodySmall>
+        <StyledBodySmall bold>{`"${searchText}".`}</StyledBodySmall>
         {' Try searching for something else!'}
       </StyledBodySmall>
     </PaddedView>

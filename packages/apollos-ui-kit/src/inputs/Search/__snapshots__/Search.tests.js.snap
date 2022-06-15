@@ -42,6 +42,7 @@ exports[`The Search Input component should render 1`] = `
           "flexDirection": "row",
           "flexGrow": 1,
           "overflow": "hidden",
+          "paddingLeft": 8,
         }
       }
     >
@@ -587,6 +588,7 @@ exports[`The Search Input component should render as disabled 1`] = `
           "flexDirection": "row",
           "flexGrow": 1,
           "overflow": "hidden",
+          "paddingLeft": 8,
         }
       }
     >
@@ -1131,6 +1133,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
           "flexDirection": "row",
           "flexGrow": 1,
           "overflow": "hidden",
+          "paddingLeft": 8,
         }
       }
     >
@@ -1675,6 +1678,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
           "flexDirection": "row",
           "flexGrow": 1,
           "overflow": "hidden",
+          "paddingLeft": 8,
         }
       }
     >
@@ -2219,6 +2223,7 @@ exports[`The Search Input component should render with a custom screenBackground
           "flexDirection": "row",
           "flexGrow": 1,
           "overflow": "hidden",
+          "paddingLeft": 8,
         }
       }
     >

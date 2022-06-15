@@ -552,6 +552,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       "flexDirection": "row",
                                       "flexGrow": 1,
                                       "overflow": "hidden",
+                                      "paddingLeft": 8,
                                     }
                                   }
                                 >
@@ -1627,6 +1628,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       "flexDirection": "row",
                                       "flexGrow": 1,
                                       "overflow": "hidden",
+                                      "paddingLeft": 8,
                                     }
                                   }
                                 >

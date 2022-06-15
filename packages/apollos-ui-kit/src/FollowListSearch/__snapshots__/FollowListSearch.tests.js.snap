@@ -50,6 +50,7 @@ exports[`FollowListSearch should render 1`] = `
             "flexDirection": "row",
             "flexGrow": 1,
             "overflow": "hidden",
+            "paddingLeft": 8,
           }
         }
       >
@@ -717,6 +718,7 @@ exports[`FollowListSearch should render a modal 1`] = `
                     "flexDirection": "row",
                     "flexGrow": 1,
                     "overflow": "hidden",
+                    "paddingLeft": 8,
                   }
                 }
               >
@@ -1275,6 +1277,7 @@ exports[`FollowListSearch should render followers 1`] = `
             "flexDirection": "row",
             "flexGrow": 1,
             "overflow": "hidden",
+            "paddingLeft": 8,
           }
         }
       >
@@ -1976,6 +1979,7 @@ exports[`FollowListSearch should render with a search function 1`] = `
             "flexDirection": "row",
             "flexGrow": 1,
             "overflow": "hidden",
+            "paddingLeft": 8,
           }
         }
       >
