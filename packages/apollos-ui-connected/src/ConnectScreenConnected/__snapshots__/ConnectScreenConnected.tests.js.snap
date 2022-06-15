@@ -316,6 +316,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             <View
                               style={
                                 Object {
+                                  "marginBottom": 16,
                                   "paddingHorizontal": 16,
                                   "paddingVertical": 16,
                                 }
@@ -1389,6 +1390,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             <View
                               style={
                                 Object {
+                                  "marginBottom": 16,
                                   "paddingHorizontal": 16,
                                   "paddingVertical": 16,
                                 }

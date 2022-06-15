@@ -21,6 +21,7 @@ exports[`The SuggestedFollowListConnected component should render with data 1`] 
   <View
     style={
       Object {
+        "marginBottom": 16,
         "paddingHorizontal": 16,
         "paddingVertical": 16,
       }
