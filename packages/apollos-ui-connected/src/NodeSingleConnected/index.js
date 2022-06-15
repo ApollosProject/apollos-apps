@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Reanimated from 'react-native-reanimated';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
@@ -23,8 +23,8 @@ import GET_MEDIA from './getMedia';
 import GET_TITLE from './getTitle';
 
 const FlexedScrollView = styled({ flex: 1 })(Reanimated.ScrollView);
-const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
-  <View {...props}>
+const NodeSingleInner = ({ nodeId, ImageWrapperComponent }) => (
+  <View>
     <ContentNodeConnected
       ImageWrapperComponent={ImageWrapperComponent}
       nodeId={nodeId}
@@ -42,18 +42,17 @@ NodeSingleInner.propTypes = {
   ImageWrapperComponent: PropTypes.any, // eslint-disable-line
 };
 
-const NodeSingleConnected = ({ nodeId, children, Component, ...props }) => (
+const NodeSingleConnected = ({ nodeId, children, Component }) => (
   <>
     <BackgroundView>
       <StretchyView>
         {({ Stretchy, ...scrollViewProps }) => (
-          <FlexedScrollView {...scrollViewProps}>
+          <FlexedScrollView
+            contentContainerStyle={styles.content}
+            {...scrollViewProps}
+          >
             {nodeId ? (
-              <Component
-                nodeId={nodeId}
-                ImageWrapperComponent={Stretchy}
-                {...props}
-              />
+              <Component nodeId={nodeId} ImageWrapperComponent={Stretchy} />
             ) : null}
           </FlexedScrollView>
         )}
@@ -73,12 +72,13 @@ NodeSingleConnected.defaultProps = {
   Component: NodeSingleInner,
 };
 
-const NodeSingleConnectedWithMedia = ({
-  nodeId,
-  children,
-  Component,
-  ...props
-}) => {
+const styles = StyleSheet.create({
+  content: {
+    paddingBottom: 200,
+  },
+});
+
+const NodeSingleConnectedWithMedia = ({ nodeId, children, Component }) => {
   const { data } = useQuery(GET_MEDIA, {
     variables: { nodeId },
     fetchPolicy: 'cache-and-network',
@@ -120,7 +120,7 @@ const NodeSingleConnectedWithMedia = ({
 
   if (!mediaSource) {
     return (
-      <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
+      <NodeSingleConnected nodeId={nodeId} Component={Component}>
         {children}
       </NodeSingleConnected>
     );

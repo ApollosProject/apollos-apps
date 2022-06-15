@@ -18,6 +18,7 @@
     "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn",
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
+    "postversion": "yarn && git add templates/mobile/ios/Podfile.lock && git commit -m 'updated podfile versions'",
     "generate-stories": "lerna run generate-stories",
     "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)",
     "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)"

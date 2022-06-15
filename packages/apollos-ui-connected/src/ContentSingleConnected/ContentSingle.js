@@ -9,10 +9,6 @@ import InteractWhenLoadedConnected from '../InteractWhenLoadedConnected';
 import NodeSingleConnected from '../NodeSingleConnected';
 import ThemeMixinConnected from '../ThemeMixinConnected';
 
-const PaddedNodeSingleConnected = styled(({ theme: { sizing } }) => ({
-  paddingBottom: sizing.baseUnit * 5,
-}))(NodeSingleConnected);
-
 const ContentSingle = (props) => {
   const nodeId = props.route?.params?.itemId;
   const { data, loading } = useQuery(
@@ -47,7 +43,7 @@ const ContentSingle = (props) => {
           parentName: data?.node?.parentChannel?.name,
         }}
       />
-      <PaddedNodeSingleConnected nodeId={nodeId} />
+      <NodeSingleConnected nodeId={nodeId} />
     </ThemeMixinConnected>
   );
 };
