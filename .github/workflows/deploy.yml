@@ -5,10 +5,11 @@ on:
     branches: [master]
 
 jobs:
-  defaults:
-    run:
-      working-directory: templates/mobile
+
   ios:
+    defaults:
+      run:
+        working-directory: templates/mobile
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,6 +28,9 @@ jobs:
       - run: apollos mobile deploy ios publish
 
   android:
+    defaults:
+      run:
+        working-directory: templates/mobile
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
