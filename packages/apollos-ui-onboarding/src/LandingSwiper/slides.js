@@ -192,6 +192,7 @@ const styles = StyleSheet.create({
   }),
   textContainer: (theme) => ({
     padding: theme.sizing.baseUnit,
+    width: '58%',
     alignItems: 'center',
     textAlign: 'center',
     alignSelf: 'center',
