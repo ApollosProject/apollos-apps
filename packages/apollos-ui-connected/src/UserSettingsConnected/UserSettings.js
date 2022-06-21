@@ -135,8 +135,8 @@ const UserSettings = () => {
         </TableView>
         <TableView>
           <Touchable
-            onPress={async () => {
-              await logout();
+            onPress={() => {
+              logout();
               // This resets the navigation stack, and the navigates to the first auth screen.
               // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
               NavigationService.resetToAuth();
