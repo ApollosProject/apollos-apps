@@ -23,7 +23,7 @@ const AddIconBackground = styled(
   ({ isLoading, theme }) => ({
     backgroundColor: isLoading
       ? theme.colors.background.inactive
-      : theme.colors.action.primary,
+      : theme.colors.action.secondary,
     padding: theme.sizing.avatar.medium * 0.1625,
   }),
   'ui-kit.Avatar.AvatarList.AddIconBackground'

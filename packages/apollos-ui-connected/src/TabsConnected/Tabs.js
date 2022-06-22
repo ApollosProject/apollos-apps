@@ -54,7 +54,7 @@ const SearchButton = () => {
         <Icon
           name="search"
           size={theme.sizing.baseUnit * 2}
-          fill={theme.colors.primary}
+          fill={theme.colors.secondary}
         />
       </View>
     </Touchable>

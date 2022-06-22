@@ -154,7 +154,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
             <View
               style={
                 Object {
-                  "backgroundColor": "#00676D",
+                  "backgroundColor": "#17B582",
                   "padding": 11.700000000000001,
                 }
               }
