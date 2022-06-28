@@ -1,0 +1,953 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonFollowingConnected/PersonIsFollowedByList renders a list of followers with no pending follow requests 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <CurrentUserFollowRequests
+        refetch={[Function]}
+      />
+    }
+    contentContainerStyle={
+      Object {
+        "paddingVertical": 16,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "__typename": "Person",
+          "currentUserFollowing": Object {
+            "__typename": "Follow",
+            "id": "Follow:1",
+            "state": "ACCEPTED",
+          },
+          "firstName": "First",
+          "followingCurrentUser": Object {
+            "__typename": "Follow",
+            "id": "Follow:2",
+            "state": "ACCEPTED",
+          },
+          "hideBorder": false,
+          "id": "Person:1",
+          "lastName": "Last",
+          "photo": Object {
+            "__typename": "ImageMediaSource",
+            "uri": "https://my.photo.com",
+          },
+        },
+        Object {
+          "__typename": "Person",
+          "currentUserFollowing": null,
+          "firstName": "First",
+          "followingCurrentUser": Object {
+            "__typename": "Follow",
+            "id": "Follow:4",
+            "state": "ACCEPTED",
+          },
+          "hideBorder": false,
+          "id": "Person:2",
+          "lastName": "Last",
+          "photo": Object {
+            "__typename": "ImageMediaSource",
+            "uri": "https://my.photo.com",
+          },
+        },
+        Object {
+          "__typename": "Person",
+          "currentUserFollowing": Object {
+            "__typename": "Follow",
+            "id": "Follow:5",
+            "state": "REQUESTED",
+          },
+          "firstName": "First",
+          "followingCurrentUser": Object {
+            "__typename": "Follow",
+            "id": "Follow:6",
+            "state": "ACCEPTED",
+          },
+          "hideBorder": true,
+          "id": "Person:3",
+          "lastName": "Last",
+          "photo": Object {
+            "__typename": "ImageMediaSource",
+            "uri": "https://my.photo.com",
+          },
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onRefresh={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        onLayout={[Function]}
+      />
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                [Function],
+              ]
+            }
+            themeSize={64}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              size="small"
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://my.photo.com",
+                    "url": "https://my.photo.com",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 32,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={64}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                "borderBottomWidth": 0.5,
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "height": "102%",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 21,
+                  }
+                }
+              >
+                First Last
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                [Function],
+              ]
+            }
+            themeSize={64}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              size="small"
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://my.photo.com",
+                    "url": "https://my.photo.com",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 32,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={64}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                "borderBottomWidth": 0.5,
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "height": "102%",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 21,
+                  }
+                }
+              >
+                First Last
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                [Function],
+              ]
+            }
+            themeSize={64}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              size="small"
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://my.photo.com",
+                    "url": "https://my.photo.com",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 32,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={64}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                "borderBottomWidth": 0,
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "height": "102%",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 21,
+                  }
+                }
+              >
+                First Last
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`PersonFollowingConnected/PersonIsFollowedByList renders a list of followers with pending follow requests 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <CurrentUserFollowRequests
+        refetch={[Function]}
+      />
+    }
+    contentContainerStyle={
+      Object {
+        "paddingVertical": 16,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "__typename": "Person",
+          "currentUserFollowing": Object {
+            "__typename": "Follow",
+            "id": "Follow:1",
+            "state": "ACCEPTED",
+          },
+          "firstName": "First",
+          "followingCurrentUser": Object {
+            "__typename": "Follow",
+            "id": "Follow:2",
+            "state": "ACCEPTED",
+          },
+          "hideBorder": false,
+          "id": "Person:1",
+          "lastName": "Last",
+          "photo": Object {
+            "__typename": "ImageMediaSource",
+            "uri": "https://my.photo.com",
+          },
+        },
+        Object {
+          "__typename": "Person",
+          "currentUserFollowing": null,
+          "firstName": "First",
+          "followingCurrentUser": Object {
+            "__typename": "Follow",
+            "id": "Follow:4",
+            "state": "ACCEPTED",
+          },
+          "hideBorder": false,
+          "id": "Person:2",
+          "lastName": "Last",
+          "photo": Object {
+            "__typename": "ImageMediaSource",
+            "uri": "https://my.photo.com",
+          },
+        },
+        Object {
+          "__typename": "Person",
+          "currentUserFollowing": Object {
+            "__typename": "Follow",
+            "id": "Follow:5",
+            "state": "REQUESTED",
+          },
+          "firstName": "First",
+          "followingCurrentUser": Object {
+            "__typename": "Follow",
+            "id": "Follow:6",
+            "state": "ACCEPTED",
+          },
+          "hideBorder": true,
+          "id": "Person:3",
+          "lastName": "Last",
+          "photo": Object {
+            "__typename": "ImageMediaSource",
+            "uri": "https://my.photo.com",
+          },
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onRefresh={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+              "borderBottomWidth": 0.5,
+              "marginBottom": 16,
+              "paddingBottom": 12,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            Requests
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+                "paddingHorizontal": 16,
+                "paddingVertical": 8,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 64,
+                    "justifyContent": "center",
+                    "width": 64,
+                  },
+                  [Function],
+                ]
+              }
+              themeSize={64}
+            >
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="small"
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "https://my.photo.com",
+                      "url": "https://my.photo.com",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 32,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                themeSize={64}
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                  "borderBottomWidth": 0,
+                  "display": "flex",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "height": "102%",
+                  "marginLeft": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  First Last
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                [Function],
+              ]
+            }
+            themeSize={64}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              size="small"
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://my.photo.com",
+                    "url": "https://my.photo.com",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 32,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={64}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                "borderBottomWidth": 0.5,
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "height": "102%",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 21,
+                  }
+                }
+              >
+                First Last
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                [Function],
+              ]
+            }
+            themeSize={64}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              size="small"
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://my.photo.com",
+                    "url": "https://my.photo.com",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 32,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={64}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                "borderBottomWidth": 0.5,
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "height": "102%",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 21,
+                  }
+                }
+              >
+                First Last
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                [Function],
+              ]
+            }
+            themeSize={64}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              size="small"
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://my.photo.com",
+                    "url": "https://my.photo.com",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 32,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={64}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(39, 39, 46, 0.18)",
+                "borderBottomWidth": 0,
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "height": "102%",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 21,
+                  }
+                }
+              >
+                First Last
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

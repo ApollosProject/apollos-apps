@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentNodeConnected should render 1`] = `
+exports[`ScriptureNodeConnected should render 1`] = `
 <View
   style={
     Object {

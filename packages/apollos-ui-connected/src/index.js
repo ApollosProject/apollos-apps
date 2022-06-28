@@ -87,6 +87,7 @@ export NodeSingleConnected, {
   GET_MEDIA,
   GET_TITLE,
 } from './NodeSingleConnected';
+export PersonFollowingConnected from './PersonFollowingConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export ScriptureScreenConnected from './ScriptureScreenConnected';

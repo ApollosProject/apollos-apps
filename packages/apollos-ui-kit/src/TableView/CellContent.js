@@ -7,6 +7,7 @@ const CellContent = styled(
     flexShrink: 1,
     paddingLeft: theme.sizing.baseUnit / 2,
     paddingRight: theme.sizing.baseUnit / 2,
+    justifyContent: 'center',
   }),
   'ui-kit.TableView.CellContent'
 )(View);

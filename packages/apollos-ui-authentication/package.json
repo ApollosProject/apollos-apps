@@ -64,7 +64,7 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
-    "@apollo/client": "3.3.20",
+    "@apollo/client": "3.6.5",
     "@apollosproject/ui-test-utils": "^3.9.0",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-navigation/native": "^5.9.3",

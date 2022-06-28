@@ -83,6 +83,7 @@ export TableView, {
   CellContent,
   Divider,
   FormFields,
+  Row,
 } from './TableView';
 export TabView, { SceneMap as TabSceneMap, TabBar } from './TabView';
 export ThemeProvider, {

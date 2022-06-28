@@ -25,6 +25,7 @@ import { Onboarding } from '@apollosproject/ui-onboarding';
 import {
   ContentSingleConnected,
   ContentFeedConnected,
+  PersonFollowingConnected,
   SearchScreenConnected,
   UserSettingsConnected,
   TabsConnected as Tabs,
@@ -142,6 +143,7 @@ const App = () => (
               name="UserSettingsNavigator"
               component={UserSettingsConnected}
             />
+            <Screen name="Following" component={PersonFollowingConnected} />
           </Navigator>
         </Providers>
       </ThemedNavigationContainer>

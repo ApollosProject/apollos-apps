@@ -37,7 +37,7 @@ const Image = styled(
 
 const StyledButtonIcon = styled(
   ({ theme, iconBackground }) => ({
-    backgroundColor: iconBackground || theme.colors.background.paper,
+    backgroundColor: iconBackground || theme.colors.action.primary,
     ...Platform.select(theme.shadows.default),
   }),
   'ui-kit.Avatar.Avatar.StyledButtonIcon'
@@ -186,7 +186,7 @@ export default withTheme(
   ({ theme, size, themeSize }) => ({
     themeSize:
       themeSize || get(theme.sizing.avatar, size, theme.sizing.avatar.small),
-    iconFill: theme.colors.action.primary,
+    iconFill: theme.colors.background.screen,
   }),
   'ui.kit.Avatar.Avatar'
 )(Avatar);

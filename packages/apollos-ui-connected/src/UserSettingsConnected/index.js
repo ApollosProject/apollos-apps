@@ -10,6 +10,7 @@ import { NotificationSettingsConnected } from '@apollosproject/ui-notifications'
 import LikedContentFeedConnected from '../LikedContentFeedConnected';
 import PersonalDetails from './PersonalDetails';
 import UserSettings from './UserSettings';
+import PersonFollowingConnected from '../PersonFollowingConnected';
 
 const StyledText = withTheme(({ theme }) => ({
   style: {
@@ -61,6 +62,11 @@ const UserSettingsNavigator = () => (
       component={LikedContentFeedConnected}
       name="LikedContentFeedConnected"
       options={{ title: 'Liked Content' }}
+    />
+    <Screen
+      component={PersonFollowingConnected}
+      name="Following"
+      options={{ title: '' }}
     />
   </Navigator>
 );

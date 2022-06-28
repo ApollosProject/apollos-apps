@@ -63,11 +63,13 @@ exports[`ActionListCard should render 5 items 1`] = `
           Object {
             "backgroundColor": "#FFFFFF",
             "borderBottomWidth": 0,
-            "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "borderLeftWidth": 0,
+            "borderRadius": 16,
             "borderRightWidth": 0,
             "borderTopWidth": 0,
             "marginBottom": 16,
+            "marginHorizontal": 16,
+            "overflow": "hidden",
           }
         }
       >
@@ -618,11 +620,13 @@ exports[`ActionListCard should render a loading state 1`] = `
           Object {
             "backgroundColor": "#FFFFFF",
             "borderBottomWidth": 0,
-            "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "borderLeftWidth": 0,
+            "borderRadius": 16,
             "borderRightWidth": 0,
             "borderTopWidth": 0,
             "marginBottom": 16,
+            "marginHorizontal": 16,
+            "overflow": "hidden",
           }
         }
       >
@@ -1188,11 +1192,13 @@ exports[`ActionListCard should render with a header 1`] = `
           Object {
             "backgroundColor": "#FFFFFF",
             "borderBottomWidth": 0,
-            "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "borderLeftWidth": 0,
+            "borderRadius": 16,
             "borderRightWidth": 0,
             "borderTopWidth": 0,
             "marginBottom": 16,
+            "marginHorizontal": 16,
+            "overflow": "hidden",
           }
         }
       >
@@ -1742,11 +1748,13 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
           Object {
             "backgroundColor": "#FFFFFF",
             "borderBottomWidth": 0,
-            "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "borderLeftWidth": 0,
+            "borderRadius": 16,
             "borderRightWidth": 0,
             "borderTopWidth": 0,
             "marginBottom": 16,
+            "marginHorizontal": 16,
+            "overflow": "hidden",
           }
         }
       >

@@ -11,8 +11,8 @@ const asFirstChild = (child) =>
 
 const Container = styled(
   ({ theme }) => ({
-    padding: theme.sizing.baseUnit / 2,
-    paddingLeft: theme.sizing.baseUnit,
+    paddingVertical: theme.sizing.baseUnit * 0.75,
+    paddingHorizontal: theme.sizing.baseUnit,
     backgroundColor: theme.colors.background.paper,
     flexDirection: 'row',
     justifyContent: 'flex-start',

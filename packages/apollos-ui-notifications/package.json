@@ -55,7 +55,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@apollo/client": "3.3.20",
+    "@apollo/client": "3.6.5",
     "jest": "^25.1.0",
     "prop-types": "15.7.2",
     "react": "16.13.1",

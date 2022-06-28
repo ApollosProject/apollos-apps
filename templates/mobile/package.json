@@ -39,7 +39,7 @@
     "react-devtools-core": "4.24.3"
   },
   "dependencies": {
-    "@apollo/client": "3.3.20",
+    "@apollo/client": "3.6.5",
     "@apollosproject/config": "link:../../packages/apollos-config",
     "@apollosproject/ui-analytics": "link:../../packages/apollos-ui-analytics",
     "@apollosproject/ui-authentication": "link:../../packages/apollos-ui-authentication",

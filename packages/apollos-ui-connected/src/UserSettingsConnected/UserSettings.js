@@ -1,25 +1,22 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 import { useQuery, useApolloClient, gql } from '@apollo/client';
 import { useNavigation } from '@react-navigation/native';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
 import { useIsLoggedIn, useLogout } from '@apollosproject/ui-authentication';
 import { get } from 'lodash';
+import Color from 'color';
 
 import {
   BackgroundView,
   TableView,
-  Cell,
-  CellIcon,
-  CellText,
+  Row,
   Divider,
   Touchable,
   NavigationService,
   H3,
-  H4,
   H6,
   PaddedView,
-  withTheme,
   styled,
 } from '@apollosproject/ui-kit';
 import {
@@ -28,23 +25,32 @@ import {
 } from '@apollosproject/ui-onboarding';
 
 import { UserAvatarUpdate } from '../UserAvatarConnected';
-
-const StyledPaddedView = withTheme(({ theme }) => ({
-  style: {
-    paddingLeft: theme.sizing.baseUnit,
-    paddingBottom: theme.sizing.baseUnit * 0.5,
-    paddingTop: 0,
-  },
-}))(PaddedView);
-
-const StyledCellIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.neutral.gray2,
-}))(CellIcon);
+import {
+  usePersonFollowing,
+  usePersonFollowedBy,
+  useCurrentUserFollowRequests,
+} from '../PersonFollowingConnected';
 
 const Container = styled({
   alignItems: 'center',
   justifyContent: 'center',
 })(PaddedView);
+
+const AppVersion = styled(({ theme }) => ({
+  color: theme.colors.neutral.gray3,
+  textAlign: 'center',
+  paddingVertical: theme.sizing.baseUnit,
+}))(H6);
+
+const NewLabel = styled(({ theme }) => ({
+  color: theme.colors.primary,
+  backgroundColor: Color(theme.colors.primary).fade(0.8).string(),
+  textAlign: 'center',
+  paddingVertical: theme.sizing.baseUnit * 0.25,
+  paddingHorizontal: theme.sizing.baseUnit * 0.5,
+  borderRadius: 8,
+  overflow: 'hidden',
+}))(H6);
 
 const UserSettings = () => {
   const navigation = useNavigation();
@@ -56,15 +62,33 @@ const UserSettings = () => {
       currentUser {
         id
         profile {
+          id
           firstName
           lastName
+          campus {
+            id
+            name
+          }
         }
+      }
+
+      likedContent {
+        totalCount
       }
     }
   `);
+  const { total: totalFollowing } = usePersonFollowing(
+    data?.currentUser?.profile?.id
+  );
+  const { total: totalFollowers } = usePersonFollowedBy(
+    data?.currentUser?.profile?.id
+  );
+  const { total: totalRequests } = useCurrentUserFollowRequests();
 
   const firstName = get(data, 'currentUser.profile.firstName');
   const lastName = get(data, 'currentUser.profile.lastName');
+  const campusName = get(data, 'currentUser.profile.campus.name');
+  const likedCount = get(data, 'likedContent.totalCount');
 
   // if (loading) return <ActivityIndicator />;
   if (!isLoggedIn) {
@@ -77,62 +101,98 @@ const UserSettings = () => {
           <UserAvatarUpdate />
           <H3>{firstName && lastName ? `${firstName} ${lastName}` : ''}</H3>
         </Container>
+        <PaddedView />
         <TableView>
+          <Touchable
+            onPress={() => {
+              navigation.navigate('Following', {
+                personId: data?.currentUser?.profile?.id,
+                screen: 'followed_by',
+              });
+            }}
+          >
+            <Row
+              title="Following Me"
+              leadingIcon="users-three"
+              accessoryText={`${totalFollowers}`}
+              accessoryComponent={totalRequests > 0 && <NewLabel>New</NewLabel>}
+            />
+          </Touchable>
+
+          <Touchable
+            onPress={() => {
+              navigation.navigate('Following', {
+                personId: data?.currentUser?.profile?.id,
+                screen: 'following',
+              });
+            }}
+          >
+            <Row
+              title="I'm Following"
+              leadingIcon="user-circle"
+              accessoryText={`${totalFollowing}`}
+            />
+          </Touchable>
+
           <Touchable
             onPress={() => {
               navigation.navigate('LikedContentFeedConnected');
             }}
           >
-            <Cell>
-              <StyledCellIcon name="like" />
-              <CellText>Likes</CellText>
-            </Cell>
+            <Row
+              title="Liked Content"
+              leadingIcon="heart"
+              accessoryText={`${likedCount || 0}`}
+            />
           </Touchable>
         </TableView>
-        <StyledPaddedView>
-          <H6>Your Profile</H6>
-        </StyledPaddedView>
-        <TableView>
+
+        <PaddedView />
+
+        <TableView headerText="My Profile">
           <Touchable
             onPress={() => {
               navigation.navigate('PersonalDetails');
             }}
           >
-            <Cell>
-              <CellText>Personal Details</CellText>
-              <StyledCellIcon name="arrow-next" />
-            </Cell>
+            <Row title="Personal Details" leadingIcon="user" />
           </Touchable>
-          <Divider />
+
           <Touchable
             onPress={() => {
               navigation.navigate('Location');
             }}
           >
-            <Cell>
-              <CellText>Location</CellText>
-              <StyledCellIcon name="arrow-next" />
-            </Cell>
+            <Row
+              title="My Campus"
+              leadingIcon="navigation-arrow"
+              accessoryText={campusName || 'Select'}
+            />
           </Touchable>
-          <Divider />
+        </TableView>
+
+        <PaddedView />
+
+        <TableView headerText="Settings">
+          <Touchable
+            onPress={() => {
+              navigation.navigate('ChangePassword');
+            }}
+          >
+            <Row title="Change Password" leadingIcon="lock-simple" />
+          </Touchable>
+
           <Touchable
             onPress={() => {
               navigation.navigate('Notifications');
             }}
           >
-            <Cell>
-              <CellText>Notification Settings</CellText>
-              <StyledCellIcon name="arrow-next" />
-            </Cell>
+            <Row title="Notification Settings" leadingIcon="bell" />
           </Touchable>
         </TableView>
-        <TableView>
-          <Cell>
-            <CellText>
-              {`App Version: ${getVersion()}.${getBuildNumber()}`}
-            </CellText>
-          </Cell>
-        </TableView>
+
+        <PaddedView />
+
         <TableView>
           <Touchable
             onPress={() => {
@@ -142,29 +202,23 @@ const UserSettings = () => {
               NavigationService.resetToAuth();
             }}
           >
-            <Cell>
-              {
-                // Uncomment this once this icon is merged to master in core
-                // <StyledCellIcon name="arrow-down-right" />
-              }
-              <CellText>Logout</CellText>
-            </Cell>
+            <Row title="Logout" leadingIcon="arrow-square-out" />
           </Touchable>
         </TableView>
+
+        <AppVersion>
+          {`App Version: ${getVersion()}.${getBuildNumber()}`}
+        </AppVersion>
 
         {/* testing panel */}
         {process.env.NODE_ENV !== 'production' ? (
           <>
-            <PaddedView>
-              <H4>For development only</H4>
-            </PaddedView>
-            <TableView>
+            <PaddedView />
+            <TableView headerText="Developer Tools">
               <Touchable
                 onPress={() => NavigationService.resetToAuth('OpenIDConnected')}
               >
-                <Cell>
-                  <CellText>Launch OpenID Flow</CellText>
-                </Cell>
+                <Row title="Launch OpenID Flow" />
               </Touchable>
               <Divider />
               <Touchable
@@ -176,9 +230,7 @@ const UserSettings = () => {
                   })
                 }
               >
-                <Cell>
-                  <CellText>Launch Onboarding</CellText>
-                </Cell>
+                <Row title="Launch Onboarding" />
               </Touchable>
               <Divider />
               <Touchable
@@ -189,9 +241,7 @@ const UserSettings = () => {
                   })
                 }
               >
-                <Cell>
-                  <CellText>Reset Onboarding to Unseen</CellText>
-                </Cell>
+                <Row title="Reset Onboarding to Unseen" />
               </Touchable>
               <Divider />
               <Touchable
@@ -202,11 +252,10 @@ const UserSettings = () => {
                   })
                 }
               >
-                <Cell>
-                  <CellText>Reset Onboarding to Seen v1</CellText>
-                </Cell>
+                <Row title="Reset Onboarding to Seen v1" />
               </Touchable>
             </TableView>
+            <PaddedView />
           </>
         ) : null}
       </ScrollView>

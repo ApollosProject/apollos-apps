@@ -36,12 +36,12 @@ exports[`the TableView Component should render 1`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderBottomWidth": 0.5,
-          "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderLeftWidth": 0,
+          "borderRadius": 16,
           "borderRightWidth": 0,
-          "borderTopWidth": 0.5,
           "marginBottom": 16,
+          "marginHorizontal": 16,
+          "overflow": "hidden",
         }
       }
     >
@@ -53,8 +53,8 @@ exports[`the TableView Component should render 1`] = `
             "flexDirection": "row",
             "justifyContent": "flex-start",
             "minHeight": 40,
-            "padding": 8,
-            "paddingLeft": 16,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -280,10 +280,8 @@ exports[`the TableView Component should render 1`] = `
           style={
             Object {
               "color": "#27272E",
-              "flexGrow": 1,
-              "flexShrink": 1,
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 17,
               "fontStyle": null,
               "fontWeight": null,
               "lineHeight": 21,
@@ -300,6 +298,7 @@ exports[`the TableView Component should render 1`] = `
           Object {
             "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "height": 0.5,
+            "marginLeft": 16,
           }
         }
       />
@@ -311,8 +310,8 @@ exports[`the TableView Component should render 1`] = `
             "flexDirection": "row",
             "justifyContent": "flex-start",
             "minHeight": 40,
-            "padding": 8,
-            "paddingLeft": 16,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -537,10 +536,8 @@ exports[`the TableView Component should render 1`] = `
           style={
             Object {
               "color": "#27272E",
-              "flexGrow": 1,
-              "flexShrink": 1,
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 17,
               "fontStyle": null,
               "fontWeight": null,
               "lineHeight": 21,
@@ -660,6 +657,7 @@ exports[`the TableView Component should render 1`] = `
           Object {
             "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "height": 0.5,
+            "marginLeft": 16,
           }
         }
       />
@@ -671,8 +669,8 @@ exports[`the TableView Component should render 1`] = `
             "flexDirection": "row",
             "justifyContent": "flex-start",
             "minHeight": 40,
-            "padding": 8,
-            "paddingLeft": 16,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -680,10 +678,8 @@ exports[`the TableView Component should render 1`] = `
           style={
             Object {
               "color": "#27272E",
-              "flexGrow": 1,
-              "flexShrink": 1,
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 17,
               "fontStyle": null,
               "fontWeight": null,
               "lineHeight": 21,
@@ -700,6 +696,7 @@ exports[`the TableView Component should render 1`] = `
           Object {
             "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "height": 0.5,
+            "marginLeft": 16,
           }
         }
       />
@@ -711,8 +708,8 @@ exports[`the TableView Component should render 1`] = `
             "flexDirection": "row",
             "justifyContent": "flex-start",
             "minHeight": 40,
-            "padding": 8,
-            "paddingLeft": 16,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -720,10 +717,8 @@ exports[`the TableView Component should render 1`] = `
           style={
             Object {
               "color": "#27272E",
-              "flexGrow": 1,
-              "flexShrink": 1,
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 17,
               "fontStyle": null,
               "fontWeight": null,
               "lineHeight": 21,

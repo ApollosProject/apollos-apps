@@ -53,7 +53,7 @@
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollo/client": "3.3.20"
+    "@apollo/client": "3.6.5"
   },
   "devDependencies": {
     "jest": "^25.1.0",

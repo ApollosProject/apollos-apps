@@ -197,7 +197,7 @@ exports[`The Avatar component should render icon button 1`] = `
         iconPadding={3.84}
         style={
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#00676D",
             "padding": 3.84,
             "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
             "shadowOffset": Object {
@@ -213,7 +213,7 @@ exports[`The Avatar component should render icon button 1`] = `
           align="xMidYMid"
           bbHeight={9.6}
           bbWidth={9.6}
-          color="#00676D"
+          color="rgb(249, 249, 251)"
           height={9.6}
           id="Raw"
           meetOrSlice={0}
@@ -235,7 +235,7 @@ exports[`The Avatar component should render icon button 1`] = `
               },
             ]
           }
-          tintColor="#00676D"
+          tintColor="rgb(249, 249, 251)"
           vbHeight={256.00098}
           vbWidth={256.00098}
           width={9.6}
@@ -361,7 +361,7 @@ exports[`The Avatar component should render icon button 1`] = `
               stroke={
                 Array [
                   0,
-                  4278216557,
+                  4294572539,
                 ]
               }
               strokeDasharray={null}
@@ -410,7 +410,7 @@ exports[`The Avatar component should render icon button 1`] = `
               stroke={
                 Array [
                   0,
-                  4278216557,
+                  4294572539,
                 ]
               }
               strokeDasharray={null}

@@ -7984,7 +7984,7 @@ each other
                                         iconPadding={3.84}
                                         style={
                                           Object {
-                                            "backgroundColor": "#FFFFFF",
+                                            "backgroundColor": "#00676D",
                                             "padding": 3.84,
                                             "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                                             "shadowOffset": Object {
@@ -8000,7 +8000,7 @@ each other
                                           align="xMidYMid"
                                           bbHeight={9.6}
                                           bbWidth={9.6}
-                                          color="#00676D"
+                                          color="rgb(249, 249, 251)"
                                           height={9.6}
                                           id="Raw"
                                           meetOrSlice={0}
@@ -8022,7 +8022,7 @@ each other
                                               },
                                             ]
                                           }
-                                          tintColor="#00676D"
+                                          tintColor="rgb(249, 249, 251)"
                                           vbHeight={256}
                                           vbWidth={256}
                                           width={9.6}
@@ -8145,7 +8145,7 @@ each other
                                               stroke={
                                                 Array [
                                                   0,
-                                                  4278216557,
+                                                  4294572539,
                                                 ]
                                               }
                                               strokeDasharray={null}
@@ -8197,7 +8197,7 @@ each other
                                               stroke={
                                                 Array [
                                                   0,
-                                                  4278216557,
+                                                  4294572539,
                                                 ]
                                               }
                                               strokeDasharray={null}

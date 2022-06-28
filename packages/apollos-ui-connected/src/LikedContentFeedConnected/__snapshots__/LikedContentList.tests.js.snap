@@ -19,6 +19,7 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
     }
   >
     <RCTScrollView
+      ListEmptyComponent={<ListEmptyComponent />}
       data={
         Array [
           Object {

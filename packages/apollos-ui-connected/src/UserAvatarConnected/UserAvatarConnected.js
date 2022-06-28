@@ -13,6 +13,7 @@ const UserAvatarConnected = ({
   onPressIcon,
   refetchRef,
   size,
+  iconButtonProps,
 }) => {
   const { data, refetch } = useQuery(GET_USER_PHOTO, {
     fetchPolicy: 'cache-and-network',
@@ -29,6 +30,7 @@ const UserAvatarConnected = ({
   return (
     <Avatar
       buttonIcon={buttonIcon}
+      iconButtonProps={iconButtonProps}
       containerStyle={containerStyle}
       iconFill={iconFill}
       isLoading={isLoading}
@@ -43,6 +45,7 @@ UserAvatarConnected.propTypes = {
   buttonIcon: PropTypes.string,
   containerStyle: PropTypes.any, // eslint-disable-line
   iconFill: PropTypes.string,
+  iconButtonProps: PropTypes.object,
   isLoading: PropTypes.bool,
   onPressIcon: PropTypes.func,
   refetchRef: PropTypes.func,

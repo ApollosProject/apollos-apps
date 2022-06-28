@@ -27,6 +27,7 @@ async function renderWithApolloData(
       });
     }
   }
+  await wait(0); // wait for response one last time
   return tree;
 }
 

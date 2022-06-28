@@ -56,6 +56,7 @@
     "@react-navigation/compat": "*",
     "@react-navigation/native": "*",
     "@react-navigation/stack": "*",
+    "moment": "^2.29.1",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
@@ -66,11 +67,13 @@
   "dependencies": {
     "@gorhom/bottom-sheet": "3.4.1",
     "@react-navigation/bottom-tabs": "^5.11.8",
+    "@react-navigation/material-top-tabs": "^6.2.1",
     "apollo-upload-client": "^17.0.0",
     "graphql": "^16.3.0",
     "graphql-tag": "2.9.2",
     "lodash": "^4.17.11",
-    "moment": "^2.29.1"
+    "react-native-pager-view": "^5.4.22",
+    "react-native-tab-view": "^3.1.1"
   },
   "devDependencies": {
     "@apollosproject/ui-test-utils": "^3.9.0",
@@ -79,6 +82,7 @@
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
     "jest": "^25.1.0",
+    "moment": "^2.29.1",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",

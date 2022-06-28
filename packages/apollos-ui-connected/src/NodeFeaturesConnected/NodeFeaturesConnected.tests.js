@@ -35,7 +35,6 @@ describe('NodeFeaturesConnected', () => {
         <NodeFeaturesConnected nodeId={'WeekendContentItem:123'} />
       </Providers>
     );
-    await new Promise((res) => setTimeout(res, 5));
     expect(tree).toMatchSnapshot();
   });
 });

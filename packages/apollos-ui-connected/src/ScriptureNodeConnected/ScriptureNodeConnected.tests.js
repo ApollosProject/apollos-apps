@@ -33,7 +33,7 @@ const scriptureMock = {
   },
 };
 
-describe('ContentNodeConnected', () => {
+describe('ScriptureNodeConnected', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers MockedProvider={MockedProvider} mocks={[scriptureMock]}>

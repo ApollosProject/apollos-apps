@@ -2,6 +2,7 @@ import { InMemoryCache } from '@apollo/client/cache';
 import AsyncStorage from '@react-native-community/async-storage';
 import { CachePersistor } from 'apollo3-cache-persist';
 import ApollosConfig from '@apollosproject/config';
+
 import fragmentTypes from '../../fragmentTypes.json';
 
 // We reset our apollo cache based an env value and static number.
@@ -18,8 +19,125 @@ fragmentTypes.__schema.types.forEach((supertype) => {
   }
 });
 
+/**
+ * Mocks an empty state for a relay style paginated object
+ * @returns {Object}
+ */
+function makeEmptyData() {
+  return {
+    edges: [],
+    pageInfo: {
+      hasPreviousPage: false,
+      hasNextPage: true,
+      startCursor: '',
+      endCursor: '',
+    },
+  };
+}
+
+/**
+ * Gets the cursor for an edge at a given index
+ * @param {Object[]} edges
+ * @param {number} index
+ * @returns {string}
+ */
+function cursorFromEdge(edges, index) {
+  if (index < 0) {
+    index += edges.length;
+  }
+  const edge = edges[index];
+  return (edge && edge.cursor) || '';
+}
+
+/**
+ * Creates the necessary `merge` and `read` fields for a relay-style pagination.
+ *
+ * Assumes that the page information is set in the form of object inside of args called `query` with properties `first` and `after`
+ * @returns {{ merge: function, read: function }}
+ */
+function relayStylePagination() {
+  return {
+    read(existing, { canRead }) {
+      if (!existing) {
+        return;
+      }
+      const edges = existing.edges.filter((edge) => canRead(edge.node));
+      return {
+        // Some implementations return additional Connection fields, such
+        // as existing.totalCount. These fields are saved by the merge
+        // function, so the read function should also preserve them.
+        ...existing,
+        edges,
+        pageInfo: {
+          ...existing.pageInfo,
+          startCursor: cursorFromEdge(edges, 0),
+          endCursor: cursorFromEdge(edges, -1),
+        },
+      };
+    },
+    merge(existing = makeEmptyData(), incoming, { args }) {
+      const query = args?.query;
+      if (!query) {
+        return {
+          ...existing,
+          /**
+           * in case we're manually updating the total count after a mutation, we'll end up with a new total count with no changes to Edges for UI reasons (see useFollowPerson.js)
+           */
+          totalCount: incoming?.totalCount ?? existing?.totalCount,
+        };
+      }
+
+      const incomingEdges = incoming.edges.slice(0);
+
+      let prefix = existing.edges;
+      let suffix = [];
+
+      if (query.after) {
+        const index = prefix.findIndex((edge) => edge.cursor === query.after);
+        if (index >= 0) {
+          prefix = prefix.slice(0, index + 1);
+          // suffix = []; // already true
+        }
+      } else {
+        // If we have neither args.after nor args.before, the incoming
+        // edges cannot be spliced into the existing edges, so they must
+        // replace the existing edges. See #6592 for a motivating example.
+        prefix = [];
+      }
+
+      const edges = [...prefix, ...incomingEdges, ...suffix];
+
+      const pageInfo = {
+        ...incoming.pageInfo,
+        ...existing.pageInfo,
+        startCursor: cursorFromEdge(edges, 0),
+        endCursor: cursorFromEdge(edges, -1),
+      };
+
+      return {
+        ...existing,
+        ...incoming,
+        edges,
+        pageInfo,
+      };
+    },
+  };
+}
+
 const cache = new InMemoryCache({
   possibleTypes,
+  typePolicies: {
+    AppTab: {
+      // We don't store tabs using an ID, but instead a Title
+      keyFields: ['title'],
+    },
+    Person: {
+      fields: {
+        following: relayStylePagination(),
+        followedBy: relayStylePagination(),
+      },
+    },
+  },
   cacheRedirects: {
     Query: {
       fields: {

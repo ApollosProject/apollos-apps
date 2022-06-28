@@ -3766,61 +3766,44 @@ exports[`The PrayerExperienceConnected component prays 1`] = `
                       }
                     >
                       <View
-                        accessible={true}
-                        focusable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
+                        bordered={false}
+                        disabled={true}
+                        pill={false}
                         style={
                           Object {
-                            "opacity": 1,
+                            "alignItems": "center",
+                            "backgroundColor": "#17B582",
+                            "borderColor": "#17B582",
+                            "borderRadius": 16,
+                            "borderWidth": 0.5,
+                            "flexDirection": "row",
+                            "height": 48,
+                            "justifyContent": "center",
+                            "opacity": 0.5,
+                            "overflow": "hidden",
+                            "paddingHorizontal": 16,
+                            "shadowColor": "rgba(0, 0, 0, 0.25)",
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 1,
+                            "shadowRadius": 8,
                           }
                         }
                       >
-                        <View
-                          bordered={false}
-                          disabled={false}
-                          pill={false}
+                        <Text
                           style={
                             Object {
-                              "alignItems": "center",
-                              "backgroundColor": "#17B582",
-                              "borderColor": "#17B582",
-                              "borderRadius": 16,
-                              "borderWidth": 0.5,
-                              "flexDirection": "row",
-                              "height": 48,
-                              "justifyContent": "center",
-                              "opacity": 1,
-                              "overflow": "hidden",
-                              "paddingHorizontal": 16,
-                              "shadowColor": "rgba(0, 0, 0, 0.25)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
+                              "color": "#F4F7F8",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 16,
+                              "lineHeight": 24,
                             }
                           }
                         >
-                          <Text
-                            style={
-                              Object {
-                                "color": "#F4F7F8",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 16,
-                                "lineHeight": 24,
-                              }
-                            }
-                          >
-                            🙏 Pray
-                          </Text>
-                        </View>
+                          Prayed!
+                        </Text>
                       </View>
                     </View>
                   </View>

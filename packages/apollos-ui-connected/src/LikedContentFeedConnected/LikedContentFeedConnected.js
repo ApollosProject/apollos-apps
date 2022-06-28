@@ -3,12 +3,50 @@ import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 
-import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
+import { View } from 'react-native';
+import {
+  UIText,
+  BackgroundView,
+  FeedView,
+  Icon,
+  styled,
+  withTheme,
+} from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../utils/fetchMoreResolver';
 import ContentCardConnected from '../ContentCardConnected';
 
 import GET_LIKED_CONTENT from './getLikedContent';
+
+const ListEmptyContainer = styled(() => ({
+  display: 'flex',
+  flex: 1,
+  height: 500,
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+}))(View);
+
+const ListEmptyText = withTheme(({ theme }) => ({
+  bold: true,
+  style: {
+    color: theme.colors.text.tertiary,
+    paddingTop: theme.sizing.baseUnit * 0.5,
+  },
+}))(UIText);
+
+const ListEmptyIcon = withTheme(({ theme }) => ({
+  size: 42,
+  name: 'heart',
+  fill: theme.colors.text.tertiary,
+}))(Icon);
+
+const ListEmptyComponent = () => (
+  <ListEmptyContainer>
+    <ListEmptyIcon />
+    <ListEmptyText>"Like" an item to see it here</ListEmptyText>
+  </ListEmptyContainer>
+);
 
 /** A FeedView wrapped in a query to pull content data. */
 class LikedContentFeedConnected extends PureComponent {
@@ -69,6 +107,7 @@ class LikedContentFeedConnected extends PureComponent {
           {({ loading, error, data, refetch, fetchMore, variables }) => (
             <Component
               ListItemComponent={ContentCardComponent}
+              ListEmptyComponent={<ListEmptyComponent />}
               content={this.getContent(data)}
               isLoading={loading}
               error={error}

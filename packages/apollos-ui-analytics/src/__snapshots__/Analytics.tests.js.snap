@@ -25,7 +25,6 @@ Array [
     "/graphql",
     Object {
       "body": "{\\"operationName\\":\\"identify\\",\\"variables\\":{\\"input\\":{\\"anonymousId\\":\\"id-123\\",\\"deviceInfo\\":{\\"platform\\":\\"iOS\\",\\"deviceId\\":\\"id-123\\",\\"deviceModel\\":\\"ios\\",\\"osVersion\\":\\"sys-version-123\\",\\"appVersion\\":\\"version-123\\"}}},\\"query\\":\\"mutation identify($input: AnalyticsIdentifyInput!) {\\\\n  identifySelf(input: $input) {\\\\n    success\\\\n    __typename\\\\n  }\\\\n}\\"}",
-      "credentials": undefined,
       "headers": Object {
         "accept": "*/*",
         "content-type": "application/json",
@@ -48,7 +47,6 @@ Array [
     "/graphql",
     Object {
       "body": "{\\"operationName\\":\\"track\\",\\"variables\\":{\\"input\\":{\\"anonymousId\\":\\"id-123\\",\\"deviceInfo\\":{\\"platform\\":\\"iOS\\",\\"deviceId\\":\\"id-123\\",\\"deviceModel\\":\\"ios\\",\\"osVersion\\":\\"sys-version-123\\",\\"appVersion\\":\\"version-123\\"},\\"eventName\\":\\"TrackSomething\\",\\"properties\\":[{\\"field\\":\\"ContentId\\",\\"value\\":\\"Content:123\\"}]}},\\"query\\":\\"mutation track($input: AnalyticsTrackInput!) {\\\\n  trackEvent(input: $input) {\\\\n    success\\\\n    __typename\\\\n  }\\\\n}\\"}",
-      "credentials": undefined,
       "headers": Object {
         "accept": "*/*",
         "content-type": "application/json",

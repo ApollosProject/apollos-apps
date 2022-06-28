@@ -373,7 +373,7 @@ exports[`UserAvatarHeaderConnected component renders UserAvatarHeaderConnected 1
                                 iconPadding={9.6}
                                 style={
                                   Object {
-                                    "backgroundColor": "#FFFFFF",
+                                    "backgroundColor": "#00676D",
                                     "padding": 9.6,
                                     "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
                                     "shadowOffset": Object {
@@ -389,7 +389,7 @@ exports[`UserAvatarHeaderConnected component renders UserAvatarHeaderConnected 1
                                   align="xMidYMid"
                                   bbHeight={24}
                                   bbWidth={24}
-                                  color="#00676D"
+                                  color="rgb(249, 249, 251)"
                                   height={24}
                                   id="Raw"
                                   meetOrSlice={0}
@@ -411,7 +411,7 @@ exports[`UserAvatarHeaderConnected component renders UserAvatarHeaderConnected 1
                                       },
                                     ]
                                   }
-                                  tintColor="#00676D"
+                                  tintColor="rgb(249, 249, 251)"
                                   vbHeight={256.00098}
                                   vbWidth={256.00098}
                                   width={24}
@@ -537,7 +537,7 @@ exports[`UserAvatarHeaderConnected component renders UserAvatarHeaderConnected 1
                                       stroke={
                                         Array [
                                           0,
-                                          4278216557,
+                                          4294572539,
                                         ]
                                       }
                                       strokeDasharray={null}
@@ -586,7 +586,7 @@ exports[`UserAvatarHeaderConnected component renders UserAvatarHeaderConnected 1
                                       stroke={
                                         Array [
                                           0,
-                                          4278216557,
+                                          4294572539,
                                         ]
                                       }
                                       strokeDasharray={null}
