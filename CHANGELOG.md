@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/ApollosProject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
+
+
+### Features
+
+* adds titles to feature feeds ([#2538](https://github.com/ApollosProject/apollos-apps/issues/2538)) ([3c5769e](https://github.com/ApollosProject/apollos-apps/commit/3c5769e381458cccc331d5752cd4ca9f2cc363d7))
+* Following Screens ([#2507](https://github.com/ApollosProject/apollos-apps/issues/2507)) ([ffccb48](https://github.com/ApollosProject/apollos-apps/commit/ffccb486e1e89fc83f62be57353b68c234de88ef))
+
+
+### Bug Fixes
+
+* adds content padding to avoid actionsheet ([#2537](https://github.com/ApollosProject/apollos-apps/issues/2537)) ([eeae9bc](https://github.com/ApollosProject/apollos-apps/commit/eeae9bccf4b2487b1fea6ca80acb0adbaff735da))
+* android prayer closing on launch ([#2528](https://github.com/ApollosProject/apollos-apps/issues/2528)) ([5da6252](https://github.com/ApollosProject/apollos-apps/commit/5da62524c95596cea8bc5e8763affaa375b29cb3))
+* call logout after resetToAuth ([#2540](https://github.com/ApollosProject/apollos-apps/issues/2540)) ([b25524b](https://github.com/ApollosProject/apollos-apps/commit/b25524bdfb7d53c83cd6b67c399cc2f81f8db867))
+* correct onboarding text width ([#2532](https://github.com/ApollosProject/apollos-apps/issues/2532)) ([e961ef7](https://github.com/ApollosProject/apollos-apps/commit/e961ef7b7867fff48ebcc606c5bddd27f165ace0))
+* space wordmark out a bit ([#2531](https://github.com/ApollosProject/apollos-apps/issues/2531)) ([1b66677](https://github.com/ApollosProject/apollos-apps/commit/1b6667797638703e69b87f4a4e807ee5218b150f))
+* Stop Videos on Church Websites from taking over ([#2529](https://github.com/ApollosProject/apollos-apps/issues/2529)) ([52c9405](https://github.com/ApollosProject/apollos-apps/commit/52c9405ea06f1681af7914a07dfe51c42d5b60b7))
+
+
+
 ## [3.9.0](https://github.com/ApollosProject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
 
 

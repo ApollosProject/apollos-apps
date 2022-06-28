@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
+
+
+### Features
+
+* Following Screens ([#2507](https://github.com/apollosproject/apollos-apps/issues/2507)) ([ffccb48](https://github.com/apollosproject/apollos-apps/commit/ffccb486e1e89fc83f62be57353b68c234de88ef))
+
+
+### Bug Fixes
+
+* Stop Videos on Church Websites from taking over ([#2529](https://github.com/apollosproject/apollos-apps/issues/2529)) ([52c9405](https://github.com/apollosproject/apollos-apps/commit/52c9405ea06f1681af7914a07dfe51c42d5b60b7))
+
+
+
 ## [3.9.0](https://github.com/apollosproject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
 
 **Note:** Version bump only for package @apollosproject/ui-authentication

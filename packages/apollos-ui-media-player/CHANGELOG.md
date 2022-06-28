@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
 ## [3.9.0](https://github.com/apollosproject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
 
 **Note:** Version bump only for package @apollosproject/ui-media-player
