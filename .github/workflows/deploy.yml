@@ -1,15 +1,16 @@
 name: Deploy
 
 on:
-  push:
-    branches: [master]
+  workflow_dispatch:
+    inputs:
+      church:
+        description: 'Church slug'
+        required: true
+        default: 'apollos_demo'
 
 jobs:
 
   ios:
-    defaults:
-      run:
-        working-directory: templates/mobile
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,17 +23,16 @@ jobs:
         with:
           working-directory: templates/mobile
       - run: npm i -g @apollosproject/cli
-      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
-      - run: cp .env.shared .env
-      - run: yarn config set network-timeout 300000
-      - run: yarn
-      - run: node ./scripts/get-introspection-data.js
-      - run: apollos mobile deploy ios publish
+      - run: scripts/setup-app.sh
+        env:
+          APOLLOS_API_KEY: ${{ secrets.APOLLOS_API_KEY }}
+          CHURCH: ${{ github.event.inputs.church }}
+      - run: scripts/deploy-ios.sh
+        env:
+          APOLLOS_API_KEY: ${{ secrets.APOLLOS_API_KEY }}
+          CHURCH: ${{ github.event.inputs.church }}
 
   android:
-    defaults:
-      run:
-        working-directory: templates/mobile
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3

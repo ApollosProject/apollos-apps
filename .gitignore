@@ -98,10 +98,8 @@ packages/**/docs/generated/*
 
 testing*.db
 
-ApollosApi/
-ApollosApp/
-ApollosCluster/
-
 vendor
 
 .vscode
+
+deploys/
