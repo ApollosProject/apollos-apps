@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
+
+
+### Features
+
+* Following Screens ([#2507](https://github.com/apollosproject/apollos-apps/issues/2507)) ([ffccb48](https://github.com/apollosproject/apollos-apps/commit/ffccb486e1e89fc83f62be57353b68c234de88ef))
+
+
+### Bug Fixes
+
+* correct onboarding text width ([#2532](https://github.com/apollosproject/apollos-apps/issues/2532)) ([e961ef7](https://github.com/apollosproject/apollos-apps/commit/e961ef7b7867fff48ebcc606c5bddd27f165ace0))
+* space wordmark out a bit ([#2531](https://github.com/apollosproject/apollos-apps/issues/2531)) ([1b66677](https://github.com/apollosproject/apollos-apps/commit/1b6667797638703e69b87f4a4e807ee5218b150f))
+
+
+
 ## [4.0.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
 
 

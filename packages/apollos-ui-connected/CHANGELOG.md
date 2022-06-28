@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
+
+
+### Features
+
+* adds titles to feature feeds ([#2538](https://github.com/apollosproject/apollos-apps/issues/2538)) ([3c5769e](https://github.com/apollosproject/apollos-apps/commit/3c5769e381458cccc331d5752cd4ca9f2cc363d7))
+* Following Screens ([#2507](https://github.com/apollosproject/apollos-apps/issues/2507)) ([ffccb48](https://github.com/apollosproject/apollos-apps/commit/ffccb486e1e89fc83f62be57353b68c234de88ef))
+
+
+### Bug Fixes
+
+* adds content padding to avoid actionsheet ([#2537](https://github.com/apollosproject/apollos-apps/issues/2537)) ([eeae9bc](https://github.com/apollosproject/apollos-apps/commit/eeae9bccf4b2487b1fea6ca80acb0adbaff735da))
+* call logout after resetToAuth ([#2540](https://github.com/apollosproject/apollos-apps/issues/2540)) ([b25524b](https://github.com/apollosproject/apollos-apps/commit/b25524bdfb7d53c83cd6b67c399cc2f81f8db867))
+
+
+
 ## [4.0.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
 
 
