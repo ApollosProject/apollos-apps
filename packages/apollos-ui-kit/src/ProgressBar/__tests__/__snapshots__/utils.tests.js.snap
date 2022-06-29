@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar util createStyles should create a stylesheet for the ProgressBar 1`] = `
+Object {
+  "bar": Object {
+    "backgroundColor": "rgba(142, 142, 147, 0.2)",
+    "borderRadius": 8,
+    "flex": 1,
+    "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+    "shadowOffset": Object {
+      "height": 5,
+      "width": 0,
+    },
+    "shadowOpacity": 1,
+    "shadowRadius": 24,
+  },
+  "progress": Object {
+    "backgroundColor": "#17B582",
+    "borderRadius": 8,
+    "height": 8,
+  },
+}
+`;
+
+exports[`ProgressBar util progressBarHeight should calculate the height of the progress bar 1`] = `8`;

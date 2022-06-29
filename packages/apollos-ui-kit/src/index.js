@@ -69,6 +69,7 @@ export ModalView, {
 } from './ModalView';
 export PaddedView from './PaddedView';
 export Placeholder, { withPlaceholder } from './Placeholder';
+export ProgressBar from './ProgressBar';
 export Comment, { CommentLikeButton, ActionMenu } from './Comment';
 export ScriptureLink from './ScriptureLink';
 export SideBySideView from './SideBySideView';
