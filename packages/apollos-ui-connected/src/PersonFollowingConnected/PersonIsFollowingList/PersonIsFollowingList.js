@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { ActivityIndicator } from 'react-native';
 
 import { getProfile, mapHideBorder, PAGE_LENGTH } from '../utils';
 
@@ -38,7 +39,9 @@ const PersonIsFollowingList = ({ personId }) => {
     fetchMore,
   } = usePersonFollowing(personId);
 
-  return (
+  return loading ? (
+    <ActivityIndicator />
+  ) : (
     <FeedView
       keyExtractor={({ id }) => id}
       content={mapHideBorder(following)}

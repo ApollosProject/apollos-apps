@@ -15,7 +15,7 @@ import {
   HeaderComponentStyles,
   ListStyles,
 } from '../PersonFollowingConnected.styles';
-import { View, Text } from 'react-native';
+import { ActivityIndicator, View, Text } from 'react-native';
 import { FeedView, useTheme } from '@apollosproject/ui-kit';
 import FollowListItem from '../FollowListItem';
 
@@ -37,11 +37,9 @@ function renderItem({ item }) {
 const CurrentUserFollowRequests = () => {
   const { followRequests } = useCurrentUserFollowRequests();
   const theme = useTheme();
-
   if (followRequests?.length === 0) {
     return null;
   }
-
   return (
     <View style={HeaderComponentStyles.container(theme)}>
       <Text style={HeaderComponentStyles.title(theme)}>Requests</Text>
@@ -76,8 +74,9 @@ const PersonIsFollowedByList = ({ personId }) => {
     });
     refetchFollowRequests();
   }
-
-  return (
+  return loading ? (
+    <ActivityIndicator />
+  ) : (
     <FeedView
       keyExtractor={({ id }) => id}
       content={mapHideBorder(followedBy)}
