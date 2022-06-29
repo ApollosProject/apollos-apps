@@ -11,7 +11,7 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1
 fi
 
-cd "deploys/mobile/$CHURCH" || exit 1
+cd deploys/mobile || exit 1
 
 API_URL="https://apollos-cluster-production.herokuapp.com/api"
 MATCH_GIT_BASIC_AUTHORIZATION=$(curl -s --fail -H "accept: text/plain" -H "x-api-key: $APOLLOS_API_KEY" "$API_URL/config/$CHURCH/APP.MATCH_TOKEN")

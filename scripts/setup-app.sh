@@ -10,24 +10,9 @@ ANDROID_BUNDLE=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: tex
 SERVER_URL=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.SERVER_URL")
 GOOGLE_MAPS_KEY=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP_GOOGLE_MAPS_API_KEY")
 
-rm -rf "deploys/mobile/$CHURCH"
-mkdir -p "deploys/mobile/$CHURCH"
-cp -r templates/mobile/* "deploys/mobile/$CHURCH"
-cd "deploys/mobile/$CHURCH" || exit 1
-
-# Add latest NPM versions
-DEPSLINE=$(grep -n "dependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
-DEVDEPSLINE=$(grep -n "devDependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
-JSON=$(sed -E "s/^.*\"(@apollosproject\/[a-z\-]+)\".*/\1 /g" package.json)
-PKGS=$(echo "$JSON" | sed -n "$DEPSLINE","$DEVDEPSLINE"p | grep "@apollosproject" | tr -d "\n")
-DEVPKGS=$(echo "$JSON" | sed -n "$DEVDEPSLINE",/^$/p | grep "@apollosproject" | tr -d "\n")
-
-# clean up dependencies
-yarn remove $PKGS $DEVPKGS @carimus/metro-symlinked-deps --ignore-scripts
-rm metro.config.js
-yarn add $PKGS --ignore-scripts
-yarn add --dev $DEVPKGS --ignore-scripts
-yarn add --dev @apollosproject/react-native-make # problem with the sharp module not installing properly the first time
+rm -rf deploys/mobile
+cp -r templates/mobile deploys/mobile
+cd deploys/mobile || exit 1
 
 rm -rf fastlane
 mkdir fastlane
