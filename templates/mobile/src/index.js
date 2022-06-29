@@ -1,12 +1,10 @@
 import { StatusBar } from 'react-native';
 import {
   NavigationContainer,
-  useNavigation,
   DarkTheme,
   DefaultTheme,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
 import { enableScreens } from 'react-native-screens';
 

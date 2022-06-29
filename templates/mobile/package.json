@@ -6,7 +6,6 @@
     "node": ">=14"
   },
   "scripts": {
-    "setup": "./scripts/init.sh",
     "ios": "react-native run-ios",
     "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android",
     "lint": "eslint .",

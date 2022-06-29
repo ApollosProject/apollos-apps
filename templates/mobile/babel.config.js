@@ -8,5 +8,11 @@ module.exports = {
         runtime: 'automatic',
       },
     ],
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+      },
+    ],
   ],
 };
