@@ -19,31 +19,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 14
-
-    - name: Install Dependencies
-      run: yarn
-
-    - name: Lint
-      run: yarn lint
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: yarn
+      - run: yarn lint
 
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 14
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: yarn
+      - run: ./scripts/test-all.sh
+      - uses: codecov/codecov-action@v1
 
-    - name: Install Dependencies
-      run: yarn
-
-    - name: Jest
-      run: ./scripts/test-all.sh
-
-    - name: Codecov
-      uses: codecov/codecov-action@v1
+  e2e:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: templates/mobile
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: templates/mobile/.nvmrc
+      - uses: ruby/setup-ruby@v1
+        with:
+          working-directory: templates/mobile
+      - run: brew tap wix/brew
+      - run: brew install applesimutils
+      - run: npm i -g @apollosproject/cli
+      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
+      - run: cp .env.shared .env
+      - run: yarn config set network-timeout 300000
+      - run: yarn
+      - run: yarn prestart
+      - run: yarn test:ios
