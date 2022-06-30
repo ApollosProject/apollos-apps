@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-auth/Profile/ProfileEntry should render 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView>
+          <H3
+            style={Object {}}
+          >
+            Complete your profile
+          </H3>
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={null}
+            label="First Name"
+            name="firstName"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+            value=""
+          />
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={null}
+            label="Last Name"
+            name="lastName"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+            value=""
+          />
+          <TextInput
+            disabled={true}
+            enablesReturnKeyAutomatically={true}
+            error={null}
+            label="Email"
+            name="email"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="emailAddress"
+            type="email"
+          />
+          <TextInput
+            disabled={true}
+            enablesReturnKeyAutomatically={true}
+            error={null}
+            label="Phone Number"
+            name="phone"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="telephoneNumber"
+            type="phone"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+  </View>
+</SafeAreaView>
+`;

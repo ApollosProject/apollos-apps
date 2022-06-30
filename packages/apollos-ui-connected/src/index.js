@@ -87,7 +87,11 @@ export NodeSingleConnected, {
   GET_MEDIA,
   GET_TITLE,
 } from './NodeSingleConnected';
-export PersonFollowingConnected from './PersonFollowingConnected';
+export PersonFollowingConnected, {
+  useCurrentUserFollowRequests,
+  usePersonFollowedBy,
+  usePersonFollowing,
+} from './PersonFollowingConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export ScriptureScreenConnected from './ScriptureScreenConnected';
@@ -121,4 +125,3 @@ export { ScriptureFeature, TextFeature, WebviewFeature } from './features';
 export { default as TabsConnected } from './TabsConnected';
 export ThemeMixinConnected, { GET_NODE_THEME } from './ThemeMixinConnected';
 export TagFilterConnected from './TagFilterConnected';
-export { default as UserSettingsConnected } from './UserSettingsConnected';

@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSettings component renders UserSettings when logged in 1`] = `
+<BackgroundView
+  avoidHeader={true}
+>
+  <RCTScrollView>
+    <View>
+      <PaddedView
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <UserAvatarUpdate />
+        <H3>
+          
+        </H3>
+      </PaddedView>
+      <PaddedView />
+      <TableView>
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            accessoryComponent={
+              <Unknown>
+                New
+              </Unknown>
+            }
+            accessoryText="1"
+            leadingIcon="users-three"
+            title="Following Me"
+          />
+        </Touchable>
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            accessoryText="1"
+            leadingIcon="user-circle"
+            title="I'm Following"
+          />
+        </Touchable>
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            accessoryText="0"
+            leadingIcon="heart"
+            title="Liked Content"
+          />
+        </Touchable>
+      </TableView>
+      <PaddedView />
+      <TableView
+        headerText="My Profile"
+      >
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            leadingIcon="user"
+            title="Personal Details"
+          />
+        </Touchable>
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            accessoryText="Select"
+            leadingIcon="navigation-arrow"
+            title="My Campus"
+          />
+        </Touchable>
+      </TableView>
+      <PaddedView />
+      <TableView
+        headerText="Settings"
+      >
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            leadingIcon="lock-simple"
+            title="Change Password"
+          />
+        </Touchable>
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            leadingIcon="bell"
+            title="Notification Settings"
+          />
+        </Touchable>
+      </TableView>
+      <PaddedView />
+      <TableView>
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            leadingIcon="arrow-square-out"
+            title="Logout"
+          />
+        </Touchable>
+      </TableView>
+      <H6
+        style={[Function]}
+      >
+        App Version: 1.0.0.1
+      </H6>
+      <PaddedView />
+      <TableView
+        headerText="Developer Tools"
+      >
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            title="Launch OpenID Flow"
+          />
+        </Touchable>
+        <Divider />
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            title="Launch Onboarding"
+          />
+        </Touchable>
+        <Divider />
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            title="Reset Onboarding to Unseen"
+          />
+        </Touchable>
+        <Divider />
+        <Touchable
+          onPress={[Function]}
+        >
+          <Row
+            title="Reset Onboarding to Seen v1"
+          />
+        </Touchable>
+      </TableView>
+      <PaddedView />
+    </View>
+  </RCTScrollView>
+</BackgroundView>
+`;

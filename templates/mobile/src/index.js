@@ -17,7 +17,6 @@ import {
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import Auth, { ProtectedRoute } from '@apollosproject/ui-authentication';
 import { Onboarding } from '@apollosproject/ui-onboarding';
 
 import {
@@ -25,11 +24,12 @@ import {
   ContentFeedConnected,
   PersonFollowingConnected,
   SearchScreenConnected,
-  UserSettingsConnected,
   TabsConnected as Tabs,
   ScriptureScreenConnected,
 } from '@apollosproject/ui-connected';
-import Providers from './Providers';
+import Providers from 'Providers';
+import Auth, { ProtectedRoute } from 'auth';
+import Settings from 'settings';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -137,10 +137,7 @@ const App = () => (
               }}
             />
             <Screen name="Search" component={SearchScreenConnected} />
-            <Screen
-              name="UserSettingsNavigator"
-              component={UserSettingsConnected}
-            />
+            <Screen name="UserSettingsNavigator" component={Settings} />
             <Screen name="Following" component={PersonFollowingConnected} />
           </Navigator>
         </Providers>

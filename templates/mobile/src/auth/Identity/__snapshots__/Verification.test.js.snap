@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Auth Verification component should render 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render as disabled 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            onSubmitEditing={[MockFunction]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+    <PaddedView>
+      <Button
+        disabled={true}
+        onPress={[MockFunction]}
+        pill={false}
+        title="Verify"
+        type="primary"
+      />
+    </PaddedView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render in a loading state 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            onSubmitEditing={[MockFunction]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+    <PaddedView>
+      <Button
+        loading={true}
+        onPress={[MockFunction]}
+        pill={false}
+        title="Verify"
+        type="primary"
+      />
+    </PaddedView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render in a next button 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            onSubmitEditing={[MockFunction]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+    <PaddedView>
+      <Button
+        onPress={[MockFunction]}
+        pill={false}
+        title="Verify"
+        type="primary"
+      />
+    </PaddedView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render in an error state 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            error="Boom errors.code Boom"
+            label="Verification Code"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render with a custom confirmationPromptText 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render with a value 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Thanks!
+Stand by…
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            type="numeric"
+            value="Boom values.code boom"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Auth Verification component should render with custom confirmationTitleText 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Custom Title
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+  </View>
+</SafeAreaView>
+`;

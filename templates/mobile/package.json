@@ -9,6 +9,7 @@
     "ios": "react-native run-ios",
     "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android",
     "lint": "eslint .",
+    "test": "jest",
     "test:ios": "detox build --configuration ios && detox test --configuration ios",
     "postinstall": "jetify && yarn pods",
     "bump": "yarn version --patch",
@@ -21,17 +22,10 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@react-native-picker/picker))"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
-    ],
-    "modulePaths": [
-      "<rootDir>/src/"
+      "node_modules/(?!(react-native|@react-native|react-native-svg|react-native-iphone-x-helper|react-native-config|react-native-inappbrowser-reborn|react-native-webview|react-native-splash-screen)/)"
     ],
     "setupFiles": [
-      "./node_modules/react-native-gesture-handler/jestSetup.js",
-      "./jest.setup.js"
+      "<rootDir>/jest.setup.js"
     ]
   },
   "resolutions": {
@@ -41,7 +35,6 @@
     "@apollo/client": "3.6.5",
     "@apollosproject/config": "link:../../packages/apollos-config",
     "@apollosproject/ui-analytics": "link:../../packages/apollos-ui-analytics",
-    "@apollosproject/ui-authentication": "link:../../packages/apollos-ui-authentication",
     "@apollosproject/ui-connected": "link:../../packages/apollos-ui-connected",
     "@apollosproject/ui-fragments": "link:../../packages/apollos-ui-fragments",
     "@apollosproject/ui-htmlview": "link:../../packages/apollos-ui-htmlview",
@@ -57,7 +50,6 @@
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/datetimepicker": "^3.0.0",
     "@react-native-community/geolocation": "^2.0.2",
-    "react-native-pager-view": "^5.4.22",
     "@react-native-picker/picker": "^1.9.4",
     "@react-navigation/bottom-tabs": "^5.11.8",
     "@react-navigation/compat": "^5.1.28",
@@ -83,6 +75,7 @@
     "react-native-maps": "^0.27.1",
     "react-native-music-control": "^1.4.1",
     "react-native-onesignal": "4.3.6",
+    "react-native-pager-view": "^5.4.22",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-permissions": "^2.0.5",
     "react-native-reanimated": "^2.2.3",
@@ -115,7 +108,7 @@
     "@babel/runtime": "7.16.7",
     "@carimus/metro-symlinked-deps": "^1.1.0",
     "@react-native-community/eslint-config": "^3.0.0",
-    "babel-jest": "27.4.6",
+    "babel-jest": "^27",
     "babel-plugin-module-resolver": "^4.0.0",
     "detox": "^19.7.1",
     "eslint": "^7.28.0",
@@ -123,7 +116,7 @@
     "eslint-plugin-detox": "^1.0.0",
     "eslint-plugin-react": "^7.26.1",
     "get-dev-paths": "^0.1.0",
-    "jest": "^28.1.1",
+    "jest": "^27",
     "jetifier": "^1.6.4",
     "metro-react-native-babel-preset": "^0.67.0",
     "react-native-version": "^4.0.0",

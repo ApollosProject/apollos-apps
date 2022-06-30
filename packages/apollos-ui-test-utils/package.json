@@ -19,7 +19,8 @@
   "devDependencies": {
     "@react-navigation/compat": "^5.1.28",
     "@react-navigation/native": "^5.9.3",
-    "@react-navigation/stack": "^5.14.3"
+    "@react-navigation/stack": "^5.14.3",
+    "react-native-screens": "2.18.1"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {

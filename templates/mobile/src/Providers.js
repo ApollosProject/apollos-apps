@@ -1,7 +1,6 @@
 import querystring from 'querystring';
 import PropTypes from 'prop-types';
 import { NavigationService } from '@apollosproject/ui-kit';
-import { AuthProvider } from '@apollosproject/ui-authentication';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
 import { NotificationsProvider } from '@apollosproject/ui-notifications';
 import {
@@ -10,7 +9,8 @@ import {
 } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 
-import ClientProvider, { client } from './client';
+import { AuthProvider } from 'auth';
+import ClientProvider, { client } from 'client';
 
 const AppProviders = ({ children }) => (
   <ClientProvider>

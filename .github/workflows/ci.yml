@@ -31,11 +31,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 14
       - run: yarn
       - run: ./scripts/test-all.sh
+      - run: |
+          yarn --ignore-scripts
+          yarn test
+        working-directory: templates/mobile
       - uses: codecov/codecov-action@v1
 
   e2e:
