@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding Slide component should render a loading indicator 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        loading={true}
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Next
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render both slide navigation buttons 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Next
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+      <ButtonLink
+        onPress={[MockFunction]}
+        style={[Function]}
+      >
+        Skip
+      </ButtonLink>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render children 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <Text>
+      Boom
+    </Text>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding Slide component should render onboarding next button navigation 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Next
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render onboarding skip button navigation 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <ButtonLink
+        onPress={[MockFunction]}
+        style={[Function]}
+      >
+        Skip
+      </ButtonLink>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render onboarding skip button with custom text 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <ButtonLink
+        onPress={[MockFunction]}
+        style={[Function]}
+      >
+        Custom skip button text
+      </ButtonLink>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render primary navigation button with a custom icon 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Custom nav text with custom icon
+        </H5>
+        <Icon
+          name="umbrella"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render primary navigation button with custom text 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Custom nav text
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Slide component should render primary navigation button without a custom icon 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Boom
+      </Text>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Custom nav text without an icon
+        </H5>
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;

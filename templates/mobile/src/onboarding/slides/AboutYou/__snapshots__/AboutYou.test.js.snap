@@ -1,0 +1,748 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding AboutYou component should pass additional props to Slide 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              This one's easy.
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Help us understand who you are so we can connect you with the best ministries and events.
+          </H5>
+        </View>
+        <H6
+          padded={true}
+          style={[Function]}
+        >
+          Gender
+        </H6>
+        <Radio
+          label="Gender"
+          onChange={[Function]}
+          style={[Function]}
+          type="radio"
+        >
+          <RadioButton
+            label={[Function]}
+            underline={false}
+            value="Male"
+          />
+          <RadioButton
+            label={[Function]}
+            underline={false}
+            value="Female"
+          />
+          <RadioButton
+            label={[Function]}
+            underline={false}
+            value="Prefer not to reply"
+          />
+        </Radio>
+        <H6
+          style={[Function]}
+        >
+          Birthday
+        </H6>
+        <DateInput
+          displayValue=""
+          onChange={[Function]}
+          placeholder="Select a date..."
+          style={[Function]}
+          type="DateInput"
+          value={2019-02-14T05:00:00.000Z}
+        />
+      </SafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Next
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding AboutYou component should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render a BackgroundComponent 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <GradientOverlayImage
+      source="https://picsum.photos/640/640/?random"
+    />
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render a custom description 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Custom description text
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render a custom gender list 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="M"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="F"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render a custom title 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Custom title text
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render the selected gender 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+        value="Male"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render with a selected birthdate 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue="02/14/1989"
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={1989-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AboutYou component should render with errors 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            This one's easy.
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Help us understand who you are so we can connect you with the best ministries and events.
+        </H5>
+      </View>
+      <H6
+        padded={true}
+        style={[Function]}
+      >
+        Gender
+      </H6>
+      <Radio
+        error="Gender errors"
+        label="Gender"
+        onChange={[Function]}
+        style={[Function]}
+        type="radio"
+      >
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Male"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Female"
+        />
+        <RadioButton
+          label={[Function]}
+          underline={false}
+          value="Prefer not to reply"
+        />
+      </Radio>
+      <H6
+        style={[Function]}
+      >
+        Birthday
+      </H6>
+      <DateInput
+        displayValue=""
+        error="BirthDate errors"
+        onChange={[Function]}
+        placeholder="Select a date..."
+        style={[Function]}
+        type="DateInput"
+        value={2019-02-14T05:00:00.000Z}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

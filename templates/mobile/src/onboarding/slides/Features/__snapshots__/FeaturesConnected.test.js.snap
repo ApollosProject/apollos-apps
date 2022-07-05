@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding FeaturesConnected component should render with a firstName when logged in 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Hey friend!
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'd like to help personalize your mobile experience so we can help you with every step on your journey.
+        </H5>
+      </View>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding FeaturesConnected component should render with a firstName when logged in 2`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Hey Marty!
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'd like to help personalize your mobile experience so we can help you with every step on your journey.
+        </H5>
+      </View>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

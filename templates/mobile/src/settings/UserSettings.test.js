@@ -33,6 +33,7 @@ describe('UserSettings component', () => {
         </MockedProvider>
       );
     });
+    expect(tree).toMatchSnapshot();
     await act(async () => {
       await new Promise((resolve) => setTimeout(resolve, 0));
     });

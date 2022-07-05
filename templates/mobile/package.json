@@ -22,7 +22,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@react-native|react-native-svg|react-native-iphone-x-helper|react-native-config|react-native-inappbrowser-reborn|react-native-webview|react-native-splash-screen)/)"
+      "node_modules/(?!(react-native-?.*|@react-native|react-navigation-shared-element)/)"
     ],
     "setupFiles": [
       "<rootDir>/jest.setup.js"
@@ -42,7 +42,6 @@
     "@apollosproject/ui-mapview": "link:../../packages/apollos-ui-mapview",
     "@apollosproject/ui-media-player": "link:../../packages/apollos-ui-media-player",
     "@apollosproject/ui-notifications": "link:../../packages/apollos-ui-notifications",
-    "@apollosproject/ui-onboarding": "link:../../packages/apollos-ui-onboarding",
     "@apollosproject/ui-passes": "link:../../packages/apollos-ui-passes",
     "@apollosproject/ui-prayer": "link:../../packages/apollos-ui-prayer",
     "@apollosproject/ui-scripture": "link:../../packages/apollos-ui-scripture",

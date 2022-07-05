@@ -7,8 +7,8 @@ import {
   LiveProvider,
   ACCEPT_FOLLOW_REQUEST,
 } from '@apollosproject/ui-connected';
-import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 
+import { checkOnboardingStatusAndNavigate } from 'onboarding';
 import { AuthProvider } from 'auth';
 import ClientProvider, { client } from 'client';
 

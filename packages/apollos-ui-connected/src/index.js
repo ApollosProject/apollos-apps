@@ -122,6 +122,5 @@ export ScriptureNodeConnected, {
   GET_SCRIPTURE_NODE,
 } from './ScriptureNodeConnected';
 export { ScriptureFeature, TextFeature, WebviewFeature } from './features';
-export { default as TabsConnected } from './TabsConnected';
 export ThemeMixinConnected, { GET_NODE_THEME } from './ThemeMixinConnected';
 export TagFilterConnected from './TagFilterConnected';

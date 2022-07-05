@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding Follow component should pass additional props to Slide 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Get connected
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Follow others to stay up to date with your church community.
+          </H5>
+        </View>
+        <FollowListConnected
+          followers={Array []}
+        />
+      </SafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Finish
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding Follow component should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Get connected
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Follow others to stay up to date with your church community.
+        </H5>
+      </View>
+      <FollowListConnected
+        followers={Array []}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding Follow component should render a BackgroundComponent 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <GradientOverlayImage
+      source="https://picsum.photos/375/812/?random"
+    />
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Get connected
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Follow others to stay up to date with your church community.
+        </H5>
+      </View>
+      <FollowListConnected
+        followers={Array []}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding Follow component should render a custom description 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Get connected
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Custom description text
+        </H5>
+      </View>
+      <FollowListConnected
+        followers={Array []}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding Follow component should render a custom first name 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  firstName="firstName"
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Get connected
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Follow others to stay up to date with your church community.
+        </H5>
+      </View>
+      <FollowListConnected
+        followers={Array []}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding Follow component should render a custom title 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Custom title text
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Follow others to stay up to date with your church community.
+        </H5>
+      </View>
+      <FollowListConnected
+        followers={Array []}
+      />
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

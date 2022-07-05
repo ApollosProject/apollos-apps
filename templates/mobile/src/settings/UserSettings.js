@@ -17,10 +17,6 @@ import {
   PaddedView,
   styled,
 } from '@apollosproject/ui-kit';
-import {
-  checkOnboardingStatusAndNavigate,
-  onboardingComplete,
-} from '@apollosproject/ui-onboarding';
 
 import {
   UserAvatarUpdate,
@@ -29,6 +25,10 @@ import {
   useCurrentUserFollowRequests,
 } from '@apollosproject/ui-connected';
 
+import {
+  checkOnboardingStatusAndNavigate,
+  onboardingComplete,
+} from 'onboarding';
 import { useLogout } from 'auth';
 
 const Container = styled({

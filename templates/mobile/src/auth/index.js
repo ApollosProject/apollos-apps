@@ -6,7 +6,7 @@ import { HeaderBackButton } from '@react-navigation/stack';
 import { UIText } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
 
-import { LandingSwiper } from '@apollosproject/ui-onboarding';
+import { LandingSwiper } from 'onboarding';
 import { LoginContext } from './LoginProvider';
 import {
   IdentityEntryConnected,

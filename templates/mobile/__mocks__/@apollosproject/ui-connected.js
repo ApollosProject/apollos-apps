@@ -18,6 +18,7 @@ export const GET_USER_PROFILE = gql`
 `;
 
 export const UserAvatarUpdate = 'UserAvatarUpdate';
+export const FollowListConnected = 'FollowListConnected';
 export const usePersonFollowing = () => ({ total: 1 });
 export const usePersonFollowedBy = () => ({ total: 1 });
 export const useCurrentUserFollowRequests = () => ({ total: 1 });

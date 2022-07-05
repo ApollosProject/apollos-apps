@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding AskNotifications component should pass additional props to Slide component 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Can we keep you informed?
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            We'll let you know when important things are happening and keep you in the loop
+          </H5>
+        </View>
+      </SafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <ButtonLink
+        onPress={[MockFunction]}
+        style={[Function]}
+      >
+        Later
+      </ButtonLink>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding AskNotifications component should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Can we keep you informed?
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll let you know when important things are happening and keep you in the loop
+        </H5>
+      </View>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskNotifications component should render a BackgroundComponent 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <GradientOverlayImage
+      source="https://picsum.photos/640/640/?random"
+    />
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Can we keep you informed?
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll let you know when important things are happening and keep you in the loop
+        </H5>
+      </View>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskNotifications component should render a button with custom text 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Can we keep you informed?
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll let you know when important things are happening and keep you in the loop
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          onPress={[MockFunction]}
+          pill={false}
+          title="Custom button text"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskNotifications component should render a custom description 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Can we keep you informed?
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Custom description text
+        </H5>
+      </View>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskNotifications component should render a custom title 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Custom title text
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll let you know when important things are happening and keep you in the loop
+        </H5>
+      </View>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskNotifications component should render the button disabled 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Can we keep you informed?
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll let you know when important things are happening and keep you in the loop
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          disabled={true}
+          onPress={[MockFunction]}
+          pill={false}
+          title="Yes, enable notifications"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskNotifications component should render with a button 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Can we keep you informed?
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll let you know when important things are happening and keep you in the loop
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          onPress={[MockFunction]}
+          pill={false}
+          title="Yes, enable notifications"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

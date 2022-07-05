@@ -43,10 +43,10 @@ describe('PersonalDetails component', () => {
         </MockedProvider>
       );
     });
+    expect(tree).toMatchSnapshot();
     await act(async () => {
       await new Promise((resolve) => setTimeout(resolve, 0));
     });
-
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Onboarding component should render Onboarding 1`] = `null`;
+
+exports[`the Onboarding component should render Onboarding 2`] = `
+Array [
+  <BackgroundView
+    style={
+      Object {
+        "height": "100%",
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  />,
+  <Swiper
+    activeDot={
+      <SafeAreaView>
+        <Unknown />
+      </SafeAreaView>
+    }
+    dot={
+      <SafeAreaView>
+        <Unknown />
+      </SafeAreaView>
+    }
+    loadMinimal={true}
+    loop={false}
+    onComplete={[Function]}
+    onIndexChanged={[Function]}
+    showsButtons={false}
+    userVersion={0}
+  />,
+]
+`;

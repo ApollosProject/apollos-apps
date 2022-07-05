@@ -17,19 +17,19 @@ import {
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import { Onboarding } from '@apollosproject/ui-onboarding';
 
 import {
   ContentSingleConnected,
   ContentFeedConnected,
   PersonFollowingConnected,
   SearchScreenConnected,
-  TabsConnected as Tabs,
   ScriptureScreenConnected,
 } from '@apollosproject/ui-connected';
 import Providers from 'Providers';
 import Auth, { ProtectedRoute } from 'auth';
+import { Onboarding } from 'onboarding';
 import Settings from 'settings';
+import Tabs from 'tabs';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -69,7 +69,7 @@ const ThemedNavigationContainer = ({ children }) => {
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
-  <ThemeProvider theme={ApollosConfig.THEME} icons={ApollosConfig.ICONS}>
+  <ThemeProvider theme={ApollosConfig.THEME}>
     <BackgroundView>
       <AppStatusBar />
       <ThemedNavigationContainer>
