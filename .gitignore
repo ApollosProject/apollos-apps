@@ -101,5 +101,3 @@ testing*.db
 vendor
 
 .vscode
-
-deploys/

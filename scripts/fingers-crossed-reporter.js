@@ -1,4 +1,3 @@
-/* eslint import/no-extraneous-dependencies: 0 */
 const chalk = require('chalk');
 const { getConsoleOutput } = require('jest-util');
 const { DefaultReporter } = require('@jest/reporters');

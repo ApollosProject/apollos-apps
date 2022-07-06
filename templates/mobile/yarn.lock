@@ -32,10 +32,10 @@
   version "0.0.0"
   uid ""
 
-"@apollosproject/react-native-make@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@apollosproject/react-native-make/-/react-native-make-3.0.4.tgz#0d446b68033d000147657f3bf500d123f2715644"
-  integrity sha512-1syyH+E1/XKaCJLFXL2/xehksO7AlvQU53TqqxpvVptu1SaWEHtt55+hd2hvQ+aluq3B6yNICHxU89bSx3SJFQ==
+"@apollosproject/react-native-make@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@apollosproject/react-native-make/-/react-native-make-3.0.5.tgz#e680aa398ef27451e448a5e345eea58b7744fde6"
+  integrity sha512-wss3yYpViO7uVJopIElJ4bsVycNRhColfYHTeWYrYrRWvSh43TA42BQ+5wr00EZzqx/7hkObXIPc00cxGCzdAw==
   dependencies:
     color-string "1.5.3"
     colors "1.3.3"
