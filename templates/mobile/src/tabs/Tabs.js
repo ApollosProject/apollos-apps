@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { View, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ApollosConfig from '@apollosproject/config';
 import {
   NavigationService,
   useTheme,
@@ -82,25 +81,19 @@ const Tabs = ({ tabs }) => {
   }, [client]);
   const tabNavs = useMemo(
     () =>
-      tabs.map(({ title, icon, feed }, i) => ({
+      tabs.map(({ title, icon, feed, config }, i) => ({
         title,
         icon,
         component: createTab({
           featureFeedId: feed.id,
           options: {
             headerLargeTitle: i !== 0,
-            ...(ApollosConfig.TABS[title]?.showLogo
-              ? { headerCenter: HeaderLogo }
-              : {}),
-            ...(ApollosConfig.TABS[title]?.showSearch
-              ? { headerRight: SearchButton }
-              : {}),
-            ...(ApollosConfig.TABS[title]?.showProfile
-              ? { headerLeft: ProfileButton }
-              : {}),
+            ...(config.logo ? { headerCenter: HeaderLogo } : {}),
+            ...(config.search ? { headerRight: SearchButton } : {}),
+            ...(config.profile ? { headerLeft: ProfileButton } : {}),
           },
           title,
-          showTags: ApollosConfig.TABS[title]?.showTags || false,
+          showTags: config.tagList,
         }),
       })),
     [tabs]

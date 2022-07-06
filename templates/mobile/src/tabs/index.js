@@ -25,6 +25,12 @@ const GET_TABS = gql`
       feed {
         id
       }
+      config {
+        logo
+        search
+        profile
+        tagList
+      }
     }
   }
 `;
