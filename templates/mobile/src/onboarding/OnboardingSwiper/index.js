@@ -117,8 +117,7 @@ class OnboardingSwiper extends Component {
         }
         {...this.props}
       >
-        {/*{this.slides}*/}
-        {null}
+        {this.slides}
       </Swiper>
     );
   }
