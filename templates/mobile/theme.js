@@ -1,11 +1,7 @@
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 
-const THEME = {
-  colors: {},
-  typography: {},
-  overrides: {},
-};
+const THEME = require('./theme.json');
 
 const TABS = {
   Home: {

@@ -9,13 +9,17 @@ IOS_BUNDLE=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/pl
 ANDROID_BUNDLE=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.ANDROID_PKG_ID")
 SERVER_URL=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.SERVER_URL")
 GOOGLE_MAPS_KEY=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP_GOOGLE_MAPS_API_KEY")
+THEME=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.THEME")
 
 rm -rf deploys/mobile
 cp -r templates/mobile deploys/mobile
+
 cd deploys/mobile || exit 1
 
 rm -rf fastlane
 mkdir fastlane
+
+printf $THEME > theme.json
 
 CLEAN_APP=$(echo "$APP" | tr -d '[:space:]')
 npx react-native-rename "$CLEAN_APP" -b "$ANDROID_BUNDLE"
