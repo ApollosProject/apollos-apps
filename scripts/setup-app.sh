@@ -69,8 +69,11 @@ APP_DATA_URL=$SERVER_URL node scripts/get-introspection-data.js
 # graphics
 curl -s "$LOGO" --output src/img/logo.png
 curl -s "$WORDMARK" --output src/img/wordmark.png
+
 GRAPHICS_DIR=$(mktemp -d)
+yarn global add canvas
 node ../../scripts/generate-app-graphics.js "$GRAPHICS_DIR" "$ICON" "$ICON_BG_COLOR"
+
 cp "$GRAPHICS_DIR/rn-icon.png" src/img/icon.png
 yarn react-native set-splash --path "$GRAPHICS_DIR/splash.png" --background "$ICON_BG_COLOR"
 yarn react-native set-icon --path "$GRAPHICS_DIR/ios.png" --platform ios
