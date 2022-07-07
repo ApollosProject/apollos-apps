@@ -28,6 +28,9 @@
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
+            <data android:scheme="https"
+                  android:host="apollos-demo.production.apollos.app"
+                  android:pathPrefix="/app-link" />
         </intent-filter>
       </activity>
     </application>

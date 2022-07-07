@@ -8,5 +8,9 @@
 	<array>
 		<string>group.com.differential.apollos.onesignal</string>
 	</array>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:apollos-demo.production.apollos.app</string>
+	</array>
 </dict>
 </plist>

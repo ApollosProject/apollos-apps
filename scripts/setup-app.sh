@@ -41,11 +41,14 @@ printf $THEME >theme.json
 
 CLEAN_APP=$(echo "$APP" | tr -d '[:space:]')
 npx react-native-rename "$CLEAN_APP" -b "$ANDROID_BUNDLE"
+SUBDOMAIN=$(echo "$CHURCH" | sed "s/_/-/g")
 
 sed -i "" -E "s/Apollos Church/$APP/g" app.json
 sed -i "" -E "s/Apollos Church/$APP/g" "ios/$CLEAN_APP/Info.plist"
 sed -i "" -E "s/Apollos Church/$APP/g" android/app/src/main/res/values/strings.xml
+sed -i "" -E "s/apollos-demo/$SUBDOMAIN/g" android/app/src/main/AndroidManifest.xml
 sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" "ios/$CLEAN_APP/$CLEAN_APP.entitlements"
+sed -i "" -E "s/apollos-demo/$SUBDOMAIN/g" "ios/$CLEAN_APP/$CLEAN_APP.entitlements"
 sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" ios/OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements
 sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
 sed -i "" -E "s/DEVELOPMENT_TEAM = \w+;/DEVELOPMENT_TEAM = \"\";/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
