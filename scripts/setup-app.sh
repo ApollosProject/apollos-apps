@@ -71,7 +71,7 @@ curl -s "$LOGO" --output src/img/logo.png
 curl -s "$WORDMARK" --output src/img/wordmark.png
 
 GRAPHICS_DIR=$(mktemp -d)
-yarn global add canvas
+(cd ../../scripts && yarn)
 node ../../scripts/generate-app-graphics.js "$GRAPHICS_DIR" "$ICON" "$ICON_BG_COLOR"
 
 cp "$GRAPHICS_DIR/rn-icon.png" src/img/icon.png
