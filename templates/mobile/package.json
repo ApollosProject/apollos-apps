@@ -56,7 +56,6 @@
     "@react-navigation/stack": "^5.14.3",
     "apollo-upload-client": "^17.0.0",
     "apollo3-cache-persist": "^0.8.0",
-    "canvas": "^2.9.3",
     "core-js": "^3.7.0",
     "dotenv": "^6.2.0",
     "graphql": "14.7.0",
