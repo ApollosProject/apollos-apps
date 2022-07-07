@@ -51,7 +51,8 @@ sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" "ios/$CLEAN_APP/$CLEAN
 sed -i "" -E "s/apollos-demo/$SUBDOMAIN/g" "ios/$CLEAN_APP/$CLEAN_APP.entitlements"
 sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" ios/OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements
 sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
-sed -i "" -E "s/DEVELOPMENT_TEAM = \w+;/DEVELOPMENT_TEAM = \"\";/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
+sed -i "" -E "s/DEVELOPMENT_TEAM = [[:alnum:]]+;/DEVELOPMENT_TEAM = \"\";/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
+sed -i "" -E "s/DevelopmentTeam = [[:alnum:]]+;/DevelopmentTeam = \"\";/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
 
 rm "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme"
 
