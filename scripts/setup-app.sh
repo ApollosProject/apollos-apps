@@ -57,7 +57,8 @@ sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" "ios/$CLEAN_APP.xcodep
 sed -i "" -E "s/DEVELOPMENT_TEAM = [[:alnum:]]+;/DEVELOPMENT_TEAM = $APPLE_TEAM_ID;/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
 sed -i "" -E "s/DevelopmentTeam = [[:alnum:]]+;/DevelopmentTeam = $APPLE_TEAM_ID;/g" "ios/$CLEAN_APP.xcodeproj/project.pbxproj"
 
-rm "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme"
+mv "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme" "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/$CLEAN_APP.xcscheme"
+sed -i "" -E "s/apolloschurchapp/$CLEAN_APP/g" "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/$CLEAN_APP.xcscheme"
 
 echo "APP_DATA_URL=$SERVER_URL
 GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_KEY" >.env
