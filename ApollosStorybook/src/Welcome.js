@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import { View } from 'react-native';
 import { Paragraph, BodyText } from '@apollosproject/ui-kit';
-import { Slide, SlideContent } from '@apollosproject/ui-onboarding';
 
 const Intro = () => (
-  <Slide>
-    <SlideContent title={`Welcome to ${'\n'}Apollos Storybook!`} icon>
+  <View>
+    <View title={`Welcome to ${'\n'}Apollos Storybook!`} icon>
       <Paragraph>
         <BodyText>
           Storybook is the component workshop for the Apollos app platform.
@@ -36,10 +36,8 @@ const Intro = () => (
           stories will reflect your theme.
         </BodyText>
       </Paragraph>
-    </SlideContent>
-  </Slide>
+    </View>
+  </View>
 );
 
-storiesOf('Storybook', module)
-  .add('Welcome', () => <Intro />)
-
+storiesOf('Storybook', module).add('Welcome', () => <Intro />);
