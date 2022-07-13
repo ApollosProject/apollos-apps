@@ -15,37 +15,67 @@ import {
 } from '@apollosproject/ui-kit';
 import { FlexedSafeAreaView } from '../styles';
 
-const LandingCardContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  alignItems: 'center',
-  marginBottom: baseUnit,
-}))(PaddedView);
+const LandingCardContainer = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    alignItems: 'center',
+    marginBottom: baseUnit,
+  })
+)(PaddedView);
 
-const ButtonContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  width: '100%',
-  marginTop: baseUnit,
-}))(View);
+const ButtonContainer = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    width: '100%',
+    marginTop: baseUnit,
+  })
+)(View);
 
-const PrimaryButton = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  marginBottom: baseUnit / 2,
-}))(Button);
+const PrimaryButton = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    marginBottom: baseUnit / 2,
+  })
+)(Button);
 
-const HeadingContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  marginVertical: baseUnit,
-  alignItems: 'center',
-}))(View);
+const HeadingContainer = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    marginVertical: baseUnit,
+    alignItems: 'center',
+  })
+)(View);
 
 const ErrorText = styled(({ theme }) => ({
   color: theme.colors.alert,
   paddingTop: theme.sizing.baseUnit / 2,
 }))(BodyText);
 
-const BottomCard = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  right: 0,
-  marginBottom: baseUnit * 2,
-}))(Card);
+const BottomCard = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    marginBottom: baseUnit * 2,
+  })
+)(Card);
 
 const Overlay = styled(({ theme }) => ({
   ...StyleSheet.absoluteFillObject,

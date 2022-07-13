@@ -13,9 +13,8 @@ const IdentityConnectVerificationConnected = (props) => {
     phone: Yup.string().matches(/^[6-9]\d{9}$/),
   });
 
-  const { handleConnectIdentity, closeAuth, code } = React.useContext(
-    LoginContext
-  );
+  const { handleConnectIdentity, closeAuth, code } =
+    React.useContext(LoginContext);
 
   const handleOnSubmit = async (
     { code: formCode },

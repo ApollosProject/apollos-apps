@@ -28,25 +28,43 @@ const LandingCardContainer = styled({
   alignItems: 'center',
 })(PaddedView);
 
-const ButtonContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  width: '100%',
-  marginTop: baseUnit,
-}))(View);
+const ButtonContainer = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    width: '100%',
+    marginTop: baseUnit,
+  })
+)(View);
 
-const HeadingContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  marginVertical: baseUnit,
-  alignItems: 'center',
-}))(View);
+const HeadingContainer = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    marginVertical: baseUnit,
+    alignItems: 'center',
+  })
+)(View);
 
 const ErrorText = styled(({ theme }) => ({
   color: theme.colors.alert,
   paddingTop: theme.sizing.baseUnit / 2,
 }))(BodyText);
 
-const BottomCard = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  marginBottom: baseUnit,
-  paddingTop: baseUnit,
-}))(Card);
+const BottomCard = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    marginBottom: baseUnit,
+    paddingTop: baseUnit,
+  })
+)(Card);
 
 const BottomAppIcon = styled(({ theme }) => ({
   position: 'absolute',

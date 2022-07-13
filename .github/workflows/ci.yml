@@ -25,6 +25,11 @@ jobs:
           node-version: 14
       - run: yarn
       - run: yarn lint
+      - run: |
+          yarn --ignore-scripts
+          yarn lint
+        working-directory:
+          templates/mobile
 
   test:
     runs-on: ubuntu-latest
