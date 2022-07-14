@@ -1,4 +1,10 @@
 PODS:
+  - Amplitude (8.10.0):
+    - AnalyticsConnector (~> 1.0.0)
+  - amplitude-react-native (2.12.1):
+    - Amplitude (= 8.10.0)
+    - React-Core
+  - AnalyticsConnector (1.0.0)
   - boost (1.76.0)
   - BVLinearGradient (2.5.6):
     - React
@@ -443,17 +449,24 @@ PODS:
   - RNScreens (3.11.1):
     - React-Core
     - React-RCTImage
+  - RNSentry (4.1.1):
+    - React-Core
+    - Sentry (= 7.20.0)
   - RNSha256 (1.4.7):
     - React
   - RNSharedElement (0.8.4):
     - React-Core
   - RNSVG (12.1.1):
     - React
+  - Sentry (7.20.0):
+    - Sentry/Core (= 7.20.0)
+  - Sentry/Core (7.20.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - "amplitude-react-native (from `../node_modules/@amplitude/react-native`)"
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
@@ -539,6 +552,7 @@ DEPENDENCIES:
   - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - "RNSentry (from `../node_modules/@sentry/react-native`)"
   - RNSha256 (from `../node_modules/react-native-sha256`)
   - RNSharedElement (from `../node_modules/react-native-shared-element`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -546,6 +560,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Amplitude
+    - AnalyticsConnector
     - CocoaAsyncSocket
     - Flipper
     - Flipper-Boost-iOSX
@@ -561,9 +577,12 @@ SPEC REPOS:
     - libevent
     - OneSignalXCFramework
     - OpenSSL-Universal
+    - Sentry
     - YogaKit
 
 EXTERNAL SOURCES:
+  amplitude-react-native:
+    :path: "../node_modules/@amplitude/react-native"
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   BVLinearGradient:
@@ -680,6 +699,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSentry:
+    :path: "../node_modules/@sentry/react-native"
   RNSha256:
     :path: "../node_modules/react-native-sha256"
   RNSharedElement:
@@ -690,6 +711,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Amplitude: 2904f346250510b9e19a4e2262017bcf1d4368f9
+  amplitude-react-native: 20f37edeceb5966927dc28fb6c229a812a58c010
+  AnalyticsConnector: 4c386d5972ac9da86e22d668564dbbac97558754
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
@@ -763,9 +787,11 @@ SPEC CHECKSUMS:
   RNPermissions: 5df468064df661a4c8c017e2791ce90d7695eea5
   RNReanimated: 1326679461fa5d2399d54c18ca1432ba3e816b9e
   RNScreens: 4d83613b50b74ed277026375dc0810893b0c347f
+  RNSentry: 7244fcc887e50a433d181d9554782a3dbaadf5ec
   RNSha256: bf2c90a9e0cec6dcbcc4100e4e19715ae7feaa34
   RNSharedElement: eb7d506733952d58634f34c82ec17e82f557e377
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
+  Sentry: 9e8ec837fa37e7b397f19f75542800461b138d0e
   Yoga: 9b6696970c3289e8dea34b3eda93f23e61fb8121
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

@@ -11,6 +11,7 @@ import {
 import { checkOnboardingStatusAndNavigate } from 'onboarding';
 import { AuthProvider } from 'auth';
 import ClientProvider, { client } from 'client';
+import { track, identify } from './amplitude';
 
 const AppProviders = ({ children }) => (
   <ClientProvider>
@@ -52,7 +53,10 @@ const AppProviders = ({ children }) => (
           })
         }
       >
-        <AnalyticsProvider>
+        <AnalyticsProvider
+          trackFunctions={[track]}
+          identifyFunctions={[identify]}
+        >
           <LiveProvider>{children}</LiveProvider>
         </AnalyticsProvider>
       </AuthProvider>

@@ -13,8 +13,12 @@ IOS_BUNDLE=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/pl
 APPLE_TEAM_ID=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.APPLE_TEAM_ID")
 ANDROID_BUNDLE=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.ANDROID_PKG_ID")
 SERVER_URL=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.SERVER_URL")
-GOOGLE_MAPS_KEY=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP_GOOGLE_MAPS_API_KEY")
 THEME=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.THEME")
+
+GOOGLE_MAPS_KEY=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP_GOOGLE_MAPS_API_KEY")
+AMPLITUDE_KEY=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.AMPLITUDE_KEY")
+SENTRY_DSN=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.SENTRY_DSN")
+SENTRY_TOKEN=$(curl -s --fail -H "x-api-key: $APOLLOS_API_KEY" -H "accept: text/plain" "$API_URL/config/$CHURCH/APP.SENTRY_TOKEN")
 
 if [ -z "$APP" ] || [ -z "$ICON" ] || [ -z "$ICON_BG_COLOR" ] || [ -z "$LOGO" ] || [ -z "$WORDMARK" ] || [ -z "$IOS_BUNDLE" ] || [ -z "$ANDROID_BUNDLE" ] || [ -z "$SERVER_URL" ] || [ -z "$GOOGLE_MAPS_KEY" ] || [ -z "$THEME" ] || [ -z "$APPLE_TEAM_ID" ]; then
     echo "Missing some variables:
@@ -61,7 +65,20 @@ mv "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme"
 sed -i "" -E "s/apolloschurchapp/$CLEAN_APP/g" "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/$CLEAN_APP.xcscheme"
 
 echo "APP_DATA_URL=$SERVER_URL
-GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_KEY" >.env
+GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_KEY
+AMPLITUDE_KEY=$AMPLITUDE_KEY
+SENTRY_DSN=$SENTRY_DSN
+" >.env
+
+SENTRY_CONFIG="
+defaults.url=https://sentry.io/
+defaults.org=differential-ka
+defaults.project=apollos-cluster-app
+auth.token=$SENTRY_TOKEN
+"
+
+echo "$SENTRY_CONFIG" > ./ios/sentry.properties
+echo "$SENTRY_CONFIG" > ./android/sentry.properties
 
 rm -rf node_modules
 yarn

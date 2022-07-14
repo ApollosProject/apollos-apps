@@ -68,7 +68,7 @@ export const createResolvers = ({
             'Arguments passed to `trackFunctions` must be functions'
           );
         } else {
-          func({ eventName, properties: gqlInputToObject(properties) });
+          func({ eventName, properties: gqlInputToObject(properties), client });
         }
       });
       if (useServerAnalytics) {
@@ -94,7 +94,7 @@ export const createResolvers = ({
             'Arguments passed to `identifyFunctions` must be functions'
           );
         } else {
-          func();
+          func({ client });
         }
       });
       if (useServerAnalytics) {

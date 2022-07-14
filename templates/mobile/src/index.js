@@ -30,6 +30,14 @@ import Auth, { ProtectedRoute } from 'auth';
 import { Onboarding } from 'onboarding';
 import Settings from 'settings';
 import Tabs from 'tabs';
+import * as Sentry from '@sentry/react-native';
+
+Sentry.init({
+  dsn: ApollosConfig.SENTRY_DSN,
+  // Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+  // We recommend adjusting this value in production.
+  tracesSampleRate: 1.0,
+});
 
 enableScreens(); // improves performance for react-navigation
 
@@ -146,4 +154,4 @@ const App = () => (
   </ThemeProvider>
 );
 
-export default App;
+export default Sentry.wrap(App);
