@@ -50,14 +50,14 @@ const StyledSideBySideView = styled(
 
 const WebviewFeature = ({ url, title, linkText, height }) => (
   <StyledCard height={height}>
-    {title && (
+    {title ? (
       <StyledSideBySideView>
         <StyledH3 padded>{title}</StyledH3>
         <TouchableOpacity onPress={() => Linking.openURL(url)}>
           <StyledText>{linkText}</StyledText>
         </TouchableOpacity>
       </StyledSideBySideView>
-    )}
+    ) : null}
     <StyledWebView source={{ uri: url }} />
   </StyledCard>
 );
