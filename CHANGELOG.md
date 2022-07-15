@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://github.com/ApollosProject/apollos-apps/compare/v4.1.0...v4.2.0) (2022-07-15)
+
+
+### Features
+
+* Add sentry, Amplitude ([#2564](https://github.com/ApollosProject/apollos-apps/issues/2564)) ([1189ba9](https://github.com/ApollosProject/apollos-apps/commit/1189ba91dd01ea68d1160190b5df9758c53ffc61))
+* Fan Effect ([#2563](https://github.com/ApollosProject/apollos-apps/issues/2563)) ([67185a1](https://github.com/ApollosProject/apollos-apps/commit/67185a14fe4b088cdb62a2aba717b88663e4cf80))
+* Progress Bar component ([#2546](https://github.com/ApollosProject/apollos-apps/issues/2546)) ([2ccb284](https://github.com/ApollosProject/apollos-apps/commit/2ccb284517d2f024a22d61a764e371bef02525d3))
+* Tabs from API ([#2557](https://github.com/ApollosProject/apollos-apps/issues/2557)) ([a7a8a99](https://github.com/ApollosProject/apollos-apps/commit/a7a8a99422d0f31366125825f7810c0b8c0166db))
+
+
+### Bug Fixes
+
+* following screens ([#2547](https://github.com/ApollosProject/apollos-apps/issues/2547)) ([74b9fbd](https://github.com/ApollosProject/apollos-apps/commit/74b9fbdc4d43311275fed8733c500f2739414da1))
+* uses onboarding slides ([#2556](https://github.com/ApollosProject/apollos-apps/issues/2556)) ([a24073e](https://github.com/ApollosProject/apollos-apps/commit/a24073e757915dfeb29c69da2ea9490819057aaa))
+* webview feature ([#2569](https://github.com/ApollosProject/apollos-apps/issues/2569)) ([e1add6f](https://github.com/ApollosProject/apollos-apps/commit/e1add6f7fb06dc6eeb33a3b8e1dd6235b5f6635a))
+
+
+
 ## [4.1.0](https://github.com/ApollosProject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
 
 

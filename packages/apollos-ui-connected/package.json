@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "4.1.0",
+  "version": "4.2.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -76,7 +76,7 @@
     "react-native-tab-view": "^3.1.1"
   },
   "devDependencies": {
-    "@apollosproject/ui-test-utils": "^4.1.0",
+    "@apollosproject/ui-test-utils": "^4.2.0",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-navigation/compat": "^5.1.28",
     "@react-navigation/native": "^5.9.3",

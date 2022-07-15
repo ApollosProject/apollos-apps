@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://github.com/apollosproject/apollos-apps/compare/v4.1.0...v4.2.0) (2022-07-15)
+
+
+### Features
+
+* Fan Effect ([#2563](https://github.com/apollosproject/apollos-apps/issues/2563)) ([67185a1](https://github.com/apollosproject/apollos-apps/commit/67185a14fe4b088cdb62a2aba717b88663e4cf80))
+* Progress Bar component ([#2546](https://github.com/apollosproject/apollos-apps/issues/2546)) ([2ccb284](https://github.com/apollosproject/apollos-apps/commit/2ccb284517d2f024a22d61a764e371bef02525d3))
+
+
+
 ## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
 
 

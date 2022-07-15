@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://github.com/apollosproject/apollos-apps/compare/v4.1.0...v4.2.0) (2022-07-15)
+
+
+### Bug Fixes
+
+* following screens ([#2547](https://github.com/apollosproject/apollos-apps/issues/2547)) ([74b9fbd](https://github.com/apollosproject/apollos-apps/commit/74b9fbdc4d43311275fed8733c500f2739414da1))
+* webview feature ([#2569](https://github.com/apollosproject/apollos-apps/issues/2569)) ([e1add6f](https://github.com/apollosproject/apollos-apps/commit/e1add6f7fb06dc6eeb33a3b8e1dd6235b5f6635a))
+
+
+
 ## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
 
 

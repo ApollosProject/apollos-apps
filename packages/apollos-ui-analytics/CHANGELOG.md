@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://github.com/apollosproject/apollos-apps/compare/v4.1.0...v4.2.0) (2022-07-15)
+
+
+### Features
+
+* Add sentry, Amplitude ([#2564](https://github.com/apollosproject/apollos-apps/issues/2564)) ([1189ba9](https://github.com/apollosproject/apollos-apps/commit/1189ba91dd01ea68d1160190b5df9758c53ffc61))
+
+
+
 ## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
 
 
