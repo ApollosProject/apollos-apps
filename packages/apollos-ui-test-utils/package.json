@@ -1,0 +1,30 @@
+{
+  "name": "@apollosproject/ui-test-utils",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "4.2.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"No tests here!\""
+  },
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-navigation": "*",
+    "react-test-renderer": "*",
+    "waait": "*"
+  },
+  "devDependencies": {
+    "@react-navigation/compat": "^5.1.28",
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3",
+    "react-native-screens": "2.18.1"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

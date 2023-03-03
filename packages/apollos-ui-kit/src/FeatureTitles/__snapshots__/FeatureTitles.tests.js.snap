@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureTitles should pass style 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "red",
+        "flexShrink": 1,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`FeatureTitles should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexShrink": 1,
+      }
+    }
+  >
+    <Text
+      secondary={true}
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+        }
+      }
+    >
+      Luke, I am your father
+    </Text>
+    <Text
+      primary={true}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Are you telling me that you built a time machine out of a DeLorean?
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`FeatureTitles should render loading state 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexShrink": 1,
+      }
+    }
+  />
+</View>
+`;

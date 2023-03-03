@@ -1,0 +1,2571 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalHighlightCard should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should render a loading state with isLoading 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    isLoading={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            labelColor="rgba(244, 247, 248, 0.6)"
+            style={
+              Object {
+                "color": "rgba(244, 247, 248, 0.6)",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Loading!
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            hasAction={true}
+            style={
+              Object {
+                "flex": 1,
+                "marginRight": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 32,
+                "width": 32,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            hasAction={true}
+            style={
+              Object {
+                "flex": 1,
+                "marginRight": 16,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={32}
+            bbWidth={32}
+            color="#F4F7F8"
+            height={32}
+            id="Raw"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            size={32}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                Object {},
+                null,
+                Object {
+                  "flex": 0,
+                  "height": 32,
+                  "width": 32,
+                },
+              ]
+            }
+            tintColor="#F4F7F8"
+            vbHeight={256}
+            vbWidth={256}
+            width={32}
+          >
+            <RNSVGGroup
+              fill={
+                Array [
+                  0,
+                  4278190080,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              font={Object {}}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={Array []}
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            >
+              <RNSVGRect
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                height={256}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                rx={0}
+                ry={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                width={256}
+                x={0}
+                y={0}
+              />
+              <RNSVGPath
+                d="M176,200a24,24,0,0,1-48,0V136"
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4294244344,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+              <RNSVGPath
+                d="M32.33457,136a8.021,8.021,0,0,1-7.97506-8.70945,104.00633,104.00633,0,0,1,207.281,0A8.021,8.021,0,0,1,223.66543,136Z"
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4294244344,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+              <RNSVGPath
+                d="M88,136c0-72,40-104,40-104s40,32,40,104"
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4294244344,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          customTheme={
+            Object {
+              "colors": Object {
+                "primary": "salmon",
+              },
+            }
+          }
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1727692914,
+              2163900530,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="salmon"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            hasAction={true}
+            style={
+              Object {
+                "flex": 1,
+                "marginRight": 16,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={32}
+            bbWidth={32}
+            color="#F4F7F8"
+            fill="#F4F7F8"
+            height={32}
+            id="Raw"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            size={32}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                Object {},
+                null,
+                Object {
+                  "flex": 0,
+                  "height": 32,
+                  "width": 32,
+                },
+              ]
+            }
+            tintColor="#F4F7F8"
+            vbHeight={256}
+            vbWidth={256}
+            width={32}
+          >
+            <RNSVGGroup
+              fill={
+                Array [
+                  0,
+                  4294244344,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              font={Object {}}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            >
+              <RNSVGRect
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                height={256}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                rx={0}
+                ry={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                width={256}
+                x={0}
+                y={0}
+              />
+              <RNSVGPath
+                d="M232.3125,114.34375,88.34375,26.35937A15.99781,15.99781,0,0,0,64,40.00781V215.99219a16.00521,16.00521,0,0,0,24.34375,13.64843L232.3125,141.65625a16.00727,16.00727,0,0,0,0-27.3125Z"
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            labelColor="rgba(244, 247, 248, 0.6)"
+            style={
+              Object {
+                "color": "rgba(244, 247, 248, 0.6)",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Custom LabelComponent
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            labelColor="rgba(244, 247, 248, 0.6)"
+            style={
+              Object {
+                "color": "rgba(244, 247, 248, 0.6)",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Quote
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should should render as a like icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={24}
+          bbWidth={24}
+          color="#F4F7F8"
+          height={24}
+          id="Raw"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          size={24}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {},
+              null,
+              Object {
+                "flex": 0,
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+          tintColor="#F4F7F8"
+          vbHeight={256}
+          vbWidth={256}
+          width={24}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGRect
+              fill={null}
+              fillOpacity={1}
+              fillRule={1}
+              height={256}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              rx={0}
+              ry={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              width={256}
+              x={0}
+              y={0}
+            />
+            <RNSVGPath
+              d="M128,216S28,160,28,92A52.00881,52.00881,0,0,1,128.00008,71.965l-.00019.00008A52.00881,52.00881,0,0,1,228,92C228,160,128,216,128,216Z"
+              fill={null}
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={
+                Array [
+                  0,
+                  4294244344,
+                ]
+              }
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={1}
+              strokeLinejoin={1}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={16}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should should render as disabled 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={true}
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 0,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          disabled={true}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              2164260863,
+              2164260863,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#FFFFFF"
+          overlayType="medium"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    inHorizontalList={true}
+    style={
+      Object {
+        "backgroundColor": "#1C1C1E",
+        "borderRadius": 16,
+        "height": 240,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.75)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              1711276032,
+              2147483648,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="gradient-bottom"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "bottom": 0,
+            "paddingBottom": 24,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#F4F7F8",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={24}
+          bbWidth={24}
+          color="#F4F7F8"
+          fill="#F4F7F8"
+          height={24}
+          id="Raw"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          size={24}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {},
+              null,
+              Object {
+                "flex": 0,
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+          tintColor="#F4F7F8"
+          vbHeight={256}
+          vbWidth={256}
+          width={24}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4294244344,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGRect
+              fill={null}
+              fillOpacity={1}
+              fillRule={1}
+              height={256}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              rx={0}
+              ry={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              width={256}
+              x={0}
+              y={0}
+            />
+            <RNSVGPath
+              d="M176.02344,32a59.85506,59.85506,0,0,0-48,23.95947A60.02029,60.02029,0,0,0,20.02344,92c0,71.86279,99.84082,128.6001,104.09082,130.98a8.00089,8.00089,0,0,0,7.81836,0A317.34027,317.34027,0,0,0,183.375,185.44629C218.30957,154.00488,236.02344,122.56494,236.02344,92A60.06812,60.06812,0,0,0,176.02344,32Z"
+              fill={
+                Array [
+                  0,
+                  4278190080,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={Array []}
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;

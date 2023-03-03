@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-authentication VerificationConnected should render 1`] = `
+<SafeAreaView
+  edges={
+    Array [
+      "right",
+      "top",
+      "left",
+      "bottom",
+    ]
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <PaddedView
+          vertical={false}
+        >
+          <H3
+            style={Object {}}
+          >
+            Test
+          </H3>
+          <H5
+            padded={true}
+            style={[Function]}
+          >
+            We just sent you a code. Enter it below when it comes.
+          </H5>
+          <TextInput
+            autoComplete="password"
+            autoFocus={true}
+            enablesReturnKeyAutomatically={true}
+            label="Verification Code"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            type="numeric"
+          />
+        </PaddedView>
+      </View>
+    </RCTScrollView>
+    <PaddedView>
+      <Button
+        disabled={false}
+        loading={false}
+        onPress={[Function]}
+        pill={false}
+        title="Verify"
+        type="primary"
+      />
+    </PaddedView>
+  </View>
+</SafeAreaView>
+`;

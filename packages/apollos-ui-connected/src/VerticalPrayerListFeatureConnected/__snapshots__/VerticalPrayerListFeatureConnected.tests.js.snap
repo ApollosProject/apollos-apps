@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VerticalPrayerListFeatureConnected component renders VerticalPrayerListFeatureConnected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      title
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      subtitle
+    </Text>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+          "shadowOffset": Object {
+            "height": 20,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 48,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 72,
+                  "justifyContent": "center",
+                  "width": 72,
+                }
+              }
+              themeSize={72}
+            >
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMedia",
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 36,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                themeSize={72}
+              />
+            </View>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Pray for Michael
+          </Text>
+          <View
+            style={
+              Object {
+                "paddingBottom": 18,
+              }
+            }
+          >
+            <Text
+              bold={false}
+              italic={false}
+              style={
+                Object {
+                  "color": "#27272E",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
+                }
+              }
+            >
+              prayer 1
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={false}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#F4F7F8",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Start Praying
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Modal
+      animationType="slide"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      visible={false}
+    />
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+          "shadowOffset": Object {
+            "height": 20,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 48,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 72,
+                  "justifyContent": "center",
+                  "width": 72,
+                }
+              }
+              themeSize={72}
+            >
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMedia",
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 36,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                themeSize={72}
+              />
+            </View>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Pray for Michael
+          </Text>
+          <View
+            style={
+              Object {
+                "paddingBottom": 18,
+              }
+            }
+          >
+            <Text
+              bold={false}
+              italic={false}
+              style={
+                Object {
+                  "color": "#27272E",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
+                }
+              }
+            >
+              prayer 2
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={false}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 16,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                  "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#F4F7F8",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Start Praying
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Modal
+      animationType="slide"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      visible={false}
+    />
+  </View>
+</View>
+`;
+
+exports[`VerticalPrayerListFeatureConnected component renders empty VerticalPrayerListFeatureConnected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      title
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      subtitle
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+          "marginBottom": 8,
+          "textAlign": "center",
+        }
+      }
+    >
+      🙏
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#00676D",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+          "marginBottom": 8,
+          "textAlign": "center",
+        }
+      }
+    >
+      It looks like you don't have any prayers yet
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 12,
+          "fontStyle": "italic",
+          "lineHeight": 18,
+          "marginBottom": 32,
+          "textAlign": "center",
+        }
+      }
+    >
+      Let's fix that! Are you ready to get started?
+    </Text>
+  </View>
+</View>
+`;

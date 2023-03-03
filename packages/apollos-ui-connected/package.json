@@ -1,0 +1,101 @@
+{
+  "name": "@apollosproject/ui-connected",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "4.2.0",
+  "main": "src/index.js",
+  "files": [
+    "src/**",
+    "storybook/**"
+  ],
+  "scripts": {
+    "test": "jest --no-watchman",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "lint": "eslint ./src --ext .js"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
+  "jest": {
+    "preset": "react-native",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
+    "transformIgnorePatterns": [
+      "../../node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@@react-navigation/native|@react-native-community/async-storage|d3|d3-*|commander))"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
+      "../../node_modules/react-native-gesture-handler/jestSetup.js",
+      "./jest.setup.js"
+    ]
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "@apollosproject/config": "*",
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-fragments": "*",
+    "@apollosproject/ui-htmlview": "*",
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-media-player": "*",
+    "@apollosproject/ui-storybook": "*",
+    "@react-native-community/async-storage": "*",
+    "@react-navigation/compat": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/stack": "*",
+    "moment": "^2.29.1",
+    "react": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-image-picker": "*",
+    "react-native-inappbrowser-reborn": "*",
+    "react-native-permissions": "*"
+  },
+  "dependencies": {
+    "@gorhom/bottom-sheet": "3.4.1",
+    "@react-navigation/bottom-tabs": "^5.11.8",
+    "@react-navigation/material-top-tabs": "^6.2.1",
+    "apollo-upload-client": "^17.0.0",
+    "graphql": "^16.3.0",
+    "graphql-tag": "2.9.2",
+    "lodash": "^4.17.11",
+    "react-native-pager-view": "^5.4.22",
+    "react-native-tab-view": "^3.1.1"
+  },
+  "devDependencies": {
+    "@apollosproject/ui-test-utils": "^4.2.0",
+    "@react-native-community/async-storage": "^1.5.1",
+    "@react-navigation/compat": "^5.1.28",
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3",
+    "jest": "^25.1.0",
+    "moment": "^2.29.1",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-gesture-handler": "^1.3.0",
+    "react-native-image-picker": "^3.1.4",
+    "react-native-inappbrowser-reborn": "3.3.4",
+    "react-native-permissions": "2.0.5",
+    "react-native-webview": "^11.0.0",
+    "react-test-renderer": "16.13.1",
+    "waait": "1.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "SEE LICENSE IN LICENSE.md"
+}

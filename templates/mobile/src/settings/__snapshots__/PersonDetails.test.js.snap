@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = `null`;
+
+exports[`PersonalDetails component renders PersonalDetails when logged in 2`] = `
+<BackgroundView
+  avoidHeader={true}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <PaddedView>
+      <TextInput
+        label="First Name"
+        onChangeText={[Function]}
+        type="text"
+        value="Isaac"
+      />
+      <TextInput
+        label="Last Name"
+        onChangeText={[Function]}
+        type="text"
+        value="Hardy"
+      />
+    </PaddedView>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <PaddedView>
+        <Button
+          disabled={false}
+          loading={false}
+          onPress={[Function]}
+          title="Save"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</BackgroundView>
+`;

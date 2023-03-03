@@ -1,0 +1,3270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The AvatarList component should accept an onPressAdd function 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <RCTScrollView
+    ListHeaderComponent={
+      <mapProps(Component)>
+        <Touchable
+          onPress={[Function]}
+        >
+          <mapProps(Component)>
+            <Unknown />
+          </mapProps(Component)>
+        </Touchable>
+      </mapProps(Component)>
+    }
+    data={
+      Array [
+        Object {
+          "id": "1",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "2",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "3",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "4",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "5",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "6",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "7",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "8",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "borderRadius": 28.8,
+              "marginRight": 8,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#17B582",
+                  "padding": 11.700000000000001,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={34.199999999999996}
+                bbWidth={34.199999999999996}
+                color="#FFFFFF"
+                height={34.199999999999996}
+                id="Raw"
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                size={34.199999999999996}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    Object {},
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 34,
+                      "width": 34,
+                    },
+                  ]
+                }
+                tintColor="#FFFFFF"
+                vbHeight={256}
+                vbWidth={256}
+                width={34.199999999999996}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGRect
+                    fill={null}
+                    fillOpacity={1}
+                    fillRule={1}
+                    height={256}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    rx={0}
+                    ry={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    width={256}
+                    x={0}
+                    y={0}
+                  />
+                  <RNSVGLine
+                    fill={null}
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                        "stroke",
+                        "strokeWidth",
+                        "strokeLinecap",
+                        "strokeLinejoin",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={
+                      Array [
+                        0,
+                        4294967295,
+                      ]
+                    }
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={1}
+                    strokeLinejoin={1}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={16}
+                    vectorEffect={0}
+                    x={0}
+                    x1={40}
+                    x2={216}
+                    y={0}
+                    y1={128}
+                    y2={128}
+                  />
+                  <RNSVGLine
+                    fill={null}
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                        "stroke",
+                        "strokeWidth",
+                        "strokeLinecap",
+                        "strokeLinejoin",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={
+                      Array [
+                        0,
+                        4294967295,
+                      ]
+                    }
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={1}
+                    strokeLinejoin={1}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={16}
+                    vectorEffect={0}
+                    x={0}
+                    x1={128}
+                    x2={128}
+                    y={0}
+                    y1={40}
+                    y2={216}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The AvatarList component should accept an onPressAvatar function 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <RCTScrollView
+    ListHeaderComponent={null}
+    data={
+      Array [
+        Object {
+          "id": "1",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "2",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "3",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "4",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "5",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "6",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "7",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "8",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The AvatarList component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <RCTScrollView
+    ListHeaderComponent={null}
+    data={
+      Array [
+        Object {
+          "id": "1",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "2",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "3",
+          "notification": true,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "4",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "5",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "6",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "7",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+        Object {
+          "id": "8",
+          "notification": false,
+          "source": Object {
+            "uri": "https://picsum.photos/200",
+          },
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#17B582",
+                  "borderColor": "#17B582",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": 0.5,
+                  "top": -1.5,
+                  "width": 14.4,
+                }
+              }
+            />
+            <View
+              avatarSize={57.6}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "transparent",
+                  "borderColor": "rgb(249, 249, 251)",
+                  "borderRadius": 14.4,
+                  "borderWidth": 3,
+                  "marginRight": 1.8,
+                  "marginTop": 1.8,
+                  "position": "absolute",
+                  "right": -2,
+                  "top": -4,
+                  "width": 19.2,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The AvatarList component should render a loading state 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <RCTScrollView
+    ListHeaderComponent={
+      <mapProps(Component)>
+        <Touchable
+          disabled={true}
+          onPress={[Function]}
+        >
+          <mapProps(Component)
+            isLoading={true}
+          >
+            <Unknown
+              isLoading={true}
+            />
+          </mapProps(Component)>
+        </Touchable>
+      </mapProps(Component)>
+    }
+    data={
+      Array [
+        Object {
+          "id": "1",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "2",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "3",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "4",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "5",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "6",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "7",
+          "source": Object {
+            "uri": "",
+          },
+        },
+        Object {
+          "id": "8",
+          "source": Object {
+            "uri": "",
+          },
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "borderRadius": 28.8,
+              "marginRight": 8,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "padding": 11.700000000000001,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 16,
+                    "height": 34.199999999999996,
+                    "width": 34.199999999999996,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 57.6,
+                "justifyContent": "center",
+                "marginRight": 8,
+                "width": 57.6,
+              }
+            }
+            themeSize={57.6}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 28.8,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={57.6}
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

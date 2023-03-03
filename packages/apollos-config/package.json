@@ -1,0 +1,52 @@
+{
+  "name": "@apollosproject/config",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "4.2.0",
+  "main": "src/index.js",
+  "files": [
+    "src/**"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ./src --ext .js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "react-native/**/*.{js,jsx}"
+    ],
+    "testMatch": [
+      "<rootDir>/{src,react-native}/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./jest.setup.js"
+    ]
+  },
+  "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^4.2.0",
+    "react-native-config": "0.11.7"
+  },
+  "peerDependencies": {
+    "react-native-config": "*"
+  },
+  "dependencies": {
+    "dotenv": "10.0.0",
+    "js-yaml": "^3.12.0"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

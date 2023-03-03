@@ -1,0 +1,414 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": 8,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ProgressBar should render at 0% when given a negative input 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": 8,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ProgressBar should render at 25% 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": "25%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ProgressBar should render at 50% 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": "50%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ProgressBar should render at 75% 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": "75%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ProgressBar should render at 100% 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": "100%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ProgressBar should render at 100% when given an input over 100 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "borderRadius": 8,
+        "flex": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.050000000000000044)",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#17B582",
+            "borderRadius": 8,
+            "height": 8,
+          },
+          Object {
+            "width": "100%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;

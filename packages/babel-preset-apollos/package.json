@@ -1,0 +1,38 @@
+{
+  "name": "@apollosproject/babel-preset-apollos",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "4.2.0",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"No tests here!\""
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-decorators": "7.4.0",
+    "@babel/plugin-proposal-do-expressions": "7.2.0",
+    "@babel/plugin-proposal-export-default-from": "7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "7.2.0",
+    "@babel/plugin-proposal-function-bind": "7.2.0",
+    "@babel/plugin-proposal-function-sent": "7.2.0",
+    "@babel/plugin-proposal-json-strings": "7.2.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "7.2.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.2.0",
+    "@babel/plugin-proposal-numeric-separator": "7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "7.2.0",
+    "@babel/plugin-proposal-throw-expressions": "7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-syntax-import-meta": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.4.0",
+    "@babel/preset-env": "7.4.2",
+    "babel-plugin-module-resolver": "^3.1.1"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

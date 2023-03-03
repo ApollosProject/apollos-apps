@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    avoidHeader={true}
+    style={
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "flex": 1,
+        "height": "100%",
+      }
+    }
+  >
+    <RCTScrollView
+      ListEmptyComponent={<ListEmptyComponent />}
+      data={
+        Array [
+          Object {
+            "__typename": "UniversalContentItem",
+            "coverImage": Object {
+              "__typename": "ImageMedia",
+              "sources": Array [
+                Object {
+                  "__typename": "ImageMediaSource",
+                  "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=55be1fd5-d8eb-43a6-aa70-f8e27bb63d31",
+                },
+              ],
+            },
+            "hyphenatedTitle": "Vacations and Your Budget",
+            "id": "UniversalContentItem:4148aeb9482181025e9cad42826e676a",
+            "isLiked": true,
+            "summary": "Some summary",
+            "theme": null,
+            "title": "Making Prayer a Spiritual Habit",
+          },
+          Object {
+            "__typename": "UniversalContentItem",
+            "coverImage": Object {
+              "__typename": "ImageMedia",
+              "sources": Array [
+                Object {
+                  "__typename": "ImageMediaSource",
+                  "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=993efb47-47ec-4dec-a3d3-47bcacfbd58e",
+                },
+              ],
+            },
+            "hyphenatedTitle": "Vacations and Your Budget",
+            "id": "UniversalContentItem:9dbdc4e565dcaa3c9b17eb5ae42de96e",
+            "isLiked": true,
+            "summary": "Some summary",
+            "theme": null,
+            "title": "Vacations and Your Budget",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.7}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onPressItem={[Function]}
+      onRefresh={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[Function]}
+          refreshing={false}
+        />
+      }
+      refreshing={false}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <RCTRefreshControl />
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              __typename="UniversalContentItem"
+              contentId="UniversalContentItem:4148aeb9482181025e9cad42826e676a"
+              coverImage={
+                Object {
+                  "__typename": "ImageMedia",
+                  "sources": Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=55be1fd5-d8eb-43a6-aa70-f8e27bb63d31",
+                    },
+                  ],
+                }
+              }
+              hyphenatedTitle="Vacations and Your Budget"
+              id="UniversalContentItem:4148aeb9482181025e9cad42826e676a"
+              isLiked={true}
+              summary="Some summary"
+              theme={null}
+              title="Making Prayer a Spiritual Habit"
+            />
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              __typename="UniversalContentItem"
+              contentId="UniversalContentItem:9dbdc4e565dcaa3c9b17eb5ae42de96e"
+              coverImage={
+                Object {
+                  "__typename": "ImageMedia",
+                  "sources": Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=993efb47-47ec-4dec-a3d3-47bcacfbd58e",
+                    },
+                  ],
+                }
+              }
+              hyphenatedTitle="Vacations and Your Budget"
+              id="UniversalContentItem:9dbdc4e565dcaa3c9b17eb5ae42de96e"
+              isLiked={true}
+              summary="Some summary"
+              theme={null}
+              title="Vacations and Your Budget"
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

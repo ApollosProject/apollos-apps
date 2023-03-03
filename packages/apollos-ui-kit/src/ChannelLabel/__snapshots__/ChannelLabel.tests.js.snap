@@ -1,0 +1,614 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ChannelLabel component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": null,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      labelColor="rgba(39, 39, 46, 0.6)"
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      Default
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the ChannelLabel component should render a skeleton view 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": null,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 0,
+          "marginRight": 8,
+        }
+      }
+    />
+    <Text
+      labelColor="rgba(39, 39, 46, 0.6)"
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      Default
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the ChannelLabel component should render a skeleton view that supports an icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": null,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 0,
+          "marginRight": 8,
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={32}
+        bbWidth={32}
+        color="rgba(39, 39, 46, 0.3)"
+        height={32}
+        id="Raw"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        size={32}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {},
+            null,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        tintColor="rgba(39, 39, 46, 0.3)"
+        vbHeight={256}
+        vbWidth={256}
+        width={32}
+      >
+        <RNSVGGroup
+          fill={
+            Array [
+              0,
+              4278190080,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          font={Object {}}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          originX={0}
+          originY={0}
+          propList={Array []}
+          rotation={0}
+          scaleX={1}
+          scaleY={1}
+          skewX={0}
+          skewY={0}
+          stroke={null}
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+          vectorEffect={0}
+          x={0}
+          y={0}
+        >
+          <RNSVGRect
+            fill={null}
+            fillOpacity={1}
+            fillRule={1}
+            height={256}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            rx={0}
+            ry={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            width={256}
+            x={0}
+            y={0}
+          />
+          <RNSVGPath
+            d="M128,216S28,160,28,92A52.00881,52.00881,0,0,1,128.00008,71.965l-.00019.00008A52.00881,52.00881,0,0,1,228,92C228,160,128,216,128,216Z"
+            fill={null}
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={
+              Array [
+                0,
+                1294411566,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={1}
+            strokeLinejoin={1}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={16}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <Text
+      labelColor="rgba(39, 39, 46, 0.6)"
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      Default
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the ChannelLabel component should render flexed 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": null,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      labelColor="rgba(39, 39, 46, 0.6)"
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      Default
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the ChannelLabel component should render with an icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": null,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 0,
+          "marginRight": 8,
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={32}
+        bbWidth={32}
+        color="rgba(39, 39, 46, 0.3)"
+        height={32}
+        id="Raw"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        size={32}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {},
+            null,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        tintColor="rgba(39, 39, 46, 0.3)"
+        vbHeight={256}
+        vbWidth={256}
+        width={32}
+      >
+        <RNSVGGroup
+          fill={
+            Array [
+              0,
+              4278190080,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          font={Object {}}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          originX={0}
+          originY={0}
+          propList={Array []}
+          rotation={0}
+          scaleX={1}
+          scaleY={1}
+          skewX={0}
+          skewY={0}
+          stroke={null}
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+          vectorEffect={0}
+          x={0}
+          y={0}
+        >
+          <RNSVGRect
+            fill={null}
+            fillOpacity={1}
+            fillRule={1}
+            height={256}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            rx={0}
+            ry={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            width={256}
+            x={0}
+            y={0}
+          />
+          <RNSVGPath
+            d="M128,216S28,160,28,92A52.00881,52.00881,0,0,1,128.00008,71.965l-.00019.00008A52.00881,52.00881,0,0,1,228,92C228,160,128,216,128,216Z"
+            fill={null}
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={
+              Array [
+                0,
+                1294411566,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={1}
+            strokeLinejoin={1}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={16}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <Text
+      labelColor="rgba(39, 39, 46, 0.6)"
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      Default
+    </Text>
+  </View>
+</View>
+`;

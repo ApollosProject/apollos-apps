@@ -1,0 +1,71 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  title:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: deepakputhraya/action-pr-title@master
+        with:
+          regex: '[a-z]+(\([a-z]+\))?:.*'
+          allowed_prefixes: 'chore,fix,feat,perf'
+          prefix_case_sensitive: false
+          min_length: 10
+          max_length: 100
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: yarn
+      - run: yarn lint
+      - run: |
+          yarn --ignore-scripts
+          yarn lint
+        working-directory:
+          templates/mobile
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - run: yarn
+      - run: ./scripts/test-all.sh
+      - run: |
+          yarn --ignore-scripts
+          yarn test
+        working-directory: templates/mobile
+      - uses: codecov/codecov-action@v1
+
+  e2e:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: templates/mobile
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: templates/mobile/.nvmrc
+      - uses: ruby/setup-ruby@v1
+        with:
+          working-directory: templates/mobile
+      - run: brew tap wix/brew
+      - run: brew install applesimutils
+      - run: npm i -g @apollosproject/cli
+      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
+      - run: cp .env.shared .env
+      - run: yarn config set network-timeout 300000
+      - run: yarn
+      - run: yarn prestart
+      - run: yarn test:ios

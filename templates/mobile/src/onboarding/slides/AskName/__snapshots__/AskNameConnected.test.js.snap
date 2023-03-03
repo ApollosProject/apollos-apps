@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The AskNameConnected component renders 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            disabled={true}
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+          />
+          <TextInput
+            disabled={true}
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The AskNameConnected component renders 2`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            disabled={false}
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+            value="Isaac"
+          />
+          <TextInput
+            disabled={false}
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+            value="Hardy"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

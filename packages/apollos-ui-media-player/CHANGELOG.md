@@ -1,0 +1,715 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.2.0](https://github.com/apollosproject/apollos-apps/compare/v4.1.0...v4.2.0) (2022-07-15)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [4.0.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.9.0](https://github.com/apollosproject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.8.0](https://github.com/apollosproject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
+
+
+### Features
+
+* Content progression ([#2500](https://github.com/apollosproject/apollos-apps/issues/2500)) ([fbbaaea](https://github.com/apollosproject/apollos-apps/commit/fbbaaeabf0fa023a9acedb612dc324aa12f3dd5e))
+
+
+
+## [3.6.0](https://github.com/apollosproject/apollos-apps/compare/v3.5.0...v3.6.0) (2022-05-05)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.5.0](https://github.com/apollosproject/apollos-apps/compare/v3.4.2...v3.5.0) (2022-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [3.4.2](https://github.com/apollosproject/apollos-apps/compare/v3.4.1...v3.4.2) (2022-04-26)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [3.4.1](https://github.com/apollosproject/apollos-apps/compare/v3.4.0...v3.4.1) (2022-04-26)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.4.0](https://github.com/apollosproject/apollos-apps/compare/v3.3.0...v3.4.0) (2022-04-26)
+
+
+### Features
+
+* adds overriding for video Container ([#2480](https://github.com/apollosproject/apollos-apps/issues/2480)) ([27aa0a9](https://github.com/apollosproject/apollos-apps/commit/27aa0a94509abe36aa76e7efa9eb5b703f9c8604))
+
+
+
+## [3.3.0](https://github.com/apollosproject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
+
+
+### Features
+
+* onPlay, onPause, and onEnd side effects for the media player ([#2418](https://github.com/apollosproject/apollos-apps/issues/2418)) ([09f9ffa](https://github.com/apollosproject/apollos-apps/commit/09f9ffa994c94bc17017def255c39fbc87abc16a))
+
+
+
+### [3.2.1](https://github.com/apollosproject/apollos-apps/compare/v3.2.0...v3.2.1) (2022-04-06)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.2.0](https://github.com/apollosproject/apollos-apps/compare/v3.1.2...v3.2.0) (2022-04-04)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [3.1.2](https://github.com/apollosproject/apollos-apps/compare/v3.1.1...v3.1.2) (2022-03-29)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [3.1.1](https://github.com/apollosproject/apollos-apps/compare/v3.1.0...v3.1.1) (2022-03-22)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.0.2...v3.1.0) (2022-03-22)
+
+
+### Bug Fixes
+
+* uses correct youtube URL regex to detect player ([#2443](https://github.com/apollosproject/apollos-apps/issues/2443)) ([dcb0e7b](https://github.com/apollosproject/apollos-apps/commit/dcb0e7bec7093a6c0573d436ec48fbf95ddc2b92))
+
+
+
+### [3.0.2](https://github.com/apollosproject/apollos-apps/compare/v3.0.1...v3.0.2) (2022-03-01)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [3.0.1](https://github.com/apollosproject/apollos-apps/compare/v3.0.0...v3.0.1) (2022-02-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [3.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+
+### Features
+
+* New Landing Swiper ([#2338](https://github.com/apollosproject/apollos-apps/issues/2338)) ([200427c](https://github.com/apollosproject/apollos-apps/commit/200427caa0613cb33fc59ac83821e12929e8af13))
+* Report Prayer Request ([#2283](https://github.com/apollosproject/apollos-apps/issues/2283)) ([04ada63](https://github.com/apollosproject/apollos-apps/commit/04ada63ea9db1b3bfb7e8f91474c380f6c8861de))
+* Webview players ([#2378](https://github.com/apollosproject/apollos-apps/issues/2378)) ([313008e](https://github.com/apollosproject/apollos-apps/commit/313008eddbfe52e0abad1eee4e073d2a780c25ab))
+
+
+
+### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.43.0](https://github.com/apollosproject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Bug Fixes
+
+* Add all phosphor icons ([#2293](https://github.com/apollosproject/apollos-apps/issues/2293)) ([8d567d1](https://github.com/apollosproject/apollos-apps/commit/8d567d1e38cdcab7394731ce7518831b35938df3))
+
+
+
+## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
+
+
+### Features
+
+* Multiple videos support ([#2272](https://github.com/apollosproject/apollos-apps/issues/2272)) ([449e870](https://github.com/apollosproject/apollos-apps/commit/449e87020cb28277a3fe95568d4f6964b4b835f0))
+
+
+
+## [2.40.0](https://github.com/apollosproject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.37.0](https://github.com/apollosproject/apollos-apps/compare/v2.36.3...v2.37.0) (2021-11-12)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.36.3](https://github.com/apollosproject/apollos-apps/compare/v2.36.2...v2.36.3) (2021-10-29)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.36.2](https://github.com/apollosproject/apollos-apps/compare/v2.36.1...v2.36.2) (2021-10-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.36.1](https://github.com/apollosproject/apollos-apps/compare/v2.36.0...v2.36.1) (2021-10-22)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.36.0](https://github.com/apollosproject/apollos-apps/compare/v2.35.0...v2.36.0) (2021-10-21)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.33.4](https://github.com/apollosproject/apollos-apps/compare/v2.33.3...v2.33.4) (2021-09-27)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.33.3](https://github.com/apollosproject/apollos-apps/compare/v2.33.2...v2.33.3) (2021-09-22)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.33.2](https://github.com/apollosproject/apollos-apps/compare/v2.33.1...v2.33.2) (2021-09-17)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.33.1](https://github.com/apollosproject/apollos-apps/compare/v2.33.0...v2.33.1) (2021-09-15)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.33.0](https://github.com/apollosproject/apollos-apps/compare/v2.32.2...v2.33.0) (2021-09-15)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.32.2](https://github.com/apollosproject/apollos-apps/compare/v2.32.1...v2.32.2) (2021-09-09)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.32.1](https://github.com/apollosproject/apollos-apps/compare/v2.32.0...v2.32.1) (2021-09-07)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.32.0](https://github.com/apollosproject/apollos-apps/compare/v2.31.0...v2.32.0) (2021-09-03)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+
+### Bug Fixes
+
+* Fullscreen video bug ([#2137](https://github.com/apollosproject/apollos-apps/issues/2137)) ([82b8854](https://github.com/apollosproject/apollos-apps/commit/82b8854679f5d7b8a458d7918e9d1f5ba2375768))
+
+
+
+## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
+
+
+### Bug Fixes
+
+* adds peer dep for rn-music-control ([#2057](https://github.com/apollosproject/apollos-apps/issues/2057)) ([688f28f](https://github.com/apollosproject/apollos-apps/commit/688f28fa2008c3fb2d98e4fd8e44932998e2b6fb))
+
+
+
+### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
+
+
+### Bug Fixes
+
+* added margin for top notch on videos ([#2103](https://github.com/apollosproject/apollos-apps/issues/2103)) ([d67ee2a](https://github.com/apollosproject/apollos-apps/commit/d67ee2a23196e21eaf2a1b5105bd3381defae1ae))
+
+
+
+### [2.29.2](https://github.com/apollosproject/apollos-apps/compare/v2.29.1...v2.29.2) (2021-08-06)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.29.1](https://github.com/apollosproject/apollos-apps/compare/v2.29.0...v2.29.1) (2021-08-06)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.29.0](https://github.com/apollosproject/apollos-apps/compare/v2.28.0...v2.29.0) (2021-08-05)
+
+
+### Features
+
+* Node 14 and file upload ([#2100](https://github.com/apollosproject/apollos-apps/issues/2100)) ([bc60c6e](https://github.com/apollosproject/apollos-apps/commit/bc60c6e59f72d548b6c09f2190a3a736a5dadb60))
+
+
+
+## [2.28.0](https://github.com/apollosproject/apollos-apps/compare/v2.27.2...v2.28.0) (2021-08-04)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.27.2](https://github.com/apollosproject/apollos-apps/compare/v2.27.1...v2.27.2) (2021-07-20)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.27.1](https://github.com/apollosproject/apollos-apps/compare/v2.27.0...v2.27.1) (2021-07-20)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.27.0](https://github.com/apollosproject/apollos-apps/compare/v2.26.0...v2.27.0) (2021-07-19)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* <ContentTitles /> and other new components ([#1838](https://github.com/apollosproject/apollos-apps/issues/1838)) ([3bc3a0c](https://github.com/apollosproject/apollos-apps/commit/3bc3a0c9bb98514ccb47f9c2d0f3af5da8de1cd2))
+
+
+
+## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Figma / 2.0 Theme Changes ([#1861](https://github.com/apollosproject/apollos-apps/issues/1861)) ([1a93cc8](https://github.com/apollosproject/apollos-apps/commit/1a93cc8364985739720ca53963f26711824683c5)), closes [#1814](https://github.com/apollosproject/apollos-apps/issues/1814)
+
+
+
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* sends birthdates with the correct date ([#1943](https://github.com/apollosproject/apollos-apps/issues/1943)) ([61bd00c](https://github.com/apollosproject/apollos-apps/commit/61bd00c2f75179fa234391867ef57d8dab6e6c4f))
+
+
+
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.13.0](https://github.com/apollosproject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* Video playing in background after closing ([#1837](https://github.com/apollosproject/apollos-apps/issues/1837)) ([30b694f](https://github.com/apollosproject/apollos-apps/commit/30b694f973885f1ffce16d6dcbe82f17371d2df5))
+
+
+
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/apollosproject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/apollosproject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* Hookup suggested followers ([#1785](https://github.com/apollosproject/apollos-apps/issues/1785)) ([68d042d](https://github.com/apollosproject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+# [2.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.4...v2.0.0) (2021-02-03)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+# [2.0.0-beta.2](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2021-01-27)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player
+
+
+
+
+
+# [2.0.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2021-01-22)
+
+**Note:** Version bump only for package @apollosproject/ui-media-player

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NodeFeaturesConnected should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <FeaturesFeedConnected
+    featureFeedId="FeatureFeed:123"
+    navigation={
+      Object {
+        "dispatch": [MockFunction],
+        "navigate": [MockFunction],
+      }
+    }
+    onPressActionItem={[Function]}
+    openUrl={[Function]}
+  />
+</View>
+`;

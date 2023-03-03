@@ -1,0 +1,1357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Text Input component should render as a numeric field 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={false}
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              editable={true}
+              keyboardType="numeric"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Some placeholder"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
+              rejectResponderTermination={true}
+              returnKeyType="done"
+              style={
+                Array [
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 14,
+                    "height": 38,
+                    "paddingVertical": 0,
+                  },
+                  undefined,
+                ]
+              }
+              type="numeric"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            pointerEvents="none"
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "position": "absolute",
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              numberOfLines={0}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Numeric
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": -0.5,
+              "height": 0.5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "scaleX": 0.0001,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            hasError={false}
+            style={
+              Object {
+                "backgroundColor": "#17B582",
+                "bottom": 0,
+                "height": 0.5,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Text Input component should render as a password field with an icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={false}
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              autoCapitalize="none"
+              autoCorrect={false}
+              editable={true}
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Some placeholder"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
+              rejectResponderTermination={true}
+              returnKeyType="done"
+              secureTextEntry={true}
+              style={
+                Array [
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 14,
+                    "height": 38,
+                    "paddingVertical": 0,
+                  },
+                  undefined,
+                ]
+              }
+              type="password"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            pointerEvents="none"
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "position": "absolute",
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              numberOfLines={0}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Password
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={18}
+            bbWidth={18}
+            color="#27272E"
+            height={18}
+            id="Raw"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            size={18}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                Object {},
+                null,
+                Object {
+                  "flex": 0,
+                  "height": 18,
+                  "width": 18,
+                },
+              ]
+            }
+            tintColor="#27272E"
+            vbHeight={256}
+            vbWidth={256}
+            width={18}
+          >
+            <RNSVGGroup
+              fill={
+                Array [
+                  0,
+                  4278190080,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              font={Object {}}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={Array []}
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            >
+              <RNSVGRect
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                height={256}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                rx={0}
+                ry={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                width={256}
+                x={0}
+                y={0}
+              />
+              <RNSVGRect
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                height={128}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                rx={8}
+                ry={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4280756014,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
+                vectorEffect={0}
+                width={176}
+                x={40}
+                y={88}
+              />
+              <RNSVGPath
+                d="M92,88V52a36,36,0,0,1,72,0V88"
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4280756014,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+              <RNSVGCircle
+                cx={128}
+                cy={152}
+                fill={
+                  Array [
+                    0,
+                    4280756014,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                r={12}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": -0.5,
+              "height": 0.5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "scaleX": 0.0001,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            hasError={false}
+            style={
+              Object {
+                "backgroundColor": "#17B582",
+                "bottom": 0,
+                "height": 0.5,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Text Input component should render as a phone number field 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={false}
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              editable={true}
+              keyboardType="phone-pad"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Some placeholder"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
+              rejectResponderTermination={true}
+              returnKeyType="done"
+              style={
+                Array [
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 14,
+                    "height": 38,
+                    "paddingVertical": 0,
+                  },
+                  undefined,
+                ]
+              }
+              type="phone"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            pointerEvents="none"
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "position": "absolute",
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              numberOfLines={0}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Phone Number
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": -0.5,
+              "height": 0.5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "scaleX": 0.0001,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            hasError={false}
+            style={
+              Object {
+                "backgroundColor": "#17B582",
+                "bottom": 0,
+                "height": 0.5,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Text Input component should render as an email field 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={false}
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              autoCapitalize="none"
+              autoCorrect={false}
+              editable={true}
+              keyboardType="email-address"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Some placeholder"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
+              rejectResponderTermination={true}
+              returnKeyType="done"
+              style={
+                Array [
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 14,
+                    "height": 38,
+                    "paddingVertical": 0,
+                  },
+                  undefined,
+                ]
+              }
+              type="email"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            pointerEvents="none"
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "position": "absolute",
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              numberOfLines={0}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Email
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": -0.5,
+              "height": 0.5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "scaleX": 0.0001,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            hasError={false}
+            style={
+              Object {
+                "backgroundColor": "#17B582",
+                "bottom": 0,
+                "height": 0.5,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Text Input component should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={false}
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              editable={true}
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Some placeholder"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
+              rejectResponderTermination={true}
+              returnKeyType="done"
+              style={
+                Array [
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 14,
+                    "height": 38,
+                    "paddingVertical": 0,
+                  },
+                  undefined,
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            pointerEvents="none"
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "position": "absolute",
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              numberOfLines={0}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Some label text
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": -0.5,
+              "height": 0.5,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "scaleX": 0.0001,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            hasError={false}
+            style={
+              Object {
+                "backgroundColor": "#17B582",
+                "bottom": 0,
+                "height": 0.5,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Text Input component should render with no underline 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    disabled={false}
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              editable={true}
+              onBlur={[Function]}
+              onFocus={[Function]}
+              placeholder="Some placeholder"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
+              rejectResponderTermination={true}
+              returnKeyType="done"
+              style={
+                Array [
+                  Object {
+                    "color": "#27272E",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 14,
+                    "height": 38,
+                    "paddingVertical": 0,
+                  },
+                  undefined,
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            pointerEvents="none"
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "position": "absolute",
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              numberOfLines={0}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Text input...
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

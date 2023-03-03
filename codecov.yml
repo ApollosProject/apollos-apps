@@ -1,0 +1,14 @@
+coverage:
+  status:
+    project:
+      data:
+        paths:
+          - packages/apollos-data-*/*
+          - packages/apollos-config/*
+          - packages/apollos-server-core/*
+      ui:
+        paths:
+          - packages/apollos-ui-*/*
+comment:
+  layout: "reach, diff, files"
+  behavior: once

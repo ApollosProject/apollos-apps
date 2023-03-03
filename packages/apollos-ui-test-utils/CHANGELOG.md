@@ -1,0 +1,711 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.2.0](https://github.com/apollosproject/apollos-apps/compare/v4.1.0...v4.2.0) (2022-07-15)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [4.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.1.0) (2022-06-28)
+
+
+### Features
+
+* Following Screens ([#2507](https://github.com/apollosproject/apollos-apps/issues/2507)) ([ffccb48](https://github.com/apollosproject/apollos-apps/commit/ffccb486e1e89fc83f62be57353b68c234de88ef))
+
+
+
+## [4.0.0](https://github.com/apollosproject/apollos-apps/compare/v3.9.0...v4.0.0) (2022-06-28)
+
+
+### Features
+
+* Following Screens ([#2507](https://github.com/apollosproject/apollos-apps/issues/2507)) ([ffccb48](https://github.com/apollosproject/apollos-apps/commit/ffccb486e1e89fc83f62be57353b68c234de88ef))
+
+
+
+## [3.9.0](https://github.com/apollosproject/apollos-apps/compare/v3.8.0...v3.9.0) (2022-06-08)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.8.0](https://github.com/apollosproject/apollos-apps/compare/v3.7.0...v3.8.0) (2022-06-02)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.7.0](https://github.com/apollosproject/apollos-apps/compare/v3.6.0...v3.7.0) (2022-05-24)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.6.0](https://github.com/apollosproject/apollos-apps/compare/v3.5.0...v3.6.0) (2022-05-05)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.5.0](https://github.com/apollosproject/apollos-apps/compare/v3.4.2...v3.5.0) (2022-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.4.2](https://github.com/apollosproject/apollos-apps/compare/v3.4.1...v3.4.2) (2022-04-26)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.4.1](https://github.com/apollosproject/apollos-apps/compare/v3.4.0...v3.4.1) (2022-04-26)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.4.0](https://github.com/apollosproject/apollos-apps/compare/v3.3.0...v3.4.0) (2022-04-26)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.3.0](https://github.com/apollosproject/apollos-apps/compare/v3.2.1...v3.3.0) (2022-04-11)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.2.1](https://github.com/apollosproject/apollos-apps/compare/v3.2.0...v3.2.1) (2022-04-06)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.2.0](https://github.com/apollosproject/apollos-apps/compare/v3.1.2...v3.2.0) (2022-04-04)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.1.2](https://github.com/apollosproject/apollos-apps/compare/v3.1.1...v3.1.2) (2022-03-29)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.1.1](https://github.com/apollosproject/apollos-apps/compare/v3.1.0...v3.1.1) (2022-03-22)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.1.0](https://github.com/apollosproject/apollos-apps/compare/v3.0.2...v3.1.0) (2022-03-22)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.0.2](https://github.com/apollosproject/apollos-apps/compare/v3.0.1...v3.0.2) (2022-03-01)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [3.0.1](https://github.com/apollosproject/apollos-apps/compare/v3.0.0...v3.0.1) (2022-02-28)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [3.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.43.1...v3.0.0) (2022-02-28)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.43.0](https://github.com/apollosproject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.40.0](https://github.com/apollosproject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.37.0](https://github.com/apollosproject/apollos-apps/compare/v2.36.3...v2.37.0) (2021-11-12)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.36.3](https://github.com/apollosproject/apollos-apps/compare/v2.36.2...v2.36.3) (2021-10-29)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.36.2](https://github.com/apollosproject/apollos-apps/compare/v2.36.1...v2.36.2) (2021-10-28)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.36.1](https://github.com/apollosproject/apollos-apps/compare/v2.36.0...v2.36.1) (2021-10-22)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.36.0](https://github.com/apollosproject/apollos-apps/compare/v2.35.0...v2.36.0) (2021-10-21)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.33.4](https://github.com/apollosproject/apollos-apps/compare/v2.33.3...v2.33.4) (2021-09-27)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.33.3](https://github.com/apollosproject/apollos-apps/compare/v2.33.2...v2.33.3) (2021-09-22)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.33.2](https://github.com/apollosproject/apollos-apps/compare/v2.33.1...v2.33.2) (2021-09-17)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.33.1](https://github.com/apollosproject/apollos-apps/compare/v2.33.0...v2.33.1) (2021-09-15)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.33.0](https://github.com/apollosproject/apollos-apps/compare/v2.32.2...v2.33.0) (2021-09-15)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.32.2](https://github.com/apollosproject/apollos-apps/compare/v2.32.1...v2.32.2) (2021-09-09)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.32.1](https://github.com/apollosproject/apollos-apps/compare/v2.32.0...v2.32.1) (2021-09-07)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.32.0](https://github.com/apollosproject/apollos-apps/compare/v2.31.0...v2.32.0) (2021-09-03)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.29.2](https://github.com/apollosproject/apollos-apps/compare/v2.29.1...v2.29.2) (2021-08-06)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.29.1](https://github.com/apollosproject/apollos-apps/compare/v2.29.0...v2.29.1) (2021-08-06)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.29.0](https://github.com/apollosproject/apollos-apps/compare/v2.28.0...v2.29.0) (2021-08-05)
+
+
+### Features
+
+* Node 14 and file upload ([#2100](https://github.com/apollosproject/apollos-apps/issues/2100)) ([bc60c6e](https://github.com/apollosproject/apollos-apps/commit/bc60c6e59f72d548b6c09f2190a3a736a5dadb60))
+
+
+
+## [2.28.0](https://github.com/apollosproject/apollos-apps/compare/v2.27.2...v2.28.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* replace graphql-tag with @apollo/client > gql ([#2083](https://github.com/apollosproject/apollos-apps/issues/2083)) ([4946de9](https://github.com/apollosproject/apollos-apps/commit/4946de9242b21919af8538c204943ebd5bac8ec5))
+
+
+
+### [2.27.2](https://github.com/apollosproject/apollos-apps/compare/v2.27.1...v2.27.2) (2021-07-20)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.27.1](https://github.com/apollosproject/apollos-apps/compare/v2.27.0...v2.27.1) (2021-07-20)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.27.0](https://github.com/apollosproject/apollos-apps/compare/v2.26.0...v2.27.0) (2021-07-19)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.13.0](https://github.com/apollosproject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Features
+
+* Better Avatar Placeholder ([#1866](https://github.com/apollosproject/apollos-apps/issues/1866)) ([d49ab8b](https://github.com/apollosproject/apollos-apps/commit/d49ab8bff1fbb300d597bc3f13291eb429b283cd))
+
+
+
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+
+### Features
+
+* Bottom sheet editor v2 ([#1818](https://github.com/apollosproject/apollos-apps/issues/1818)) ([615715b](https://github.com/apollosproject/apollos-apps/commit/615715b9fe0d7cba49dbe3abd895194891e017ad))
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/apollosproject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/apollosproject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+## [2.1.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.1-canary.0...v2.1.0) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+# [2.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.4...v2.0.0) (2021-02-03)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+# [2.0.0-beta.2](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2021-01-27)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils
+
+
+
+
+
+# [2.0.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2021-01-22)
+
+**Note:** Version bump only for package @apollosproject/ui-test-utils

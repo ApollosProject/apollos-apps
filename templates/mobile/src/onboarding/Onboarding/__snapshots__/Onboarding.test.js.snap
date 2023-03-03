@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Onboarding component should render Onboarding 1`] = `null`;
+
+exports[`the Onboarding component should render Onboarding 2`] = `
+Array [
+  <BackgroundView
+    style={
+      Object {
+        "height": "100%",
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  />,
+  <Swiper
+    activeDot={
+      <SafeAreaView>
+        <Unknown />
+      </SafeAreaView>
+    }
+    dot={
+      <SafeAreaView>
+        <Unknown />
+      </SafeAreaView>
+    }
+    loadMinimal={true}
+    loop={false}
+    onComplete={[Function]}
+    onIndexChanged={[Function]}
+    showsButtons={false}
+    userVersion={0}
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      overScrollMode="auto"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View>
+        <SafeAreaView
+          style={[Function]}
+        >
+          <View>
+            <View
+              style={[Function]}
+            >
+              <H2
+                style={[Function]}
+              >
+                Hey friend!
+              </H2>
+            </View>
+            <H5
+              style={[Function]}
+            >
+              We'd like to help personalize your mobile experience so we can help you with every step on your journey.
+            </H5>
+          </View>
+        </SafeAreaView>
+      </View>
+    </RCTScrollView>
+    <PaddedView
+      style={[Function]}
+      vertical={false}
+    >
+      <SafeAreaView
+        edges={
+          Array [
+            "bottom",
+          ]
+        }
+      >
+        <Button
+          loading={false}
+          onPress={[Function]}
+          style={Object {}}
+          trackEventName="Features Completed"
+        >
+          <H5>
+            Next
+          </H5>
+          <Icon
+            name="arrow-next"
+          />
+        </Button>
+      </SafeAreaView>
+    </PaddedView>
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      overScrollMode="auto"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View>
+        <SafeAreaView
+          style={[Function]}
+        >
+          <View>
+            <View
+              style={[Function]}
+            >
+              <H2
+                style={[Function]}
+              >
+                Let's select your local campus
+              </H2>
+            </View>
+            <H5
+              style={[Function]}
+            >
+              We'll use your location to connect you with your nearby campus and community
+            </H5>
+          </View>
+          <PaddedView
+            horizontal={false}
+          >
+            <Button
+              onPress={[Function]}
+              pill={false}
+              title="Yes, find my local campus"
+            />
+          </PaddedView>
+        </SafeAreaView>
+      </View>
+    </RCTScrollView>
+    <PaddedView
+      style={[Function]}
+      vertical={false}
+    >
+      <SafeAreaView
+        edges={
+          Array [
+            "bottom",
+          ]
+        }
+      >
+        <ButtonLink
+          onPress={[Function]}
+          style={[Function]}
+          trackEventName="Ask Location Skipped"
+        >
+          Skip
+        </ButtonLink>
+      </SafeAreaView>
+    </PaddedView>
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      overScrollMode="auto"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View>
+        <SafeAreaView
+          style={[Function]}
+        >
+          <View>
+            <View
+              style={[Function]}
+            >
+              <H2
+                style={[Function]}
+              >
+                Can we keep you informed?
+              </H2>
+            </View>
+            <H5
+              style={[Function]}
+            >
+              We'll let you know when important things are happening and keep you in the loop
+            </H5>
+          </View>
+          <PaddedView
+            horizontal={false}
+          >
+            <Button
+              disabled={true}
+              onPress={[Function]}
+              pill={false}
+              title="Notifications Enabled!"
+            />
+          </PaddedView>
+        </SafeAreaView>
+      </View>
+    </RCTScrollView>
+    <PaddedView
+      style={[Function]}
+      vertical={false}
+    >
+      <SafeAreaView
+        edges={
+          Array [
+            "bottom",
+          ]
+        }
+      >
+        <Button
+          onPress={[Function]}
+          style={Object {}}
+          trackEventName="Ask Notifications Completed"
+        >
+          <H5>
+            Next
+          </H5>
+          <Icon
+            name="arrow-next"
+          />
+        </Button>
+      </SafeAreaView>
+    </PaddedView>
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      loading={false}
+      overScrollMode="auto"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      version={2}
+    >
+      <View>
+        <SafeAreaView
+          style={[Function]}
+        >
+          <View>
+            <View
+              style={[Function]}
+            >
+              <H2
+                style={[Function]}
+              >
+                Get connected
+              </H2>
+            </View>
+            <H5
+              style={[Function]}
+            >
+              Follow others to stay up to date with your church community.
+            </H5>
+          </View>
+          <FollowListConnected
+            followers={Array []}
+          />
+        </SafeAreaView>
+      </View>
+    </RCTScrollView>
+    <PaddedView
+      style={[Function]}
+      vertical={false}
+    >
+      <SafeAreaView
+        edges={
+          Array [
+            "bottom",
+          ]
+        }
+      >
+        <Button
+          onPress={[Function]}
+          style={Object {}}
+        >
+          <H5>
+            Finish
+          </H5>
+          <Icon
+            name="arrow-next"
+          />
+        </Button>
+      </SafeAreaView>
+    </PaddedView>
+  </Swiper>,
+]
+`;

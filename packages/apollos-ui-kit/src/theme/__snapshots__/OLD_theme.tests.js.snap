@@ -1,0 +1,687 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider defaults to user settings 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(249, 249, 251)",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#27272E",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 24,
+        "lineHeight": 27.6,
+      }
+    }
+  >
+    YOOO
+  </Text>
+</View>
+`;
+
+exports[`ThemeProvider renders in dark theme 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#000000",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#F4F7F8",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 24,
+        "lineHeight": 27.6,
+      }
+    }
+  >
+    YOOO
+  </Text>
+</View>
+`;
+
+exports[`ThemeProvider renders in light theme 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(249, 249, 251)",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#27272E",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 24,
+        "lineHeight": 27.6,
+      }
+    }
+  >
+    YOOO
+  </Text>
+</View>
+`;
+
+exports[`the styled HOC allows a theme to supply override functions 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    active={true}
+    clickable={true}
+    style={
+      Object {
+        "backgroundColor": "active-color",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "in-active-color",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`the styled HOC allows a theme to supply overrides 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    clickable={true}
+    style={
+      Object {
+        "backgroundColor": "green",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`the styled HOC merges nested styles from withTheme and an overide 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    clickable={false}
+    style={
+      Object {
+        "backgroundColor": "active-color",
+        "borderRadius": 7,
+        "color": "blue",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`the styled HOC provides a theme 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    clickable={false}
+    style={
+      Object {
+        "backgroundColor": "#00676D",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`the styled HOC uses overide when using \`named\` hoc 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    clickable={false}
+    style={
+      Object {
+        "backgroundColor": "active-color",
+        "borderRadius": 7,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#00676D",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#00676D",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#F4F7F8",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#00676D",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`withThemeMixin overrides themeInput with theme prop 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "salmon",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "yellow",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`withThemeMixin prunes null inputs 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#00676D",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`withThemeMixin reverts to themeInput when mixin has null values 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "salmon",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "blue",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`withThemeMixin works with dynamic props 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "blue",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#F4F7F8",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;

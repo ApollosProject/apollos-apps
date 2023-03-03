@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding AskName component should accept a firstName 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+            value="Marty"
+          />
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskName component should accept a lastName 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+          />
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+            value="McFly"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskName component should pass additional props to Slide component 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <SafeAreaView>
+        <SafeAreaView
+          style={[Function]}
+        >
+          <View>
+            <View
+              style={[Function]}
+            >
+              <Icon
+                icon={true}
+                isLoading={false}
+              />
+            </View>
+            <View
+              style={[Function]}
+            >
+              <H2
+                style={[Function]}
+              >
+                Welcome!
+              </H2>
+            </View>
+            <H5
+              style={[Function]}
+            >
+              Every relationship starts with a name. What's yours?
+            </H5>
+          </View>
+          <PaddedView
+            horizontal={false}
+          >
+            <TextInput
+              enablesReturnKeyAutomatically={true}
+              error={false}
+              label="First Name"
+              onChangeText={[Function]}
+              onSubmitEditing={[Function]}
+              returnKeyType="next"
+              textContentType="givenName"
+              type="text"
+            />
+            <TextInput
+              enablesReturnKeyAutomatically={true}
+              error={false}
+              inputRef={[Function]}
+              label="Last Name"
+              onChangeText={[Function]}
+              onSubmitEditing={[MockFunction]}
+              returnKeyType="next"
+              textContentType="familyName"
+              type="text"
+            />
+          </PaddedView>
+        </SafeAreaView>
+      </SafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[MockFunction]}
+        style={Object {}}
+      >
+        <H5>
+          Next
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding AskName component should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+          />
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskName component should render a custom description 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Custom description text
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+          />
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskName component should render a custom title 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Custom title text
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+          />
+          <TextInput
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding AskName component should render a loading state 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <Icon
+              icon={true}
+              isLoading={false}
+            />
+          </View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Welcome!
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            Every relationship starts with a name. What's yours?
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <TextInput
+            disabled={true}
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            label="First Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            textContentType="givenName"
+            type="text"
+          />
+          <TextInput
+            disabled={true}
+            enablesReturnKeyAutomatically={true}
+            error={false}
+            inputRef={[Function]}
+            label="Last Name"
+            onChangeText={[Function]}
+            returnKeyType="next"
+            textContentType="familyName"
+            type="text"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

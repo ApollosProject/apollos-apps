@@ -1,0 +1,55 @@
+{
+  "name": "@apollosproject/ui-fragments",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "4.2.0",
+  "main": "src/index.js",
+  "files": [
+    "src/**",
+    "storybook/**"
+  ],
+  "scripts": {
+    "test": "echo \"No tests yet!\"",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "lint": "eslint ./src --ext .js"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject|d3|d3-*|commander))"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
+    ]
+  },
+  "dependencies": {
+    "@apollo/client": "3.6.5"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-react-native": "18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

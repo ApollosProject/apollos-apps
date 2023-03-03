@@ -1,0 +1,2972 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultCard should render a loading state with isLoading 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    isLoading={true}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 24,
+              "marginVertical": 1.8000000000000007,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 16,
+              "marginVertical": 5,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render at the images natural aspect ratio (between min/max) 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/1400/800/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/1400/800/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall) 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/2000/800/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/2000/800/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render with a summary 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+              }
+            }
+          >
+            The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render with an actionIcon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 0,
+                "marginRight": 8,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={32}
+              bbWidth={32}
+              color="#27272E"
+              height={32}
+              id="Raw"
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              size={32}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {},
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 32,
+                    "width": 32,
+                  },
+                ]
+              }
+              tintColor="#27272E"
+              vbHeight={256}
+              vbWidth={256}
+              width={32}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGRect
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  height={256}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  rx={0}
+                  ry={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  width={256}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M176,200a24,24,0,0,1-48,0V136"
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={1}
+                  strokeLinejoin={1}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={16}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M32.33457,136a8.021,8.021,0,0,1-7.97506-8.70945,104.00633,104.00633,0,0,1,207.281,0A8.021,8.021,0,0,1,223.66543,136Z"
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={1}
+                  strokeLinejoin={1}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={16}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M88,136c0-72,40-104,40-104s40,32,40,104"
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={1}
+                  strokeLinejoin={1}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={16}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render with an actionIcon and subtitle 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 0,
+                "marginRight": 8,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={32}
+              bbWidth={32}
+              color="#27272E"
+              height={32}
+              id="Raw"
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              size={32}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {},
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 32,
+                    "width": 32,
+                  },
+                ]
+              }
+              tintColor="#27272E"
+              vbHeight={256}
+              vbWidth={256}
+              width={32}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGRect
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  height={256}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  rx={0}
+                  ry={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  width={256}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M176,200a24,24,0,0,1-48,0V136"
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={1}
+                  strokeLinejoin={1}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={16}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M32.33457,136a8.021,8.021,0,0,1-7.97506-8.70945,104.00633,104.00633,0,0,1,207.281,0A8.021,8.021,0,0,1,223.66543,136Z"
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={1}
+                  strokeLinejoin={1}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={16}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M88,136c0-72,40-104,40-104s40,32,40,104"
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={1}
+                  strokeLinejoin={1}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={16}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              labelColor="rgba(39, 39, 46, 0.6)"
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              Quote
+            </Text>
+          </View>
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render with custom LabelComponent 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            labelColor="rgba(39, 39, 46, 0.6)"
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Custom LabelComponent
+          </Text>
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render with custom labelText 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            labelColor="rgba(39, 39, 46, 0.6)"
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Custom label text
+          </Text>
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should render with isLive support 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 0,
+                "marginRight": 8,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={7}
+              bbWidth={7}
+              height={7}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {
+                    "marginRight": 8,
+                  },
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 7,
+                    "width": 7,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={7}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGCircle
+                  cx="12"
+                  cy="12"
+                  fill={
+                    Array [
+                      0,
+                      1294411566,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  r="12"
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+          <Text
+            labelColor="rgba(39, 39, 46, 0.6)"
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Live
+          </Text>
+        </View>
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should should render a like icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DefaultCard should should render as isLiked 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.08999999999999997)",
+        "shadowOffset": Object {
+          "height": 20,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 48,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "bottom": 0,
+            "flex": 1,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Image
+          blurRadius={80}
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#27272E",
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 8,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "opacity": 1,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={20}
+              bbWidth={20}
+              color="rgba(39, 39, 46, 0.3)"
+              fill="rgba(39, 39, 46, 0.3)"
+              height={20}
+              id="Raw"
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              size={20}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {},
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 20,
+                    "width": 20,
+                  },
+                ]
+              }
+              tintColor="rgba(39, 39, 46, 0.3)"
+              vbHeight={256}
+              vbWidth={256}
+              width={20}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    1294411566,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGRect
+                  fill={null}
+                  fillOpacity={1}
+                  fillRule={1}
+                  height={256}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  rx={0}
+                  ry={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  width={256}
+                  x={0}
+                  y={0}
+                />
+                <RNSVGPath
+                  d="M176.02344,32a59.85506,59.85506,0,0,0-48,23.95947A60.02029,60.02029,0,0,0,20.02344,92c0,71.86279,99.84082,128.6001,104.09082,130.98a8.00089,8.00089,0,0,0,7.81836,0A317.34027,317.34027,0,0,0,183.375,185.44629C218.30957,154.00488,236.02344,122.56494,236.02344,92A60.06812,60.06812,0,0,0,176.02344,32Z"
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
+              style={
+                Object {
+                  "width": 5.333333333333333,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              Like
+              d
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

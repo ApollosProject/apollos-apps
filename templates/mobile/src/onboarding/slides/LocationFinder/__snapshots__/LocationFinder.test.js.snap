@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding LocationFinder component should pass additional props to Slide component 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Let's select your local campus
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            We'll use your location to connect you with your nearby campus and community
+          </H5>
+        </View>
+        <PaddedView
+          horizontal={false}
+        >
+          <Button
+            pill={false}
+            title="Yes, find my local campus"
+          />
+        </PaddedView>
+      </SafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <ButtonLink
+        onPress={[MockFunction]}
+        style={[Function]}
+      >
+        Later
+      </ButtonLink>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding LocationFinder component should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Let's select your local campus
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll use your location to connect you with your nearby campus and community
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          pill={false}
+          title="Yes, find my local campus"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding LocationFinder component should render a BackgroundComponent 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <GradientOverlayImage
+      source="https://picsum.photos/640/640/?random"
+    />
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Let's select your local campus
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll use your location to connect you with your nearby campus and community
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          pill={false}
+          title="Yes, find my local campus"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding LocationFinder component should render a button with custom text 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Let's select your local campus
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll use your location to connect you with your nearby campus and community
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          onPress={[MockFunction]}
+          pill={false}
+          title="Custom button text"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding LocationFinder component should render a custom description 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Let's select your local campus
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          Custom description text
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          pill={false}
+          title="Yes, find my local campus"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding LocationFinder component should render a custom title 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Custom title text
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll use your location to connect you with your nearby campus and community
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          pill={false}
+          title="Yes, find my local campus"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`The Onboarding LocationFinder component should render the campus card 1`] = `
+Array [
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <SafeAreaView
+        style={[Function]}
+      >
+        <View>
+          <View
+            style={[Function]}
+          >
+            <H2
+              style={[Function]}
+            >
+              Let's select your local campus
+            </H2>
+          </View>
+          <H5
+            style={[Function]}
+          >
+            We'll use your location to connect you with your nearby campus and community
+          </H5>
+        </View>
+        <Touchable>
+          <CampusCard
+            description="67 Algonquin Rd
+South Barrington, IL 60010-6143"
+            images={
+              Array [
+                Object {
+                  "uri": "https://picsum.photos/300/300/?random",
+                },
+              ]
+            }
+            style={[Function]}
+            title="Chicago Campus"
+          />
+        </Touchable>
+      </SafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <PaddedView
+    style={[Function]}
+    vertical={false}
+  >
+    <SafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
+      <Button
+        onPress={[Function]}
+        style={Object {}}
+      >
+        <H5>
+          Next
+        </H5>
+        <Icon
+          name="arrow-next"
+        />
+      </Button>
+    </SafeAreaView>
+  </PaddedView>,
+]
+`;
+
+exports[`The Onboarding LocationFinder component should render with a button 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "minHeight": "100%",
+    }
+  }
+  overScrollMode="auto"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <SafeAreaView
+      style={[Function]}
+    >
+      <View>
+        <View
+          style={[Function]}
+        >
+          <H2
+            style={[Function]}
+          >
+            Let's select your local campus
+          </H2>
+        </View>
+        <H5
+          style={[Function]}
+        >
+          We'll use your location to connect you with your nearby campus and community
+        </H5>
+      </View>
+      <PaddedView
+        horizontal={false}
+      >
+        <Button
+          onPress={[MockFunction]}
+          pill={false}
+          title="Yes, find my local campus"
+        />
+      </PaddedView>
+    </SafeAreaView>
+  </View>
+</RCTScrollView>
+`;

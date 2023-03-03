@@ -1,0 +1,54 @@
+name: Codecov Report
+
+on:
+  push:
+    branches:
+      - master
+      - next
+      - v1
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    services:
+      # label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres:latest
+        # service environment variables
+        # `POSTGRES_HOST` is `postgres`
+        env:
+          # required
+          POSTGRES_PASSWORD: pg_password
+          # optional (defaults to `5432`)
+          POSTGRES_PORT: 5432
+          # optional (defaults to `postgres`)
+          POSTGRES_USER: postgres
+        ports:
+          # maps tcp port 5432 on service container to the host
+          - 5432:5432
+        # set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install Dependencies
+      run: yarn
+
+    - name: Jest
+      run: ./scripts/test-all.sh
+      env:
+        PGUSER: postgres
+        PGPASSWORD: pg_password
+
+    - name: Codecov
+      uses: codecov/codecov-action@v1

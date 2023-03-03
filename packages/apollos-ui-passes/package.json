@@ -1,0 +1,72 @@
+{
+  "name": "@apollosproject/ui-passes",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "4.2.0",
+  "main": "src/index.js",
+  "files": [
+    "src/**",
+    "storybook/**"
+  ],
+  "scripts": {
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "test": "jest --no-watchman",
+    "lint": "eslint ./src --ext .js"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
+  "jest": {
+    "preset": "react-native",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject|d3|d3-*|commander))"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
+      "./jest.setup.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "node_modules/@storybook/"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ]
+  },
+  "peerDependencies": {
+    "@apollosproject/ui-kit": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-passkit-wallet": "*",
+    "rn-fetch-blob": "*"
+  },
+  "dependencies": {
+    "@apollo/client": "3.6.5"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-passkit-wallet": "^0.1.4",
+    "react-test-renderer": "16.13.1",
+    "rn-fetch-blob": "^0.10.15"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

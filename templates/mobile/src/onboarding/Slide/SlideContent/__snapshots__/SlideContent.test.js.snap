@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding Slide component should render a custom icon 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <Icon
+        icon="umbrella"
+        isLoading={false}
+      />
+    </View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      />
+    </View>
+    <H5
+      style={[Function]}
+    />
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render a description 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      />
+    </View>
+    <H5
+      style={[Function]}
+    >
+      There's that word again: "heavy." Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?
+    </H5>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render a loading state 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <Icon
+        icon={true}
+        isLoading={true}
+      />
+    </View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      >
+        Whoa, this is heavy
+      </H2>
+    </View>
+    <H5
+      style={[Function]}
+    >
+      There's that word again: "heavy." Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?
+    </H5>
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render a title 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      >
+        Whoa, this is heavy
+      </H2>
+    </View>
+    <H5
+      style={[Function]}
+    />
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render accept additionall props 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      />
+    </View>
+    <H5
+      style={[Function]}
+    />
+  </View>
+  <Text>
+    Great Scott!
+  </Text>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render an icon 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <Icon
+        icon={true}
+        isLoading={false}
+      />
+    </View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      />
+    </View>
+    <H5
+      style={[Function]}
+    />
+  </View>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render children alone 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      />
+    </View>
+    <H5
+      style={[Function]}
+    />
+  </View>
+  <Text>
+    Great Scott!
+  </Text>
+</SafeAreaView>
+`;
+
+exports[`The Onboarding Slide component should render with children 1`] = `
+<SafeAreaView
+  style={[Function]}
+>
+  <View>
+    <View
+      style={[Function]}
+    >
+      <H2
+        style={[Function]}
+      >
+        Whoa, this is heavy
+      </H2>
+    </View>
+    <H5
+      style={[Function]}
+    >
+      There's that word again: "heavy." Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?
+    </H5>
+  </View>
+  <Text>
+    Great Scott!
+  </Text>
+</SafeAreaView>
+`;

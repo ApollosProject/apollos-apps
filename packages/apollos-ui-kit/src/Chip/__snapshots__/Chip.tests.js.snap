@@ -1,0 +1,692 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Chip component should be selected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    bordered={false}
+    disabled={false}
+    pill={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#17B582",
+        "borderColor": "#17B582",
+        "borderRadius": 16,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "height": 32,
+        "justifyContent": "center",
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignItems": "center",
+          "color": "#F4F7F8",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "justifyContent": "center",
+          "lineHeight": 18,
+          "textAlign": "center",
+        }
+      }
+    >
+      My Button!
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`The Chip component should render a custom icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "height": 32,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 12,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingRight": 8,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={16}
+          bbWidth={16}
+          height={16}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              undefined,
+              null,
+              Object {
+                "flex": 0,
+                "height": 16,
+                "width": 16,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={16}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGCircle
+              cx="12"
+              cy="12"
+              fill={
+                Array [
+                  0,
+                  4294901760,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              r="12"
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <Text
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "#F4F7F8",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 12,
+            "justifyContent": "center",
+            "lineHeight": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        Custom Icon
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Chip component should render an icon 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    bordered={false}
+    disabled={false}
+    pill={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#17B582",
+        "borderColor": "#17B582",
+        "borderRadius": 16,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "height": 32,
+        "justifyContent": "center",
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <View
+      hasTitle={true}
+      style={
+        Object {
+          "paddingRight": 8,
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        color="#F4F7F8"
+        height={16}
+        id="Raw"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {},
+            null,
+            Object {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        tintColor="#F4F7F8"
+        vbHeight={256}
+        vbWidth={256}
+        width={16}
+      >
+        <RNSVGGroup
+          fill={
+            Array [
+              0,
+              4278190080,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          font={Object {}}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          originX={0}
+          originY={0}
+          propList={Array []}
+          rotation={0}
+          scaleX={1}
+          scaleY={1}
+          skewX={0}
+          skewY={0}
+          stroke={null}
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+          vectorEffect={0}
+          x={0}
+          y={0}
+        >
+          <RNSVGRect
+            fill={null}
+            fillOpacity={1}
+            fillRule={1}
+            height={256}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            rx={0}
+            ry={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            width={256}
+            x={0}
+            y={0}
+          />
+          <RNSVGPath
+            d="M128,216S28,160,28,92A52.00881,52.00881,0,0,1,128.00008,71.965l-.00019.00008A52.00881,52.00881,0,0,1,228,92C228,160,128,216,128,216Z"
+            fill={null}
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={
+              Array [
+                0,
+                4294244344,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={1}
+            strokeLinejoin={1}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={16}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <Text
+      style={
+        Object {
+          "alignItems": "center",
+          "color": "#F4F7F8",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "justifyContent": "center",
+          "lineHeight": 18,
+          "textAlign": "center",
+        }
+      }
+    >
+      Heart!!!
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`The Chip component should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "height": 32,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 12,
+          "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "#F4F7F8",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 12,
+            "justifyContent": "center",
+            "lineHeight": 18,
+            "textAlign": "center",
+          }
+        }
+      >
+        My Button!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The Chip component should render positioned for a chipList 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    bordered={false}
+    disabled={false}
+    pill={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#17B582",
+        "borderColor": "#17B582",
+        "borderRadius": 16,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "height": 32,
+        "justifyContent": "center",
+        "marginBottom": 8,
+        "marginRight": 8,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.040000000000000036)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignItems": "center",
+          "color": "#F4F7F8",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "justifyContent": "center",
+          "lineHeight": 18,
+          "textAlign": "center",
+        }
+      }
+    >
+      chipList
+    </Text>
+  </View>
+</View>
+`;

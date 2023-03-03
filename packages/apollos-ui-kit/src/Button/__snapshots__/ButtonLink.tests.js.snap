@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Button component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <Text
+    onPress={[Function]}
+    style={
+      Object {
+        "color": "#17B582",
+      }
+    }
+  >
+    Boom
+  </Text>
+</View>
+`;
+
+exports[`The Button component should render inherit typographic styles 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <Text
+    bold={false}
+    italic={false}
+    style={
+      Object {
+        "color": "#27272E",
+        "fontFamily": "InterUI-Regular",
+        "fontSize": 16,
+        "lineHeight": 26,
+      }
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Object {
+          "color": "#17B582",
+        }
+      }
+    >
+      Boom
+    </Text>
+  </Text>
+</View>
+`;

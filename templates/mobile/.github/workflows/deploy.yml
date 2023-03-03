@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  ios:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: ruby/setup-ruby@v1
+      - run: npm i -g @apollosproject/cli
+      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
+      - run: cp .env.shared .env
+      - run: yarn config set network-timeout 300000
+      - run: yarn
+      - run: node ./scripts/get-introspection-data.js
+      - run: apollos mobile deploy ios publish
+
+  android:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: ruby/setup-ruby@v1
+      - run: npm i -g @apollosproject/cli
+      - run: apollos secrets -d ${{ secrets.ENCRYPTION_PASSWORD }}
+      - run: cp .env.shared .env
+      - run: yarn config set network-timeout 300000
+      - run: yarn
+      - run: node ./scripts/get-introspection-data.js
+      - run: apollos mobile deploy android publish
