@@ -31,25 +31,7 @@ const ContentParentFeedConnected = ({
 
         return { currentIndex, nextCursor: cursor, content };
       }}
-      updateQuery={(previousResult, { fetchMoreResult }) => {
-        const newEdges = get(
-          fetchMoreResult,
-          'node.childContentItemsConnection.edges',
-          []
-        );
-        return {
-          node: {
-            ...previousResult.node,
-            childContentItemsConnection: {
-              ...previousResult.node.childContentItemsConnection,
-              edges: [
-                ...previousResult.node.childContentItemsConnection.edges,
-                ...newEdges,
-              ],
-            },
-          },
-        };
-      }}
+      collectionName="node.childContentItemsConnection"
     />
   );
 };

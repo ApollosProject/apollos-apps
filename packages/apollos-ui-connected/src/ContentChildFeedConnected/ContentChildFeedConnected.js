@@ -27,25 +27,7 @@ const ContentChildNodeConnected = ({ nodeId, loadingStateTypes, ...props }) => {
 
         return { currentIndex, nextCursor: cursor, content };
       }}
-      updateQuery={(previousResult, { fetchMoreResult }) => {
-        const newEdges = get(
-          fetchMoreResult,
-          'node.siblingContentItemsConnection.edges',
-          []
-        );
-        return {
-          node: {
-            ...previousResult.node,
-            siblingContentItemsConnection: {
-              ...previousResult.node.siblingContentItemsConnection,
-              edges: [
-                ...previousResult.node.siblingContentItemsConnection.edges,
-                ...newEdges,
-              ],
-            },
-          },
-        };
-      }}
+      collectionName="node.siblingContentItemsConnection"
     />
   );
 };

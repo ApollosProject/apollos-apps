@@ -10,10 +10,11 @@ import {
 } from '@apollosproject/ui-kit';
 
 import HorizontalContentCardConnected from './HorizontalContentCardConnected';
+import { buildFetchMoreUpdateQuery } from './utils';
 
 const HorizontalFeedConnected = ({
   isLoading,
-  updateQuery,
+  collectionName,
   query,
   variables,
   mapContentFromData,
@@ -94,7 +95,7 @@ const HorizontalFeedConnected = ({
         !loading &&
         fetchMore({
           variables: { cursor: nextCursor, ...variables },
-          updateQuery,
+          updateQuery: buildFetchMoreUpdateQuery(collectionName),
         })
       }
     />
@@ -114,7 +115,7 @@ HorizontalFeedConnected.propTypes = {
   }),
   loadingStateObject: PropTypes.shape({}),
   mapContentFromData: PropTypes.func,
-  updateQuery: PropTypes.func,
+  collectionName: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   isLoading: PropTypes.bool,
 };
 

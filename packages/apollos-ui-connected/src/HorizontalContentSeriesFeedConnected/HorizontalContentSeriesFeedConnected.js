@@ -31,22 +31,13 @@ const HorizontalContentSeriesFeedConnected = ({ contentId, ...props }) => (
 
       return { currentIndex, nextCursor: cursor, content };
     }}
-    updateQuery={(previousResult, { fetchMoreResult }) => {
-      const connection = getIsParent(previousResult)
-        ? 'childContentItemsConnection'
-        : 'siblingContentItemsConnection';
-      const newEdges = get(fetchMoreResult, `node.${connection}.edges`) || [];
-
-      return {
-        node: {
-          ...previousResult.node,
-          [connection]: {
-            ...previousResult.node[connection],
-            edges: [...previousResult.node[connection].edges, ...newEdges],
-          },
-        },
-      };
-    }}
+    collectionName={(previousResult) =>
+      `node.${
+        getIsParent(previousResult)
+          ? 'childContentItemsConnection'
+          : 'siblingContentItemsConnection'
+      }`
+    }
   />
 );
 
